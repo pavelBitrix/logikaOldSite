@@ -1,0 +1,1 @@
+<?php echo 'GET /api/v1/compare/details'; ?>

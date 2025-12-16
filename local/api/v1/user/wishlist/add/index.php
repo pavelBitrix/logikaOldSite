@@ -1,0 +1,1 @@
+<?php echo 'POST /api/v1/user/wishlist/add'; ?>

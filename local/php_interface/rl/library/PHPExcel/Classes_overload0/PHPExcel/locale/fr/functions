@@ -1,0 +1,438 @@
+##
+## PHPExcel
+##
+## Copyright (c) 2006 - 2013 PHPExcel
+##
+## This library is free software; you can redistribute it and/or
+## modify it under the terms of the GNU Lesser General Public
+## License as published by the Free Software Foundation; either
+## version 2.1 of the License, or (at your option) any later version.
+##
+## This library is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+## Lesser General Public License for more details.
+##
+## You should have received a copy of the GNU Lesser General Public
+## License along with this library; if not, write to the Free Software
+## Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+##
+## @category   PHPExcel
+## @package    PHPExcel_Calculation
+## @copyright  Copyright (c) 2006 - 2013 PHPExcel (http://www.codeplex.com/PHPExcel)
+## @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
+## @version    ##VERSION##, ##DATE##
+##
+## Data in this file derived from http://www.piuha.fi/excel-function-name-translation/
+##
+##
+
+
+##
+##	Add-in and Automation functions			Fonctions de complГ©ment et dвЂ™automatisation
+##
+GETPIVOTDATA		= LIREDONNEESTABCROISDYNAMIQUE	##	Renvoie les donnГ©es stockГ©es dans un rapport de tableau croisГ© dynamique.
+
+
+##
+##	Cube functions					Fonctions Cube
+##
+CUBEKPIMEMBER		= MEMBREKPICUBE			##	Renvoie un nom, une propriГ©tГ© et une mesure dвЂ™indicateur de performance clГ© et affiche le nom et la propriГ©tГ© dans la cellule. Un indicateur de performance clГ© est une mesure quantifiable, telle que la marge bГ©nГ©ficiaire brute mensuelle ou la rotation trimestrielle du personnel, utilisГ©e pour Г©valuer les performances dвЂ™une entreprise.
+CUBEMEMBER		= MEMBRECUBE			##	Renvoie un membre ou un uplet dans une hiГ©rarchie de cubes. Utilisez cette fonction pour valider lвЂ™existence du membre ou de lвЂ™uplet dans le cube.
+CUBEMEMBERPROPERTY	= PROPRIETEMEMBRECUBE		##	Renvoie la valeur dвЂ™une propriГ©tГ© de membre du cube. Utilisez cette fonction pour valider lвЂ™existence dвЂ™un nom de membre dans le cube et pour renvoyer la propriГ©tГ© spГ©cifiГ©e pour ce membre.
+CUBERANKEDMEMBER	= RANGMEMBRECUBE		##	Renvoie le niГЁme membre ou le membre placГ© Г  un certain rang dans un ensemble. Utilisez cette fonction pour renvoyer un ou plusieurs Г©lГ©ments dвЂ™un ensemble, tels que les meilleurs vendeurs ou les 10 meilleurs Г©tudiants.
+CUBESET			= JEUCUBE			##	DГ©finit un ensemble calculГ© de membres ou dвЂ™uplets en envoyant une expression dГ©finie au cube sur le serveur qui crГ©e lвЂ™ensemble et le renvoie Г  Microsoft Office Excel.
+CUBESETCOUNT		= NBJEUCUBE			##	Renvoie le nombre dвЂ™Г©lГ©ments dans un jeu.
+CUBEVALUE		= VALEURCUBE			##	Renvoie une valeur dвЂ™agrГ©gation issue dвЂ™un cube.
+
+
+##
+##	Database functions				Fonctions de base de donnГ©es
+##
+DAVERAGE		= BDMOYENNE			##	Renvoie la moyenne des entrГ©es de base de donnГ©es sГ©lectionnГ©es.
+DCOUNT			= BCOMPTE			##	Compte le nombre de cellules dвЂ™une base de donnГ©es qui contiennent des nombres.
+DCOUNTA			= BDNBVAL			##	Compte les cellules non vides dвЂ™une base de donnГ©es.
+DGET			= BDLIRE			##	Extrait dвЂ™une base de donnГ©es un enregistrement unique rГ©pondant aux critГЁres spГ©cifiГ©s.
+DMAX			= BDMAX				##	Renvoie la valeur maximale des entrГ©es de base de donnГ©es sГ©lectionnГ©es.
+DMIN			= BDMIN				##	Renvoie la valeur minimale des entrГ©es de base de donnГ©es sГ©lectionnГ©es.
+DPRODUCT		= BDPRODUIT			##	Multiplie les valeurs dвЂ™un champ particulier des enregistrements dвЂ™une base de donnГ©es, qui rГ©pondent aux critГЁres spГ©cifiГ©s.
+DSTDEV			= BDECARTYPE			##	Calcule lвЂ™Г©cart type pour un Г©chantillon dвЂ™entrГ©es de base de donnГ©es sГ©lectionnГ©es.
+DSTDEVP			= BDECARTYPEP			##	Calcule lвЂ™Г©cart type pour lвЂ™ensemble dвЂ™une population dвЂ™entrГ©es de base de donnГ©es sГ©lectionnГ©es.
+DSUM			= BDSOMME			##	Ajoute les nombres dans la colonne de champ des enregistrements de la base de donnГ©es, qui rГ©pondent aux critГЁres.
+DVAR			= BDVAR				##	Calcule la variance pour un Г©chantillon dвЂ™entrГ©es de base de donnГ©es sГ©lectionnГ©es.
+DVARP			= BDVARP			##	Calcule la variance pour lвЂ™ensemble dвЂ™une population dвЂ™entrГ©es de base de donnГ©es sГ©lectionnГ©es.
+
+
+##
+##	Date and time functions				Fonctions de date et dвЂ™heure
+##
+DATE			= DATE				##	Renvoie le numГ©ro de sГ©rie dвЂ™une date prГ©cise.
+DATEVALUE		= DATEVAL			##	Convertit une date reprГ©sentГ©e sous forme de texte en numГ©ro de sГ©rie.
+DAY			= JOUR				##	Convertit un numГ©ro de sГ©rie en jour du mois.
+DAYS360			= JOURS360			##	Calcule le nombre de jours qui sГ©parent deux dates sur la base dвЂ™une annГ©e de 360 jours.
+EDATE			= MOIS.DECALER			##	Renvoie le numГ©ro sГ©quentiel de la date qui reprГ©sente une date spГ©cifiГ©e (lвЂ™argument date_dГ©part), corrigГ©e en plus ou en moins du nombre de mois indiquГ©.
+EOMONTH			= FIN.MOIS			##	Renvoie le numГ©ro sГ©quentiel de la date du dernier jour du mois prГ©cГ©dant ou suivant la date_dГ©part du nombre de mois indiquГ©.
+HOUR			= HEURE				##	Convertit un numГ©ro de sГ©rie en heure.
+MINUTE			= MINUTE			##	Convertit un numГ©ro de sГ©rie en minute.
+MONTH			= MOIS				##	Convertit un numГ©ro de sГ©rie en mois.
+NETWORKDAYS		= NB.JOURS.OUVRES		##	Renvoie le nombre de jours ouvrГ©s entiers compris entre deux dates.
+NOW			= MAINTENANT			##	Renvoie le numГ©ro de sГ©rie de la date et de lвЂ™heure du jour.
+SECOND			= SECONDE			##	Convertit un numГ©ro de sГ©rie en seconde.
+TIME			= TEMPS				##	Renvoie le numГ©ro de sГ©rie dвЂ™une heure prГ©cise.
+TIMEVALUE		= TEMPSVAL			##	Convertit une date reprГ©sentГ©e sous forme de texte en numГ©ro de sГ©rie.
+TODAY			= AUJOURDHUI			##	Renvoie le numГ©ro de sГ©rie de la date du jour.
+WEEKDAY			= JOURSEM			##	Convertit un numГ©ro de sГ©rie en jour de la semaine.
+WEEKNUM			= NO.SEMAINE			##	Convertit un numГ©ro de sГ©rie en un numГ©ro reprГ©sentant lвЂ™ordre de la semaine dans lвЂ™annГ©e.
+WORKDAY			= SERIE.JOUR.OUVRE		##	Renvoie le numГ©ro de sГ©rie de la date avant ou aprГЁs le nombre de jours ouvrГ©s spГ©cifiГ©s.
+YEAR			= ANNEE				##	Convertit un numГ©ro de sГ©rie en annГ©e.
+YEARFRAC		= FRACTION.ANNEE		##	Renvoie la fraction de lвЂ™annГ©e reprГ©sentant le nombre de jours entre la date de dГ©but et la date de fin.
+
+
+##
+##	Engineering functions				Fonctions dвЂ™ingГ©nierie
+##
+BESSELI			= BESSELI			##	Renvoie la fonction Bessel modifiГ©e In(x).
+BESSELJ			= BESSELJ			##	Renvoie la fonction Bessel Jn(x).
+BESSELK			= BESSELK			##	Renvoie la fonction Bessel modifiГ©e Kn(x).
+BESSELY			= BESSELY			##	Renvoie la fonction Bessel Yn(x).
+BIN2DEC			= BINDEC			##	Convertit un nombre binaire en nombre dГ©cimal.
+BIN2HEX			= BINHEX			##	Convertit un nombre binaire en nombre hexadГ©cimal.
+BIN2OCT			= BINOCT			##	Convertit un nombre binaire en nombre octal.
+COMPLEX			= COMPLEXE			##	Convertit des coefficients rГ©el et imaginaire en un nombre complexe.
+CONVERT			= CONVERT			##	Convertit un nombre dвЂ™une unitГ© de mesure Г  une autre.
+DEC2BIN			= DECBIN			##	Convertit un nombre dГ©cimal en nombre binaire.
+DEC2HEX			= DECHEX			##	Convertit un nombre dГ©cimal en nombre hexadГ©cimal.
+DEC2OCT			= DECOCT			##	Convertit un nombre dГ©cimal en nombre octal.
+DELTA			= DELTA				##	Teste lвЂ™Г©galitГ© de deux nombres.
+ERF			= ERF				##	Renvoie la valeur de la fonction dвЂ™erreur.
+ERFC			= ERFC				##	Renvoie la valeur de la fonction dвЂ™erreur complГ©mentaire.
+GESTEP			= SUP.SEUIL			##	Teste si un nombre est supГ©rieur Г  une valeur de seuil.
+HEX2BIN			= HEXBIN			##	Convertit un nombre hexadГ©cimal en nombre binaire.
+HEX2DEC			= HEXDEC			##	Convertit un nombre hexadГ©cimal en nombre dГ©cimal.
+HEX2OCT			= HEXOCT			##	Convertit un nombre hexadГ©cimal en nombre octal.
+IMABS			= COMPLEXE.MODULE		##	Renvoie la valeur absolue (module) dвЂ™un nombre complexe.
+IMAGINARY		= COMPLEXE.IMAGINAIRE		##	Renvoie le coefficient imaginaire dвЂ™un nombre complexe.
+IMARGUMENT		= COMPLEXE.ARGUMENT		##	Renvoie lвЂ™argument thГЄta, un angle exprimГ© en radians.
+IMCONJUGATE		= COMPLEXE.CONJUGUE		##	Renvoie le nombre complexe conjuguГ© dвЂ™un nombre complexe.
+IMCOS			= IMCOS				##	Renvoie le cosinus dвЂ™un nombre complexe.
+IMDIV			= COMPLEXE.DIV			##	Renvoie le quotient de deux nombres complexes.
+IMEXP			= COMPLEXE.EXP			##	Renvoie la fonction exponentielle dвЂ™un nombre complexe.
+IMLN			= COMPLEXE.LN			##	Renvoie le logarithme nГ©pГ©rien dвЂ™un nombre complexe.
+IMLOG10			= COMPLEXE.LOG10		##	Calcule le logarithme en base 10 dвЂ™un nombre complexe.
+IMLOG2			= COMPLEXE.LOG2			##	Calcule le logarithme en base 2 dвЂ™un nombre complexe.
+IMPOWER			= COMPLEXE.PUISSANCE		##	Renvoie un nombre complexe Г©levГ© Г  une puissance entiГЁre.
+IMPRODUCT		= COMPLEXE.PRODUIT		##	Renvoie le produit de plusieurs nombres complexes.
+IMREAL			= COMPLEXE.REEL			##	Renvoie le coefficient rГ©el dвЂ™un nombre complexe.
+IMSIN			= COMPLEXE.SIN			##	Renvoie le sinus dвЂ™un nombre complexe.
+IMSQRT			= COMPLEXE.RACINE		##	Renvoie la racine carrГ©e dвЂ™un nombre complexe.
+IMSUB			= COMPLEXE.DIFFERENCE		##	Renvoie la diffГ©rence entre deux nombres complexes.
+IMSUM			= COMPLEXE.SOMME		##	Renvoie la somme de plusieurs nombres complexes.
+OCT2BIN			= OCTBIN			##	Convertit un nombre octal en nombre binaire.
+OCT2DEC			= OCTDEC			##	Convertit un nombre octal en nombre dГ©cimal.
+OCT2HEX			= OCTHEX			##	Convertit un nombre octal en nombre hexadГ©cimal.
+
+
+##
+##	Financial functions				Fonctions financiГЁres
+##
+ACCRINT			= INTERET.ACC			##	Renvoie lвЂ™intГ©rГЄt couru non Г©chu dвЂ™un titre dont lвЂ™intГ©rГЄt est perГ§u pГ©riodiquement.
+ACCRINTM		= INTERET.ACC.MAT		##	Renvoie lвЂ™intГ©rГЄt couru non Г©chu dвЂ™un titre dont lвЂ™intГ©rГЄt est perГ§u Г  lвЂ™Г©chГ©ance.
+AMORDEGRC		= AMORDEGRC			##	Renvoie lвЂ™amortissement correspondant Г  chaque pГ©riode comptable en utilisant un coefficient dвЂ™amortissement.
+AMORLINC		= AMORLINC			##	Renvoie lвЂ™amortissement dвЂ™un bien Г  la fin dвЂ™une pГ©riode fiscale donnГ©e.
+COUPDAYBS		= NB.JOURS.COUPON.PREC		##	Renvoie le nombre de jours entre le dГ©but de la pГ©riode de coupon et la date de liquidation.
+COUPDAYS		= NB.JOURS.COUPONS		##	Renvoie le nombre de jours pour la pГ©riode du coupon contenant la date de liquidation.
+COUPDAYSNC		= NB.JOURS.COUPON.SUIV		##	Renvoie le nombre de jours entre la date de liquidation et la date du coupon suivant la date de liquidation.
+COUPNCD			= DATE.COUPON.SUIV		##	Renvoie la premiГЁre date de coupon ultГ©rieure Г  la date de rГЁglement.
+COUPNUM			= NB.COUPONS			##	Renvoie le nombre de coupons dus entre la date de rГЁglement et la date dвЂ™Г©chГ©ance.
+COUPPCD			= DATE.COUPON.PREC		##	Renvoie la date de coupon prГ©cГ©dant la date de rГЁglement.
+CUMIPMT			= CUMUL.INTER			##	Renvoie lвЂ™intГ©rГЄt cumulГ© payГ© sur un emprunt entre deux pГ©riodes.
+CUMPRINC		= CUMUL.PRINCPER		##	Renvoie le montant cumulГ© des remboursements du capital dвЂ™un emprunt effectuГ©s entre deux pГ©riodes.
+DB			= DB				##	Renvoie lвЂ™amortissement dвЂ™un bien pour une pГ©riode spГ©cifiГ©e en utilisant la mГ©thode de lвЂ™amortissement dГ©gressif Г  taux fixe.
+DDB			= DDB				##	Renvoie lвЂ™amortissement dвЂ™un bien pour toute pГ©riode spГ©cifiГ©e, en utilisant la mГ©thode de lвЂ™amortissement dГ©gressif Г  taux double ou selon un coefficient Г  spГ©cifier.
+DISC			= TAUX.ESCOMPTE			##	Calcule le taux dвЂ™escompte dвЂ™une transaction.
+DOLLARDE		= PRIX.DEC			##	Convertit un prix en euros, exprimГ© sous forme de fraction, en un prix en euros exprimГ© sous forme de nombre dГ©cimal.
+DOLLARFR		= PRIX.FRAC			##	Convertit un prix en euros, exprimГ© sous forme de nombre dГ©cimal, en un prix en euros exprimГ© sous forme de fraction.
+DURATION		= DUREE				##	Renvoie la durГ©e, en annГ©es, dвЂ™un titre dont lвЂ™intГ©rГЄt est perГ§u pГ©riodiquement.
+EFFECT			= TAUX.EFFECTIF			##	Renvoie le taux dвЂ™intГ©rГЄt annuel effectif.
+FV			= VC				##	Renvoie la valeur future dвЂ™un investissement.
+FVSCHEDULE		= VC.PAIEMENTS			##	Calcule la valeur future dвЂ™un investissement en appliquant une sГ©rie de taux dвЂ™intГ©rГЄt composites.
+INTRATE			= TAUX.INTERET			##	Affiche le taux dвЂ™intГ©rГЄt dвЂ™un titre totalement investi.
+IPMT			= INTPER			##	Calcule le montant des intГ©rГЄts dвЂ™un investissement pour une pГ©riode donnГ©e.
+IRR			= TRI				##	Calcule le taux de rentabilitГ© interne dвЂ™un investissement pour une succession de trГ©soreries.
+ISPMT			= ISPMT				##	Calcule le montant des intГ©rГЄts dвЂ™un investissement pour une pГ©riode donnГ©e.
+MDURATION		= DUREE.MODIFIEE		##	Renvoie la durГ©e de Macauley modifiГ©e pour un titre ayant une valeur nominale hypothГ©tique de 100_euros.
+MIRR			= TRIM				##	Calcule le taux de rentabilitГ© interne lorsque les paiements positifs et nГ©gatifs sont financГ©s Г  des taux diffГ©rents.
+NOMINAL			= TAUX.NOMINAL			##	Calcule le taux dвЂ™intГ©rГЄt nominal annuel.
+NPER			= NPM				##	Renvoie le nombre de versements nГ©cessaires pour rembourser un emprunt.
+NPV			= VAN				##	Calcule la valeur actuelle nette dвЂ™un investissement basГ© sur une sГ©rie de dГ©caissements et un taux dвЂ™escompte.
+ODDFPRICE		= PRIX.PCOUPON.IRREG		##	Renvoie le prix par tranche de valeur nominale de 100 euros dвЂ™un titre dont la premiГЁre pГ©riode de coupon est irrГ©guliГЁre.
+ODDFYIELD		= REND.PCOUPON.IRREG		##	Renvoie le taux de rendement dвЂ™un titre dont la premiГЁre pГ©riode de coupon est irrГ©guliГЁre.
+ODDLPRICE		= PRIX.DCOUPON.IRREG		##	Renvoie le prix par tranche de valeur nominale de 100 euros dвЂ™un titre dont la premiГЁre pГ©riode de coupon est irrГ©guliГЁre.
+ODDLYIELD		= REND.DCOUPON.IRREG		##	Renvoie le taux de rendement dвЂ™un titre dont la derniГЁre pГ©riode de coupon est irrГ©guliГЁre.
+PMT			= VPM				##	Calcule le paiement pГ©riodique dвЂ™un investissement donnГ©.
+PPMT			= PRINCPER			##	Calcule, pour une pГ©riode donnГ©e, la part de remboursement du principal dвЂ™un investissement.
+PRICE			= PRIX.TITRE			##	Renvoie le prix dвЂ™un titre rapportant des intГ©rГЄts pГ©riodiques, pour une valeur nominale de 100 euros.
+PRICEDISC		= VALEUR.ENCAISSEMENT		##	Renvoie la valeur dвЂ™encaissement dвЂ™un escompte commercial, pour une valeur nominale de 100 euros.
+PRICEMAT		= PRIX.TITRE.ECHEANCE		##	Renvoie le prix dвЂ™un titre dont la valeur nominale est 100 euros et qui rapporte des intГ©rГЄts Г  lвЂ™Г©chГ©ance.
+PV			= PV				##	Calcule la valeur actuelle dвЂ™un investissement.
+RATE			= TAUX				##	Calcule le taux dвЂ™intГ©rГЄt par pГ©riode pour une annuitГ©.
+RECEIVED		= VALEUR.NOMINALE		##	Renvoie la valeur nominale Г  Г©chГ©ance dвЂ™un effet de commerce.
+SLN			= AMORLIN			##	Calcule lвЂ™amortissement linГ©aire dвЂ™un bien pour une pГ©riode donnГ©e.
+SYD			= SYD				##	Calcule lвЂ™amortissement dвЂ™un bien pour une pГ©riode donnГ©e sur la base de la mГ©thode amГ©ricaine Sum-of-Years Digits (amortissement dГ©gressif Г  taux dГ©croissant appliquГ© Г  une valeur constante).
+TBILLEQ			= TAUX.ESCOMPTE.R		##	Renvoie le taux dвЂ™escompte rationnel dвЂ™un bon du TrГ©sor.
+TBILLPRICE		= PRIX.BON.TRESOR		##	Renvoie le prix dвЂ™un bon du TrГ©sor dвЂ™une valeur nominale de 100 euros.
+TBILLYIELD		= RENDEMENT.BON.TRESOR		##	Calcule le taux de rendement dвЂ™un bon du TrГ©sor.
+VDB			= VDB				##	Renvoie lвЂ™amortissement dвЂ™un bien pour une pГ©riode spГ©cifiГ©e ou partielle en utilisant une mГ©thode de lвЂ™amortissement dГ©gressif Г  taux fixe.
+XIRR			= TRI.PAIEMENTS			##	Calcule le taux de rentabilitГ© interne dвЂ™un ensemble de paiements non pГ©riodiques.
+XNPV			= VAN.PAIEMENTS			##	Renvoie la valeur actuelle nette dвЂ™un ensemble de paiements non pГ©riodiques.
+YIELD			= RENDEMENT.TITRE		##	Calcule le rendement dвЂ™un titre rapportant des intГ©rГЄts pГ©riodiquement.
+YIELDDISC		= RENDEMENT.SIMPLE		##	Calcule le taux de rendement dвЂ™un emprunt Г  intГ©rГЄt simple (par exemple, un bon du TrГ©sor).
+YIELDMAT		= RENDEMENT.TITRE.ECHEANCE	##	Renvoie le rendement annuel dвЂ™un titre qui rapporte des intГ©rГЄts Г  lвЂ™Г©chГ©ance.
+
+
+##
+##	Information functions				Fonctions dвЂ™information
+##
+CELL			= CELLULE			##	Renvoie des informations sur la mise en forme, lвЂ™emplacement et le contenu dвЂ™une cellule.
+ERROR.TYPE		= TYPE.ERREUR			##	Renvoie un nombre correspondant Г  un type dвЂ™erreur.
+INFO			= INFORMATIONS			##	Renvoie des informations sur lвЂ™environnement dвЂ™exploitation actuel.
+ISBLANK			= ESTVIDE			##	Renvoie VRAI si lвЂ™argument valeur est vide.
+ISERR			= ESTERR			##	Renvoie VRAI si lвЂ™argument valeur fait rГ©fГ©rence Г  une valeur dвЂ™erreur, sauf #N/A.
+ISERROR			= ESTERREUR			##	Renvoie VRAI si lвЂ™argument valeur fait rГ©fГ©rence Г  une valeur dвЂ™erreur.
+ISEVEN			= EST.PAIR			##	Renvoie VRAI si le chiffre est pair.
+ISLOGICAL		= ESTLOGIQUE			##	Renvoie VRAI si lвЂ™argument valeur fait rГ©fГ©rence Г  une valeur logique.
+ISNA			= ESTNA				##	Renvoie VRAI si lвЂ™argument valeur fait rГ©fГ©rence Г  la valeur dвЂ™erreur #N/A.
+ISNONTEXT		= ESTNONTEXTE			##	Renvoie VRAI si lвЂ™argument valeur ne se prГ©sente pas sous forme de texte.
+ISNUMBER		= ESTNUM			##	Renvoie VRAI si lвЂ™argument valeur reprГ©sente un nombre.
+ISODD			= EST.IMPAIR			##	Renvoie VRAI si le chiffre est impair.
+ISREF			= ESTREF			##	Renvoie VRAI si lвЂ™argument valeur est une rГ©fГ©rence.
+ISTEXT			= ESTTEXTE			##	Renvoie VRAI si lвЂ™argument valeur se prГ©sente sous forme de texte.
+N			= N				##	Renvoie une valeur convertie en nombre.
+NA			= NA				##	Renvoie la valeur dвЂ™erreur #N/A.
+TYPE			= TYPE				##	Renvoie un nombre indiquant le type de donnГ©es dвЂ™une valeur.
+
+
+##
+##	Logical functions				Fonctions logiques
+##
+AND			= ET				##	Renvoie VRAI si tous ses arguments sont VRAI.
+FALSE			= FAUX				##	Renvoie la valeur logique FAUX.
+IF			= SI				##	SpГ©cifie un test logique Г  effectuer.
+IFERROR			= SIERREUR			##	Renvoie une valeur que vous spГ©cifiez si une formule gГ©nГЁre une erreur ; sinon, elle renvoie le rГ©sultat de la formule.
+NOT			= NON				##	Inverse la logique de cet argument.
+OR			= OU				##	Renvoie VRAI si un des arguments est VRAI.
+TRUE			= VRAI				##	Renvoie la valeur logique VRAI.
+
+
+##
+##	Lookup and reference functions			Fonctions de recherche et de rГ©fГ©rence
+##
+ADDRESS			= ADRESSE			##	Renvoie une rГ©fГ©rence sous forme de texte Г  une seule cellule dвЂ™une feuille de calcul.
+AREAS			= ZONES				##	Renvoie le nombre de zones dans une rГ©fГ©rence.
+CHOOSE			= CHOISIR			##	Choisit une valeur dans une liste.
+COLUMN			= COLONNE			##	Renvoie le numГ©ro de colonne dвЂ™une rГ©fГ©rence.
+COLUMNS			= COLONNES			##	Renvoie le nombre de colonnes dans une rГ©fГ©rence.
+HLOOKUP			= RECHERCHEH			##	Effectue une recherche dans la premiГЁre ligne dвЂ™une matrice et renvoie la valeur de la cellule indiquГ©e.
+HYPERLINK		= LIEN_HYPERTEXTE		##	CrГ©e un raccourci ou un renvoi qui ouvre un document stockГ© sur un serveur rГ©seau, sur un rГ©seau Intranet ou sur Internet.
+INDEX			= INDEX				##	Utilise un index pour choisir une valeur provenant dвЂ™une rГ©fГ©rence ou dвЂ™une matrice.
+INDIRECT		= INDIRECT			##	Renvoie une rГ©fГ©rence indiquГ©e par une valeur de texte.
+LOOKUP			= RECHERCHE			##	Recherche des valeurs dans un vecteur ou une matrice.
+MATCH			= EQUIV				##	Recherche des valeurs dans une rГ©fГ©rence ou une matrice.
+OFFSET			= DECALER			##	Renvoie une rГ©fГ©rence dГ©calГ©e par rapport Г  une rГ©fГ©rence donnГ©e.
+ROW			= LIGNE				##	Renvoie le numГ©ro de ligne dвЂ™une rГ©fГ©rence.
+ROWS			= LIGNES			##	Renvoie le nombre de lignes dans une rГ©fГ©rence.
+RTD			= RTD				##	Extrait les donnГ©es en temps rГ©el Г  partir dвЂ™un programme prenant en charge lвЂ™automation COM (Automation : utilisation des objets d'une application Г  partir d'une autre application ou d'un autre outil de dГ©veloppement. Autrefois appelГ©e OLE Automation, Automation est une norme industrielle et une fonctionnalitГ© du modГЁle d'objet COM (Component Object Model).).
+TRANSPOSE		= TRANSPOSE			##	Renvoie la transposition dвЂ™une matrice.
+VLOOKUP			= RECHERCHEV			##	Effectue une recherche dans la premiГЁre colonne dвЂ™une matrice et se dГ©place sur la ligne pour renvoyer la valeur dвЂ™une cellule.
+
+
+##
+##	Math and trigonometry functions			Fonctions mathГ©matiques et trigonomГ©triques
+##
+ABS			= ABS				##	Renvoie la valeur absolue dвЂ™un nombre.
+ACOS			= ACOS				##	Renvoie lвЂ™arccosinus dвЂ™un nombre.
+ACOSH			= ACOSH				##	Renvoie le cosinus hyperbolique inverse dвЂ™un nombre.
+ASIN			= ASIN				##	Renvoie lвЂ™arcsinus dвЂ™un nombre.
+ASINH			= ASINH				##	Renvoie le sinus hyperbolique inverse dвЂ™un nombre.
+ATAN			= ATAN				##	Renvoie lвЂ™arctangente dвЂ™un nombre.
+ATAN2			= ATAN2				##	Renvoie lвЂ™arctangente des coordonnГ©es x et y.
+ATANH			= ATANH				##	Renvoie la tangente hyperbolique inverse dвЂ™un nombre.
+CEILING			= PLAFOND			##	Arrondit un nombre au nombre entier le plus proche ou au multiple le plus proche de lвЂ™argument prГ©cision en sвЂ™Г©loignant de zГ©ro.
+COMBIN			= COMBIN			##	Renvoie le nombre de combinaisons que lвЂ™on peut former avec un nombre donnГ© dвЂ™objets.
+COS			= COS				##	Renvoie le cosinus dвЂ™un nombre.
+COSH			= COSH				##	Renvoie le cosinus hyperbolique dвЂ™un nombre.
+DEGREES			= DEGRES			##	Convertit des radians en degrГ©s.
+EVEN			= PAIR				##	Arrondit un nombre au nombre entier pair le plus proche en sвЂ™Г©loignant de zГ©ro.
+EXP			= EXP				##	Renvoie e Г©levГ© Г  la puissance dвЂ™un nombre donnГ©.
+FACT			= FACT				##	Renvoie la factorielle dвЂ™un nombre.
+FACTDOUBLE		= FACTDOUBLE			##	Renvoie la factorielle double dвЂ™un nombre.
+FLOOR			= PLANCHER			##	Arrondit un nombre en tendant vers 0 (zГ©ro).
+GCD			= PGCD				##	Renvoie le plus grand commun diviseur.
+INT			= ENT				##	Arrondit un nombre Г  lвЂ™entier immГ©diatement infГ©rieur.
+LCM			= PPCM				##	Renvoie le plus petit commun multiple.
+LN			= LN				##	Renvoie le logarithme nГ©pГ©rien dвЂ™un nombre.
+LOG			= LOG				##	Renvoie le logarithme dвЂ™un nombre dans la base spГ©cifiГ©e.
+LOG10			= LOG10				##	Calcule le logarithme en base 10 dвЂ™un nombre.
+MDETERM			= DETERMAT			##	Renvoie le dГ©terminant dвЂ™une matrice.
+MINVERSE		= INVERSEMAT			##	Renvoie la matrice inverse dвЂ™une matrice.
+MMULT			= PRODUITMAT			##	Renvoie le produit de deux matrices.
+MOD			= MOD				##	Renvoie le reste dвЂ™une division.
+MROUND			= ARRONDI.AU.MULTIPLE		##	Donne lвЂ™arrondi dвЂ™un nombre au multiple spГ©cifiГ©.
+MULTINOMIAL		= MULTINOMIALE			##	Calcule la multinomiale dвЂ™un ensemble de nombres.
+ODD			= IMPAIR			##	Renvoie le nombre, arrondi Г  la valeur du nombre entier impair le plus proche en sвЂ™Г©loignant de zГ©ro.
+PI			= PI				##	Renvoie la valeur de pi.
+POWER			= PUISSANCE			##	Renvoie la valeur du nombre Г©levГ© Г  une puissance.
+PRODUCT			= PRODUIT			##	Multiplie ses arguments.
+QUOTIENT		= QUOTIENT			##	Renvoie la partie entiГЁre du rГ©sultat dвЂ™une division.
+RADIANS			= RADIANS			##	Convertit des degrГ©s en radians.
+RAND			= ALEA				##	Renvoie un nombre alГ©atoire compris entre 0 et 1.
+RANDBETWEEN		= ALEA.ENTRE.BORNES		##	Renvoie un nombre alГ©atoire entre les nombres que vous spГ©cifiez.
+ROMAN			= ROMAIN			##	Convertit des chiffres arabes en chiffres romains, sous forme de texte.
+ROUND			= ARRONDI			##	Arrondit un nombre au nombre de chiffres indiquГ©.
+ROUNDDOWN		= ARRONDI.INF			##	Arrondit un nombre en tendant vers 0 (zГ©ro).
+ROUNDUP			= ARRONDI.SUP			##	Arrondit un nombre Г  lвЂ™entier supГ©rieur, en sвЂ™Г©loignant de zГ©ro.
+SERIESSUM		= SOMME.SERIES			##	Renvoie la somme dвЂ™une sГ©rie gГ©omГ©trique en sвЂ™appuyant sur la formule suivante :
+SIGN			= SIGNE				##	Renvoie le signe dвЂ™un nombre.
+SIN			= SIN				##	Renvoie le sinus dвЂ™un angle donnГ©.
+SINH			= SINH				##	Renvoie le sinus hyperbolique dвЂ™un nombre.
+SQRT			= RACINE			##	Renvoie la racine carrГ©e dвЂ™un nombre.
+SQRTPI			= RACINE.PI			##	Renvoie la racine carrГ©e de (nombre * pi).
+SUBTOTAL		= SOUS.TOTAL			##	Renvoie un sous-total dans une liste ou une base de donnГ©es.
+SUM			= SOMME				##	Calcule la somme de ses arguments.
+SUMIF			= SOMME.SI			##	Additionne les cellules spГ©cifiГ©es si elles rГ©pondent Г  un critГЁre donnГ©.
+SUMIFS			= SOMME.SI.ENS			##	Ajoute les cellules dвЂ™une plage qui rГ©pondent Г  plusieurs critГЁres.
+SUMPRODUCT		= SOMMEPROD			##	Multiplie les valeurs correspondantes des matrices spГ©cifiГ©es et calcule la somme de ces produits.
+SUMSQ			= SOMME.CARRES			##	Renvoie la somme des carrГ©s des arguments.
+SUMX2MY2		= SOMME.X2MY2			##	Renvoie la somme de la diffГ©rence des carrГ©s des valeurs correspondantes de deux matrices.
+SUMX2PY2		= SOMME.X2PY2			##	Renvoie la somme de la somme des carrГ©s des valeurs correspondantes de deux matrices.
+SUMXMY2			= SOMME.XMY2			##	Renvoie la somme des carrГ©s des diffГ©rences entre les valeurs correspondantes de deux matrices.
+TAN			= TAN				##	Renvoie la tangente dвЂ™un nombre.
+TANH			= TANH				##	Renvoie la tangente hyperbolique dвЂ™un nombre.
+TRUNC			= TRONQUE			##	Renvoie la partie entiГЁre dвЂ™un nombre.
+
+
+##
+##	Statistical functions				Fonctions statistiques
+##
+AVEDEV			= ECART.MOYEN			##	Renvoie la moyenne des Г©carts absolus observГ©s dans la moyenne des points de donnГ©es.
+AVERAGE			= MOYENNE			##	Renvoie la moyenne de ses arguments.
+AVERAGEA		= AVERAGEA			##	Renvoie la moyenne de ses arguments, nombres, texte et valeurs logiques inclus.
+AVERAGEIF		= MOYENNE.SI			##	Renvoie la moyenne (arithmГ©tique) de toutes les cellules dвЂ™une plage qui rГ©pondent Г  des critГЁres donnГ©s.
+AVERAGEIFS		= MOYENNE.SI.ENS		##	Renvoie la moyenne (arithmГ©tique) de toutes les cellules qui rГ©pondent Г  plusieurs critГЁres.
+BETADIST		= LOI.BETA			##	Renvoie la fonction de distribution cumulГ©e.
+BETAINV			= BETA.INVERSE			##	Renvoie lвЂ™inverse de la fonction de distribution cumulГ©e pour une distribution bГЄta spГ©cifiГ©e.
+BINOMDIST		= LOI.BINOMIALE			##	Renvoie la probabilitГ© dвЂ™une variable alГ©atoire discrГЁte suivant la loi binomiale.
+CHIDIST			= LOI.KHIDEUX			##	Renvoie la probabilitГ© unilatГ©rale de la distribution khi-deux.
+CHIINV			= KHIDEUX.INVERSE		##	Renvoie lвЂ™inverse de la probabilitГ© unilatГ©rale de la distribution khi-deux.
+CHITEST			= TEST.KHIDEUX			##	Renvoie le test dвЂ™indГ©pendance.
+CONFIDENCE		= INTERVALLE.CONFIANCE		##	Renvoie lвЂ™intervalle de confiance pour une moyenne de population.
+CORREL			= COEFFICIENT.CORRELATION	##	Renvoie le coefficient de corrГ©lation entre deux sГ©ries de donnГ©es.
+COUNT			= NB				##	DГ©termine les nombres compris dans la liste des arguments.
+COUNTA			= NBVAL				##	DГ©termine le nombre de valeurs comprises dans la liste des arguments.
+COUNTBLANK		= NB.VIDE			##	Compte le nombre de cellules vides dans une plage.
+COUNTIF			= NB.SI				##	Compte le nombre de cellules qui rГ©pondent Г  un critГЁre donnГ© dans une plage.
+COUNTIFS		= NB.SI.ENS			##	Compte le nombre de cellules Г  lвЂ™intГ©rieur dвЂ™une plage qui rГ©pondent Г  plusieurs critГЁres.
+COVAR			= COVARIANCE			##	Renvoie la covariance, moyenne des produits des Г©carts pour chaque sГ©rie dвЂ™observations.
+CRITBINOM		= CRITERE.LOI.BINOMIALE		##	Renvoie la plus petite valeur pour laquelle la distribution binomiale cumulГ©e est infГ©rieure ou Г©gale Г  une valeur de critГЁre.
+DEVSQ			= SOMME.CARRES.ECARTS		##	Renvoie la somme des carrГ©s des Г©carts.
+EXPONDIST		= LOI.EXPONENTIELLE		##	Renvoie la distribution exponentielle.
+FDIST			= LOI.F				##	Renvoie la distribution de probabilitГ© F.
+FINV			= INVERSE.LOI.F			##	Renvoie lвЂ™inverse de la distribution de probabilitГ© F.
+FISHER			= FISHER			##	Renvoie la transformation de Fisher.
+FISHERINV		= FISHER.INVERSE		##	Renvoie lвЂ™inverse de la transformation de Fisher.
+FORECAST		= PREVISION			##	Calcule une valeur par rapport Г  une tendance linГ©aire.
+FREQUENCY		= FREQUENCE			##	Calcule la frГ©quence dвЂ™apparition des valeurs dans une plage de valeurs, puis renvoie des nombres sous forme de matrice verticale.
+FTEST			= TEST.F			##	Renvoie le rГ©sultat dвЂ™un test F.
+GAMMADIST		= LOI.GAMMA			##	Renvoie la probabilitГ© dвЂ™une variable alГ©atoire suivant une loi Gamma.
+GAMMAINV		= LOI.GAMMA.INVERSE		##	Renvoie, pour une probabilitГ© donnГ©e, la valeur dвЂ™une variable alГ©atoire suivant une loi Gamma.
+GAMMALN			= LNGAMMA			##	Renvoie le logarithme nГ©pГ©rien de la fonction Gamma, G(x)
+GEOMEAN			= MOYENNE.GEOMETRIQUE		##	Renvoie la moyenne gГ©omГ©trique.
+GROWTH			= CROISSANCE			##	Calcule des valeurs par rapport Г  une tendance exponentielle.
+HARMEAN			= MOYENNE.HARMONIQUE		##	Renvoie la moyenne harmonique.
+HYPGEOMDIST		= LOI.HYPERGEOMETRIQUE		##	Renvoie la probabilitГ© dвЂ™une variable alГ©atoire discrГЁte suivant une loi hypergГ©omГ©trique.
+INTERCEPT		= ORDONNEE.ORIGINE		##	Renvoie lвЂ™ordonnГ©e Г  lвЂ™origine dвЂ™une droite de rГ©gression linГ©aire.
+KURT			= KURTOSIS			##	Renvoie le kurtosis dвЂ™une sГ©rie de donnГ©es.
+LARGE			= GRANDE.VALEUR			##	Renvoie la k-iГЁme plus grande valeur dвЂ™une sГ©rie de donnГ©es.
+LINEST			= DROITEREG			##	Renvoie les paramГЁtres dвЂ™une tendance linГ©aire.
+LOGEST			= LOGREG			##	Renvoie les paramГЁtres dвЂ™une tendance exponentielle.
+LOGINV			= LOI.LOGNORMALE.INVERSE	##	Renvoie lвЂ™inverse de la probabilitГ© pour une variable alГ©atoire suivant la loi lognormale.
+LOGNORMDIST		= LOI.LOGNORMALE		##	Renvoie la probabilitГ© dвЂ™une variable alГ©atoire continue suivant une loi lognormale.
+MAX			= MAX				##	Renvoie la valeur maximale contenue dans une liste dвЂ™arguments.
+MAXA			= MAXA				##	Renvoie la valeur maximale dвЂ™une liste dвЂ™arguments, nombres, texte et valeurs logiques inclus.
+MEDIAN			= MEDIANE			##	Renvoie la valeur mГ©diane des nombres donnГ©s.
+MIN			= MIN				##	Renvoie la valeur minimale contenue dans une liste dвЂ™arguments.
+MINA			= MINA				##	Renvoie la plus petite valeur dвЂ™une liste dвЂ™arguments, nombres, texte et valeurs logiques inclus.
+MODE			= MODE				##	Renvoie la valeur la plus courante dвЂ™une sГ©rie de donnГ©es.
+NEGBINOMDIST		= LOI.BINOMIALE.NEG		##	Renvoie la probabilitГ© dвЂ™une variable alГ©atoire discrГЁte suivant une loi binomiale nГ©gative.
+NORMDIST		= LOI.NORMALE			##	Renvoie la probabilitГ© dвЂ™une variable alГ©atoire continue suivant une loi normale.
+NORMINV			= LOI.NORMALE.INVERSE		##	Renvoie, pour une probabilitГ© donnГ©e, la valeur dвЂ™une variable alГ©atoire suivant une loi normale standard.
+NORMSDIST		= LOI.NORMALE.STANDARD		##	Renvoie la probabilitГ© dвЂ™une variable alГ©atoire continue suivant une loi normale standard.
+NORMSINV		= LOI.NORMALE.STANDARD.INVERSE	##	Renvoie lвЂ™inverse de la distribution cumulГ©e normale standard.
+PEARSON			= PEARSON			##	Renvoie le coefficient de corrГ©lation dвЂ™Г©chantillonnage de Pearson.
+PERCENTILE		= CENTILE			##	Renvoie le k-iГЁme centile des valeurs dвЂ™une plage.
+PERCENTRANK		= RANG.POURCENTAGE		##	Renvoie le rang en pourcentage dвЂ™une valeur dвЂ™une sГ©rie de donnГ©es.
+PERMUT			= PERMUTATION			##	Renvoie le nombre de permutations pour un nombre donnГ© dвЂ™objets.
+POISSON			= LOI.POISSON			##	Renvoie la probabilitГ© dвЂ™une variable alГ©atoire suivant une loi de Poisson.
+PROB			= PROBABILITE			##	Renvoie la probabilitГ© que des valeurs dвЂ™une plage soient comprises entre deux limites.
+QUARTILE		= QUARTILE			##	Renvoie le quartile dвЂ™une sГ©rie de donnГ©es.
+RANK			= RANG				##	Renvoie le rang dвЂ™un nombre contenu dans une liste.
+RSQ			= COEFFICIENT.DETERMINATION	##	Renvoie la valeur du coefficient de dГ©termination R^2 dвЂ™une rГ©gression linГ©aire.
+SKEW			= COEFFICIENT.ASYMETRIE		##	Renvoie lвЂ™asymГ©trie dвЂ™une distribution.
+SLOPE			= PENTE				##	Renvoie la pente dвЂ™une droite de rГ©gression linГ©aire.
+SMALL			= PETITE.VALEUR			##	Renvoie la k-iГЁme plus petite valeur dвЂ™une sГ©rie de donnГ©es.
+STANDARDIZE		= CENTREE.REDUITE		##	Renvoie une valeur centrГ©e rГ©duite.
+STDEV			= ECARTYPE			##	Г‰value lвЂ™Г©cart type dвЂ™une population en se basant sur un Г©chantillon de cette population.
+STDEVA			= STDEVA			##	Г‰value lвЂ™Г©cart type dвЂ™une population en se basant sur un Г©chantillon de cette population, nombres, texte et valeurs logiques inclus.
+STDEVP			= ECARTYPEP			##	Calcule lвЂ™Г©cart type dвЂ™une population Г  partir de la population entiГЁre.
+STDEVPA			= STDEVPA			##	Calcule lвЂ™Г©cart type dвЂ™une population Г  partir de lвЂ™ensemble de la population, nombres, texte et valeurs logiques inclus.
+STEYX			= ERREUR.TYPE.XY		##	Renvoie lвЂ™erreur type de la valeur y prГ©vue pour chaque x de la rГ©gression.
+TDIST			= LOI.STUDENT			##	Renvoie la probabilitГ© dвЂ™une variable alГ©atoire suivant une loi T de Student.
+TINV			= LOI.STUDENT.INVERSE		##	Renvoie, pour une probabilitГ© donnГ©e, la valeur dвЂ™une variable alГ©atoire suivant une loi T de Student.
+TREND			= TENDANCE			##	Renvoie des valeurs par rapport Г  une tendance linГ©aire.
+TRIMMEAN		= MOYENNE.REDUITE		##	Renvoie la moyenne de lвЂ™intГ©rieur dвЂ™une sГ©rie de donnГ©es.
+TTEST			= TEST.STUDENT			##	Renvoie la probabilitГ© associГ©e Г  un test T de Student.
+VAR			= VAR				##	Calcule la variance sur la base dвЂ™un Г©chantillon.
+VARA			= VARA				##	Estime la variance dвЂ™une population en se basant sur un Г©chantillon de cette population, nombres, texte et valeurs logiques incluses.
+VARP			= VAR.P				##	Calcule la variance sur la base de lвЂ™ensemble de la population.
+VARPA			= VARPA				##	Calcule la variance dвЂ™une population en se basant sur la population entiГЁre, nombres, texte et valeurs logiques inclus.
+WEIBULL			= LOI.WEIBULL			##	Renvoie la probabilitГ© dвЂ™une variable alГ©atoire suivant une loi de Weibull.
+ZTEST			= TEST.Z			##	Renvoie la valeur de probabilitГ© unilatГ©rale dвЂ™un test z.
+
+
+##
+##	Text functions					Fonctions de texte
+##
+ASC			= ASC				##	Change les caractГЁres anglais ou katakana Г  pleine chasse (codГ©s sur deux octets) Г  lвЂ™intГ©rieur dвЂ™une chaГ®ne de caractГЁres en caractГЁres Г  demi-chasse (codГ©s sur un octet).
+BAHTTEXT		= BAHTTEXT			##	Convertit un nombre en texte en utilisant le format monГ©taire Гџ (baht).
+CHAR			= CAR				##	Renvoie le caractГЁre spГ©cifiГ© par le code numГ©rique.
+CLEAN			= EPURAGE			##	Supprime tous les caractГЁres de contrГґle du texte.
+CODE			= CODE				##	Renvoie le numГ©ro de code du premier caractГЁre du texte.
+CONCATENATE		= CONCATENER			##	Assemble plusieurs Г©lГ©ments textuels de faГ§on Г  nвЂ™en former quвЂ™un seul.
+DOLLAR			= EURO				##	Convertit un nombre en texte en utilisant le format monГ©taire в‚¬ (euro).
+EXACT			= EXACT				##	VГ©rifie si deux valeurs de texte sont identiques.
+FIND			= TROUVE			##	Trouve un valeur textuelle dans une autre, en respectant la casse.
+FINDB			= TROUVERB			##	Trouve un valeur textuelle dans une autre, en respectant la casse.
+FIXED			= CTXT				##	Convertit un nombre au format texte avec un nombre de dГ©cimales spГ©cifiГ©.
+JIS			= JIS				##	Change les caractГЁres anglais ou katakana Г  demi-chasse (codГ©s sur un octet) Г  lвЂ™intГ©rieur dвЂ™une chaГ®ne de caractГЁres en caractГЁres Г  Г  pleine chasse (codГ©s sur deux octets).
+LEFT			= GAUCHE			##	Renvoie des caractГЁres situГ©s Г  lвЂ™extrГЄme gauche dвЂ™une chaГ®ne de caractГЁres.
+LEFTB			= GAUCHEB			##	Renvoie des caractГЁres situГ©s Г  lвЂ™extrГЄme gauche dвЂ™une chaГ®ne de caractГЁres.
+LEN			= NBCAR				##	Renvoie le nombre de caractГЁres contenus dans une chaГ®ne de texte.
+LENB			= LENB				##	Renvoie le nombre de caractГЁres contenus dans une chaГ®ne de texte.
+LOWER			= MINUSCULE			##	Convertit le texte en minuscules.
+MID			= STXT				##	Renvoie un nombre dГ©terminГ© de caractГЁres dвЂ™une chaГ®ne de texte Г  partir de la position que vous indiquez.
+MIDB			= STXTB				##	Renvoie un nombre dГ©terminГ© de caractГЁres dвЂ™une chaГ®ne de texte Г  partir de la position que vous indiquez.
+PHONETIC		= PHONETIQUE			##	Extrait les caractГЁres phonГ©tiques (furigana) dвЂ™une chaГ®ne de texte.
+PROPER			= NOMPROPRE			##	Met en majuscules la premiГЁre lettre de chaque mot dans une chaГ®ne textuelle.
+REPLACE			= REMPLACER			##	Remplace des caractГЁres dans un texte.
+REPLACEB		= REMPLACERB			##	Remplace des caractГЁres dans un texte.
+REPT			= REPT				##	RГ©pГЁte un texte un certain nombre de fois.
+RIGHT			= DROITE			##	Renvoie des caractГЁres situГ©s Г  lвЂ™extrГЄme droite dвЂ™une chaГ®ne de caractГЁres.
+RIGHTB			= DROITEB			##	Renvoie des caractГЁres situГ©s Г  lвЂ™extrГЄme droite dвЂ™une chaГ®ne de caractГЁres.
+SEARCH			= CHERCHE			##	Trouve un texte dans un autre texte (sans respecter la casse).
+SEARCHB			= CHERCHERB			##	Trouve un texte dans un autre texte (sans respecter la casse).
+SUBSTITUTE		= SUBSTITUE			##	Remplace lвЂ™ancien texte dвЂ™une chaГ®ne de caractГЁres par un nouveau.
+T			= T				##	Convertit ses arguments en texte.
+TEXT			= TEXTE				##	Convertit un nombre au format texte.
+TRIM			= SUPPRESPACE			##	Supprime les espaces du texte.
+UPPER			= MAJUSCULE			##	Convertit le texte en majuscules.
+VALUE			= CNUM				##	Convertit un argument textuel en nombre

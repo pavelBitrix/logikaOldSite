@@ -1,0 +1,18 @@
+{
+    "require": {
+        "wikimedia/composer-merge-plugin": "dev-master",
+        "phpmailer/phpmailer": "^6.5"
+    },
+    "extra": {
+        "merge-plugin": {
+            "require": [
+                "../bitrix/composer-bx.json"
+            ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "wikimedia/composer-merge-plugin": true
+        }
+    }
+}

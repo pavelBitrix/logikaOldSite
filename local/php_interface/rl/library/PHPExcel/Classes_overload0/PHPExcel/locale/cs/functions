@@ -1,0 +1,438 @@
+##
+## PHPExcel
+##
+## Copyright (c) 2006 - 2013 PHPExcel
+##
+## This library is free software; you can redistribute it and/or
+## modify it under the terms of the GNU Lesser General Public
+## License as published by the Free Software Foundation; either
+## version 2.1 of the License, or (at your option) any later version.
+##
+## This library is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+## Lesser General Public License for more details.
+##
+## You should have received a copy of the GNU Lesser General Public
+## License along with this library; if not, write to the Free Software
+## Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+##
+## @category   PHPExcel
+## @package    PHPExcel_Calculation
+## @copyright  Copyright (c) 2006 - 2013 PHPExcel (http://www.codeplex.com/PHPExcel)
+## @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
+## @version    ##VERSION##, ##DATE##
+##
+## Data in this file derived from http://www.piuha.fi/excel-function-name-translation/
+##
+##
+
+
+##
+##	Add-in and Automation functions		Funkce doplЕ€kЕЇ a automatizace
+##
+GETPIVOTDATA		= ZГЌSKATKONTDATA	##	VrГЎtГ­ data uloЕѕenГЎ v kontingenДЌnГ­ tabulce. PomocГ­ funkce ZГЌSKATKONTDATA mЕЇЕѕete naДЌГ­st souhrnnГЎ data z kontingenДЌnГ­ tabulky, pokud jsou tato data v kontingenДЌnГ­ sestavД› zobrazena.
+
+
+##
+##	Cube functions				Funkce pro prГЎci s krychlemi
+##
+CUBEKPIMEMBER		= CUBEKPIMEMBER		##	VrГЎtГ­ nГЎzev, vlastnost a velikost klГ­ДЌovГ©ho ukazatele vГЅkonu (KUV) a zobrazГ­ v buЕ€ce nГЎzev a vlastnost. KlГ­ДЌovГЅ ukazatel vГЅkonu je kvantifikovatelnГЎ veliДЌina, napЕ™Г­klad hrubГЅ mД›sГ­ДЌnГ­ zisk nebo ДЌtvrtletnГ­ obrat na zamД›stnance, kterГЎ se pouЕѕГ­vГЎ pro sledovГЎnГ­ vГЅkonnosti organizace.
+CUBEMEMBER		= CUBEMEMBER		##	VrГЎtГ­ ДЌlen nebo n-tici v hierarchii krychle. SlouЕѕГ­ k ovД›Е™enГ­, zda v krychli existuje ДЌlen nebo n-tice.
+CUBEMEMBERPROPERTY	= CUBEMEMBERPROPERTY	##	VrГЎtГ­ hodnotu vlastnosti ДЌlena v krychli. SlouЕѕГ­ k ovД›Е™enГ­, zda v krychli existuje ДЌlen s danГЅm nГЎzvem, a k vrГЎcenГ­ konkrГ©tnГ­ vlastnosti tohoto ДЌlena.
+CUBERANKEDMEMBER	= CUBERANKEDMEMBER	##	VrГЎtГ­ n-tГЅ nebo poЕ™adovГЅ ДЌlen sady. PouЕѕijte ji pro vrГЎcenГ­ jednoho nebo vГ­ce prvkЕЇ sady, napЕ™Г­klad obchodnГ­ka s nejvyЕЎЕЎГ­m obratem nebo deseti nejlepЕЎГ­ch studentЕЇ.
+CUBESET			= CUBESET		##	Definuje vypoДЌtenou sadu ДЌlenЕЇ nebo n-tic odeslГЎnГ­m vГЅrazu sady do krychle na serveru, kterГЅ vytvoЕ™Г­ sadu a potom ji vrГЎtГ­ do aplikace Microsoft Office Excel.
+CUBESETCOUNT		= CUBESETCOUNT		##	VrГЎtГ­ poДЌet poloЕѕek v mnoЕѕinД›
+CUBEVALUE		= CUBEVALUE		##	VrГЎtГ­ Гєhrnnou hodnotu z krychle.
+
+
+##
+##	Database functions			Funkce databГЎze
+##
+DAVERAGE		= DPRЕ®MДљR		##	VrГЎtГ­ prЕЇmД›r vybranГЅch poloЕѕek databГЎze.
+DCOUNT			= DPOДЊET		##	SpoДЌГ­tГЎ buЕ€ky databГЎze obsahujГ­cГ­ ДЌГ­sla.
+DCOUNTA			= DPOДЊET2		##	SpoДЌГ­tГЎ buЕ€ky databГЎze, kterГ© nejsou prГЎzdnГ©.
+DGET			= DZГЌSKAT		##	Extrahuje z databГЎze jeden zГЎznam splЕ€ujГ­cГ­ zadanГЎ kritГ©ria.
+DMAX			= DMAX			##	VrГЎtГ­ maximГЎlnГ­ hodnotu z vybranГЅch poloЕѕek databГЎze.
+DMIN			= DMIN			##	VrГЎtГ­ minimГЎlnГ­ hodnotu z vybranГЅch poloЕѕek databГЎze.
+DPRODUCT		= DSOUДЊIN		##	VynГЎsobГ­ hodnoty urДЌitГ©ho pole zГЎznamЕЇ v databГЎzi, kterГ© splЕ€ujГ­ danГЎ kritГ©ria.
+DSTDEV			= DSMODCH.VГќBДљR		##	Odhadne smД›rodatnou odchylku vГЅbД›ru vybranГЅch poloЕѕek databГЎze.
+DSTDEVP			= DSMODCH		##	VypoДЌte smД›rodatnou odchylku zГЎkladnГ­ho souboru vybranГЅch poloЕѕek databГЎze.
+DSUM			= DSUMA			##	SeДЌte ДЌГ­sla ve sloupcovГ©m poli zГЎznamЕЇ databГЎze, kterГЎ splЕ€ujГ­ danГЎ kritГ©ria.
+DVAR			= DVAR.VГќBДљR		##	Odhadne rozptyl vГЅbД›ru vybranГЅch poloЕѕek databГЎze.
+DVARP			= DVAR			##	VypoДЌte rozptyl zГЎkladnГ­ho souboru vybranГЅch poloЕѕek databГЎze.
+
+
+##
+##	Date and time functions			Funkce data a ДЌasu
+##
+DATE			= DATUM			##	VrГЎtГ­ poЕ™adovГ© ДЌГ­slo urДЌitГ©ho data.
+DATEVALUE		= DATUMHODN		##	PЕ™evede datum ve formД› textu na poЕ™adovГ© ДЌГ­slo.
+DAY			= DEN			##	PЕ™evede poЕ™adovГ© ДЌГ­slo na den v mД›sГ­ci.
+DAYS360			= ROK360		##	VrГЎtГ­ poДЌet dnГ­ mezi dvД›ma daty na zГЎkladД› roku s 360 dny.
+EDATE			= EDATE			##	VrГЎtГ­ poЕ™adovГ© ДЌГ­slo data, kterГ© oznaДЌuje urДЌenГЅ poДЌet mД›sГ­cЕЇ pЕ™ed nebo po poДЌГЎteДЌnГ­m datu.
+EOMONTH			= EOMONTH		##	VrГЎtГ­ poЕ™adovГ© ДЌГ­slo poslednГ­ho dne mД›sГ­ce pЕ™ed nebo po zadanГ©m poДЌtu mД›sГ­cЕЇ.
+HOUR			= HODINA		##	PЕ™evede poЕ™adovГ© ДЌГ­slo na hodinu.
+MINUTE			= MINUTA		##	PЕ™evede poЕ™adovГ© ДЌГ­slo na minutu.
+MONTH			= MДљSГЌC			##	PЕ™evede poЕ™adovГ© ДЌГ­slo na mД›sГ­c.
+NETWORKDAYS		= NETWORKDAYS		##	VrГЎtГ­ poДЌet celГЅch pracovnГ­ch dnГ­ mezi dvД›ma daty.
+NOW			= NYNГЌ			##	VrГЎtГ­ poЕ™adovГ© ДЌГ­slo aktuГЎlnГ­ho data a ДЌasu.
+SECOND			= SEKUNDA		##	PЕ™evede poЕ™adovГ© ДЌГ­slo na sekundu.
+TIME			= ДЊAS			##	VrГЎtГ­ poЕ™adovГ© ДЌГ­slo urДЌitГ©ho ДЌasu.
+TIMEVALUE		= ДЊASHODN		##	PЕ™evede ДЌas ve formД› textu na poЕ™adovГ© ДЌГ­slo.
+TODAY			= DNES			##	VrГЎtГ­ poЕ™adovГ© ДЌГ­slo dneЕЎnГ­ho data.
+WEEKDAY			= DENTГќDNE		##	PЕ™evede poЕ™adovГ© ДЌГ­slo na den v tГЅdnu.
+WEEKNUM			= WEEKNUM		##	PЕ™evede poЕ™adovГ© ДЌГ­slo na ДЌГ­slo pЕ™edstavujГ­cГ­ ДЌГ­selnou pozici tГЅdne v roce.
+WORKDAY			= WORKDAY		##	VrГЎtГ­ poЕ™adovГ© ДЌГ­slo data pЕ™ed nebo po zadanГ©m poДЌtu pracovnГ­ch dnГ­.
+YEAR			= ROK			##	PЕ™evede poЕ™adovГ© ДЌГ­slo na rok.
+YEARFRAC		= YEARFRAC		##	VrГЎtГ­ ДЌГЎst roku vyjГЎdЕ™enou zlomkem a pЕ™edstavujГ­cГ­ poДЌet celГЅch dnГ­ mezi poДЌГЎteДЌnГ­m a koncovГЅm datem.
+
+
+##
+##	Engineering functions			InЕѕenГЅrskГ© funkce (TechnickГ© funkce)
+##
+BESSELI			= BESSELI		##	VrГЎtГ­ modifikovanou Besselovu funkci In(x).
+BESSELJ			= BESSELJ		##	VrГЎtГ­ modifikovanou Besselovu funkci Jn(x).
+BESSELK			= BESSELK		##	VrГЎtГ­ modifikovanou Besselovu funkci Kn(x).
+BESSELY			= BESSELY		##	VrГЎtГ­ Besselovu funkci Yn(x).
+BIN2DEC			= BIN2DEC		##	PЕ™evede binГЎrnГ­ ДЌГ­slo na desГ­tkovГ©.
+BIN2HEX			= BIN2HEX		##	PЕ™evede binГЎrnГ­ ДЌГ­slo na ЕЎestnГЎctkovГ©.
+BIN2OCT			= BIN2OCT		##	PЕ™evede binГЎrnГ­ ДЌГ­slo na osmiДЌkovГ©.
+COMPLEX			= COMPLEX		##	PЕ™evede reГЎlnou a imaginГЎrnГ­ ДЌГЎst na komplexnГ­ ДЌГ­slo.
+CONVERT			= CONVERT		##	PЕ™evede ДЌГ­slo do jinГ©ho jednotkovГ©ho mД›rnГ©ho systГ©mu.
+DEC2BIN			= DEC2BIN		##	PЕ™evede desГ­tkovГ©ho ДЌГ­sla na dvojkovГ©
+DEC2HEX			= DEC2HEX		##	PЕ™evede desГ­tkovГ© ДЌГ­slo na ЕЎestnГЎctkovГ©.
+DEC2OCT			= DEC2OCT		##	PЕ™evede desГ­tkovГ© ДЌГ­slo na osmiДЌkovГ©.
+DELTA			= DELTA			##	Testuje rovnost dvou hodnot.
+ERF			= ERF			##	VrГЎtГ­ chybovou funkci.
+ERFC			= ERFC			##	VrГЎtГ­ doplЕ€kovou chybovou funkci.
+GESTEP			= GESTEP		##	Testuje, zda je ДЌГ­slo vД›tЕЎГ­ neЕѕ meznГ­ hodnota.
+HEX2BIN			= HEX2BIN		##	PЕ™evede ЕЎestnГЎctkovГ© ДЌГ­slo na binГЎrnГ­.
+HEX2DEC			= HEX2DEC		##	PЕ™evede ЕЎestnГЎctkovГ© ДЌГ­slo na desГ­tkovГ©.
+HEX2OCT			= HEX2OCT		##	PЕ™evede ЕЎestnГЎctkovГ© ДЌГ­slo na osmiДЌkovГ©.
+IMABS			= IMABS			##	VrГЎtГ­ absolutnГ­ hodnotu (modul) komplexnГ­ho ДЌГ­sla.
+IMAGINARY		= IMAGINARY		##	VrГЎtГ­ imaginГЎrnГ­ ДЌГЎst komplexnГ­ho ДЌГ­sla.
+IMARGUMENT		= IMARGUMENT		##	VrГЎtГ­ argument thГ©ta, Гєhel vyjГЎdЕ™enГЅ v radiГЎnech.
+IMCONJUGATE		= IMCONJUGATE		##	VrГЎtГ­ komplexnД› sdruЕѕenГ© ДЌГ­slo ke komplexnГ­mu ДЌГ­slu.
+IMCOS			= IMCOS			##	VrГЎtГ­ kosinus komplexnГ­ho ДЌГ­sla.
+IMDIV			= IMDIV			##	VrГЎtГ­ podГ­l dvou komplexnГ­ch ДЌГ­sel.
+IMEXP			= IMEXP			##	VrГЎtГ­ exponenciГЎlnГ­ tvar komplexnГ­ho ДЌГ­sla.
+IMLN			= IMLN			##	VrГЎtГ­ pЕ™irozenГЅ logaritmus komplexnГ­ho ДЌГ­sla.
+IMLOG10			= IMLOG10		##	VrГЎtГ­ dekadickГЅ logaritmus komplexnГ­ho ДЌГ­sla.
+IMLOG2			= IMLOG2		##	VrГЎtГ­ logaritmus komplexnГ­ho ДЌГ­sla pЕ™i zГЎkladu 2.
+IMPOWER			= IMPOWER		##	VrГЎtГ­ komplexnГ­ ДЌГ­slo umocnД›nГ© na celГ© ДЌГ­slo.
+IMPRODUCT		= IMPRODUCT		##	VrГЎtГ­ souДЌin komplexnГ­ch ДЌГ­sel.
+IMREAL			= IMREAL		##	VrГЎtГ­ reГЎlnou ДЌГЎst komplexnГ­ho ДЌГ­sla.
+IMSIN			= IMSIN			##	VrГЎtГ­ sinus komplexnГ­ho ДЌГ­sla.
+IMSQRT			= IMSQRT		##	VrГЎtГ­ druhou odmocninu komplexnГ­ho ДЌГ­sla.
+IMSUB			= IMSUB			##	VrГЎtГ­ rozdГ­l mezi dvД›ma komplexnГ­mi ДЌГ­sly.
+IMSUM			= IMSUM			##	VrГЎtГ­ souДЌet dvou komplexnГ­ch ДЌГ­sel.
+OCT2BIN			= OCT2BIN		##	PЕ™evede osmiДЌkovГ© ДЌГ­slo na binГЎrnГ­.
+OCT2DEC			= OCT2DEC		##	PЕ™evede osmiДЌkovГ© ДЌГ­slo na desГ­tkovГ©.
+OCT2HEX			= OCT2HEX		##	PЕ™evede osmiДЌkovГ© ДЌГ­slo na ЕЎestnГЎctkovГ©.
+
+
+##
+##	Financial functions			FinanДЌnГ­ funkce
+##
+ACCRINT			= ACCRINT		##	VrГЎtГ­ nahromadД›nГЅ Гєrok z cennГ©ho papГ­ru, ze kterГ©ho je Гєrok placen v pravidelnГЅch termГ­nech.
+ACCRINTM		= ACCRINTM		##	VrГЎtГ­ nahromadД›nГЅ Гєrok z cennГ©ho papГ­ru, ze kterГ©ho je Гєrok placen k datu splatnosti.
+AMORDEGRC		= AMORDEGRC		##	VrГЎtГ­ lineГЎrnГ­ amortizaci v kaЕѕdГ©m ГєДЌetnГ­m obdobГ­ pomocГ­ koeficientu amortizace.
+AMORLINC		= AMORLINC		##	VrГЎtГ­ lineГЎrnГ­ amortizaci v kaЕѕdГ©m ГєДЌetnГ­m obdobГ­.
+COUPDAYBS		= COUPDAYBS		##	VrГЎtГ­ poДЌet dnЕЇ od zaДЌГЎtku obdobГ­ placenГ­ kupГіnЕЇ do data splatnosti.
+COUPDAYS		= COUPDAYS		##	VrГЎtГ­ poДЌet dnЕЇ v obdobГ­ placenГ­ kupГіnЕЇ, kterГ© obsahuje den zГєДЌtovГЎnГ­.
+COUPDAYSNC		= COUPDAYSNC		##	VrГЎtГ­ poДЌet dnЕЇ od data zГєДЌtovГЎnГ­ do nГЎsledujГ­cГ­ho data placenГ­ kupГіnu.
+COUPNCD			= COUPNCD		##	VrГЎtГ­ nГЎsledujГ­cГ­ datum placenГ­ kupГіnu po datu zГєДЌtovГЎnГ­.
+COUPNUM			= COUPNUM		##	VrГЎtГ­ poДЌet kupГіnЕЇ splatnГЅch mezi datem zГєДЌtovГЎnГ­ a datem splatnosti.
+COUPPCD			= COUPPCD		##	VrГЎtГ­ pЕ™edchozГ­ datum placenГ­ kupГіnu pЕ™ed datem zГєДЌtovГЎnГ­.
+CUMIPMT			= CUMIPMT		##	VrГЎtГ­ kumulativnГ­ Гєrok splacenГЅ mezi dvД›ma obdobГ­mi.
+CUMPRINC		= CUMPRINC		##	VrГЎtГ­ kumulativnГ­ jistinu splacenou mezi dvД›ma obdobГ­mi pЕЇjДЌky.
+DB			= ODPIS.ZRYCH		##	VrГЎtГ­ odpis aktiva za urДЌitГ© obdobГ­ pomocГ­ degresivnГ­ metody odpisu s pevnГЅm zЕЇstatkem.
+DDB			= ODPIS.ZRYCH2		##	VrГЎtГ­ odpis aktiva za urДЌitГ© obdobГ­ pomocГ­ dvojitГ© degresivnГ­ metody odpisu nebo jinГ© metody, kterou zadГЎte.
+DISC			= DISC			##	VrГЎtГ­ diskontnГ­ sazbu cennГ©ho papГ­ru.
+DOLLARDE		= DOLLARDE		##	PЕ™evede ДЌГЎstku v korunГЎch vyjГЎdЕ™enou zlomkem na ДЌГЎstku v korunГЎch vyjГЎdЕ™enou desetinnГЅm ДЌГ­slem.
+DOLLARFR		= DOLLARFR		##	PЕ™evede ДЌГЎstku v korunГЎch vyjГЎdЕ™enou desetinnГЅm ДЌГ­slem na ДЌГЎstku v korunГЎch vyjГЎdЕ™enou zlomkem.
+DURATION		= DURATION		##	VrГЎtГ­ roДЌnГ­ dobu cennГ©ho papГ­ru s pravidelnГЅmi ГєrokovГЅmi sazbami.
+EFFECT			= EFFECT		##	VrГЎtГ­ efektivnГ­ roДЌnГ­ Гєrokovou sazbu.
+FV			= BUDHODNOTA		##	VrГЎtГ­ budoucГ­ hodnotu investice.
+FVSCHEDULE		= FVSCHEDULE		##	VrГЎtГ­ budoucГ­ hodnotu poДЌГЎteДЌnГ­ jistiny po pouЕѕitГ­ sГ©rie sazeb sloЕѕitГ©ho Гєroku.
+INTRATE			= INTRATE		##	VrГЎtГ­ Гєrokovou sazbu plnД› investovanГ©ho cennГ©ho papГ­ru.
+IPMT			= PLATBA.ГљROK		##	VrГЎtГ­ vГЅЕЎku Гєroku investice za danГ© obdobГ­.
+IRR			= MГЌRA.VГќNOSNOSTI	##	VrГЎtГ­ vnitЕ™nГ­ vГЅnosovГ© procento sГ©rie penД›ЕѕnГ­ch tokЕЇ.
+ISPMT			= ISPMT			##	VypoДЌte vГЅЕЎi Гєroku z investice zaplacenГ©ho bД›hem urДЌitГ©ho obdobГ­.
+MDURATION		= MDURATION		##	VrГЎtГ­ Macauleyho modifikovanou dobu cennГ©ho papГ­ru o nominГЎlnГ­ hodnotД› 100 KДЌ.
+MIRR			= MOD.MГЌRA.VГќNOSNOSTI	##	VrГЎtГ­ vnitЕ™nГ­ sazbu vГЅnosu, pЕ™iДЌemЕѕ kladnГ© a zГЎpornГ© hodnoty penД›ЕѕnГ­ch prostЕ™edkЕЇ jsou financovГЎny podle rЕЇznГЅch sazeb.
+NOMINAL			= NOMINAL		##	VrГЎtГ­ nominГЎlnГ­ roДЌnГ­ Гєrokovou sazbu.
+NPER			= POДЊET.OBDOBГЌ		##	VrГЎtГ­ poДЌet obdobГ­ pro investici.
+NPV			= ДЊISTГЃ.SOUДЊHODNOTA	##	VrГЎtГ­ ДЌistou souДЌasnou hodnotu investice vypoДЌГ­tanou na zГЎkladД› sГ©rie pravidelnГЅch penД›ЕѕnГ­ch tokЕЇ a diskontnГ­ sazby.
+ODDFPRICE		= ODDFPRICE		##	VrГЎtГ­ cenu cennГ©ho papГ­ru o nominГЎlnГ­ hodnotД› 100 KДЌ s odliЕЎnГЅm prvnГ­m obdobГ­m.
+ODDFYIELD		= ODDFYIELD		##	VrГЎtГ­ vГЅnos cennГ©ho papГ­ru s odliЕЎnГЅm prvnГ­m obdobГ­m.
+ODDLPRICE		= ODDLPRICE		##	VrГЎtГ­ cenu cennГ©ho papГ­ru o nominГЎlnГ­ hodnotД› 100 KДЌ s odliЕЎnГЅm poslednГ­m obdobГ­m.
+ODDLYIELD		= ODDLYIELD		##	VrГЎtГ­ vГЅnos cennГ©ho papГ­ru s odliЕЎnГЅm poslednГ­m obdobГ­m.
+PMT			= PLATBA		##	VrГЎtГ­ hodnotu pravidelnГ© splГЎtky anuity.
+PPMT			= PLATBA.ZГЃKLAD		##	VrГЎtГ­ hodnotu splГЎtky jistiny pro zadanou investici za danГ© obdobГ­.
+PRICE			= PRICE			##	VrГЎtГ­ cenu cennГ©ho papГ­ru o nominГЎlnГ­ hodnotД› 100 KДЌ, ze kterГ©ho je Гєrok placen v pravidelnГЅch termГ­nech.
+PRICEDISC		= PRICEDISC		##	VrГЎtГ­ cenu diskontnГ­ho cennГ©ho papГ­ru o nominГЎlnГ­ hodnotД› 100 KДЌ.
+PRICEMAT		= PRICEMAT		##	VrГЎtГ­ cenu cennГ©ho papГ­ru o nominГЎlnГ­ hodnotД› 100 KДЌ, ze kterГ©ho je Гєrok placen k datu splatnosti.
+PV			= SOUДЊHODNOTA		##	VrГЎtГ­ souДЌasnou hodnotu investice.
+RATE			= ГљROKOVГЃ.MГЌRA		##	VrГЎtГ­ Гєrokovou sazbu vztaЕѕenou na obdobГ­ anuity.
+RECEIVED		= RECEIVED		##	VrГЎtГ­ ДЌГЎstku obdrЕѕenou k datu splatnosti plnД› investovanГ©ho cennГ©ho papГ­ru.
+SLN			= ODPIS.LIN		##	VrГЎtГ­ pЕ™Г­mГ© odpisy aktiva pro jedno obdobГ­.
+SYD			= ODPIS.NELIN		##	VrГЎtГ­ smД›rnГ© ДЌГ­slo roДЌnГ­ch odpisЕЇ aktiva pro zadanГ© obdobГ­.
+TBILLEQ			= TBILLEQ		##	VrГЎtГ­ vГЅnos smД›nky stГЎtnГ­ pokladny ekvivalentnГ­ vГЅnosu obligace.
+TBILLPRICE		= TBILLPRICE		##	VrГЎtГ­ cenu smД›nky stГЎtnГ­ pokladny o nominГЎlnГ­ hodnotД› 100 KДЌ.
+TBILLYIELD		= TBILLYIELD		##	VrГЎtГ­ vГЅnos smД›nky stГЎtnГ­ pokladny.
+VDB			= ODPIS.ZA.INT		##	VrГЎtГ­ odpis aktiva pro urДЌitГ© obdobГ­ nebo ДЌГЎst obdobГ­ pomocГ­ degresivnГ­ metody odpisu.
+XIRR			= XIRR			##	VrГЎtГ­ vnitЕ™nГ­ vГЅnosnost pro harmonogram penД›ЕѕnГ­ch tokЕЇ, kterГЅ nemusГ­ bГЅt nutnД› periodickГЅ.
+XNPV			= XNPV			##	VrГЎtГ­ ДЌistou souДЌasnou hodnotu pro harmonogram penД›ЕѕnГ­ch tokЕЇ, kterГЅ nemusГ­ bГЅt nutnД› periodickГЅ.
+YIELD			= YIELD			##	VrГЎtГ­ vГЅnos cennГ©ho papГ­ru, ze kterГ©ho je Гєrok placen v pravidelnГЅch termГ­nech.
+YIELDDISC		= YIELDDISC		##	VrГЎtГ­ roДЌnГ­ vГЅnos diskontnГ­ho cennГ©ho papГ­ru, napЕ™Г­klad smД›nky stГЎtnГ­ pokladny.
+YIELDMAT		= YIELDMAT		##	VrГЎtГ­ roДЌnГ­ vГЅnos cennГ©ho papГ­ru, ze kterГ©ho je Гєrok placen k datu splatnosti.
+
+
+##
+##	Information functions			InformaДЌnГ­ funkce
+##
+CELL			= POLГЌДЊKO		##	VrГЎtГ­ informace o formГЎtovГЎnГ­, umГ­stД›nГ­ nebo obsahu buЕ€ky.
+ERROR.TYPE		= CHYBA.TYP		##	VrГЎtГ­ ДЌГ­slo odpovГ­dajГ­cГ­ typu chyby.
+INFO			= O.PROSTЕ�EDГЌ		##	VrГЎtГ­ informace o aktuГЎlnГ­m pracovnГ­m prostЕ™edГ­.
+ISBLANK			= JE.PRГЃZDNГ‰		##	VrГЎtГ­ hodnotu PRAVDA, pokud se argument hodnota odkazuje na prГЎzdnou buЕ€ku.
+ISERR			= JE.CHYBA		##	VrГЎtГ­ hodnotu PRAVDA, pokud je argument hodnota libovolnГЎ chybovГЎ hodnota (kromД› #N/A).
+ISERROR			= JE.CHYBHODN		##	VrГЎtГ­ hodnotu PRAVDA, pokud je argument hodnota libovolnГЎ chybovГЎ hodnota.
+ISEVEN			= ISEVEN		##	VrГЎtГ­ hodnotu PRAVDA, pokud je ДЌГ­slo sudГ©.
+ISLOGICAL		= JE.LOGHODN		##	VrГЎtГ­ hodnotu PRAVDA, pokud je argument hodnota logickГЎ hodnota.
+ISNA			= JE.NEDEF		##	VrГЎtГ­ hodnotu PRAVDA, pokud je argument hodnota chybovГЎ hodnota #N/A.
+ISNONTEXT		= JE.NETEXT		##	VrГЎtГ­ hodnotu PRAVDA, pokud argument hodnota nenГ­ text.
+ISNUMBER		= JE.ДЊГЌSLO		##	VrГЎtГ­ hodnotu PRAVDA, pokud je argument hodnota ДЌГ­slo.
+ISODD			= ISODD			##	VrГЎtГ­ hodnotu PRAVDA, pokud je ДЌГ­slo lichГ©.
+ISREF			= JE.ODKAZ		##	VrГЎtГ­ hodnotu PRAVDA, pokud je argument hodnota odkaz.
+ISTEXT			= JE.TEXT		##	VrГЎtГ­ hodnotu PRAVDA, pokud je argument hodnota text.
+N			= N			##	VrГЎtГ­ hodnotu pЕ™evedenou na ДЌГ­slo.
+NA			= NEDEF			##	VrГЎtГ­ chybovou hodnotu #N/A.
+TYPE			= TYP			##	VrГЎtГ­ ДЌГ­slo oznaДЌujГ­cГ­ datovГЅ typ hodnoty.
+
+
+##
+##	Logical functions			LogickГ© funkce
+##
+AND			= A			##	VrГЎtГ­ hodnotu PRAVDA, majГ­-li vЕЎechny argumenty hodnotu PRAVDA.
+FALSE			= NEPRAVDA		##	VrГЎtГ­ logickou hodnotu NEPRAVDA.
+IF			= KDYЕЅ			##	UrДЌГ­, kterГЅ logickГЅ test mГЎ probД›hnout.
+IFERROR			= IFERROR		##	Pokud je vzorec vyhodnocen jako chyba, vrГЎtГ­ zadanou hodnotu. V opaДЌnГ©m pЕ™Г­padД› vrГЎtГ­ vГЅsledek vzorce.
+NOT			= NE			##	Provede logickou negaci argumentu funkce.
+OR			= NEBO			##	VrГЎtГ­ hodnotu PRAVDA, je-li alespoЕ€ jeden argument roven hodnotД› PRAVDA.
+TRUE			= PRAVDA		##	VrГЎtГ­ logickou hodnotu PRAVDA.
+
+
+##
+##	Lookup and reference functions		VyhledГЎvacГ­ funkce
+##
+ADDRESS			= ODKAZ			##	VrГЎtГ­ textovГЅ odkaz na jednu buЕ€ku listu.
+AREAS			= POДЊET.BLOKЕ®		##	VrГЎtГ­ poДЌet oblastГ­ v odkazu.
+CHOOSE			= ZVOLIT		##	ZvolГ­ hodnotu ze seznamu hodnot.
+COLUMN			= SLOUPEC		##	VrГЎtГ­ ДЌГ­slo sloupce odkazu.
+COLUMNS			= SLOUPCE		##	VrГЎtГ­ poДЌet sloupcЕЇ v odkazu.
+HLOOKUP			= VVYHLEDAT		##	ProhledГЎ hornГ­ Е™ГЎdek matice a vrГЎtГ­ hodnotu urДЌenГ© buЕ€ky.
+HYPERLINK		= HYPERTEXTOVГќ.ODKAZ	##	VytvoЕ™Г­ zГЎstupce nebo odkaz, kterГЅ otevЕ™e dokument uloЕѕenГЅ na sГ­ЕҐovГ©m serveru, v sГ­ti intranet nebo Internet.
+INDEX			= INDEX			##	PomocГ­ rejstЕ™Г­ku zvolГ­ hodnotu z odkazu nebo matice.
+INDIRECT		= NEPЕ�ГЌMГќ.ODKAZ		##	VrГЎtГ­ odkaz urДЌenГЅ textovou hodnotou.
+LOOKUP			= VYHLEDAT		##	VyhledГЎ hodnoty ve vektoru nebo matici.
+MATCH			= POZVYHLEDAT		##	VyhledГЎ hodnoty v odkazu nebo matici.
+OFFSET			= POSUN			##	VrГЎtГ­ posun odkazu od zadanГ©ho odkazu.
+ROW			= Е�ГЃDEK			##	VrГЎtГ­ ДЌГ­slo Е™ГЎdku odkazu.
+ROWS			= Е�ГЃDKY			##	VrГЎtГ­ poДЌet Е™ГЎdkЕЇ v odkazu.
+RTD			= RTD			##	NaДЌte data reГЎlnГ©ho ДЌasu z programu, kterГЅ podporuje automatizaci modelu COM (Automatizace: ZpЕЇsob prГЎce s objekty urДЌitГ© aplikace z jinГ© aplikace nebo nГЎstroje pro vГЅvoj. Automatizace (dЕ™Г­ve nazГЅvanГЎ automatizace OLE) je poДЌГ­taДЌovГЅm standardem a je funkcГ­ modelu COM (Component Object Model).).
+TRANSPOSE		= TRANSPOZICE		##	VrГЎtГ­ transponovanou matici.
+VLOOKUP			= SVYHLEDAT		##	ProhledГЎ prvnГ­ sloupec matice, pЕ™esune kurzor v Е™ГЎdku a vrГЎtГ­ hodnotu buЕ€ky.
+
+
+##
+##	Math and trigonometry functions		MatematickГ© a trigonometrickГ© funkce
+##
+ABS			= ABS			##	VrГЎtГ­ absolutnГ­ hodnotu ДЌГ­sla.
+ACOS			= ARCCOS		##	VrГЎtГ­ arkuskosinus ДЌГ­sla.
+ACOSH			= ARCCOSH		##	VrГЎtГ­ hyperbolickГЅ arkuskosinus ДЌГ­sla.
+ASIN			= ARCSIN		##	VrГЎtГ­ arkussinus ДЌГ­sla.
+ASINH			= ARCSINH		##	VrГЎtГ­ hyperbolickГЅ arkussinus ДЌГ­sla.
+ATAN			= ARCTG			##	VrГЎtГ­ arkustangens ДЌГ­sla.
+ATAN2			= ARCTG2		##	VrГЎtГ­ arkustangens x-ovГ© a y-ovГ© souЕ™adnice.
+ATANH			= ARCTGH		##	VrГЎtГ­ hyperbolickГЅ arkustangens ДЌГ­sla.
+CEILING			= ZAOKR.NAHORU		##	ZaokrouhlГ­ ДЌГ­slo na nejbliЕѕЕЎГ­ celГ© ДЌГ­slo nebo na nejbliЕѕЕЎГ­ nГЎsobek zadanГ© hodnoty.
+COMBIN			= KOMBINACE		##	VrГЎtГ­ poДЌet kombinacГ­ pro danГЅ poДЌet poloЕѕek.
+COS			= COS			##	VrГЎtГ­ kosinus ДЌГ­sla.
+COSH			= COSH			##	VrГЎtГ­ hyperbolickГЅ kosinus ДЌГ­sla.
+DEGREES			= DEGREES		##	PЕ™evede radiГЎny na stupnД›.
+EVEN			= ZAOKROUHLIT.NA.SUDГ‰	##	ZaokrouhlГ­ ДЌГ­slo nahoru na nejbliЕѕЕЎГ­ celГ© sudГ© ДЌГ­slo.
+EXP			= EXP			##	VrГЎtГ­ zГЎklad pЕ™irozenГ©ho logaritmu e umocnД›nГЅ na zadanГ© ДЌГ­slo.
+FACT			= FAKTORIГЃL		##	VrГЎtГ­ faktoriГЎl ДЌГ­sla.
+FACTDOUBLE		= FACTDOUBLE		##	VrГЎtГ­ dvojitГЅ faktoriГЎl ДЌГ­sla.
+FLOOR			= ZAOKR.DOLЕ®		##	ZaokrouhlГ­ ДЌГ­slo dolЕЇ, smД›rem k nule.
+GCD			= GCD			##	VrГЎtГ­ nejvД›tЕЎГ­ spoleДЌnГЅ dД›litel.
+INT			= CELГЃ.ДЊГЃST		##	ZaokrouhlГ­ ДЌГ­slo dolЕЇ na nejbliЕѕЕЎГ­ celГ© ДЌГ­slo.
+LCM			= LCM			##	VrГЎtГ­ nejmenЕЎГ­ spoleДЌnГЅ nГЎsobek.
+LN			= LN			##	VrГЎtГ­ pЕ™irozenГЅ logaritmus ДЌГ­sla.
+LOG			= LOGZ			##	VrГЎtГ­ logaritmus ДЌГ­sla pЕ™i zadanГ©m zГЎkladu.
+LOG10			= LOG			##	VrГЎtГ­ dekadickГЅ logaritmus ДЌГ­sla.
+MDETERM			= DETERMINANT		##	VrГЎtГ­ determinant matice.
+MINVERSE		= INVERZE		##	VrГЎtГ­ inverznГ­ matici.
+MMULT			= SOUДЊIN.MATIC		##	VrГЎtГ­ souДЌin dvou matic.
+MOD			= MOD			##	VrГЎtГ­ zbytek po dД›lenГ­.
+MROUND			= MROUND		##	VrГЎtГ­ ДЌГ­slo zaokrouhlenГ© na poЕѕadovanГЅ nГЎsobek.
+MULTINOMIAL		= MULTINOMIAL		##	VrГЎtГ­ mnohoДЌlen z mnoЕѕiny ДЌГ­sel.
+ODD			= ZAOKROUHLIT.NA.LICHГ‰	##	ZaokrouhlГ­ ДЌГ­slo nahoru na nejbliЕѕЕЎГ­ celГ© lichГ© ДЌГ­slo.
+PI			= PI			##	VrГЎtГ­ hodnotu ДЌГ­sla pГ­.
+POWER			= POWER			##	UmocnГ­ ДЌГ­slo na zadanou mocninu.
+PRODUCT			= SOUДЊIN		##	VynГЎsobГ­ argumenty funkce.
+QUOTIENT		= QUOTIENT		##	VrГЎtГ­ celou ДЌГЎst dД›lenГ­.
+RADIANS			= RADIANS		##	PЕ™evede stupnД› na radiГЎny.
+RAND			= NГЃHДЊГЌSLO		##	VrГЎtГ­ nГЎhodnГ© ДЌГ­slo mezi 0 a 1.
+RANDBETWEEN		= RANDBETWEEN		##	VrГЎtГ­ nГЎhodnГ© ДЌГ­slo mezi zadanГЅmi ДЌГ­sly.
+ROMAN			= ROMAN			##	PЕ™evede arabskou ДЌГ­slici na Е™Г­mskou ve formГЎtu textu.
+ROUND			= ZAOKROUHLIT		##	ZaokrouhlГ­ ДЌГ­slo na zadanГЅ poДЌet ДЌГ­slic.
+ROUNDDOWN		= ROUNDDOWN		##	ZaokrouhlГ­ ДЌГ­slo dolЕЇ, smД›rem k nule.
+ROUNDUP			= ROUNDUP		##	ZaokrouhlГ­ ДЌГ­slo nahoru, smД›rem od nuly.
+SERIESSUM		= SERIESSUM		##	VrГЎtГ­ souДЌet mocninnГ© Е™ady urДЌenГ© podle vzorce.
+SIGN			= SIGN			##	VrГЎtГ­ znamГ©nko ДЌГ­sla.
+SIN			= SIN			##	VrГЎtГ­ sinus danГ©ho Гєhlu.
+SINH			= SINH			##	VrГЎtГ­ hyperbolickГЅ sinus ДЌГ­sla.
+SQRT			= ODMOCNINA		##	VrГЎtГ­ kladnou druhou odmocninu.
+SQRTPI			= SQRTPI		##	VrГЎtГ­ druhou odmocninu vГЅrazu (ДЌГ­slo * pГ­).
+SUBTOTAL		= SUBTOTAL		##	VrГЎtГ­ souhrn v seznamu nebo databГЎzi.
+SUM			= SUMA			##	SeДЌte argumenty funkce.
+SUMIF			= SUMIF			##	SeДЌte buЕ€ky vybranГ© podle zadanГЅch kritГ©riГ­.
+SUMIFS			= SUMIFS		##	SeДЌte buЕ€ky urДЌenГ© vГ­ce zadanГЅmi podmГ­nkami.
+SUMPRODUCT		= SOUДЊIN.SKALГЃRNГЌ	##	VrГЎtГ­ souДЌet souДЌinЕЇ odpovГ­dajГ­cГ­ch prvkЕЇ matic.
+SUMSQ			= SUMA.ДЊTVERCЕ®		##	VrГЎtГ­ souДЌet ДЌtvercЕЇ argumentЕЇ.
+SUMX2MY2		= SUMX2MY2		##	VrГЎtГ­ souДЌet rozdГ­lu ДЌtvercЕЇ odpovГ­dajГ­cГ­ch hodnot ve dvou maticГ­ch.
+SUMX2PY2		= SUMX2PY2		##	VrГЎtГ­ souДЌet souДЌtu ДЌtvercЕЇ odpovГ­dajГ­cГ­ch hodnot ve dvou maticГ­ch.
+SUMXMY2			= SUMXMY2		##	VrГЎtГ­ souДЌet ДЌtvercЕЇ rozdГ­lЕЇ odpovГ­dajГ­cГ­ch hodnot ve dvou maticГ­ch.
+TAN			= TGTG			##	VrГЎtГ­ tangens ДЌГ­sla.
+TANH			= TGH			##	VrГЎtГ­ hyperbolickГЅ tangens ДЌГ­sla.
+TRUNC			= USEKNOUT		##	ZkrГЎtГ­ ДЌГ­slo na celГ© ДЌГ­slo.
+
+
+##
+##	Statistical functions			StatistickГ© funkce
+##
+AVEDEV			= PRЕ®MODCHYLKA		##	VrГЎtГ­ prЕЇmД›rnou hodnotu absolutnГ­ch odchylek datovГЅch bodЕЇ od jejich stЕ™ednГ­ hodnoty.
+AVERAGE			= PRЕ®MДљR		##	VrГЎtГ­ prЕЇmД›rnou hodnotu argumentЕЇ.
+AVERAGEA		= AVERAGEA		##	VrГЎtГ­ prЕЇmД›rnou hodnotu argumentЕЇ vДЌetnД› ДЌГ­sel, textu a logickГЅch hodnot.
+AVERAGEIF		= AVERAGEIF		##	VrГЎtГ­ prЕЇmД›rnou hodnotu (aritmetickГЅ prЕЇmД›r) vЕЎech bunД›k v oblasti, kterГ© vyhovujГ­ pЕ™Г­sluЕЎnГ© podmГ­nce.
+AVERAGEIFS		= AVERAGEIFS		##	VrГЎtГ­ prЕЇmД›rnou hodnotu (aritmetickГЅ prЕЇmД›r) vЕЎech bunД›k vyhovujГ­cГ­ch nД›kolika podmГ­nkГЎm.
+BETADIST		= BETADIST		##	VrГЎtГ­ hodnotu souДЌtovГ©ho rozdД›lenГ­ beta.
+BETAINV			= BETAINV		##	VrГЎtГ­ inverznГ­ hodnotu souДЌtovГ©ho rozdД›lenГ­ pro zadanГ© rozdД›lenГ­ beta.
+BINOMDIST		= BINOMDIST		##	VrГЎtГ­ hodnotu binomickГ©ho rozdД›lenГ­ pravdД›podobnosti jednotlivГЅch veliДЌin.
+CHIDIST			= CHIDIST		##	VrГЎtГ­ jednostrannou pravdД›podobnost rozdД›lenГ­ chГ­-kvadrГЎt.
+CHIINV			= CHIINV		##	VrГЎtГ­ hodnotu funkce inverznГ­ k distribuДЌnГ­ funkci jednostrannГ© pravdД›podobnosti rozdД›lenГ­ chГ­-kvadrГЎt.
+CHITEST			= CHITEST		##	VrГЎtГ­ test nezГЎvislosti.
+CONFIDENCE		= CONFIDENCE		##	VrГЎtГ­ interval spolehlivosti pro stЕ™ednГ­ hodnotu zГЎkladnГ­ho souboru.
+CORREL			= CORREL		##	VrГЎtГ­ korelaДЌnГ­ koeficient mezi dvД›ma mnoЕѕinami dat.
+COUNT			= POДЊET			##	VrГЎtГ­ poДЌet ДЌГ­sel v seznamu argumentЕЇ.
+COUNTA			= POДЊET2		##	VrГЎtГ­ poДЌet hodnot v seznamu argumentЕЇ.
+COUNTBLANK		= COUNTBLANK		##	SpoДЌГ­tГЎ poДЌet prГЎzdnГЅch bunД›k v oblasti.
+COUNTIF			= COUNTIF		##	SpoДЌГ­tГЎ buЕ€ky v oblasti, kterГ© odpovГ­dajГ­ zadanГЅm kritГ©riГ­m.
+COUNTIFS		= COUNTIFS		##	SpoДЌГ­tГЎ buЕ€ky v oblasti, kterГ© odpovГ­dajГ­ vГ­ce kritГ©riГ­m.
+COVAR			= COVAR			##	VrГЎtГ­ hodnotu kovariance, prЕЇmД›rnou hodnotu souДЌinЕЇ pГЎrovГЅch odchylek
+CRITBINOM		= CRITBINOM		##	VrГЎtГ­ nejmenЕЎГ­ hodnotu, pro kterou mГЎ souДЌtovГ© binomickГ© rozdД›lenГ­ hodnotu vД›tЕЎГ­ nebo rovnu hodnotД› kritГ©ria.
+DEVSQ			= DEVSQ			##	VrГЎtГ­ souДЌet ДЌtvercЕЇ odchylek.
+EXPONDIST		= EXPONDIST		##	VrГЎtГ­ hodnotu exponenciГЎlnГ­ho rozdД›lenГ­.
+FDIST			= FDIST			##	VrГЎtГ­ hodnotu rozdД›lenГ­ pravdД›podobnosti F.
+FINV			= FINV			##	VrГЎtГ­ hodnotu inverznГ­ funkce k distribuДЌnГ­ funkci rozdД›lenГ­ F.
+FISHER			= FISHER		##	VrГЎtГ­ hodnotu Fisherovy transformace.
+FISHERINV		= FISHERINV		##	VrГЎtГ­ hodnotu inverznГ­ funkce k FisherovД› transformaci.
+FORECAST		= FORECAST		##	VrГЎtГ­ hodnotu lineГЎrnГ­ho trendu.
+FREQUENCY		= ДЊETNOSTI		##	VrГЎtГ­ ДЌetnost rozdД›lenГ­ jako svislou matici.
+FTEST			= FTEST			##	VrГЎtГ­ vГЅsledek F-testu.
+GAMMADIST		= GAMMADIST		##	VrГЎtГ­ hodnotu rozdД›lenГ­ gama.
+GAMMAINV		= GAMMAINV		##	VrГЎtГ­ hodnotu inverznГ­ funkce k distribuДЌnГ­ funkci souДЌtovГ©ho rozdД›lenГ­ gama.
+GAMMALN			= GAMMALN		##	VrГЎtГ­ pЕ™irozenГЅ logaritmus funkce gama, О“(x).
+GEOMEAN			= GEOMEAN		##	VrГЎtГ­ geometrickГЅ prЕЇmД›r.
+GROWTH			= LOGLINTREND		##	VrГЎtГ­ hodnoty exponenciГЎlnГ­ho trendu.
+HARMEAN			= HARMEAN		##	VrГЎtГ­ harmonickГЅ prЕЇmД›r.
+HYPGEOMDIST		= HYPGEOMDIST		##	VrГЎtГ­ hodnotu hypergeometrickГ©ho rozdД›lenГ­.
+INTERCEPT		= INTERCEPT		##	VrГЎtГ­ Гєsek lineГЎrnГ­ regresnГ­ ДЌГЎry.
+KURT			= KURT			##	VrГЎtГ­ hodnotu excesu mnoЕѕiny dat.
+LARGE			= LARGE			##	VrГЎtГ­ k-tou nejvД›tЕЎГ­ hodnotu mnoЕѕiny dat.
+LINEST			= LINREGRESE		##	VrГЎtГ­ parametry lineГЎrnГ­ho trendu.
+LOGEST			= LOGLINREGRESE		##	VrГЎtГ­ parametry exponenciГЎlnГ­ho trendu.
+LOGINV			= LOGINV		##	VrГЎtГ­ inverznГ­ funkci k distribuДЌnГ­ funkci logaritmicko-normГЎlnГ­ho rozdД›lenГ­.
+LOGNORMDIST		= LOGNORMDIST		##	VrГЎtГ­ hodnotu souДЌtovГ©ho logaritmicko-normГЎlnГ­ho rozdД›lenГ­.
+MAX			= MAX			##	VrГЎtГ­ maximГЎlnГ­ hodnotu seznamu argumentЕЇ.
+MAXA			= MAXA			##	VrГЎtГ­ maximГЎlnГ­ hodnotu seznamu argumentЕЇ vДЌetnД› ДЌГ­sel, textu a logickГЅch hodnot.
+MEDIAN			= MEDIAN		##	VrГЎtГ­ stЕ™ednГ­ hodnotu zadanГЅch ДЌГ­sel.
+MIN			= MIN			##	VrГЎtГ­ minimГЎlnГ­ hodnotu seznamu argumentЕЇ.
+MINA			= MINA			##	VrГЎtГ­ nejmenЕЎГ­ hodnotu v seznamu argumentЕЇ vДЌetnД› ДЌГ­sel, textu a logickГЅch hodnot.
+MODE			= MODE			##	VrГЎtГ­ hodnotu, kterГЎ se v mnoЕѕinД› dat vyskytuje nejДЌastД›ji.
+NEGBINOMDIST		= NEGBINOMDIST		##	VrГЎtГ­ hodnotu negativnГ­ho binomickГ©ho rozdД›lenГ­.
+NORMDIST		= NORMDIST		##	VrГЎtГ­ hodnotu normГЎlnГ­ho souДЌtovГ©ho rozdД›lenГ­.
+NORMINV			= NORMINV		##	VrГЎtГ­ inverznГ­ funkci k funkci normГЎlnГ­ho souДЌtovГ©ho rozdД›lenГ­.
+NORMSDIST		= NORMSDIST		##	VrГЎtГ­ hodnotu standardnГ­ho normГЎlnГ­ho souДЌtovГ©ho rozdД›lenГ­.
+NORMSINV		= NORMSINV		##	VrГЎtГ­ inverznГ­ funkci k funkci standardnГ­ho normГЎlnГ­ho souДЌtovГ©ho rozdД›lenГ­.
+PEARSON			= PEARSON		##	VrГЎtГ­ PearsonЕЇv vГЅslednГЅ momentovГЅ korelaДЌnГ­ koeficient.
+PERCENTILE		= PERCENTIL		##	VrГЎtГ­ hodnotu k-tГ©ho percentilu hodnot v oblasti.
+PERCENTRANK		= PERCENTRANK		##	VrГЎtГ­ poЕ™adГ­ hodnoty v mnoЕѕinД› dat vyjГЎdЕ™enГ© procentuГЎlnГ­ ДЌГЎstГ­ mnoЕѕiny dat.
+PERMUT			= PERMUTACE		##	VrГЎtГ­ poДЌet permutacГ­ pro zadanГЅ poДЌet objektЕЇ.
+POISSON			= POISSON		##	VrГЎtГ­ hodnotu distribuДЌnГ­ funkce Poissonova rozdД›lenГ­.
+PROB			= PROB			##	VrГЎtГ­ pravdД›podobnost vГЅskytu hodnot v oblasti mezi dvД›ma meznГ­mi hodnotami.
+QUARTILE		= QUARTIL		##	VrГЎtГ­ hodnotu kvartilu mnoЕѕiny dat.
+RANK			= RANK			##	VrГЎtГ­ poЕ™adГ­ ДЌГ­sla v seznamu ДЌГ­sel.
+RSQ			= RKQ			##	VrГЎtГ­ druhou mocninu Pearsonova vГЅslednГ©ho momentovГ©ho korelaДЌnГ­ho koeficientu.
+SKEW			= SKEW			##	VrГЎtГ­ zeЕЎikmenГ­ rozdД›lenГ­.
+SLOPE			= SLOPE			##	VrГЎtГ­ smД›rnici lineГЎrnГ­ regresnГ­ ДЌГЎry.
+SMALL			= SMALL			##	VrГЎtГ­ k-tou nejmenЕЎГ­ hodnotu mnoЕѕiny dat.
+STANDARDIZE		= STANDARDIZE		##	VrГЎtГ­ normalizovanou hodnotu.
+STDEV			= SMODCH.VГќBДљR		##	VypoДЌte smД›rodatnou odchylku vГЅbД›ru.
+STDEVA			= STDEVA		##	VypoДЌte smД›rodatnou odchylku vГЅbД›ru vДЌetnД› ДЌГ­sel, textu a logickГЅch hodnot.
+STDEVP			= SMODCH		##	VypoДЌte smД›rodatnou odchylku zГЎkladnГ­ho souboru.
+STDEVPA			= STDEVPA		##	VypoДЌte smД›rodatnou odchylku zГЎkladnГ­ho souboru vДЌetnД› ДЌГ­sel, textu a logickГЅch hodnot.
+STEYX			= STEYX			##	VrГЎtГ­ standardnГ­ chybu pЕ™edpovД›zenГ© hodnoty y pro kaЕѕdou hodnotu x v regresi.
+TDIST			= TDIST			##	VrГЎtГ­ hodnotu Studentova t-rozdД›lenГ­.
+TINV			= TINV			##	VrГЎtГ­ inverznГ­ funkci k distribuДЌnГ­ funkci Studentova t-rozdД›lenГ­.
+TREND			= LINTREND		##	VrГЎtГ­ hodnoty lineГЎrnГ­ho trendu.
+TRIMMEAN		= TRIMMEAN		##	VrГЎtГ­ stЕ™ednГ­ hodnotu vnitЕ™nГ­ ДЌГЎsti mnoЕѕiny dat.
+TTEST			= TTEST			##	VrГЎtГ­ pravdД›podobnost spojenou se StudentovГЅm t-testem.
+VAR			= VAR.VГќBДљR		##	VypoДЌte rozptyl vГЅbД›ru.
+VARA			= VARA			##	VypoДЌte rozptyl vГЅbД›ru vДЌetnД› ДЌГ­sel, textu a logickГЅch hodnot.
+VARP			= VAR			##	VypoДЌte rozptyl zГЎkladnГ­ho souboru.
+VARPA			= VARPA			##	VypoДЌte rozptyl zГЎkladnГ­ho souboru vДЌetnД› ДЌГ­sel, textu a logickГЅch hodnot.
+WEIBULL			= WEIBULL		##	VrГЎtГ­ hodnotu Weibullova rozdД›lenГ­.
+ZTEST			= ZTEST			##	VrГЎtГ­ jednostrannou P-hodnotu z-testu.
+
+
+##
+##	Text functions				TextovГ© funkce
+##
+ASC			= ASC			##	ZmД›nГ­ znaky s plnou ЕЎГ­Е™kou (dvoubajtovГ©)v Е™etД›zci znakЕЇ na znaky s poloviДЌnГ­ ЕЎГ­Е™kou (jednobajtovГ©).
+BAHTTEXT		= BAHTTEXT		##	PЕ™evede ДЌГ­slo na text ve formГЎtu, mД›ny Гџ (baht).
+CHAR			= ZNAK			##	VrГЎtГ­ znak urДЌenГЅ ДЌГ­slem kГіdu.
+CLEAN			= VYДЊISTIT		##	Odebere z textu vЕЎechny netisknutelnГ© znaky.
+CODE			= KГ“D			##	VrГЎtГ­ ДЌГ­selnГЅ kГіd prvnГ­ho znaku zadanГ©ho textovГ©ho Е™etД›zce.
+CONCATENATE		= CONCATENATE		##	SpojГ­ nД›kolik textovГЅch poloЕѕek do jednГ©.
+DOLLAR			= KДЊ			##	PЕ™evede ДЌГ­slo na text ve formГЎtu mД›ny KДЌ (ДЌeskГЎ koruna).
+EXACT			= STEJNГ‰		##	Zkontroluje, zda jsou dvД› textovГ© hodnoty shodnГ©.
+FIND			= NAJГЌT			##	Nalezne textovou hodnotu uvnitЕ™ jinГ© (rozliЕЎuje malГЎ a velkГЎ pГ­smena).
+FINDB			= FINDB			##	Nalezne textovou hodnotu uvnitЕ™ jinГ© (rozliЕЎuje malГЎ a velkГЎ pГ­smena).
+FIXED			= ZAOKROUHLIT.NA.TEXT	##	ZformГЎtuje ДЌГ­slo jako text s pevnГЅm poДЌtem desetinnГЅch mГ­st.
+JIS			= JIS			##	ZmД›nГ­ znaky s poloviДЌnГ­ ЕЎГ­Е™kou (jednobajtovГ©) v Е™etД›zci znakЕЇ na znaky s plnou ЕЎГ­Е™kou (dvoubajtovГ©).
+LEFT			= ZLEVA			##	VrГЎtГ­ prvnГ­ znaky textovГ© hodnoty umГ­stД›nГ© nejvГ­ce vlevo.
+LEFTB			= LEFTB			##	VrГЎtГ­ prvnГ­ znaky textovГ© hodnoty umГ­stД›nГ© nejvГ­ce vlevo.
+LEN			= DГ‰LKA			##	VrГЎtГ­ poДЌet znakЕЇ textovГ©ho Е™etД›zce.
+LENB			= LENB			##	VrГЎtГ­ poДЌet znakЕЇ textovГ©ho Е™etД›zce.
+LOWER			= MALГЃ			##	PЕ™evede text na malГЎ pГ­smena.
+MID			= ДЊГЃST			##	VrГЎtГ­ urДЌitГЅ poДЌet znakЕЇ textovГ©ho Е™etД›zce poДЌГ­naje zadanГЅm mГ­stem.
+MIDB			= MIDB			##	VrГЎtГ­ urДЌitГЅ poДЌet znakЕЇ textovГ©ho Е™etД›zce poДЌГ­naje zadanГЅm mГ­stem.
+PHONETIC		= ZVUKOVГ‰		##	Extrahuje fonetickГ© znaky (furigana) z textovГ©ho Е™etД›zce.
+PROPER			= VELKГЃ2		##	PЕ™evede prvnГ­ pГ­smeno kaЕѕdГ©ho slova textovГ© hodnoty na velkГ©.
+REPLACE			= NAHRADIT		##	NahradГ­ znaky uvnitЕ™ textu.
+REPLACEB		= NAHRADITB		##	NahradГ­ znaky uvnitЕ™ textu.
+REPT			= OPAKOVAT		##	Zopakuje text podle zadanГ©ho poДЌtu opakovГЎnГ­.
+RIGHT			= ZPRAVA		##	VrГЎtГ­ prvnГ­ znaky textovГ© hodnoty umГ­stД›nГ© nejvГ­ce vpravo.
+RIGHTB			= RIGHTB		##	VrГЎtГ­ prvnГ­ znaky textovГ© hodnoty umГ­stД›nГ© nejvГ­ce vpravo.
+SEARCH			= HLEDAT		##	Nalezne textovou hodnotu uvnitЕ™ jinГ© (malГЎ a velkГЎ pГ­smena nejsou rozliЕЎovГЎna).
+SEARCHB			= SEARCHB		##	Nalezne textovou hodnotu uvnitЕ™ jinГ© (malГЎ a velkГЎ pГ­smena nejsou rozliЕЎovГЎna).
+SUBSTITUTE		= DOSADIT		##	V textovГ©m Е™etД›zci nahradГ­ starГЅ text novГЅm.
+T			= T			##	PЕ™evede argumenty na text.
+TEXT			= HODNOTA.NA.TEXT	##	ZformГЎtuje ДЌГ­slo a pЕ™evede ho na text.
+TRIM			= PROДЊISTIT		##	OdstranГ­ z textu mezery.
+UPPER			= VELKГЃ			##	PЕ™evede text na velkГЎ pГ­smena.
+VALUE			= HODNOTA		##	PЕ™evede textovГЅ argument na ДЌГ­slo.

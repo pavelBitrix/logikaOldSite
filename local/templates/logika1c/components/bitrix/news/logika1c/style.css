@@ -1,0 +1,21 @@
+.url-back {
+   transition: .2s ease-in-out; 
+    background: #ed535a;
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    padding: 20px 40px;
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 25px;
+    border-radius: 78px;
+    font-size: 16px;
+    text-transform: lowercase;
+}
+
+.url-back:hover {
+    border-radius: 25px;
+    background: #ed535acc;
+    color: white;
+}

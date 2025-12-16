@@ -1,0 +1,1 @@
+<?php echo 'DELETE /api/v1/user/wishlist/remove'; ?>

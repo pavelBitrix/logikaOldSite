@@ -1,0 +1,8 @@
+.search-page {
+    border-radius: 12px;
+}
+
+input.form-control {
+    background: #EFF5F7;
+    height: 60px;
+}

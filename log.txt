@@ -1,0 +1,170 @@
+Host: logika1c.ru
+Date: 2022-11-16 09:02:27
+Module: 
+Запись с кодом Array изменена.
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:03:17
+Module: 
+Запись с кодом sale изменена.
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:15:42
+Module: 
+Запись с кодом Array изменена.
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:25:39
+Module: 
+Запись с кодом TEST_COUPON изменена.
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:27:29
+Module: 
+1
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:27:29
+Module: 
+1
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:27:29
+Module: 
+Y
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:27:29
+Module: 
+15.11.2022 11:02:00
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:27:29
+Module: 
+TEST_COUPON
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:27:29
+Module: 
+4
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:27:29
+Module: 
+0
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:27:29
+Module: 
+0
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:27:29
+Module: 
+0
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:27:29
+Module: 
+16.11.2022 08:45:38
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:27:29
+Module: 
+186
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:27:29
+Module: 
+16.11.2022 07:41:25
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------
+Host: logika1c.ru
+Date: 2022-11-16 09:27:29
+Module: 
+186
+    onManagerCouponAddHandler < call_user_func_array < Bitrix\Main\EventManager::sendToEventHandler < Bitrix\Main\EventManager::send < Bitrix\Main\Event::send
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:435
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/eventmanager.php:371
+	/home/l/logika1cma/public_html/bitrix/modules/main/lib/event.php:142
+	/home/l/logika1cma/public_html/bitrix/modules/sale/lib/discountcouponsmanagerbase.php:524
+----------

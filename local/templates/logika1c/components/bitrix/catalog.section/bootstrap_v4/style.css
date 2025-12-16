@@ -1,0 +1,6 @@
+.product-item-title {
+    overflow: hidden;
+    margin-bottom: 15px;
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+}

@@ -1,0 +1,31 @@
+.catalog-section-item-slider-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    width: 90% !important;
+    height: auto;
+    z-index: 10;
+    outline: 1px solid transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(-50%) translateX(-50%);
+    border-radius: 38px;
+    background-color: white;
+}
+
+.catalog-section-item-slider-image {
+	background: #dedddf !important;
+    border-radius: 38px 38px 0 0;
+}
+
+.catalog-section-item { border: none !important; }
+
+.catalog-section-item-slider-image-overlay { display: none !important; }
+
+.catalog-section-item-description {
+    padding: 12px 16px 23px 16px;
+    background: #dedddf !important;
+    border-radius: 0 0 38px 38px;
+}

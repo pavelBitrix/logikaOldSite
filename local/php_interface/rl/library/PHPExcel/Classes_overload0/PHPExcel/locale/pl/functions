@@ -1,0 +1,438 @@
+##
+## PHPExcel
+##
+## Copyright (c) 2006 - 2013 PHPExcel
+##
+## This library is free software; you can redistribute it and/or
+## modify it under the terms of the GNU Lesser General Public
+## License as published by the Free Software Foundation; either
+## version 2.1 of the License, or (at your option) any later version.
+##
+## This library is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+## Lesser General Public License for more details.
+##
+## You should have received a copy of the GNU Lesser General Public
+## License along with this library; if not, write to the Free Software
+## Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+##
+## @category   PHPExcel
+## @package    PHPExcel_Calculation
+## @copyright  Copyright (c) 2006 - 2013 PHPExcel (http://www.codeplex.com/PHPExcel)
+## @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
+## @version    ##VERSION##, ##DATE##
+##
+## Data in this file derived from http://www.piuha.fi/excel-function-name-translation/
+##
+##
+
+
+##
+##	Add-in and Automation functions			Funkcje dodatkГіw i automatyzacji
+##
+GETPIVOTDATA		= WEЕ№DANETABELI			##	Zwraca dane przechowywane w raporcie tabeli przestawnej.
+
+
+##
+##	Cube functions					Funkcje moduЕ‚Гіw
+##
+CUBEKPIMEMBER		= ELEMENT.KPI.MODUЕЃU		##	Zwraca nazwД™, wЕ‚aЕ›ciwoЕ›Д‡ i miarД™ kluczowego wskaЕєnika wydajnoЕ›ci (KPI) oraz wyЕ›wietla nazwД™ i wЕ‚aЕ›ciwoЕ›Д‡ w komГіrce. WskaЕєnik KPI jest miarД… iloЕ›ciowД…, takД… jak miesiД™czny zysk brutto lub kwartalna fluktuacja pracownikГіw, uЕјywanД… do monitorowania wydajnoЕ›ci organizacji.
+CUBEMEMBER		= ELEMENT.MODUЕЃU		##	Zwraca element lub krotkД™ z hierarchii moduЕ‚u. SЕ‚uЕјy do sprawdzania, czy element lub krotka istnieje w module.
+CUBEMEMBERPROPERTY	= WЕЃAЕљCIWOЕљД†.ELEMENTU.MODUЕЃU	##	Zwraca wartoЕ›Д‡ wЕ‚aЕ›ciwoЕ›ci elementu w module. SЕ‚uЕјy do sprawdzania, czy nazwa elementu istnieje w module, i zwracania okreЕ›lonej wЕ‚aЕ›ciwoЕ›ci dla tego elementu.
+CUBERANKEDMEMBER	= USZEREGOWANY.ELEMENT.MODUЕЃU	##	Zwraca n-ty (albo uszeregowany) element zestawu. SЕ‚uЕјy do zwracania elementu lub elementГіw zestawu, na przykЕ‚ad najlepszego sprzedawcy lub 10 najlepszych studentГіw.
+CUBESET			= ZESTAW.MODUЕЃГ“W		##	Definiuje obliczony zestaw elementГіw lub krotek, wysyЕ‚ajД…c wyraЕјenie zestawu do serwera moduЕ‚u, ktГіry tworzy zestaw i zwraca go do programu Microsoft Office Excel.
+CUBESETCOUNT		= LICZNIK.MODUЕЃГ“W.ZESTAWU	##	Zwraca liczbД™ elementГіw zestawu.
+CUBEVALUE		= WARTOЕљД†.MODUЕЃU		##	Zwraca zagregowanД… wartoЕ›Д‡ z moduЕ‚u.
+
+
+##
+##	Database functions				Funkcje baz danych
+##
+DAVERAGE		= BD.ЕљREDNIA			##	Zwraca wartoЕ›Д‡ Е›redniej wybranych wpisГіw bazy danych.
+DCOUNT			= BD.ILE.REKORDГ“W		##	Zlicza komГіrki zawierajД…ce liczby w bazie danych.
+DCOUNTA			= BD.ILE.REKORDГ“W.A		##	Zlicza niepuste komГіrki w bazie danych.
+DGET			= BD.POLE			##	WyodrД™bnia z bazy danych jeden rekord speЕ‚niajД…cy okreЕ›lone kryteria.
+DMAX			= BD.MAX			##	Zwraca wartoЕ›Д‡ maksymalnД… z wybranych wpisГіw bazy danych.
+DMIN			= BD.MIN			##	Zwraca wartoЕ›Д‡ minimalnД… z wybranych wpisГіw bazy danych.
+DPRODUCT		= BD.ILOCZYN			##	MnoЕјy wartoЕ›ci w konkretnym, speЕ‚niajД…cym kryteria polu rekordГіw bazy danych.
+DSTDEV			= BD.ODCH.STANDARD		##	Szacuje odchylenie standardowe na podstawie prГіbki z wybranych wpisГіw bazy danych.
+DSTDEVP			= BD.ODCH.STANDARD.POPUL	##	Oblicza odchylenie standardowe na podstawie caЕ‚ej populacji wybranych wpisГіw bazy danych.
+DSUM			= BD.SUMA			##	Dodaje liczby w kolumnie pГіl rekordГіw bazy danych, ktГіre speЕ‚niajД… kryteria.
+DVAR			= BD.WARIANCJA			##	Szacuje wariancjД™ na podstawie prГіbki z wybranych wpisГіw bazy danych.
+DVARP			= BD.WARIANCJA.POPUL		##	Oblicza wariancjД™ na podstawie caЕ‚ej populacji wybranych wpisГіw bazy danych.
+
+
+##
+##	Date and time functions				Funkcje dat, godzin i czasu
+##
+DATE			= DATA				##	Zwraca liczbД™ seryjnД… dla wybranej daty.
+DATEVALUE		= DATA.WARTOЕљД†			##	Konwertuje datД™ w formie tekstu na liczbД™ seryjnД….
+DAY			= DZIEЕѓ				##	Konwertuje liczbД™ seryjnД… na dzieЕ„ miesiД…ca.
+DAYS360			= DNI.360			##	Oblicza liczbД™ dni miД™dzy dwiema datami na podstawie roku 360-dniowego.
+EDATE			= UPЕЃDNI			##	Zwraca liczbД™ seryjnД… daty jako wskazanД… liczbД™ miesiД™cy przed okreЕ›lonД… datД… poczД…tkowД… lub po niej.
+EOMONTH			= EOMONTH			##	Zwraca liczbД™ seryjnД… ostatniego dnia miesiД…ca przed okreЕ›lonД… liczbД… miesiД™cy lub po niej.
+HOUR			= GODZINA			##	Konwertuje liczbД™ seryjnД… na godzinД™.
+MINUTE			= MINUTA			##	Konwertuje liczbД™ seryjnД… na minutД™.
+MONTH			= MIESIД„C			##	Konwertuje liczbД™ seryjnД… na miesiД…c.
+NETWORKDAYS		= NETWORKDAYS			##	Zwraca liczbД™ peЕ‚nych dni roboczych miД™dzy dwiema datami.
+NOW			= TERAZ				##	Zwraca liczbД™ seryjnД… bieЕјД…cej daty i godziny.
+SECOND			= SEKUNDA			##	Konwertuje liczbД™ seryjnД… na sekundД™.
+TIME			= CZAS				##	Zwraca liczbД™ seryjnД… okreЕ›lonego czasu.
+TIMEVALUE		= CZAS.WARTOЕљД†			##	Konwertuje czas w formie tekstu na liczbД™ seryjnД….
+TODAY			= DZIЕљ				##	Zwraca liczbД™ seryjnД… dla daty bieЕјД…cej.
+WEEKDAY			= DZIEЕѓ.TYG			##	Konwertuje liczbД™ seryjnД… na dzieЕ„ tygodnia.
+WEEKNUM			= WEEKNUM			##	Konwertuje liczbД™ seryjnД… na liczbД™ reprezentujД…cД… numer tygodnia w roku.
+WORKDAY			= WORKDAY			##	Zwraca liczbД™ seryjnД… dla daty przed okreЕ›lonД… liczbД… dni roboczych lub po niej.
+YEAR			= ROK				##	Konwertuje liczbД™ seryjnД… na rok.
+YEARFRAC		= YEARFRAC			##	Zwraca czД™Е›Д‡ roku reprezentowanД… przez peЕ‚nД… liczbД™ dni miД™dzy datД… poczД…tkowД… a datД… koЕ„cowД….
+
+
+##
+##	Engineering functions				Funkcje inЕјynierskie
+##
+BESSELI			= BESSELI			##	Zwraca wartoЕ›Д‡ zmodyfikowanej funkcji Bessela In(x).
+BESSELJ			= BESSELJ			##	Zwraca wartoЕ›Д‡ funkcji Bessela Jn(x).
+BESSELK			= BESSELK			##	Zwraca wartoЕ›Д‡ zmodyfikowanej funkcji Bessela Kn(x).
+BESSELY			= BESSELY			##	Zwraca wartoЕ›Д‡ funkcji Bessela Yn(x).
+BIN2DEC			= BIN2DEC			##	Konwertuje liczbД™ w postaci dwГіjkowej na liczbД™ w postaci dziesiД™tnej.
+BIN2HEX			= BIN2HEX			##	Konwertuje liczbД™ w postaci dwГіjkowej na liczbД™ w postaci szesnastkowej.
+BIN2OCT			= BIN2OCT			##	Konwertuje liczbД™ w postaci dwГіjkowej na liczbД™ w postaci Гіsemkowej.
+COMPLEX			= COMPLEX			##	Konwertuje czД™Е›Д‡ rzeczywistД… i urojonД… na liczbД™ zespolonД….
+CONVERT			= CONVERT			##	Konwertuje liczbД™ z jednego systemu miar na inny.
+DEC2BIN			= DEC2BIN			##	Konwertuje liczbД™ w postaci dziesiД™tnej na postaД‡ dwГіjkowД….
+DEC2HEX			= DEC2HEX			##	Konwertuje liczbД™ w postaci dziesiД™tnej na liczbД™ w postaci szesnastkowej.
+DEC2OCT			= DEC2OCT			##	Konwertuje liczbД™ w postaci dziesiД™tnej na liczbД™ w postaci Гіsemkowej.
+DELTA			= DELTA				##	Sprawdza, czy dwie wartoЕ›ci sД… rГіwne.
+ERF			= ERF				##	Zwraca wartoЕ›Д‡ funkcji bЕ‚Д™du.
+ERFC			= ERFC				##	Zwraca wartoЕ›Д‡ komplementarnej funkcji bЕ‚Д™du.
+GESTEP			= GESTEP			##	Sprawdza, czy liczba jest wiД™ksza niЕј wartoЕ›Д‡ progowa.
+HEX2BIN			= HEX2BIN			##	Konwertuje liczbД™ w postaci szesnastkowej na liczbД™ w postaci dwГіjkowej.
+HEX2DEC			= HEX2DEC			##	Konwertuje liczbД™ w postaci szesnastkowej na liczbД™ w postaci dziesiД™tnej.
+HEX2OCT			= HEX2OCT			##	Konwertuje liczbД™ w postaci szesnastkowej na liczbД™ w postaci Гіsemkowej.
+IMABS			= IMABS				##	Zwraca wartoЕ›Д‡ bezwzglД™dnД… (moduЕ‚) liczby zespolonej.
+IMAGINARY		= IMAGINARY			##	Zwraca wartoЕ›Д‡ czД™Е›ci urojonej liczby zespolonej.
+IMARGUMENT		= IMARGUMENT			##	Zwraca wartoЕ›Д‡ argumentu liczby zespolonej, przy czym kД…t wyraЕјony jest w radianach.
+IMCONJUGATE		= IMCONJUGATE			##	Zwraca wartoЕ›Д‡ liczby sprzД™Ејonej danej liczby zespolonej.
+IMCOS			= IMCOS				##	Zwraca wartoЕ›Д‡ cosinusa liczby zespolonej.
+IMDIV			= IMDIV				##	Zwraca wartoЕ›Д‡ ilorazu dwГіch liczb zespolonych.
+IMEXP			= IMEXP				##	Zwraca postaД‡ wykЕ‚adniczД… liczby zespolonej.
+IMLN			= IMLN				##	Zwraca wartoЕ›Д‡ logarytmu naturalnego liczby zespolonej.
+IMLOG10			= IMLOG10			##	Zwraca wartoЕ›Д‡ logarytmu dziesiД™tnego liczby zespolonej.
+IMLOG2			= IMLOG2			##	Zwraca wartoЕ›Д‡ logarytmu liczby zespolonej przy podstawie 2.
+IMPOWER			= IMPOWER			##	Zwraca wartoЕ›Д‡ liczby zespolonej podniesionej do potД™gi caЕ‚kowitej.
+IMPRODUCT		= IMPRODUCT			##	Zwraca wartoЕ›Д‡ iloczynu liczb zespolonych.
+IMREAL			= IMREAL			##	Zwraca wartoЕ›Д‡ czД™Е›ci rzeczywistej liczby zespolonej.
+IMSIN			= IMSIN				##	Zwraca wartoЕ›Д‡ sinusa liczby zespolonej.
+IMSQRT			= IMSQRT			##	Zwraca wartoЕ›Д‡ pierwiastka kwadratowego z liczby zespolonej.
+IMSUB			= IMSUB				##	Zwraca wartoЕ›Д‡ rГіЕјnicy dwГіch liczb zespolonych.
+IMSUM			= IMSUM				##	Zwraca wartoЕ›Д‡ sumy liczb zespolonych.
+OCT2BIN			= OCT2BIN			##	Konwertuje liczbД™ w postaci Гіsemkowej na liczbД™ w postaci dwГіjkowej.
+OCT2DEC			= OCT2DEC			##	Konwertuje liczbД™ w postaci Гіsemkowej na liczbД™ w postaci dziesiД™tnej.
+OCT2HEX			= OCT2HEX			##	Konwertuje liczbД™ w postaci Гіsemkowej na liczbД™ w postaci szesnastkowej.
+
+
+##
+##	Financial functions				Funkcje finansowe
+##
+ACCRINT			= ACCRINT			##	Zwraca narosЕ‚e odsetki dla papieru wartoЕ›ciowego z oprocentowaniem okresowym.
+ACCRINTM		= ACCRINTM			##	Zwraca narosЕ‚e odsetki dla papieru wartoЕ›ciowego z oprocentowaniem w terminie wykupu.
+AMORDEGRC		= AMORDEGRC			##	Zwraca amortyzacjД™ dla kaЕјdego okresu rozliczeniowego z wykorzystaniem wspГіЕ‚czynnika amortyzacji.
+AMORLINC		= AMORLINC			##	Zwraca amortyzacjД™ dla kaЕјdego okresu rozliczeniowego.
+COUPDAYBS		= COUPDAYBS			##	Zwraca liczbД™ dni od poczД…tku okresu dywidendy do dnia rozliczeniowego.
+COUPDAYS		= COUPDAYS			##	Zwraca liczbД™ dni w okresie dywidendy, z uwzglД™dnieniem dnia rozliczeniowego.
+COUPDAYSNC		= COUPDAYSNC			##	Zwraca liczbД™ dni od dnia rozliczeniowego do daty nastД™pnego dnia dywidendy.
+COUPNCD			= COUPNCD			##	Zwraca dzieЕ„ nastД™pnej dywidendy po dniu rozliczeniowym.
+COUPNUM			= COUPNUM			##	Zwraca liczbД™ dywidend pЕ‚atnych miД™dzy dniem rozliczeniowym a dniem wykupu.
+COUPPCD			= COUPPCD			##	Zwraca dzieЕ„ poprzedniej dywidendy przed dniem rozliczeniowym.
+CUMIPMT			= CUMIPMT			##	Zwraca wartoЕ›Д‡ procentu skЕ‚adanego pЕ‚atnego miД™dzy dwoma okresami.
+CUMPRINC		= CUMPRINC			##	Zwraca wartoЕ›Д‡ kapitaЕ‚u skumulowanego spЕ‚aty poЕјyczki miД™dzy dwoma okresami.
+DB			= DB				##	Zwraca amortyzacjД™ Е›rodka trwaЕ‚ego w danym okresie metodД… degresywnД… z zastosowaniem staЕ‚ej bazowej.
+DDB			= DDB				##	Zwraca amortyzacjД™ Е›rodka trwaЕ‚ego za podany okres metodД… degresywnД… z zastosowaniem podwГіjnej bazowej lub metodД… okreЕ›lonД… przez uЕјytkownika.
+DISC			= DISC				##	Zwraca wartoЕ›Д‡ stopy dyskontowej papieru wartoЕ›ciowego.
+DOLLARDE		= DOLLARDE			##	Konwertuje cenД™ w postaci uЕ‚amkowej na cenД™ wyraЕјonД… w postaci dziesiД™tnej.
+DOLLARFR		= DOLLARFR			##	Konwertuje cenД™ wyraЕјonД… w postaci dziesiД™tnej na cenД™ wyraЕјonД… w postaci uЕ‚amkowej.
+DURATION		= DURATION			##	Zwraca wartoЕ›Д‡ rocznego przychodu z papieru wartoЕ›ciowego o okresowych wypЕ‚atach oprocentowania.
+EFFECT			= EFFECT			##	Zwraca wartoЕ›Д‡ efektywnej rocznej stopy procentowej.
+FV			= FV				##	Zwraca przyszЕ‚Д… wartoЕ›Д‡ lokaty.
+FVSCHEDULE		= FVSCHEDULE			##	Zwraca przyszЕ‚Д… wartoЕ›Д‡ kapitaЕ‚u poczД…tkowego wraz z szeregiem procentГіw skЕ‚adanych.
+INTRATE			= INTRATE			##	Zwraca wartoЕ›Д‡ stopy procentowej papieru wartoЕ›ciowego caЕ‚kowicie ulokowanego.
+IPMT			= IPMT				##	Zwraca wysokoЕ›Д‡ spЕ‚aty oprocentowania lokaty za dany okres.
+IRR			= IRR				##	Zwraca wartoЕ›Д‡ wewnД™trznej stopy zwrotu dla serii przepЕ‚ywГіw gotГіwkowych.
+ISPMT			= ISPMT				##	Oblicza wysokoЕ›Д‡ spЕ‚aty oprocentowania za dany okres lokaty.
+MDURATION		= MDURATION			##	Zwraca wartoЕ›Д‡ zmodyfikowanego okresu Macauleya dla papieru wartoЕ›ciowego o zaЕ‚oЕјonej wartoЕ›ci nominalnej 100 zЕ‚.
+MIRR			= MIRR				##	Zwraca wartoЕ›Д‡ wewnД™trznej stopy zwrotu dla przypadku, gdy dodatnie i ujemne przepЕ‚ywy gotГіwkowe majД… rГіЕјne stopy.
+NOMINAL			= NOMINAL			##	Zwraca wysokoЕ›Д‡ nominalnej rocznej stopy procentowej.
+NPER			= NPER				##	Zwraca liczbД™ okresГіw dla lokaty.
+NPV			= NPV				##	Zwraca wartoЕ›Д‡ bieЕјД…cД… netto lokaty na podstawie szeregu okresowych przepЕ‚ywГіw gotГіwkowych i stopy dyskontowej.
+ODDFPRICE		= ODDFPRICE			##	Zwraca cenД™ za 100 zЕ‚ wartoЕ›ci nominalnej papieru wartoЕ›ciowego z nietypowym pierwszym okresem.
+ODDFYIELD		= ODDFYIELD			##	Zwraca rentownoЕ›Д‡ papieru wartoЕ›ciowego z nietypowym pierwszym okresem.
+ODDLPRICE		= ODDLPRICE			##	Zwraca cenД™ za 100 zЕ‚ wartoЕ›ci nominalnej papieru wartoЕ›ciowego z nietypowym ostatnim okresem.
+ODDLYIELD		= ODDLYIELD			##	Zwraca rentownoЕ›Д‡ papieru wartoЕ›ciowego z nietypowym ostatnim okresem.
+PMT			= PMT				##	Zwraca wartoЕ›Д‡ okresowej pЕ‚atnoЕ›ci raty rocznej.
+PPMT			= PPMT				##	Zwraca wysokoЕ›Д‡ spЕ‚aty kapitaЕ‚u w przypadku lokaty dla danego okresu.
+PRICE			= PRICE				##	Zwraca cenД™ za 100 zЕ‚ wartoЕ›ci nominalnej papieru wartoЕ›ciowego z oprocentowaniem okresowym.
+PRICEDISC		= PRICEDISC			##	Zwraca cenД™ za 100 zЕ‚ wartoЕ›ci nominalnej papieru wartoЕ›ciowego zdyskontowanego.
+PRICEMAT		= PRICEMAT			##	Zwraca cenД™ za 100 zЕ‚ wartoЕ›ci nominalnej papieru wartoЕ›ciowego z oprocentowaniem w terminie wykupu.
+PV			= PV				##	Zwraca wartoЕ›Д‡ bieЕјД…cД… lokaty.
+RATE			= RATE				##	Zwraca wysokoЕ›Д‡ stopy procentowej w okresie raty rocznej.
+RECEIVED		= RECEIVED			##	Zwraca wartoЕ›Д‡ kapitaЕ‚u otrzymanego przy wykupie papieru wartoЕ›ciowego caЕ‚kowicie ulokowanego.
+SLN			= SLN				##	Zwraca amortyzacjД™ Е›rodka trwaЕ‚ego za jeden okres metodД… liniowД….
+SYD			= SYD				##	Zwraca amortyzacjД™ Е›rodka trwaЕ‚ego za dany okres metodД… sumy cyfr lat amortyzacji.
+TBILLEQ			= TBILLEQ			##	Zwraca rentownoЕ›Д‡ ekwiwalentu obligacji dla bonu skarbowego.
+TBILLPRICE		= TBILLPRICE			##	Zwraca cenД™ za 100 zЕ‚ wartoЕ›ci nominalnej bonu skarbowego.
+TBILLYIELD		= TBILLYIELD			##	Zwraca rentownoЕ›Д‡ bonu skarbowego.
+VDB			= VDB				##	Oblicza amortyzacjД™ Е›rodka trwaЕ‚ego w danym okresie lub jego czД™Е›ci metodД… degresywnД….
+XIRR			= XIRR				##	Zwraca wartoЕ›Д‡ wewnД™trznej stopy zwrotu dla serii rozЕ‚oЕјonych w czasie przepЕ‚ywГіw gotГіwkowych, niekoniecznie okresowych.
+XNPV			= XNPV				##	Zwraca wartoЕ›Д‡ bieЕјД…cД… netto dla serii rozЕ‚oЕјonych w czasie przepЕ‚ywГіw gotГіwkowych, niekoniecznie okresowych.
+YIELD			= YIELD				##	Zwraca rentownoЕ›Д‡ papieru wartoЕ›ciowego z oprocentowaniem okresowym.
+YIELDDISC		= YIELDDISC			##	Zwraca rocznД… rentownoЕ›Д‡ zdyskontowanego papieru wartoЕ›ciowego, na przykЕ‚ad bonu skarbowego.
+YIELDMAT		= YIELDMAT			##	Zwraca rocznД… rentownoЕ›Д‡ papieru wartoЕ›ciowego oprocentowanego przy wykupie.
+
+
+##
+##	Information functions				Funkcje informacyjne
+##
+CELL			= KOMГ“RKA			##	Zwraca informacje o formacie, poЕ‚oЕјeniu lub zawartoЕ›ci komГіrki.
+ERROR.TYPE		= NR.BЕЃД�DU			##	Zwraca liczbД™ odpowiadajД…cД… typowi bЕ‚Д™du.
+INFO			= INFO				##	Zwraca informacjД™ o aktualnym Е›rodowisku pracy.
+ISBLANK			= CZY.PUSTA			##	Zwraca wartoЕ›Д‡ PRAWDA, jeЕ›li wartoЕ›Д‡ jest pusta.
+ISERR			= CZY.BЕЃ			##	Zwraca wartoЕ›Д‡ PRAWDA, jeЕ›li wartoЕ›Д‡ jest dowolnД… wartoЕ›ciД… bЕ‚Д™du, z wyjД…tkiem #N/D!.
+ISERROR			= CZY.BЕЃД„D			##	Zwraca wartoЕ›Д‡ PRAWDA, jeЕ›li wartoЕ›Д‡ jest dowolnД… wartoЕ›ciД… bЕ‚Д™du.
+ISEVEN			= ISEVEN			##	Zwraca wartoЕ›Д‡ PRAWDA, jeЕ›li liczba jest parzysta.
+ISLOGICAL		= CZY.LOGICZNA			##	Zwraca wartoЕ›Д‡ PRAWDA, jeЕ›li wartoЕ›Д‡ jest wartoЕ›ciД… logicznД….
+ISNA			= CZY.BRAK			##	Zwraca wartoЕ›Д‡ PRAWDA, jeЕ›li wartoЕ›Д‡ jest wartoЕ›ciД… bЕ‚Д™du #N/D!.
+ISNONTEXT		= CZY.NIE.TEKST			##	Zwraca wartoЕ›Д‡ PRAWDA, jeЕ›li wartoЕ›Д‡ nie jest tekstem.
+ISNUMBER		= CZY.LICZBA			##	Zwraca wartoЕ›Д‡ PRAWDA, jeЕ›li wartoЕ›Д‡ jest liczbД….
+ISODD			= ISODD				##	Zwraca wartoЕ›Д‡ PRAWDA, jeЕ›li liczba jest nieparzysta.
+ISREF			= CZY.ADR			##	Zwraca wartoЕ›Д‡ PRAWDA, jeЕ›li wartoЕ›Д‡ jest odwoЕ‚aniem.
+ISTEXT			= CZY.TEKST			##	Zwraca wartoЕ›Д‡ PRAWDA, jeЕ›li wartoЕ›Д‡ jest tekstem.
+N			= L				##	Zwraca wartoЕ›Д‡ przekonwertowanД… na postaД‡ liczbowД….
+NA			= BRAK				##	Zwraca wartoЕ›Д‡ bЕ‚Д™du #N/D!.
+TYPE			= TYP				##	Zwraca liczbД™ wskazujД…cД… typ danych wartoЕ›ci.
+
+
+##
+##	Logical functions				Funkcje logiczne
+##
+AND			= ORAZ				##	Zwraca wartoЕ›Д‡ PRAWDA, jeЕ›li wszystkie argumenty majД… wartoЕ›Д‡ PRAWDA.
+FALSE			= FAЕЃSZ				##	Zwraca wartoЕ›Д‡ logicznД… FAЕЃSZ.
+IF			= JEЕ»ELI			##	OkreЕ›la warunek logiczny do sprawdzenia.
+IFERROR			= JEЕ»ELI.BЕЃД„D			##	Zwraca okreЕ›lonД… wartoЕ›Д‡, jeЕ›li wynikiem obliczenia formuЕ‚y jest bЕ‚Д…d; w przeciwnym przypadku zwraca wynik formuЕ‚y.
+NOT			= NIE				##	Odwraca wartoЕ›Д‡ logicznД… argumentu.
+OR			= LUB				##	Zwraca wartoЕ›Д‡ PRAWDA, jeЕ›li co najmniej jeden z argumentГіw ma wartoЕ›Д‡ PRAWDA.
+TRUE			= PRAWDA			##	Zwraca wartoЕ›Д‡ logicznД… PRAWDA.
+
+
+##
+##	Lookup and reference functions			Funkcje wyszukiwania i odwoЕ‚aЕ„
+##
+ADDRESS			= ADRES				##	Zwraca odwoЕ‚anie do jednej komГіrki w arkuszu jako wartoЕ›Д‡ tekstowД….
+AREAS			= OBSZARY			##	Zwraca liczbД™ obszarГіw wystД™pujД…cych w odwoЕ‚aniu.
+CHOOSE			= WYBIERZ			##	Wybiera wartoЕ›Д‡ z listy wartoЕ›ci.
+COLUMN			= NR.KOLUMNY			##	Zwraca numer kolumny z odwoЕ‚ania.
+COLUMNS			= LICZBA.KOLUMN			##	Zwraca liczbД™ kolumn dla danego odwoЕ‚ania.
+HLOOKUP			= WYSZUKAJ.POZIOMO		##	PrzeglД…da gГіrny wiersz tablicy i zwraca wartoЕ›Д‡ wskazanej komГіrki.
+HYPERLINK		= HIPERЕЃД„CZE			##	Tworzy skrГіt lub skok, ktГіry pozwala otwieraД‡ dokument przechowywany na serwerze sieciowym, w sieci intranet lub w Internecie.
+INDEX			= INDEKS			##	UЕјywa indeksu do wybierania wartoЕ›ci z odwoЕ‚ania lub tablicy.
+INDIRECT		= ADR.POЕљR			##	Zwraca odwoЕ‚anie okreЕ›lone przez wartoЕ›Д‡ tekstowД….
+LOOKUP			= WYSZUKAJ			##	Wyszukuje wartoЕ›ci w wektorze lub tablicy.
+MATCH			= PODAJ.POZYCJД�			##	Wyszukuje wartoЕ›ci w odwoЕ‚aniu lub w tablicy.
+OFFSET			= PRZESUNIД�CIE			##	Zwraca adres przesuniД™ty od danego odwoЕ‚ania.
+ROW			= WIERSZ			##	Zwraca numer wiersza odwoЕ‚ania.
+ROWS			= ILE.WIERSZY			##	Zwraca liczbД™ wierszy dla danego odwoЕ‚ania.
+RTD			= RTD				##	Pobiera dane w czasie rzeczywistym z programu obsЕ‚ugujД…cego automatyzacjД™ COM (Automatyzacja: SposГіb pracy z obiektami aplikacji pochodzД…cymi z innej aplikacji lub narzД™dzia projektowania. Nazywana wczeЕ›niej AutomatyzacjД… OLE, Automatyzacja jest standardem przemysЕ‚owym i funkcjД… obiektowego modelu skЕ‚adnikГіw (COM, Component Object Model).).
+TRANSPOSE		= TRANSPONUJ			##	Zwraca transponowanД… tablicД™.
+VLOOKUP			= WYSZUKAJ.PIONOWO		##	Przeszukuje pierwszД… kolumnД™ tablicy i przechodzi wzdЕ‚uЕј wiersza, aby zwrГіciД‡ wartoЕ›Д‡ komГіrki.
+
+
+##
+##	Math and trigonometry functions			Funkcje matematyczne i trygonometryczne
+##
+ABS			= MODUЕЃ.LICZBY			##	Zwraca wartoЕ›Д‡ absolutnД… liczby.
+ACOS			= ACOS				##	Zwraca arcus cosinus liczby.
+ACOSH			= ACOSH				##	Zwraca arcus cosinus hiperboliczny liczby.
+ASIN			= ASIN				##	Zwraca arcus sinus liczby.
+ASINH			= ASINH				##	Zwraca arcus sinus hiperboliczny liczby.
+ATAN			= ATAN				##	Zwraca arcus tangens liczby.
+ATAN2			= ATAN2				##	Zwraca arcus tangens liczby na podstawie wspГіЕ‚rzД™dnych x i y.
+ATANH			= ATANH				##	Zwraca arcus tangens hiperboliczny liczby.
+CEILING			= ZAOKR.W.GГ“RД�			##	ZaokrД…gla liczbД™ do najbliЕјszej liczby caЕ‚kowitej lub do najbliЕјszej wielokrotnoЕ›ci dokЕ‚adnoЕ›ci.
+COMBIN			= KOMBINACJE			##	Zwraca liczbД™ kombinacji dla danej liczby obiektГіw.
+COS			= COS				##	Zwraca cosinus liczby.
+COSH			= COSH				##	Zwraca cosinus hiperboliczny liczby.
+DEGREES			= STOPNIE			##	Konwertuje radiany na stopnie.
+EVEN			= ZAOKR.DO.PARZ			##	ZaokrД…gla liczbД™ w gГіrД™ do najbliЕјszej liczby parzystej.
+EXP			= EXP				##	Zwraca wartoЕ›Д‡ liczby e podniesionej do potД™gi okreЕ›lonej przez podanД… liczbД™.
+FACT			= SILNIA			##	Zwraca silniД™ liczby.
+FACTDOUBLE		= FACTDOUBLE			##	Zwraca podwГіjnД… silniД™ liczby.
+FLOOR			= ZAOKR.W.DГ“ЕЃ			##	ZaokrД…gla liczbД™ w dГіЕ‚, w kierunku zera.
+GCD			= GCD				##	Zwraca najwiД™kszy wspГіlny dzielnik.
+INT			= ZAOKR.DO.CAЕЃK			##	ZaokrД…gla liczbД™ w dГіЕ‚ do najbliЕјszej liczby caЕ‚kowitej.
+LCM			= LCM				##	Zwraca najmniejszД… wspГіlnД… wielokrotnoЕ›Д‡.
+LN			= LN				##	Zwraca logarytm naturalny podanej liczby.
+LOG			= LOG				##	Zwraca logarytm danej liczby przy zadanej podstawie.
+LOG10			= LOG10				##	Zwraca logarytm dziesiД™tny liczby.
+MDETERM			= WYZNACZNIK.MACIERZY		##	Zwraca wyznacznik macierzy tablicy.
+MINVERSE		= MACIERZ.ODW			##	Zwraca odwrotnoЕ›Д‡ macierzy tablicy.
+MMULT			= MACIERZ.ILOCZYN		##	Zwraca iloczyn macierzy dwГіch tablic.
+MOD			= MOD				##	Zwraca resztД™ z dzielenia.
+MROUND			= MROUND			##	Zwraca liczbД™ zaokrД…glonД… do ЕјД…danej wielokrotnoЕ›ci.
+MULTINOMIAL		= MULTINOMIAL			##	Zwraca wielomian dla zbioru liczb.
+ODD			= ZAOKR.DO.NPARZ		##	ZaokrД…gla liczbД™ w gГіrД™ do najbliЕјszej liczby nieparzystej.
+PI			= PI				##	Zwraca wartoЕ›Д‡ liczby Pi.
+POWER			= POTД�GA			##	Zwraca liczbД™ podniesionД… do potД™gi.
+PRODUCT			= ILOCZYN			##	MnoЕјy argumenty.
+QUOTIENT		= QUOTIENT			##	Zwraca iloraz (caЕ‚kowity).
+RADIANS			= RADIANY			##	Konwertuje stopnie na radiany.
+RAND			= LOS				##	Zwraca liczbД™ pseudolosowД… z zakresu od 0 do 1.
+RANDBETWEEN		= RANDBETWEEN			##	Zwraca liczbД™ pseudolosowД… z zakresu okreЕ›lonego przez podane argumenty.
+ROMAN			= RZYMSKIE			##	Konwertuje liczbД™ arabskД… na rzymskД… jako tekst.
+ROUND			= ZAOKR				##	ZaokrД…gla liczbД™ do okreЕ›lonej liczby cyfr.
+ROUNDDOWN		= ZAOKR.DГ“ЕЃ			##	ZaokrД…gla liczbД™ w dГіЕ‚, w kierunku zera.
+ROUNDUP			= ZAOKR.GГ“RA			##	ZaokrД…gla liczbД™ w gГіrД™, w kierunku od zera.
+SERIESSUM		= SERIESSUM			##	Zwraca sumД™ szeregu potД™gowego na podstawie wzoru.
+SIGN			= ZNAK.LICZBY			##	Zwraca znak liczby.
+SIN			= SIN				##	Zwraca sinus danego kД…ta.
+SINH			= SINH				##	Zwraca sinus hiperboliczny liczby.
+SQRT			= PIERWIASTEK			##	Zwraca dodatni pierwiastek kwadratowy.
+SQRTPI			= SQRTPI			##	Zwraca pierwiastek kwadratowy iloczynu (liczba * Pi).
+SUBTOTAL		= SUMY.POЕљREDNIE		##	Zwraca sumД™ czД™Е›ciowД… listy lub bazy danych.
+SUM			= SUMA				##	Dodaje argumenty.
+SUMIF			= SUMA.JEЕ»ELI			##	Dodaje komГіrki okreЕ›lone przez podane kryterium.
+SUMIFS			= SUMA.WARUNKГ“W			##	Dodaje komГіrki w zakresie, ktГіre speЕ‚niajД… wiele kryteriГіw.
+SUMPRODUCT		= SUMA.ILOCZYNГ“W		##	Zwraca sumД™ iloczynГіw odpowiednich elementГіw tablicy.
+SUMSQ			= SUMA.KWADRATГ“W		##	Zwraca sumД™ kwadratГіw argumentГіw.
+SUMX2MY2		= SUMA.X2.M.Y2			##	Zwraca sumД™ rГіЕјnic kwadratГіw odpowiednich wartoЕ›ci w dwГіch tablicach.
+SUMX2PY2		= SUMA.X2.P.Y2			##	Zwraca sumД™ sum kwadratГіw odpowiednich wartoЕ›ci w dwГіch tablicach.
+SUMXMY2			= SUMA.XMY.2			##	Zwraca sumД™ kwadratГіw rГіЕјnic odpowiednich wartoЕ›ci w dwГіch tablicach.
+TAN			= TAN				##	Zwraca tangens liczby.
+TANH			= TANH				##	Zwraca tangens hiperboliczny liczby.
+TRUNC			= LICZBA.CAЕЃK			##	Przycina liczbД™ do wartoЕ›ci caЕ‚kowitej.
+
+
+##
+##	Statistical functions				Funkcje statystyczne
+##
+AVEDEV			= ODCH.ЕљREDNIE			##	Zwraca Е›redniД… wartoЕ›Д‡ odchyleЕ„ absolutnych punktГіw danych od ich wartoЕ›ci Е›redniej.
+AVERAGE			= ЕљREDNIA			##	Zwraca wartoЕ›Д‡ Е›redniД… argumentГіw.
+AVERAGEA		= ЕљREDNIA.A			##	Zwraca wartoЕ›Д‡ Е›redniД… argumentГіw, z uwzglД™dnieniem liczb, tekstГіw i wartoЕ›ci logicznych.
+AVERAGEIF		= ЕљREDNIA.JEЕ»ELI		##	Zwraca Е›redniД… (Е›redniД… arytmetycznД…) wszystkich komГіrek w zakresie, ktГіre speЕ‚niajД… podane kryteria.
+AVERAGEIFS		= ЕљREDNIA.WARUNKГ“W		##	Zwraca Е›redniД… (Е›redniД… arytmetycznД…) wszystkich komГіrek, ktГіre speЕ‚niajД… jedno lub wiД™cej kryteriГіw.
+BETADIST		= ROZKЕЃAD.BETA			##	Zwraca skumulowanД… funkcjД™ gД™stoЕ›ci prawdopodobieЕ„stwa beta.
+BETAINV			= ROZKЕЃAD.BETA.ODW		##	Zwraca odwrotnoЕ›Д‡ skumulowanej funkcji gД™stoЕ›ci prawdopodobieЕ„stwa beta.
+BINOMDIST		= ROZKЕЃAD.DWUM			##	Zwraca pojedynczy skЕ‚adnik dwumianowego rozkЕ‚adu prawdopodobieЕ„stwa.
+CHIDIST			= ROZKЕЃAD.CHI			##	Zwraca wartoЕ›Д‡ jednostronnego prawdopodobieЕ„stwa rozkЕ‚adu chi-kwadrat.
+CHIINV			= ROZKЕЃAD.CHI.ODW		##	Zwraca odwrotnoЕ›Д‡ wartoЕ›ci jednostronnego prawdopodobieЕ„stwa rozkЕ‚adu chi-kwadrat.
+CHITEST			= TEST.CHI			##	Zwraca test niezaleЕјnoЕ›ci.
+CONFIDENCE		= UFNOЕљД†			##	Zwraca interwaЕ‚ ufnoЕ›ci dla Е›redniej populacji.
+CORREL			= WSP.KORELACJI			##	Zwraca wspГіЕ‚czynnik korelacji dwГіch zbiorГіw danych.
+COUNT			= ILE.LICZB			##	Zlicza liczby znajdujД…ce siД™ na liЕ›cie argumentГіw.
+COUNTA			= ILE.NIEPUSTYCH		##	Zlicza wartoЕ›ci znajdujД…ce siД™ na liЕ›cie argumentГіw.
+COUNTBLANK		= LICZ.PUSTE			##	Zwraca liczbД™ pustych komГіrek w pewnym zakresie.
+COUNTIF			= LICZ.JEЕ»ELI			##	Zlicza komГіrki wewnД…trz zakresu, ktГіre speЕ‚niajД… podane kryteria.
+COUNTIFS		= LICZ.WARUNKI			##	Zlicza komГіrki wewnД…trz zakresu, ktГіre speЕ‚niajД… wiele kryteriГіw.
+COVAR			= KOWARIANCJA			##	Zwraca kowariancjД™, czyli Е›redniД… wartoЕ›Д‡ iloczynГіw odpowiednich odchyleЕ„.
+CRITBINOM		= PRГ“G.ROZKЕЃAD.DWUM		##	Zwraca najmniejszД… wartoЕ›Д‡, dla ktГіrej skumulowany rozkЕ‚ad dwumianowy jest mniejszy niЕј wartoЕ›Д‡ kryterium lub rГіwny jej.
+DEVSQ			= ODCH.KWADRATOWE		##	Zwraca sumД™ kwadratГіw odchyleЕ„.
+EXPONDIST		= ROZKЕЃAD.EXP			##	Zwraca rozkЕ‚ad wykЕ‚adniczy.
+FDIST			= ROZKЕЃAD.F			##	Zwraca rozkЕ‚ad prawdopodobieЕ„stwa F.
+FINV			= ROZKЕЃAD.F.ODW			##	Zwraca odwrotnoЕ›Д‡ rozkЕ‚adu prawdopodobieЕ„stwa F.
+FISHER			= ROZKЕЃAD.FISHER		##	Zwraca transformacjД™ Fishera.
+FISHERINV		= ROZKЕЃAD.FISHER.ODW		##	Zwraca odwrotnoЕ›Д‡ transformacji Fishera.
+FORECAST		= REGLINX			##	Zwraca wartoЕ›Д‡ trendu liniowego.
+FREQUENCY		= CZД�STOЕљД†			##	Zwraca rozkЕ‚ad czД™stotliwoЕ›ci jako tablicД™ pionowД….
+FTEST			= TEST.F			##	Zwraca wynik testu F.
+GAMMADIST		= ROZKЕЃAD.GAMMA			##	Zwraca rozkЕ‚ad gamma.
+GAMMAINV		= ROZKЕЃAD.GAMMA.ODW		##	Zwraca odwrotnoЕ›Д‡ skumulowanego rozkЕ‚adu gamma.
+GAMMALN			= ROZKЕЃAD.LIN.GAMMA		##	Zwraca logarytm naturalny funkcji gamma, О“(x).
+GEOMEAN			= ЕљREDNIA.GEOMETRYCZNA		##	Zwraca Е›redniД… geometrycznД….
+GROWTH			= REGEXPW			##	Zwraca wartoЕ›ci trendu wykЕ‚adniczego.
+HARMEAN			= ЕљREDNIA.HARMONICZNA		##	Zwraca Е›redniД… harmonicznД….
+HYPGEOMDIST		= ROZKЕЃAD.HIPERGEOM		##	Zwraca rozkЕ‚ad hipergeometryczny.
+INTERCEPT		= ODCIД�TA			##	Zwraca punkt przeciД™cia osi pionowej z liniД… regresji liniowej.
+KURT			= KURTOZA			##	Zwraca kurtozД™ zbioru danych.
+LARGE			= MAX.K				##	Zwraca k-tД… najwiД™kszД… wartoЕ›Д‡ ze zbioru danych.
+LINEST			= REGLINP			##	Zwraca parametry trendu liniowego.
+LOGEST			= REGEXPP			##	Zwraca parametry trendu wykЕ‚adniczego.
+LOGINV			= ROZKЕЃAD.LOG.ODW		##	Zwraca odwrotnoЕ›Д‡ rozkЕ‚adu logarytmu naturalnego.
+LOGNORMDIST		= ROZKЕЃAD.LOG			##	Zwraca skumulowany rozkЕ‚ad logarytmu naturalnego.
+MAX			= MAX				##	Zwraca maksymalnД… wartoЕ›Д‡ listy argumentГіw.
+MAXA			= MAX.A				##	Zwraca maksymalnД… wartoЕ›Д‡ listy argumentГіw, z uwzglД™dnieniem liczb, tekstГіw i wartoЕ›ci logicznych.
+MEDIAN			= MEDIANA			##	Zwraca medianД™ podanych liczb.
+MIN			= MIN				##	Zwraca minimalnД… wartoЕ›Д‡ listy argumentГіw.
+MINA			= MIN.A				##	Zwraca najmniejszД… wartoЕ›Д‡ listy argumentГіw, z uwzglД™dnieniem liczb, tekstГіw i wartoЕ›ci logicznych.
+MODE			= WYST.NAJCZД�ЕљCIEJ		##	Zwraca wartoЕ›Д‡ najczД™Е›ciej wystД™pujД…cД… w zbiorze danych.
+NEGBINOMDIST		= ROZKЕЃAD.DWUM.PRZEC		##	Zwraca ujemny rozkЕ‚ad dwumianowy.
+NORMDIST		= ROZKЕЃAD.NORMALNY		##	Zwraca rozkЕ‚ad normalny skumulowany.
+NORMINV			= ROZKЕЃAD.NORMALNY.ODW		##	Zwraca odwrotnoЕ›Д‡ rozkЕ‚adu normalnego skumulowanego.
+NORMSDIST		= ROZKЕЃAD.NORMALNY.S		##	Zwraca standardowy rozkЕ‚ad normalny skumulowany.
+NORMSINV		= ROZKЕЃAD.NORMALNY.S.ODW	##	Zwraca odwrotnoЕ›Д‡ standardowego rozkЕ‚adu normalnego skumulowanego.
+PEARSON			= PEARSON			##	Zwraca wspГіЕ‚czynnik korelacji momentu iloczynu Pearsona.
+PERCENTILE		= PERCENTYL			##	Wyznacza k-ty percentyl wartoЕ›ci w zakresie.
+PERCENTRANK		= PROCENT.POZYCJA		##	Zwraca procentowД… pozycjД™ wartoЕ›ci w zbiorze danych.
+PERMUT			= PERMUTACJE			##	Zwraca liczbД™ permutacji dla danej liczby obiektГіw.
+POISSON			= ROZKЕЃAD.POISSON		##	Zwraca rozkЕ‚ad Poissona.
+PROB			= PRAWDPD			##	Zwraca prawdopodobieЕ„stwo, Ејe wartoЕ›ci w zakresie leЕјД… pomiД™dzy dwiema granicami.
+QUARTILE		= KWARTYL			##	Wyznacza kwartyl zbioru danych.
+RANK			= POZYCJA			##	Zwraca pozycjД™ liczby na liЕ›cie liczb.
+RSQ			= R.KWADRAT			##	Zwraca kwadrat wspГіЕ‚czynnika korelacji momentu iloczynu Pearsona.
+SKEW			= SKOЕљNOЕљД†			##	Zwraca skoЕ›noЕ›Д‡ rozkЕ‚adu.
+SLOPE			= NACHYLENIE			##	Zwraca nachylenie linii regresji liniowej.
+SMALL			= MIN.K				##	Zwraca k-tД… najmniejszД… wartoЕ›Д‡ ze zbioru danych.
+STANDARDIZE		= NORMALIZUJ			##	Zwraca wartoЕ›Д‡ znormalizowanД….
+STDEV			= ODCH.STANDARDOWE		##	Szacuje odchylenie standardowe na podstawie prГіbki.
+STDEVA			= ODCH.STANDARDOWE.A		##	Szacuje odchylenie standardowe na podstawie prГіbki, z uwzglД™dnieniem liczb, tekstГіw i wartoЕ›ci logicznych.
+STDEVP			= ODCH.STANDARD.POPUL		##	Oblicza odchylenie standardowe na podstawie caЕ‚ej populacji.
+STDEVPA			= ODCH.STANDARD.POPUL.A		##	Oblicza odchylenie standardowe na podstawie caЕ‚ej populacji, z uwzglД™dnieniem liczb, teksГіw i wartoЕ›ci logicznych.
+STEYX			= REGBЕЃSTD			##	Zwraca bЕ‚Д…d standardowy przewidzianej wartoЕ›ci y dla kaЕјdej wartoЕ›ci x w regresji.
+TDIST			= ROZKЕЃAD.T			##	Zwraca rozkЕ‚ad t-Studenta.
+TINV			= ROZKЕЃAD.T.ODW			##	Zwraca odwrotnoЕ›Д‡ rozkЕ‚adu t-Studenta.
+TREND			= REGLINW			##	Zwraca wartoЕ›ci trendu liniowego.
+TRIMMEAN		= ЕљREDNIA.WEWN			##	Zwraca Е›redniД… wartoЕ›Д‡ dla wnД™trza zbioru danych.
+TTEST			= TEST.T			##	Zwraca prawdopodobieЕ„stwo zwiД…zane z testem t-Studenta.
+VAR			= WARIANCJA			##	Szacuje wariancjД™ na podstawie prГіbki.
+VARA			= WARIANCJA.A			##	Szacuje wariancjД™ na podstawie prГіbki, z uwzglД™dnieniem liczb, tekstГіw i wartoЕ›ci logicznych.
+VARP			= WARIANCJA.POPUL		##	Oblicza wariancjД™ na podstawie caЕ‚ej populacji.
+VARPA			= WARIANCJA.POPUL.A		##	Oblicza wariancjД™ na podstawie caЕ‚ej populacji, z uwzglД™dnieniem liczb, tekstГіw i wartoЕ›ci logicznych.
+WEIBULL			= ROZKЕЃAD.WEIBULL		##	Zwraca rozkЕ‚ad Weibulla.
+ZTEST			= TEST.Z			##	Zwraca wartoЕ›Д‡ jednostronnego prawdopodobieЕ„stwa testu z.
+
+
+##
+##	Text functions					Funkcje tekstowe
+##
+ASC			= ASC				##	Zamienia litery angielskie lub katakana o peЕ‚nej szerokoЕ›ci (dwubajtowe) w ciД…gu znakГіw na znaki o szerokoЕ›ci poЕ‚Гіwkowej (jednobajtowe).
+BAHTTEXT		= BAHTTEXT			##	Konwertuje liczbД™ na tekst, stosujД…c format walutowy Гџ (baht).
+CHAR			= ZNAK				##	Zwraca znak o podanym numerze kodu.
+CLEAN			= OCZYЕљД†			##	Usuwa z tekstu wszystkie znaki, ktГіre nie mogД… byД‡ drukowane.
+CODE			= KOD				##	Zwraca kod numeryczny pierwszego znaku w ciД…gu tekstowym.
+CONCATENATE		= ZЕЃД„CZ.TEKSTY			##	ЕЃД…czy kilka oddzielnych tekstГіw w jeden tekst.
+DOLLAR			= KWOTA				##	Konwertuje liczbД™ na tekst, stosujД…c format walutowy $ (dolar).
+EXACT			= PORГ“WNAJ			##	Sprawdza identycznoЕ›Д‡ dwГіch wartoЕ›ci tekstowych.
+FIND			= ZNAJDЕ№			##	Znajduje jednД… wartoЕ›Д‡ tekstowД… wewnД…trz innej (z uwzglД™dnieniem wielkich i maЕ‚ych liter).
+FINDB			= ZNAJDЕ№B			##	Znajduje jednД… wartoЕ›Д‡ tekstowД… wewnД…trz innej (z uwzglД™dnieniem wielkich i maЕ‚ych liter).
+FIXED			= ZAOKR.DO.TEKST		##	Formatuje liczbД™ jako tekst przy staЕ‚ej liczbie miejsc dziesiД™tnych.
+JIS			= JIS				##	Zmienia litery angielskie lub katakana o szerokoЕ›ci poЕ‚Гіwkowej (jednobajtowe) w ciД…gu znakГіw na znaki o peЕ‚nej szerokoЕ›ci (dwubajtowe).
+LEFT			= LEWY				##	Zwraca skrajne lewe znaki z wartoЕ›ci tekstowej.
+LEFTB			= LEWYB				##	Zwraca skrajne lewe znaki z wartoЕ›ci tekstowej.
+LEN			= DЕЃ				##	Zwraca liczbД™ znakГіw ciД…gu tekstowego.
+LENB			= DЕЃ.B				##	Zwraca liczbД™ znakГіw ciД…gu tekstowego.
+LOWER			= LITERY.MAЕЃE			##	Konwertuje wielkie litery tekstu na maЕ‚e litery.
+MID			= FRAGMENT.TEKSTU		##	Zwraca okreЕ›lonД… liczbД™ znakГіw z ciД…gu tekstowego, zaczynajД…c od zadanej pozycji.
+MIDB			= FRAGMENT.TEKSTU.B		##	Zwraca okreЕ›lonД… liczbД™ znakГіw z ciД…gu tekstowego, zaczynajД…c od zadanej pozycji.
+PHONETIC		= PHONETIC			##	Wybiera znaki fonetyczne (furigana) z ciД…gu tekstowego.
+PROPER			= Z.WIELKIEJ.LITERY		##	ZastД™puje pierwszД… literД™ kaЕјdego wyrazu tekstu wielkД… literД….
+REPLACE			= ZASTД„P			##	ZastД™puje znaki w tekЕ›cie.
+REPLACEB		= ZASTД„P.B			##	ZastД™puje znaki w tekЕ›cie.
+REPT			= POWT				##	Powiela tekst danД… liczbД™ razy.
+RIGHT			= PRAWY				##	Zwraca skrajne prawe znaki z wartoЕ›ci tekstowej.
+RIGHTB			= PRAWYB			##	Zwraca skrajne prawe znaki z wartoЕ›ci tekstowej.
+SEARCH			= SZUKAJ.TEKST			##	Wyszukuje jednД… wartoЕ›Д‡ tekstowД… wewnД…trz innej (bez uwzglД™dniania wielkoЕ›ci liter).
+SEARCHB			= SZUKAJ.TEKST.B		##	Wyszukuje jednД… wartoЕ›Д‡ tekstowД… wewnД…trz innej (bez uwzglД™dniania wielkoЕ›ci liter).
+SUBSTITUTE		= PODSTAW			##	Podstawia nowy tekst w miejsce poprzedniego tekstu w ciД…gu tekstowym.
+T			= T				##	Konwertuje argumenty na tekst.
+TEXT			= TEKST				##	Formatuje liczbД™ i konwertuje jД… na tekst.
+TRIM			= USUЕѓ.ZBД�DNE.ODSTД�PY		##	Usuwa spacje z tekstu.
+UPPER			= LITERY.WIELKIE		##	Konwertuje znaki tekstu na wielkie litery.
+VALUE			= WARTOЕљД†			##	Konwertuje argument tekstowy na liczbД™.

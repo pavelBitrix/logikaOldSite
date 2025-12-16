@@ -1,0 +1,46 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"О нас", 
+		SITE_DIR."logika/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Доставка", 
+		SITE_DIR."/delivery.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Каталог", 
+		SITE_DIR."/catalog", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		SITE_DIR."contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"WEB-разработка", 
+		SITE_DIR."/site.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Публикации", 
+		SITE_DIR."/posts/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

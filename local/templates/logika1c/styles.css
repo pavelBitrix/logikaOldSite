@@ -1,0 +1,9 @@
+button#addTicketPopup_create {
+    display: block !important;
+}
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    display: block !important;
+}

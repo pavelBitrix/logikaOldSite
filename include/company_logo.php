@@ -1,0 +1,1 @@
+<img src="/bitrix/templates/eshop_bootstrap_v4/images/logo.svg" class="logo_img">

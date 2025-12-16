@@ -1,0 +1,438 @@
+##
+## PHPExcel
+##
+## Copyright (c) 2006 - 2013 PHPExcel
+##
+## This library is free software; you can redistribute it and/or
+## modify it under the terms of the GNU Lesser General Public
+## License as published by the Free Software Foundation; either
+## version 2.1 of the License, or (at your option) any later version.
+##
+## This library is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+## Lesser General Public License for more details.
+##
+## You should have received a copy of the GNU Lesser General Public
+## License along with this library; if not, write to the Free Software
+## Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+##
+## @category   PHPExcel
+## @package    PHPExcel_Calculation
+## @copyright  Copyright (c) 2006 - 2013 PHPExcel (http://www.codeplex.com/PHPExcel)
+## @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
+## @version    ##VERSION##, ##DATE##
+##
+## Data in this file derived from http://www.piuha.fi/excel-function-name-translation/
+##
+##
+
+
+##
+##	Add-in and Automation functions			Eklenti ve Otomasyon fonksiyonlarД±
+##
+GETPIVOTDATA		= Г–ZETVERД°AL	##	Bir Г–zet Tablo raporunda saklanan verileri verir.
+
+
+##
+##	Cube functions					KГјp iЕџlevleri
+##
+CUBEKPIMEMBER		= KГњPKPIГњYE			##	Kilit performans gГ¶stergesi (KPI-Key Performance Indicator) adД±nД±, Г¶zelliДџini ve Г¶lГ§ГјsГјnГј verir ve hГјcredeki ad ve Г¶zelliДџi gГ¶sterir. KPI, bir kurumun performansД±nД± izlemek iГ§in kullanД±lan aylД±k brГјt kГўr ya da ГјГ§ aylД±k Г§alД±Еџan giriЕџ Г§Д±kД±ЕџlarД± gibi Г¶lГ§Гјlebilen bir birimdir.
+CUBEMEMBER			= KГњPГњYE			##	Bir kГјp hiyerarЕџisinde bir Гјyeyi veya kaydД± verir. Гњye veya kaydД±n kГјpte varolduДџunu doДџrulamak iГ§in kullanД±lД±r.
+CUBEMEMBERPROPERTY	= KГњPГњYEГ–ZELLД°ДћД°	##	Bir kГјpte bir Гјyenin Г¶zelliДџinin deДџerini verir. KГјp iГ§inde Гјye adД±nД±n varlД±ДџД±nД± doДџrulamak ve bu Гјyenin belli Г¶zelliklerini getirmek iГ§in kullanД±lД±r.
+CUBERANKEDMEMBER	= KГњPГњYESIRASI 		##	Bir kГјme iГ§indeki Гјyenin derecesini veya kaГ§Д±ncД± olduДџunu verir. En iyi satД±Еџ elemanД±, veya en iyi on Г¶Дџrenci gibi bir kГјmedeki bir veya daha fazla Г¶Дџeyi getirmek iГ§in kullanД±lД±r.
+CUBESET				= KГњPKГњME			##	KГјmeyi oluЕџturan ve ardД±ndan bu kГјmeyi Microsoft Office Excel'e getiren sunucudaki kГјpe kГјme ifadelerini gГ¶ndererek hesaplanan Гјye veya kayД±t kГјmesini tanД±mlar.
+CUBESETCOUNT		= KГњPKГњMESAY		##	Bir kГјmedeki Г¶Дџelerin sayД±sД±nД± getirir.
+CUBEVALUE			= KГњPDEДћER 			##	Bir kГјpten toplam deДџeri getirir.
+
+
+##
+##	Database functions				VeritabanД± iЕџlevleri
+##
+DAVERAGE		= VSEГ‡ORT			##	SeГ§ili veritabanД± girdilerinin ortalamasД±nД± verir.
+DCOUNT			= VSEГ‡SAY			##	VeritabanД±nda sayД± iГ§eren hГјcre sayД±sД±nД± hesaplar.
+DCOUNTA			= VSEГ‡SAYDOLU		##	VeritabanД±ndaki boЕџ olmayan hГјcreleri sayar.
+DGET			= VAL				##	VeritabanД±ndan, belirtilen Г¶lГ§Гјtlerle eЕџleЕџen tek bir rapor Г§Д±karД±r.
+DMAX			= VSEГ‡MAK			##	SeГ§ili veritabanД± giriЕџlerinin en yГјksek deДџerini verir.
+DMIN			= VSEГ‡MД°N			##	SeГ§ili veritabanД± giriЕџlerinin en dГјЕџГјk deДџerini verir.
+DPRODUCT		= VSEГ‡Г‡ARP			##	KayД±tlarД±n belli bir alanД±nda bulunan, bir veritabanД±ndaki Г¶lГ§Гјtlerle eЕџleЕџen deДџerleri Г§arpar.
+DSTDEV			= VSEГ‡STDSAPMA		##	SeГ§ili veritabanД± giriЕџlerinden oluЕџan bir Г¶rneДџe dayanarak, standart sapmayД± tahmin eder.
+DSTDEVP			= VSEГ‡STDSAPMAS		##	Standart sapmayД±, seГ§ili veritabanД± giriЕџlerinin tГјm popГјlasyonunu esas alarak hesaplar.
+DSUM			= VSEГ‡TOPLA			##	KayД±tlarД±n alan sГјtununda bulunan, Г¶lГ§Гјtle eЕџleЕџen sayД±larД± toplar.
+DVAR			= VSEГ‡VAR			##	SeГ§ili veritabanД± giriЕџlerinden oluЕџan bir Г¶rneДџi esas alarak farkД± tahmin eder.
+DVARP			= VSEГ‡VARS			##	SeГ§ili veritabanД± giriЕџlerinin tГјm popГјlasyonunu esas alarak farkД± hesaplar.
+
+
+##
+##	Date and time functions				Tarih ve saat iЕџlevleri
+##
+DATE			= TARД°H				##	Belirli bir tarihin seri numarasД±nД± verir.
+DATEVALUE		= TARД°HSAYISI		##	Metin biГ§imindeki bir tarihi seri numarasД±na dГ¶nГјЕџtГјrГјr.
+DAY				= GГњN				##	Seri numarasД±nД±, ayД±n bir gГјnГјne dГ¶nГјЕџtГјrГјr.
+DAYS360			= GГњN360			##	Д°ki tarih arasД±ndaki gГјn sayД±sД±nД±, 360 gГјnlГјk yД±lД± esas alarak hesaplar.
+EDATE			= SERД°TARД°H			##	BaЕџlangД±Г§ tarihinden itibaren, belirtilen ay sayД±sД±ndan Г¶nce veya sonraki tarihin seri numarasД±nД± verir.
+EOMONTH			= SERД°AY			##	Belirtilen sayД±da ay Г¶nce veya sonraki ayД±n son gГјnГјnГјn seri numarasД±nД± verir.
+HOUR			= SAAT				##	Bir seri numarasД±nД± saate dГ¶nГјЕџtГјrГјr.
+MINUTE			= DAKД°KA			##	Bir seri numarasД±nД± dakikaya dГ¶nГјЕџtГјrГјr.
+MONTH			= AY				##	Bir seri numarasД±nД± aya dГ¶nГјЕџtГјrГјr.
+NETWORKDAYS		= TAMД°ЕћGГњNГњ			##	Д°ki tarih arasД±ndaki tam Г§alД±Еџma gГјnlerinin sayД±sД±nД± verir.
+NOW				= ЕћД°MDД°				##	GeГ§erli tarihin ve saatin seri numarasД±nД± verir.
+SECOND			= SANД°YE			##	Bir seri numarasД±nД± saniyeye dГ¶nГјЕџtГјrГјr.
+TIME			= ZAMAN				##	Belirli bir zamanД±n seri numarasД±nД± verir.
+TIMEVALUE		= ZAMANSAYISI		##	Metin biГ§imindeki zamanД± seri numarasД±na dГ¶nГјЕџtГјrГјr.
+TODAY			= BUGГњN				##	BugГјnГјn tarihini seri numarasД±na dГ¶nГјЕџtГјrГјr.
+WEEKDAY			= HAFTANINGГњNГњ		##	Bir seri numarasД±nД±, haftanД±n gГјnГјne dГ¶nГјЕџtГјrГјr.
+WEEKNUM			= HAFTASAY			##	Dizisel deДџerini, haftanД±n yД±l iГ§inde bulunduДџu konumu sayД±sal olarak gГ¶steren sayД±ya dГ¶nГјЕџtГјrГјr.
+WORKDAY			= Д°ЕћGГњNГњ			##	Belirtilen sayД±da Г§alД±Еџma gГјnГј Г¶ncesinin ya da sonrasД±nД±n tarihinin seri numarasД±nД± verir.
+YEAR			= YIL				##	Bir seri numarasД±nД± yД±la dГ¶nГјЕџtГјrГјr.
+YEARFRAC		= YILORAN			##	BaЕџlangД±Г§_tarihi ve bitiЕџ_tarihi arasД±ndaki tam gГјnleri gГ¶steren yД±l kesrini verir.
+
+
+##
+##	Engineering functions				MГјhendislik iЕџlevleri
+##
+BESSELI			= BESSELI			##	DeДџiЕџtirilmiЕџ Bessel fonksiyonu In(x)'i verir.
+BESSELJ			= BESSELJ			##	Bessel fonksiyonu Jn(x)'i verir.
+BESSELK			= BESSELK			##	DeДџiЕџtirilmiЕџ Bessel fonksiyonu Kn(x)'i verir.
+BESSELY			= BESSELY			##	Bessel fonksiyonu Yn(x)'i verir.
+BIN2DEC			= BIN2DEC			##	Д°kili bir sayД±yД±, ondalД±k sayД±ya dГ¶nГјЕџtГјrГјr.
+BIN2HEX			= BIN2HEX			##	Д°kili bir sayД±yД±, onaltД±lД±ya dГ¶nГјЕџtГјrГјr.
+BIN2OCT			= BIN2OCT			##	Д°kili bir sayД±yД±, sekizliye dГ¶nГјЕџtГјrГјr.
+COMPLEX			= KARMAЕћIK			##	GerГ§ek ve sanal katsayД±larД±, karmaЕџД±k sayД±ya dГ¶nГјЕџtГјrГјr.
+CONVERT			= Г‡EVД°R				##	Bir sayД±yД±, bir Г¶lГ§Гјm sisteminden bir baЕџka Г¶lГ§Гјm sistemine dГ¶nГјЕџtГјrГјr.
+DEC2BIN			= DEC2BIN			##	OndalД±k bir sayД±yД±, ikiliye dГ¶nГјЕџtГјrГјr.
+DEC2HEX			= DEC2HEX			##	OndalД±k bir sayД±yД±, onaltД±lД±ya dГ¶nГјЕџtГјrГјr.
+DEC2OCT			= DEC2OCT			##	OndalД±k bir sayД±yД± sekizliДџe dГ¶nГјЕџtГјrГјr.
+DELTA			= DELTA				##	Д°ki deДџerin eЕџit olup olmadД±ДџД±nД± sД±nar.
+ERF				= HATAД°ЕћLEV			##	Hata iЕџlevini verir.
+ERFC			= TГњMHATAД°ЕћLEV		##	TГјmleyici hata iЕџlevini verir.
+GESTEP			= BESINIR			##	Bir sayД±nД±n eЕџik deДџerinden bГјyГјk olup olmadД±ДџД±nД± sД±nar.
+HEX2BIN			= HEX2BIN			##	OnaltД±lД± bir sayД±yД± ikiliye dГ¶nГјЕџtГјrГјr.
+HEX2DEC			= HEX2DEC			##	OnaltД±lД± bir sayД±yД± ondalД±Дџa dГ¶nГјЕџtГјrГјr.
+HEX2OCT			= HEX2OCT			##	OnaltД±lД± bir sayД±yД± sekizliДџe dГ¶nГјЕџtГјrГјr.
+IMABS			= SANMUTLAK			##	KarmaЕџД±k bir sayД±nД±n mutlak deДџerini (modГјl) verir.
+IMAGINARY		= SANAL				##	KarmaЕџД±k bir sayД±nД±n sanal katsayД±sД±nД± verir.
+IMARGUMENT		= SANBAДћ_DEДћД°ЕћKEN	##	Radyanlarla belirtilen bir aГ§Д± olan teta baДџД±msД±z deДџiЕџkenini verir.
+IMCONJUGATE		= SANEЕћLENEK		##	KarmaЕџД±k bir sayД±nД±n karmaЕџД±k eЕџleniДџini verir.
+IMCOS			= SANCOS			##	KarmaЕџД±k bir sayД±nД±n kosinГјsГјnГј verir.
+IMDIV			= SANBГ–L			##	Д°ki karmaЕџД±k sayД±nД±n bГ¶lГјmГјnГј verir.
+IMEXP			= SANГњS				##	KarmaЕџД±k bir sayД±nД±n ГјssГјnГј verir.
+IMLN			= SANLN				##	KarmaЕџД±k bir sayД±nД±n doДџal logaritmasД±nД± verir.
+IMLOG10			= SANLOG10			##	KarmaЕџД±k bir sayД±nД±n, 10 tabanД±nda logaritmasД±nД± verir.
+IMLOG2			= SANLOG2			##	KarmaЕџД±k bir sayД±nД±n 2 tabanД±nda logaritmasД±nД± verir.
+IMPOWER			= SANГњSSГњ			##	KarmaЕџД±k bir sayД±yД±, bir tamsayД± ГјssГјne yГјkseltilmiЕџ olarak verir.
+IMPRODUCT		= SANГ‡ARP			##	KarmaЕџД±k sayД±larД±n Г§arpД±mД±nД± verir.
+IMREAL			= SANGERГ‡EK			##	KarmaЕџД±k bir sayД±nД±n, gerГ§ek katsayД±sД±nД± verir.
+IMSIN			= SANSIN			##	KarmaЕџД±k bir sayД±nД±n sinГјsГјnГј verir.
+IMSQRT			= SANKAREKГ–K		##	KarmaЕџД±k bir sayД±nД±n karekГ¶kГјnГј verir.
+IMSUB			= SANГ‡IKAR			##	Д°ki karmaЕџД±k sayД±nД±n farkД±nД± verir.
+IMSUM			= SANTOPLA			##	KarmaЕџД±k sayД±larД±n toplamД±nД± verir.
+OCT2BIN			= OCT2BIN			##	Sekizli bir sayД±yД± ikiliye dГ¶nГјЕџtГјrГјr.
+OCT2DEC			= OCT2DEC			##	Sekizli bir sayД±yД± ondalД±Дџa dГ¶nГјЕџtГјrГјr.
+OCT2HEX			= OCT2HEX			##	Sekizli bir sayД±yД± onaltД±lД±ya dГ¶nГјЕџtГјrГјr.
+
+
+##
+##	Financial functions				Finansal fonksiyonlar
+##
+ACCRINT			= GERГ‡EKFAД°Z		##	DГ¶nemsel faiz Г¶deyen hisse senedine iliЕџkin tahakkuk eden faizi getirir.
+ACCRINTM		= GERГ‡EKFAД°ZV		##	Vadesinde Г¶deme yapan bir tahvilin tahakkuk etmiЕџ faizini verir.
+AMORDEGRC		= AMORDEGRC			##	YД±pranma katsayД±sД± kullanarak her hesap dГ¶neminin deДџer kaybД±nД± verir.
+AMORLINC		= AMORLINC			##	Her hesap dГ¶nemi iГ§indeki yД±pranmayД± verir.
+COUPDAYBS		= KUPONGГњNBD		##	Kupon sГјresinin baЕџlangД±cД±ndan alД±Еџ tarihine kadar olan sГјredeki gГјn sayД±sД±nД± verir.
+COUPDAYS		= KUPONGГњN			##	Kupon sГјresindeki, gГјn sayД±sД±nД±, alД±Еџ tarihini de iГ§ermek Гјzere, verir.
+COUPDAYSNC		= KUPONGГњNDSK		##	AlД±Еџ tarihinden bir sonraki kupon tarihine kadar olan gГјn sayД±sД±nД± verir.
+COUPNCD			= KUPONGГњNSKT		##	AlД±Еџ tarihinden bir sonraki kupon tarihini verir.
+COUPNUM			= KUPONSAYI			##	AlД±Еџ tarihiyle vade tarihi arasД±nda Г¶denecek kuponlarД±n sayД±sД±nД± verir.
+COUPPCD			= KUPONGГњNГ–KT		##	AlД±Еџ tarihinden bir Г¶nceki kupon tarihini verir.
+CUMIPMT			= AД°Г‡VERД°MORANI		##	Д°ki dГ¶nem arasД±nda Г¶denen kГјmГјlatif faizi verir.
+CUMPRINC		= ANA_PARA_Г–DEMESД°	##	Д°ki dГ¶nem arasД±nda bir borГ§ Гјzerine Г¶denen birikimli temeli verir.
+DB				= AZALANBAKД°YE		##	Bir malД±n belirtilen bir sГјre iГ§indeki yД±pranmasД±nД±, sabit azalan bakiye yГ¶ntemini kullanarak verir.
+DDB				= Г‡Д°FTAZALANBAKД°YE	##	Bir malД±n belirtilen bir sГјre iГ§indeki yД±pranmasД±nД±, Г§ift azalan bakiye yГ¶ntemi ya da sizin belirttiДџiniz baЕџka bir yГ¶ntemi kullanarak verir.
+DISC			= Д°NDД°RД°M			##	Bir tahvilin indirim oranД±nД± verir.
+DOLLARDE		= LД°RAON			##	Kesir olarak tanД±mlanmД±Еџ lira fiyatД±nД±, ondalД±k sayД± olarak tanД±mlanmД±Еџ lira fiyatД±na dГ¶nГјЕџtГјrГјr.
+DOLLARFR		= LД°RAKES			##	OndalД±k sayД± olarak tanД±mlanmД±Еџ lira fiyatД±nД±, kesir olarak tanД±mlanmД±Еџ lira fiyatД±na dГ¶nГјЕџtГјrГјr.
+DURATION		= SГњRE				##	Belli aralД±klarla faiz Г¶demesi yapan bir tahvilin yД±llД±k sГјresini verir.
+EFFECT			= ETKД°N				##	Efektif yД±llД±k faiz oranД±nД± verir.
+FV				= ANBD				##	Bir yatД±rД±mД±n gelecekteki deДџerini verir.
+FVSCHEDULE		= GDPROGRAM			##	Bir seri birleЕџik faiz oranД± uyguladД±ktan sonra, bir baЕџlangД±Г§taki anaparanД±n gelecekteki deДџerini verir.
+INTRATE			= FAД°ZORANI			##	Tam olarak yatД±rД±m yapД±lmД±Еџ bir tahvilin faiz oranД±nД± verir.
+IPMT			= FAД°ZTUTARI		##	Bir yatД±rД±mД±n verilen bir sГјre iГ§in faiz Г¶demesini verir.
+IRR				= Д°Г‡_VERД°M_ORANI	##	Bir para akД±ЕџД± serisi iГ§in, iГ§ verim oranД±nД± verir.
+ISPMT			= ISPMT				##	YatД±rД±mД±n belirli bir dГ¶nemi boyunca Г¶denen faizi hesaplar.
+MDURATION		= MSГњRE				##	VarsayД±lan par deДџeri 10.000.000 lira olan bir tahvil iГ§in Macauley deДџiЕџtirilmiЕџ sГјreyi verir.
+MIRR			= D_Д°Г‡_VERД°M_ORANI	##	Pozitif ve negatif para akД±ЕџlarД±nД±n farklД± oranlarda finanse edildiДџi durumlarda, iГ§ verim oranД±nД± verir.
+NOMINAL			= NOMД°NAL			##	YД±llД±k nominal faiz oranД±nД± verir.
+NPER			= DГ–NEM_SAYISI		##	Bir yatД±rД±mД±n dГ¶nem sayД±sД±nД± verir.
+NPV				= NBD				##	Bir yatД±rД±mД±n bugГјnkГј net deДџerini, bir dГ¶nemsel para akД±ЕџlarД± serisine ve bir indirim oranД±na baДџlД± olarak verir.
+ODDFPRICE		= TEKYDEДћER			##	Tek bir ilk dГ¶nemi olan bir tahvilin deДџerini, her 100.000.000 lirada bir verir.
+ODDFYIELD		= TEKYГ–DEME			##	Tek bir ilk dГ¶nemi olan bir tahvilin Г¶demesini verir.
+ODDLPRICE		= TEKSDEДћER			##	Tek bir son dГ¶nemi olan bir tahvilin fiyatД±nД± her 10.000.000 lirada bir verir.
+ODDLYIELD		= TEKSГ–DEME			##	Tek bir son dГ¶nemi olan bir tahvilin Г¶demesini verir.
+PMT				= DEVRESEL_Г–DEME	##	Bir yД±llД±k dГ¶nemsel Г¶demeyi verir.
+PPMT			= ANA_PARA_Г–DEMESД°	##	Verilen bir sГјre iГ§in, bir yatД±rД±mД±n anaparasД±na dayanan Г¶demeyi verir.
+PRICE			= DEДћER				##	DГ¶nemsel faiz Г¶deyen bir tahvilin fiyatД±nД± 10.000.00 liralД±k deДџer baЕџД±na verir.
+PRICEDISC		= DEДћERД°ND			##	Д°ndirimli bir tahvilin fiyatД±nД± 10.000.000 liralД±k nominal deДџer baЕџД±na verir.
+PRICEMAT		= DEДћERVADE			##	Faizini vade sonunda Г¶deyen bir tahvilin fiyatД±nД± 10.000.000 nominal deДџer baЕџД±na verir.
+PV				= BD				##	Bir yatД±rД±mД±n bugГјnkГј deДџerini verir.
+RATE			= FAД°Z_ORANI		##	Bir yД±llД±k dГ¶nem baЕџД±na dГјЕџen faiz oranД±nД± verir.
+RECEIVED		= GETД°RД°			##	Tam olarak yatД±rД±lmД±Еџ bir tahvilin vadesinin bitiminde alД±nan miktarД± verir.
+SLN				= DA				##	Bir malД±n bir dГ¶nem iГ§indeki doДџrusal yД±pranmasД±nД± verir.
+SYD				= YAT				##	Bir malД±n belirli bir dГ¶nem iГ§in olan amortismanД±nД± verir.
+TBILLEQ			= HTAHEЕћ			##	Bir Hazine bonosunun bono eЕџdeДџeri Г¶demesini verir.
+TBILLPRICE		= HTAHDEДћER			##	Bir Hazine bonosunun deДџerini, 10.000.000 liralД±k nominal deДџer baЕџД±na verir.
+TBILLYIELD		= HTAHГ–DEME			##	Bir Hazine bonosunun Г¶demesini verir.
+VDB				= DAB				##	Bir malД±n amortismanД±nД±, belirlenmiЕџ ya da kД±smi bir dГ¶nem iГ§in, bir azalan bakiye yГ¶ntemi kullanarak verir.
+XIRR			= AД°Г‡VERД°MORANI		##	DГ¶nemsel olmasД± gerekmeyen bir para akД±ЕџlarД± programД± iГ§in, iГ§ verim oranД±nД± verir.
+XNPV			= ANBD				##	DГ¶nemsel olmasД± gerekmeyen bir para akД±ЕџlarД± programД± iГ§in, bugГјnkГј net deДџeri verir.
+YIELD			= Г–DEME				##	Belirli aralД±klarla faiz Г¶deyen bir tahvilin Г¶demesini verir.
+YIELDDISC		= Г–DEMEД°ND			##	Д°ndirimli bir tahvilin yД±llД±k Г¶demesini verir; Г¶rneДџin, bir Hazine bonosunun.
+YIELDMAT		= Г–DEMEVADE			##	Vadesinin bitiminde faiz Г¶deyen bir tahvilin yД±llД±k Г¶demesini verir.
+
+
+##
+##	Information functions				Bilgi fonksiyonlarД±
+##
+CELL			= HГњCRE			##	Bir hГјcrenin biГ§imlendirmesi, konumu ya da iГ§eriДџi hakkД±nda bilgi verir.
+ERROR.TYPE		= HATA.TД°PД°		##	Bir hata tГјrГјne iliЕџkin sayД±larД± verir.
+INFO			= BД°LGД°			##	GeГ§erli iЕџletim ortamД± hakkД±nda bilgi verir.
+ISBLANK			= EBOЕћSA		##	DeДџer boЕџsa, DOДћRU verir.
+ISERR			= EHATA			##	DeДџer, #YOK dД±ЕџД±ndaki bir hata deДџeriyse, DOДћRU verir.
+ISERROR			= EHATALIYSA	##	DeДџer, herhangi bir hata deДџeriyse, DOДћRU verir.
+ISEVEN			= Г‡Д°FTTД°R		##	SayД± Г§iftse, DOДћRU verir.
+ISLOGICAL		= EMANTIKSALSA	##	DeДџer, mantД±ksal bir deДџerse, DOДћRU verir.
+ISNA			= EYOKSA		##	DeДџer, #YOK hata deДџeriyse, DOДћRU verir.
+ISNONTEXT		= EMETД°NDEДћД°LSE	##	DeДџer, metin deДџilse, DOДћRU verir.
+ISNUMBER		= ESAYIYSA		##	DeДџer, bir sayД±ysa, DOДћRU verir.
+ISODD			= TEKTД°R		##	SayД± tekse, DOДћRU verir.
+ISREF			= EREFSE		##	DeДџer bir baЕџvuruysa, DOДћRU verir.
+ISTEXT			= EMETД°NSE		##	DeДџer bir metinse DOДћRU verir.
+N				= N				##	SayД±ya dГ¶nГјЕџtГјrГјlmГјЕџ bir deДџer verir.
+NA				= YOKSAY		##	#YOK hata deДџerini verir.
+TYPE			= TД°P			##	Bir deДџerin veri tГјrГјnГј belirten bir sayД± verir.
+
+
+##
+##	Logical functions				MantД±ksal fonksiyonlar
+##
+AND				= VE			##	BГјtГјn baДџД±msД±z deДџiЕџkenleri DOДћRU ise, DOДћRU verir.
+FALSE			= YANLIЕћ		##	YANLIЕћ mantД±ksal deДџerini verir.
+IF				= EДћER			##	GerГ§ekleЕџtirilecek bir mantД±ksal sД±nama belirtir.
+IFERROR			= EДћERHATA		##	FormГјl hatalД±ysa belirttiДџiniz deДџeri verir; bunun dД±ЕџД±ndaki durumlarda formГјlГјn sonucunu verir.
+NOT				= DEДћД°L			##	BaДџД±msД±z deДџiЕџkeninin mantД±ДџД±nД± tersine Г§evirir.
+OR				= YADA			##	BaДџД±msД±z deДџiЕџkenlerden herhangi birisi DOДћRU ise, DOДћRU verir.
+TRUE			= DOДћRU			##	DOДћRU mantД±ksal deДџerini verir.
+
+
+##
+##	Lookup and reference functions			Arama ve BaЕџvuru fonksiyonlarД±
+##
+ADDRESS			= ADRES				##	Bir baЕџvuruyu, Г§alД±Еџma sayfasД±ndaki tek bir hГјcreye metin olarak verir.
+AREAS			= ALANSAY			##	Renvoie le nombre de zones dans une rГ©fГ©rence.
+CHOOSE			= ELEMAN			##	DeДџerler listesinden bir deДџer seГ§er.
+COLUMN			= SГњTUN				##	Bir baЕџvurunun sГјtun sayД±sД±nД± verir.
+COLUMNS			= SГњTUNSAY			##	Bir baЕџvurudaki sГјtunlarД±n sayД±sД±nД± verir.
+HLOOKUP			= YATAYARA			##	Bir dizinin en Гјst satД±rД±na bakar ve belirtilen hГјcrenin deДџerini verir.
+HYPERLINK		= KГ–PRГњ				##	Bir aДџ sunucusunda, bir intranette ya da Internet'te depolanan bir belgeyi aГ§an bir kД±sayol ya da atlama oluЕџturur.
+INDEX			= Д°NDД°S				##	BaЕџvurudan veya diziden bir deДџer seГ§mek iГ§in, bir dizin kullanД±r.
+INDIRECT		= DOLAYLI			##	Metin deДџeriyle belirtilen bir baЕџvuru verir.
+LOOKUP			= ARA				##	Bir vektГ¶rdeki veya dizideki deДџerleri arar.
+MATCH			= KAГ‡INCI			##	Bir baЕџvurudaki veya dizideki deДџerleri arar.
+OFFSET			= KAYDIR			##	Verilen bir baЕџvurudan, bir baЕџvuru kaydД±rmayД± verir.
+ROW				= SATIR				##	Bir baЕџvurunun satД±r sayД±sД±nД± verir.
+ROWS			= SATIRSAY			##	Bir baЕџvurudaki satД±rlarД±n sayД±sД±nД± verir.
+RTD				= RTD				##	COM otomasyonunu destekleyen programdan gerГ§ek zaman verileri alД±r.
+TRANSPOSE		= DEVRД°K_DГ–NГњЕћГњM	##	Bir dizinin devrik dГ¶nГјЕџГјmГјnГј verir.
+VLOOKUP			= DГњЕћEYARA			##	Bir dizinin ilk sГјtununa bakar ve bir hГјcrenin deДџerini vermek iГ§in satД±r boyunca hareket eder.
+
+
+##
+##	Math and trigonometry functions			Matematik ve trigonometri fonksiyonlarД±
+##
+ABS				= MUTLAK			##	Bir sayД±nД±n mutlak deДџerini verir.
+ACOS			= ACOS				##	Bir sayД±nД±n ark kosinГјsГјnГј verir.
+ACOSH			= ACOSH				##	Bir sayД±nД±n ters hiperbolik kosinГјsГјnГј verir.
+ASIN			= ASД°N				##	Bir sayД±nД±n ark sinГјsГјnГј verir.
+ASINH			= ASД°NH				##	Bir sayД±nД±n ters hiperbolik sinГјsГјnГј verir.
+ATAN			= ATAN				##	Bir sayД±nД±n ark tanjantД±nД± verir.
+ATAN2			= ATAN2				##	Ark tanjantД±, x- ve y- koordinatlarД±ndan verir.
+ATANH			= ATANH				##	Bir sayД±nД±n ters hiperbolik tanjantД±nД± verir.
+CEILING			= TAVANAYUVARLA		##	Bir sayД±yД±, en yakД±n tamsayД±ya ya da en yakД±n katД±na yuvarlar.
+COMBIN			= KOMBД°NASYON		##	Verilen sayД±da Г¶Дџenin kombinasyon sayД±sД±nД± verir.
+COS				= COS				##	Bir sayД±nД±n kosinГјsГјnГј verir.
+COSH			= COSH				##	Bir sayД±nД±n hiperbolik kosinГјsГјnГј verir.
+DEGREES			= DERECE			##	RadyanlarД± dereceye dГ¶nГјЕџtГјrГјr.
+EVEN			= Г‡Д°FT				##	Bir sayД±yД±, en yakД±n daha bГјyГјk Г§ift tamsayД±ya yuvarlar.
+EXP				= ГњS				##	e'yi, verilen bir sayД±nД±n ГјssГјne yГјkseltilmiЕџ olarak verir.
+FACT			= Г‡ARPINIM			##	Bir sayД±nД±n faktГ¶rГјnГј verir.
+FACTDOUBLE		= Г‡Д°FTFAKTГ–R		##	Bir sayД±nД±n Г§ift Г§arpД±nД±mД±nД± verir.
+FLOOR			= TABANAYUVARLA		##	Bir sayД±yД±, daha kГјГ§Гјk sayД±ya, sД±fД±ra yakД±nsayarak yuvarlar.
+GCD				= OBEB				##	En bГјyГјk ortak bГ¶leni verir.
+INT				= TAMSAYI			##	Bir sayД±yД± aЕџaДџД±ya doДџru en yakД±n tamsayД±ya yuvarlar.
+LCM				= OKEK				##	En kГјГ§Гјk ortak katД± verir.
+LN				= LN				##	Bir sayД±nД±n doДџal logaritmasД±nД± verir.
+LOG				= LOG				##	Bir sayД±nД±n, belirtilen bir tabandaki logaritmasД±nД± verir.
+LOG10			= LOG10				##	Bir sayД±nД±n 10 tabanД±nda logaritmasД±nД± verir.
+MDETERM			= DETERMД°NANT		##	Bir dizinin dizey determinantД±nД± verir.
+MINVERSE		= DД°ZEY_TERS		##	Bir dizinin dizey tersini verir.
+MMULT			= DГ‡ARP				##	Д°ki dizinin dizey Г§arpД±mД±nД± verir.
+MOD				= MODГњLO			##	BГ¶lmeden kalanД± verir.
+MROUND			= KYUVARLA			##	Д°stenen kata yuvarlanmД±Еџ bir sayД± verir.
+MULTINOMIAL		= Г‡OKTERД°MLД°		##	Bir sayД±lar kГјmesinin Г§ok terimlisini verir.
+ODD				= TEK				##	Bir sayД±yД± en yakД±n daha bГјyГјk tek sayД±ya yuvarlar.
+PI				= PД°				##	Pi deДџerini verir.
+POWER			= KUVVET			##	Bir Гјsse yГјkseltilmiЕџ sayД±nД±n sonucunu verir.
+PRODUCT			= Г‡ARPIM			##	BaДџД±msД±z deДџiЕџkenlerini Г§arpar.
+QUOTIENT		= BГ–LГњM				##	Bir bГ¶lme iЕџleminin tamsayД± kД±smД±nД± verir.
+RADIANS			= RADYAN			##	Dereceleri radyanlara dГ¶nГјЕџtГјrГјr.
+RAND			= S_SAYI_ГњRET		##	0 ile 1 arasД±nda rastgele bir sayД± verir.
+RANDBETWEEN		= RASTGELEARALIK	##	BelirttiДџiniz sayД±lar arasД±nda rastgele bir sayД± verir.
+ROMAN			= ROMEN				##	Bir normal rakamД±, metin olarak, romen rakamД±na Г§evirir.
+ROUND			= YUVARLA			##	Bir sayД±yД±, belirtilen basamak sayД±sД±na yuvarlar.
+ROUNDDOWN		= AЕћAДћIYUVARLA		##	Bir sayД±yД±, daha kГјГ§Гјk sayД±ya, sД±fД±ra yakД±nsayarak yuvarlar.
+ROUNDUP			= YUKARIYUVARLA		##	Bir sayД±yД± daha bГјyГјk sayД±ya, sД±fД±rdan Д±raksayarak yuvarlar.
+SERIESSUM		= SERД°TOPLA			##	Bir Гјs serisinin toplamД±nД±, formГјle baДџlД± olarak verir.
+SIGN			= Д°ЕћARET			##	Bir sayД±nД±n iЕџaretini verir.
+SIN				= SД°N				##	Verilen bir aГ§Д±nД±n sinГјsГјnГј verir.
+SINH			= SД°NH				##	Bir sayД±nД±n hiperbolik sinГјsГјnГј verir.
+SQRT			= KAREKГ–K			##	Pozitif bir karekГ¶k verir.
+SQRTPI			= KAREKГ–KPД°			##	(* Pi sayД±sД±nД±n) kare kГ¶kГјnГј verir.
+SUBTOTAL		= ALTTOPLAM			##	Bir listedeki ya da veritabanД±ndaki bir alt toplamД± verir.
+SUM				= TOPLA				##	BaДџД±msД±z deДџiЕџkenlerini toplar.
+SUMIF			= ETOPLA			##	Verilen Г¶lГ§Гјtle belirlenen hГјcreleri toplar.
+SUMIFS			= SUMIFS			##	Bir aralД±ktaki, birden fazla Г¶lГ§Гјte uyan hГјcreleri ekler.
+SUMPRODUCT		= TOPLA.Г‡ARPIM		##	Д°liЕџkili dizi bileЕџenlerinin Г§arpД±mlarД±nД±n toplamД±nД± verir.
+SUMSQ			= TOPKARE			##	BaДџД±msД±z deДџiЕџkenlerin karelerinin toplamД±nД± verir.
+SUMX2MY2		= TOPX2EY2			##	Д°ki dizideki iliЕџkili deДџerlerin farkД±nД±n toplamД±nД± verir.
+SUMX2PY2		= TOPX2AY2			##	Д°ki dizideki iliЕџkili deДџerlerin karelerinin toplamД±nД±n toplamД±nД± verir.
+SUMXMY2			= TOPXEY2			##	Д°ki dizideki iliЕџkili deДџerlerin farklarД±nД±n karelerinin toplamД±nД± verir.
+TAN				= TAN				##	Bir sayД±nД±n tanjantД±nД± verir.
+TANH			= TANH				##	Bir sayД±nД±n hiperbolik tanjantД±nД± verir.
+TRUNC			= NSAT				##	Bir sayД±nД±n, tamsayД± durumuna gelecek Еџekilde, fazlalД±klarД±nД± atar.
+
+
+##
+##	Statistical functions				Д°statistiksel fonksiyonlar
+##
+AVEDEV			= ORTSAP			##	Veri noktalarД±nД±n ortalamalarД±ndan mutlak sapmalarД±nД±n ortalamasД±nД± verir.
+AVERAGE			= ORTALAMA			##	BaДџД±msД±z deДџiЕџkenlerinin ortalamasД±nД± verir.
+AVERAGEA		= ORTALAMAA			##	BaДџД±msД±z deДџiЕџkenlerinin, sayД±lar, metin ve mantД±ksal deДџerleri iГ§ermek Гјzere ortalamasД±nД± verir.
+AVERAGEIF		= EДћERORTALAMA 		##	Verili Г¶lГ§ГјtГј karЕџД±layan bir aralД±ktaki bГјtГјn hГјcrelerin ortalamasД±nД± (aritmetik ortalama) hesaplar.
+AVERAGEIFS		= EДћERLERORTALAMA 	##	Birden Г§ok Г¶lГ§Гјte uyan tГјm hГјcrelerin ortalamasД±nД± (aritmetik ortalama) hesaplar.
+BETADIST		= BETADAДћ			##	Beta birikimli daДџД±lД±m fonksiyonunu verir.
+BETAINV			= BETATERS			##	Belirli bir beta daДџД±lД±mД± iГ§in birikimli daДџД±lД±m fonksiyonunun tersini verir.
+BINOMDIST		= BД°NOMDAДћ			##	Tek terimli binom daДџД±lД±mД± olasД±lД±ДџД±nД± verir.
+CHIDIST			= KД°KAREDAДћ			##	Kikare daДџД±lД±mД±n tek kuyruklu olasД±lД±ДџД±nД± verir.
+CHIINV			= KД°KARETERS		##	Kikare daДџД±lД±mД±n kuyruklu olasД±lД±ДџД±nД±n tersini verir.
+CHITEST			= KД°KARETEST		##	BaДџД±msД±zlД±k sД±namalarД±nД± verir.
+CONFIDENCE		= GГњVENД°RLД°K		##	Bir popГјlasyon ortalamasД± iГ§in gГјvenirlik aralД±ДџД±nД± verir.
+CORREL			= KORELASYON		##	Д°ki veri kГјmesi arasД±ndaki baДџlantД± katsayД±sД±nД± verir.
+COUNT			= BAДћ_DEДћ_SAY		##	BaДџД±msД±z deДџiЕџkenler listesinde kaГ§ tane sayД± bulunduДџunu sayar.
+COUNTA			= BAДћ_DEДћ_DOLU_SAY	##	BaДџД±msД±z deДџiЕџkenler listesinde kaГ§ tane deДџer bulunduДџunu sayar.
+COUNTBLANK		= BOЕћLUKSAY 		##	AralД±ktaki boЕџ hГјcre sayД±sД±nД± hesaplar.
+COUNTIF			= EДћERSAY 			##	Verilen Г¶lГ§Гјtlere uyan bir aralД±k iГ§indeki hГјcreleri sayar.
+COUNTIFS		= Г‡OKEДћERSAY 		##	Birden Г§ok Г¶lГ§Гјte uyan bir aralД±k iГ§indeki hГјcreleri sayar.
+COVAR			= KOVARYANS 		##	EЕџleЕџtirilmiЕџ sapmalarД±n ortalamasД± olan kovaryansД± verir.
+CRITBINOM		= KRД°TД°KBД°NOM		##	Birikimli binom daДџД±lД±mД±nД±n bir Г¶lГ§Гјt deДџerinden kГјГ§Гјk veya Г¶lГ§Гјt deДџerine eЕџit olduДџu en kГјГ§Гјk deДџeri verir.
+DEVSQ			= SAPKARE			##	SapmalarД±n karelerinin toplamД±nД± verir.
+EXPONDIST		= ГњSTELDAДћ			##	Гњstel daДџД±lД±mД± verir.
+FDIST			= FDAДћ				##	F olasД±lД±k daДџД±lД±mД±nД± verir.
+FINV			= FTERS				##	F olasД±lД±k daДџД±lД±mД±nД±n tersini verir.
+FISHER			= FISHER			##	Fisher dГ¶nГјЕџГјmГјnГј verir.
+FISHERINV		= FISHERTERS		##	Fisher dГ¶nГјЕџГјmГјnГјn tersini verir.
+FORECAST		= TAHMД°N			##	Bir doДџrusal eДџilim boyunca bir deДџer verir.
+FREQUENCY		= SIKLIK			##	Bir sД±klД±k daДџД±lД±mД±nД±, dikey bir dizi olarak verir.
+FTEST			= FTEST				##	Bir F-test'in sonucunu verir.
+GAMMADIST		= GAMADAДћ			##	Gama daДџД±lД±mД±nД± verir.
+GAMMAINV		= GAMATERS			##	Gama kГјmГјlatif daДџД±lД±mД±nД±n tersini verir.
+GAMMALN			= GAMALN			##	Gama fonksiyonunun (?(x)) doДџal logaritmasД±nД± verir.
+GEOMEAN			= GEOORT			##	Geometrik ortayД± verir.
+GROWTH			= BГњYГњME			##	Гњstel bir eДџilim boyunca deДџerler verir.
+HARMEAN			= HARORT			##	Harmonik ortayД± verir.
+HYPGEOMDIST		= HД°PERGEOMDAДћ		##	Hipergeometrik daДџД±lД±mД± verir.
+INTERCEPT		= KESMENOKTASI		##	DoДџrusal Г§akД±ЕџtД±rma Г§izgisinin kesiЕџme noktasД±nД± verir.
+KURT			= BASIKLIK			##	Bir veri kГјmesinin basД±klД±ДџД±nД± verir.
+LARGE			= BГњYГњK				##	Bir veri kГјmesinde k. en bГјyГјk deДџeri verir.
+LINEST			= DOT				##	DoДџrusal bir eДџilimin parametrelerini verir.
+LOGEST			= LOT				##	Гњstel bir eДџilimin parametrelerini verir.
+LOGINV			= LOGTERS			##	Bir lognormal daДџД±lД±mД±nД±n tersini verir.
+LOGNORMDIST		= LOGNORMDAДћ		##	Birikimli lognormal daДџД±lД±mД±nД± verir.
+MAX				= MAK				##	Bir baДџД±msД±z deДџiЕџkenler listesindeki en bГјyГјk deДџeri verir.
+MAXA			= MAKA				##	Bir baДџД±msД±z deДџiЕџkenler listesindeki, sayД±lar, metin ve mantД±ksal deДџerleri iГ§ermek Гјzere, en bГјyГјk deДџeri verir.
+MEDIAN			= ORTANCA			##	Belirtilen sayД±larД±n orta deДџerini verir.
+MIN				= MД°N				##	Bir baДџД±msД±z deДџiЕџkenler listesindeki en kГјГ§Гјk deДџeri verir.
+MINA			= MД°NA				##	Bir baДџД±msД±z deДџiЕџkenler listesindeki, sayД±lar, metin ve mantД±ksal deДџerleri de iГ§ermek Гјzere, en kГјГ§Гјk deДџeri verir.
+MODE			= ENГ‡OK_OLAN		##	Bir veri kГјmesindeki en sД±k rastlanan deДџeri verir.
+NEGBINOMDIST	= NEGBД°NOMDAДћ		##	Negatif binom daДџД±lД±mД±nД± verir.
+NORMDIST		= NORMDAДћ			##	Normal birikimli daДџД±lД±mД± verir.
+NORMINV			= NORMTERS			##	Normal kГјmГјlatif daДџД±lД±mД±n tersini verir.
+NORMSDIST		= NORMSDAДћ			##	Standart normal birikimli daДџД±lД±mД± verir.
+NORMSINV		= NORMSTERS			##	Standart normal birikimli daДџД±lД±mД±n tersini verir.
+PEARSON			= PEARSON			##	Pearson Г§arpД±m moment korelasyon katsayД±sД±nД± verir.
+PERCENTILE		= YГњZDEBД°RLД°K		##	Bir aralД±k iГ§erisinde bulunan deДџerlerin k. frekans toplamД±nД± verir.
+PERCENTRANK		= YГњZDERANK			##	Bir veri kГјmesindeki bir deДџerin yГјzde mertebesini verir.
+PERMUT			= PERMГњTASYON		##	Verilen sayД±da nesne iГ§in permГјtasyon sayД±sД±nД± verir.
+POISSON			= POISSON			##	Poisson daДџД±lД±mД±nД± verir.
+PROB			= OLASILIK			##	Bir aralД±ktaki deДџerlerin iki sД±nД±r arasД±nda olmasД± olasД±lД±ДџД±nД± verir.
+QUARTILE		= DГ–RTTEBД°RLД°K		##	Bir veri kГјmesinin dГ¶rtte birliДџini verir.
+RANK			= RANK				##	Bir sayД±lar listesinde bir sayД±nД±n mertebesini verir.
+RSQ				= RKARE				##	Pearson Г§arpД±m moment korelasyon katsayД±sД±nД±n karesini verir.
+SKEW			= Г‡ARPIKLIK			##	Bir daДџД±lД±mД±n Г§arpД±klД±ДџД±nД± verir.
+SLOPE			= EДћД°M				##	DoДџrusal Г§akД±Еџma Г§izgisinin eДџimini verir.
+SMALL			= KГњГ‡ГњK				##	Bir veri kГјmesinde k. en kГјГ§Гјk deДџeri verir.
+STANDARDIZE		= STANDARTLAЕћTIRMA	##	NormalleЕџtirilmiЕџ bir deДџer verir.
+STDEV			= STDSAPMA			##	Bir Г¶rneДџe dayanarak standart sapmayД± tahmin eder.
+STDEVA			= STDSAPMAA			##	Standart sapmayД±, sayД±lar, metin ve mantД±ksal deДџerleri iГ§ermek Гјzere, bir Г¶rneДџe baДџlД± olarak tahmin eder.
+STDEVP			= STDSAPMAS			##	Standart sapmayД±, tГјm popГјlasyona baДџlД± olarak hesaplar.
+STDEVPA			= STDSAPMASA		##	Standart sapmayД±, sayД±lar, metin ve mantД±ksal deДџerleri iГ§ermek Гјzere, tГјm popГјlasyona baДџlД± olarak hesaplar.
+STEYX			= STHYX				##	Regresyondaki her x iГ§in tahmini y deДџerinin standart hatasД±nД± verir.
+TDIST			= TDAДћ				##	T-daДџД±lД±mД±nД± verir.
+TINV			= TTERS				##	T-daДџД±lД±mД±nД±n tersini verir.
+TREND			= EДћД°LД°M			##	DoДџrusal bir eДџilim boyunca deДџerler verir.
+TRIMMEAN		= KIRPORTALAMA		##	Bir veri kГјmesinin iГ§inin ortalamasД±nД± verir.
+TTEST			= TTEST				##	T-test'le iliЕџkilendirilmiЕџ olasД±lД±ДџД± verir.
+VAR				= VAR				##	VaryansД±, bir Г¶rneДџe baДџlД± olarak tahmin eder.
+VARA			= VARA				##	VaryansД±, sayД±lar, metin ve mantД±ksal deДџerleri iГ§ermek Гјzere, bir Г¶rneДџe baДџlД± olarak tahmin eder.
+VARP			= VARS				##	VaryansД±, tГјm popГјlasyona dayanarak hesaplar.
+VARPA			= VARSA				##	VaryansД±, sayД±lar, metin ve mantД±ksal deДџerleri iГ§ermek Гјzere, tГјm popГјlasyona baДџlД± olarak hesaplar.
+WEIBULL			= WEIBULL			##	Weibull daДџД±lД±mД±nД± hesaplar.
+ZTEST			= ZTEST				##	Z-testinin tek kuyruklu olasД±lД±k deДџerini hesaplar.
+
+
+##
+##	Text functions					Metin fonksiyonlarД±
+##
+ASC				= ASC 				##	Bir karakter dizesindeki Г§ift enli (iki bayt) Д°ngilizce harfleri veya katakanayД± yarД±m enli (tek bayt) karakterlerle deДџiЕџtirir.
+BAHTTEXT		= BAHTTEXT 			##	SayД±yД±, Гџ (baht) para birimi biГ§imini kullanarak metne dГ¶nГјЕџtГјrГјr.
+CHAR			= DAMGA 			##	Kod sayД±sД±yla belirtilen karakteri verir.
+CLEAN			= TEMД°Z				##	Metindeki bГјtГјn yazdД±rД±lamaz karakterleri kaldД±rД±r.
+CODE			= KOD				##	Bir metin dizesindeki ilk karakter iГ§in sayД±sal bir kod verir.
+CONCATENATE		= BД°RLEЕћTД°R			##	Pek Г§ok metin Г¶Дџesini bir metin Г¶Дџesi olarak birleЕџtirir.
+DOLLAR			= LД°RA				##	Bir sayД±yД± YTL (yeni TГјrk lirasД±) para birimi biГ§imini kullanarak metne dГ¶nГјЕџtГјrГјr.
+EXACT			= Г–ZDEЕћ				##	Д°ki metin deДџerinin Г¶zdeЕџ olup olmadД±ДџД±nД± anlamak iГ§in, deДџerleri denetler.
+FIND			= BUL				##	Bir metin deДџerini, bir baЕџkasД±nД±n iГ§inde bulur (bГјyГјk kГјГ§Гјk harf duyarlД±dД±r).
+FINDB			= BULB				##	Bir metin deДџerini, bir baЕџkasД±nД±n iГ§inde bulur (bГјyГјk kГјГ§Гјk harf duyarlД±dД±r).
+FIXED			= SAYIDГњZENLE		##	Bir sayД±yД±, sabit sayД±da ondalД±kla, metin olarak biГ§imlendirir.
+JIS				= JIS				##	Bir karakter dizesindeki tek enli (tek bayt) Д°ngilizce harfleri veya katakanayД± Г§ift enli (iki bayt) karakterlerle deДџiЕџtirir.
+LEFT			= SOL				##	Bir metin deДџerinden en soldaki karakterleri verir.
+LEFTB			= SOLB				##	Bir metin deДџerinden en soldaki karakterleri verir.
+LEN				= UZUNLUK			##	Bir metin dizesindeki karakter sayД±sД±nД± verir.
+LENB			= UZUNLUKB			##	Bir metin dizesindeki karakter sayД±sД±nД± verir.
+LOWER			= KГњГ‡ГњKHARF			##	Metni kГјГ§Гјk harfe Г§evirir.
+MID				= ORTA				##	Bir metin dizesinden belirli sayД±da karakteri, belirttiДџiniz konumdan baЕџlamak Гјzere verir.
+MIDB			= ORTAB				##	Bir metin dizesinden belirli sayД±da karakteri, belirttiДџiniz konumdan baЕџlamak Гјzere verir.
+PHONETIC		= SES				##	Metin dizesinden ses (furigana) karakterlerini ayД±klar.
+PROPER			= YAZIM.DГњZENД°		##	Bir metin deДџerinin her bir sГ¶zcГјДџГјnГјn ilk harfini bГјyГјk harfe Г§evirir.
+REPLACE			= DEДћД°ЕћTД°R			##	Metnin iГ§indeki karakterleri deДџiЕџtirir.
+REPLACEB		= DEДћД°ЕћTД°RB			##	Metnin iГ§indeki karakterleri deДџiЕџtirir.
+REPT			= YД°NELE			##	Metni belirtilen sayД±da yineler.
+RIGHT			= SAДћ				##	Bir metin deДџerinden en saДџdaki karakterleri verir.
+RIGHTB			= SAДћB				##	Bir metin deДџerinden en saДџdaki karakterleri verir.
+SEARCH			= BUL				##	Bir metin deДџerini, bir baЕџkasД±nД±n iГ§inde bulur (bГјyГјk kГјГ§Гјk harf duyarlД± deДџildir).
+SEARCHB			= BULB				##	Bir metin deДџerini, bir baЕџkasД±nД±n iГ§inde bulur (bГјyГјk kГјГ§Гјk harf duyarlД± deДџildir).
+SUBSTITUTE		= YERД°NEKOY			##	Bir metin dizesinde, eski metnin yerine yeni metin koyar.
+T				= M					##	BaДџД±msД±z deДџerlerini metne dГ¶nГјЕџtГјrГјr.
+TEXT			= METNEГ‡EVД°R		##	Bir sayД±yД± biГ§imlendirir ve metne dГ¶nГјЕџtГјrГјr.
+TRIM			= KIRP				##	Metindeki boЕџluklarД± kaldД±rД±r.
+UPPER			= BГњYГњKHARF			##	Metni bГјyГјk harfe Г§evirir.
+VALUE			= SAYIYAГ‡EVД°R		##	Bir metin baДџД±msД±z deДџiЕџkenini sayД±ya dГ¶nГјЕџtГјrГјr.

@@ -1,0 +1,88 @@
+.main_area  {
+    padding: 0 40px 60px 40px;
+}
+
+section.lgk-area {
+    border-radius: 30px;
+    background-color: #433147;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    padding: 30px 40px;
+}
+
+
+.lgk-btn  {
+    color: white;
+    background: #ed535a;
+    border-radius: 78px;
+    transition: .2s ease-in-out;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    width: max-content;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    font-size: 1.4rem;
+    align-items: center;
+    padding: 40px 60px;
+    color: white;
+    font-weight: 800;
+}
+
+.lgk-btn:hover {
+	border-radius: 30px;
+}
+
+.swiper-slide.slide-area {
+    background: #2c2c2c;
+    border-radius: 30px;
+    padding: 40px 0 0 40px;
+}
+.swiper-slide.slide-area img {
+    width: 100%;
+}
+.swiper-slide.slide-area span {
+    color: #000000;
+    font-weight: 800;
+    padding: 20px;
+    font-size: 15px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 15px;
+    width: 40%;
+    text-transform: capitalize;
+    text-align: center;
+    background: #e1df02f0;
+}
+.lgk-area-text h1 {
+    color: #ffffff;
+    font-size: 58px;
+    line-height: 1.10;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    width: 80%;
+    margin-top: 50px;
+}
+
+.lgk-area-text h2 {
+    color: white;
+    font-weight: 400;
+    font-size: 26px;
+    width: 80%;
+    margin: 55px 0;
+}
+
+.page_content h2 {
+    border: solid #433247;
+    padding: 30px 60px;
+    border-radius: 68px;
+    width: 250px;
+    text-align: center;
+    margin: 50px 0;
+}

@@ -1,0 +1,6 @@
+<?
+$MESS["ARLIGHT_ARSTORE_ZAGOLOVOK"] = "Заголовок";
+$MESS["ARLIGHT_ARSTORE_TEKST"] = "Текст";
+$MESS["ARLIGHT_ARSTORE_ZAGOLOVOK_KNOPKI"] = "Заголовок кнопки";
+$MESS["ARLIGHT_ARSTORE_SSYLKA"] = "Ссылка";
+?>

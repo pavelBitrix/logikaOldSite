@@ -1,0 +1,269 @@
+a.btn.btn-primary.ajax_reload {
+    background: #ed535a;
+    border: none;
+    border-radius: 12px;
+    font-weight: 800;
+    text-transform: lowercase;
+    padding: 5px 20px;
+    transition: .2s ease-in-out;
+}
+
+a.btn.btn-primary.ajax_reload:hover {
+	border-radius: 3px;
+    opacity: .9;
+    color: white !important;
+}
+
+a.g-font-size-15.sale-order-list-repeat-link, a.g-font-size-15.sale-order-list-cancel-link {
+    font-size: medium;
+    color: #ebebeb;
+    text-transform: lowercase;
+    font-weight: 500;
+}
+
+
+.sale-order-list-status-restricted, .sale-order-list-status-alert, .sale-order-list-status-success {
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: small;
+    border-radius: 12px;
+    background: #ed535a;
+    text-transform: lowercase;
+    color: white;
+    font-weight: 800;
+    margin-left: 25px;
+}
+
+.sale-order-list-shipment-status-block {
+    display: inline-block;
+    padding: 5px 20px !important;
+    border: 1px solid rgba(128, 134, 142, 0.20);
+    margin-left: 15px;
+    background: #ebebeb;
+    color: #7d7d7d;
+    vertical-align: middle;
+    text-transform: lowercase;
+    border-radius: 12px !important;
+    font-size: small;
+    font-weight: 800;
+}
+
+.sale-order-description {
+	color: #888;
+}
+
+.sale-order-list-shipment-button, .sale-order-list-change-payment  {
+    color: #ed535a;
+    font-size: large;
+    font-weight: 800;
+}
+
+.sale-order-list-shipment-button:hover, .sale-order-list-change-payment:hover,
+a.g-font-size-15.sale-order-list-about-link:hover, a.g-font-size-15.sale-order-list-repeat-link:hover, a.g-font-size-15.sale-order-list-cancel-link:hover
+ { opacity: .6;}
+
+a.g-font-size-15.sale-order-list-about-link {
+    color: #ed535a;
+    font-size: medium;
+    font-weight: 800;
+    text-transform: lowercase;
+}
+
+.mb-1.sale-order-list-payment-price {
+    color: #ebebeb;
+    font-size: medium;
+    font-weight: 400;
+}
+
+.sale-order-list-inner-container {
+    border: 1px solid #efecec;
+    border-top: none;
+    background: #433147;
+    padding: 20px 60px;
+    border-radius: 28px;
+}
+
+.sale-order-list-payment-title, .sale-order-list-shipment-title, .sale-order-list-shipment-status-item, .mb-1.sale-order-list-shipment-item {
+    color: #ebebeb;
+    font-size: medium;
+    font-weight: 400;
+}
+
+.sale-order-list-title-container h3 { font-size: 16px; }
+
+.sale-order-list-accomplished-title {
+	margin-top: 10px;
+	color: #2f3435;
+}
+
+.sale-order-list-inner-container { border: 1px solid #efecec; border-top: none; }
+
+.sale-order-list-inner-title-line {
+	margin: 0;
+	height: 1px;
+	border: none;
+	background: #f2f2f2;
+}
+
+.sale-order-list-inner-title-line-item {
+    color: #ebebeb;
+    font-size: large;
+    font-weight: 600;
+}
+
+.sale-order-list-inner-row-template { display: none; }
+
+.sale-order-list-payment-about-link,
+.sale-order-list-payment-repeat-link,
+.sale-order-list-payment-cancel-link { padding: 21px 0 0; }
+
+.sale-order-list-shipment-button,
+.sale-order-list-change-payment {
+	border-bottom: 1px dashed;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.sale-order-list-repeat-link:before {
+	display: inline-block;
+	margin: 0 3px 4px 0;
+	width: 10px;
+	height: 13px;
+	background: url(images/sale-order-repeat.svg) no-repeat;
+	content: "";
+	vertical-align: middle;
+}
+
+.sale-order-link-accomplished {
+	padding: 0;
+	text-decoration: none;
+}
+
+.sale-order-list-shipment-button:hover,
+.sale-order-list-change-payment:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+.sale-order-list-status-success {
+	border: 1px solid #bed277;
+	background: #e3f0bd;
+	color: #597707;
+}
+
+.sale-order-list-status-restricted-message {
+	color: #9e9fa2;
+}
+
+.sale-order-list-payment-check {
+	float: left;
+	width: 100%;
+}
+
+.sale-order-list-payment-check-left {
+	display: inline;
+	float: left;
+	padding-right: 5px;
+}
+
+.sale-order-list-shipment {
+	list-style: none;
+}
+
+.sale-order-list-shipment-list-item-link {
+	padding: 16px 0 0;
+	text-decoration: underline;
+}
+
+.sale-order-list-shipment-id { font-weight: 700; }
+
+.sale-order-list-shipment-id-icon {
+	display: inline-block;
+	width: 11px;
+	height: 13px;
+	background: url("images/sale-order-order-list-options-methods-shipment-list-item-id-element.svg") center no-repeat;
+	cursor: pointer;
+}
+
+.sale-order-list-top-border {
+	margin: 18px 15px 21px;
+	width: auto;
+	height: 1px;
+	background: #f2f2f2;
+}
+
+.sale-order-list-accomplished-title-container {
+	border: 1px solid #d6d6d6;
+	background: #f2f2f2;
+}
+
+.sale-order-list-accomplished-date-container { text-align: right; }
+
+.sale-order-list-accomplished-date { padding: 0 8px 0 0; }
+
+.sale-order-list-accomplished-date,
+.sale-order-list-accomplished-date-number {
+	display: inline-block;
+	margin: 10px 0 0;
+}
+
+.sale-order-list-accomplished-date { color: #888; }
+
+.sale-order-list-accomplished-date.canceled-order { color: #f00; }
+
+.sale-order-list-accomplished-date-number { color: #888; }
+
+.sale-order-list-shipment-status-item {
+	display: inline-block;
+	margin: 6px 0 5px;
+	vertical-align: middle;
+}
+
+.sale-order-list-shipment-status-block {
+	display: inline-block;
+	padding: 5px;
+	border: 1px solid rgba(128, 134, 142, 0.20);
+	border-radius: 2px;
+	background: #f3f4f5;
+	color: #535c69;
+	vertical-align: middle;
+}
+
+/* state's */
+
+.sale-order-state-green { background: #c2f388; }
+
+.sale-order-state-yellow { background: #d7dd39; }
+
+.sale-order-state-red { background: #dd6239; }
+
+.sale-order-state-grey { background: #f2f2f2; }
+
+@media (max-width: 998px) {
+	.sale-order-list-accomplished-date-container,
+	.sale-order-list-repeat-accomplished { text-align: left; }
+	.sale-order-list-inner-container {
+		padding: 5px 20px;
+		border-radius: 18px;
+	}
+.sale-order-list-shipment-button, .sale-order-list-change-payment { font-size: medium; }
+a.btn.btn-primary.ajax_reload {
+    padding: 5px 10px;
+    display: block;
+    width: 100%;
+	margin: 25px 0;
+    font-size: smaller;
+}
+.col-auto.sale-order-list-about-container {
+    margin-bottom: 15px;
+}
+}
+
+@media (max-width: 767px) {
+	.sale-order-list-button {
+		float: none;
+		margin: 10px 0 0;
+		max-width: none;
+	}
+}

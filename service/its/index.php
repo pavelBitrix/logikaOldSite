@@ -1,0 +1,105 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("Сопровождение 1С");
+$APPLICATION->SetPageProperty("keywords", "1С, бухгалтерия, автоматизация, внедрение, бухгалтерский учет, оперативный учет, курсы 1С, обновление 1С, управленческий учет, Франчайзи, купить 1С, скачать 1С, 1С бухгалтерия, 1С предприятие, 1С зарплата и кадры, 1С кадры, 1С предприятие, 1С расчет, 1С торговля");
+$APPLICATION->SetPageProperty("description", "Продажа, установка, настройка программ 1C, обучение пользователей. Разработка и внедрение систем полной автоматизации предприятий.");
+?><div style="width: 70%; margin-left: 200px; margin-top: 50px;">
+
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news",
+	"its",
+	Array(
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"SEF_MODE" => "Y",
+		"IBLOCK_TYPE" => "news",
+		"IBLOCK_ID" => "11",
+		"NEWS_COUNT" => "50",
+		"USE_SEARCH" => "N",
+		"USE_RSS" => "N",
+		"USE_RATING" => "N",
+		"USE_CATEGORIES" => "N",
+		"USE_REVIEW" => "N",
+		"USE_FILTER" => "N",
+		"SORT_BY1" => "SORT",
+        "SERVICE_FORM_ID" => "3",
+		"SORT_ORDER1" => "ASC",
+		"SORT_BY2" => "ACTIVE_FROM",
+		"SORT_ORDER2" => "DESC",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"LIST_FIELD_CODE" => Array("",""),
+		"LIST_PROPERTY_CODE" => array(
+			0 => "URL",
+		),
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"DISPLAY_NAME" => "N",
+		"META_KEYWORDS" => "KEYWORDS",
+		"META_DESCRIPTION" => "DESCRIPTION",
+		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"DETAIL_FIELD_CODE" => Array("PREVIEW_PICTURE",""),
+		"DETAIL_PROPERTY_CODE" => array(
+            0 => "PRICE_STARTS_FROM",
+            1 => "PRICE_DESC",
+            2 => "NEGOTIATED",
+		),
+		"DETAIL_DISPLAY_TOP_PAGER" => "N",
+		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
+		"DETAIL_PAGER_TITLE" => "Страница",
+		"DETAIL_PAGER_TEMPLATE" => "adaptive",
+		"DISPLAY_PANEL" => "Y",
+		"SET_TITLE" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"USE_PERMISSIONS" => "N",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "3600",
+		"CACHE_FILTER" => "N",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"PAGER_TITLE" => "Новости",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => "adaptive",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"USE_SHARE" => "Y",
+		"ADD_ELEMENT_CHAIN" => "Y",
+		"SHARE_HIDE" => "N",
+		"SHARE_TEMPLATE" => "",
+		"SHARE_HANDLERS" => array(
+			0 => "facebook",
+			1 => "lj",
+			2 => "mailru",
+			3 => "twitter",
+			4 => "vk",
+		),
+		"SHARE_SHORTEN_URL_LOGIN" => "",
+		"SHARE_SHORTEN_URL_KEY" => "",
+		"SEF_FOLDER" => "/service/its/",
+		"SEF_URL_TEMPLATES" => Array(
+			"news" => "",
+			"section" => "",
+			"detail" => "#ELEMENT_CODE#/",
+			"search" => "search/",
+			"rss" => "rss/",
+			"rss_section" => "#SECTION_CODE#/rss/"
+		),
+		"VARIABLE_ALIASES" => Array(
+			"news" => Array(),
+			"section" => Array(),
+			"detail" => Array(),
+			"search" => Array(),
+			"rss" => Array(),
+			"rss_section" => Array(),
+		),
+        "USER_CONSENT" => "Y",
+        "USER_CONSENT_ID" => "1",
+        "USER_CONSENT_IS_CHECKED" => "N",
+        "USER_CONSENT_IS_LOADED" => "N",
+        "PRICE_FORMAT" => "# <span class='currency'>руб.</span>",
+	)
+);?>
+</div>
+</div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

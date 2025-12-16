@@ -1,0 +1,70 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("Поиск");
+?><div class="container" style="margin-top: 5%; margin-bottom: 10%;">
+	 <?$APPLICATION->IncludeComponent(
+	"bitrix:catalog.search", 
+	"logika", 
+	array(
+		"ACTION_VARIABLE" => "action",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "N",
+		"BASKET_URL" => "/personal/basket.php",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "N",
+		"CHECK_DATES" => "N",
+		"CONVERT_CURRENCY" => "N",
+		"DETAIL_URL" => "/catalog/#SECTION_ID#/#ELEMENT_ID#",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_COMPARE" => "N",
+		"DISPLAY_TOP_PAGER" => "N",
+		"ELEMENT_SORT_FIELD" => "sort",
+		"ELEMENT_SORT_FIELD2" => "id",
+		"ELEMENT_SORT_ORDER" => "asc",
+		"ELEMENT_SORT_ORDER2" => "desc",
+		"HIDE_NOT_AVAILABLE" => "Y",
+		"HIDE_NOT_AVAILABLE_OFFERS" => "Y",
+		"IBLOCK_ID" => "53",
+		"IBLOCK_TYPE" => "1c_catalog",
+		"LINE_ELEMENT_COUNT" => "4",
+		"NO_WORD_LOGIC" => "N",
+		"OFFERS_LIMIT" => "5",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => "modern",
+		"PAGER_TITLE" => "Товары",
+		"PAGE_ELEMENT_COUNT" => "24",
+		"PRICE_CODE" => array(
+			0 => "retail",
+		),
+		"PRICE_VAT_INCLUDE" => "N",
+		"PRODUCT_ID_VARIABLE" => "id",
+		"PRODUCT_PROPERTIES" => array(
+		),
+		"PRODUCT_PROPS_VARIABLE" => "prop",
+		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"RESTART" => "N",
+		"SECTION_ID_VARIABLE" => "SECTION_ID",
+		"SECTION_URL" => "/catalog/#SECTION_ID#",
+		"SHOW_PRICE_COUNT" => "1",
+		"USE_LANGUAGE_GUESS" => "Y",
+		"USE_PRICE_COUNT" => "N",
+		"USE_PRODUCT_QUANTITY" => "Y",
+		"USE_SEARCH_RESULT_ORDER" => "N",
+		"USE_TITLE_RANK" => "N",
+		"COMPONENT_TEMPLATE" => "logika",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO"
+	),
+	false
+);?>
+</div><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -1,0 +1,6 @@
+<?
+$sSectionName = "profile";
+$arDirProperties = Array(
+
+);
+?>

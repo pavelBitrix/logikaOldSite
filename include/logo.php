@@ -1,0 +1,1 @@
+<img src="/include/franchise_default_logo.png" class="logo-image" />

@@ -1,0 +1,438 @@
+##
+## PHPExcel
+##
+## Copyright (c) 2006 - 2013 PHPExcel
+##
+## This library is free software; you can redistribute it and/or
+## modify it under the terms of the GNU Lesser General Public
+## License as published by the Free Software Foundation; either
+## version 2.1 of the License, or (at your option) any later version.
+##
+## This library is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+## Lesser General Public License for more details.
+##
+## You should have received a copy of the GNU Lesser General Public
+## License along with this library; if not, write to the Free Software
+## Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+##
+## @category   PHPExcel
+## @package    PHPExcel_Calculation
+## @copyright  Copyright (c) 2006 - 2013 PHPExcel (http://www.codeplex.com/PHPExcel)
+## @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
+## @version    ##VERSION##, ##DATE##
+##
+## Data in this file derived from http://www.piuha.fi/excel-function-name-translation/
+##
+##
+
+
+##
+##	Add-in and Automation functions			Add-In- und Automatisierungsfunktionen
+##
+GETPIVOTDATA	= PIVOTDATENZUORDNEN			##	In einem PivotTable-Bericht gespeicherte Daten werden zurГјckgegeben.
+
+
+##
+##	Cube functions					Cubefunktionen
+##
+CUBEKPIMEMBER		= CUBEKPIELEMENT		##	Gibt Name, Eigenschaft und Measure eines Key Performance Indicators (KPI) zurГјck und zeigt den Namen und die Eigenschaft in der Zelle an. Ein KPI ist ein quantifizierbares MaГџ, wie z. B. der monatliche Bruttogewinn oder die vierteljГ¤hrliche Mitarbeiterfluktuation, mit dessen Hilfe das Leistungsverhalten eines Unternehmens Гјberwacht werden kann.
+CUBEMEMBER		= CUBEELEMENT			##	Gibt ein Element oder ein Tuple in einer Cubehierarchie zurГјck. Wird verwendet, um zu ГјberprГјfen, ob das Element oder Tuple im Cube vorhanden ist.
+CUBEMEMBERPROPERTY	= CUBEELEMENTEIGENSCHAFT	##	Gibt den Wert einer Elementeigenschaft im Cube zurГјck. Wird verwendet, um zu ГјberprГјfen, ob ein Elementname im Cube vorhanden ist, und um die fГјr dieses Element angegebene Eigenschaft zurГјckzugeben.
+CUBERANKEDMEMBER	= CUBERANGELEMENT		##	Gibt das n-te oder n-rangige Element in einer Menge zurГјck. Wird verwendet, um mindestens ein Element in einer Menge zurГјckzugeben, wie z. B. bester Vertriebsmitarbeiter oder 10 beste Kursteilnehmer.
+CUBESET			= CUBEMENGE			##	Definiert eine berechnete Menge Elemente oder Tuples durch Senden eines Mengenausdrucks an den Cube auf dem Server, der die Menge erstellt und an Microsoft Office Excel zurГјckgibt.
+CUBESETCOUNT		= CUBEMENGENANZAHL		##	Gibt die Anzahl der Elemente in einer Menge zurГјck.
+CUBEVALUE		= CUBEWERT			##	Gibt einen Aggregatwert aus einem Cube zurГјck.
+
+
+##
+##	Database functions				Datenbankfunktionen
+##
+DAVERAGE		= DBMITTELWERT			##	Gibt den Mittelwert der ausgewГ¤hlten DatenbankeintrГ¤ge zurГјck
+DCOUNT			= DBANZAHL			##	ZГ¤hlt die Zellen mit Zahlen in einer Datenbank
+DCOUNTA			= DBANZAHL2			##	ZГ¤hlt nicht leere Zellen in einer Datenbank
+DGET			= DBAUSZUG			##	Extrahiert aus einer Datenbank einen einzelnen Datensatz, der den angegebenen Kriterien entspricht
+DMAX			= DBMAX				##	Gibt den grГ¶Гџten Wert aus ausgewГ¤hlten DatenbankeintrГ¤gen zurГјck
+DMIN			= DBMIN				##	Gibt den kleinsten Wert aus ausgewГ¤hlten DatenbankeintrГ¤gen zurГјck
+DPRODUCT		= DBPRODUKT			##	Multipliziert die Werte in einem bestimmten Feld mit DatensГ¤tzen, die den Kriterien in einer Datenbank entsprechen
+DSTDEV			= DBSTDABW			##	SchГ¤tzt die Standardabweichung auf der Grundlage einer Stichprobe aus ausgewГ¤hlten DatenbankeintrГ¤gen
+DSTDEVP			= DBSTDABWN			##	Berechnet die Standardabweichung auf der Grundlage der Grundgesamtheit ausgewГ¤hlter DatenbankeintrГ¤ge
+DSUM			= DBSUMME			##	Addiert die Zahlen in der Feldspalte mit DatensГ¤tzen in der Datenbank, die den Kriterien entsprechen
+DVAR			= DBVARIANZ			##	SchГ¤tzt die Varianz auf der Grundlage ausgewГ¤hlter DatenbankeintrГ¤ge
+DVARP			= DBVARIANZEN			##	Berechnet die Varianz auf der Grundlage der Grundgesamtheit ausgewГ¤hlter DatenbankeintrГ¤ge
+
+
+##
+##	Date and time functions				Datums- und Zeitfunktionen
+##
+DATE			= DATUM				##	Gibt die fortlaufende Zahl eines bestimmten Datums zurГјck
+DATEVALUE		= DATWERT			##	Wandelt ein Datum in Form von Text in eine fortlaufende Zahl um
+DAY			= TAG				##	Wandelt eine fortlaufende Zahl in den Tag des Monats um
+DAYS360			= TAGE360			##	Berechnet die Anzahl der Tage zwischen zwei Datumsangaben ausgehend von einem Jahr, das 360 Tage hat
+EDATE			= EDATUM			##	Gibt die fortlaufende Zahl des Datums zurГјck, bei dem es sich um die angegebene Anzahl von Monaten vor oder nach dem Anfangstermin handelt
+EOMONTH			= MONATSENDE			##	Gibt die fortlaufende Zahl des letzten Tags des Monats vor oder nach einer festgelegten Anzahl von Monaten zurГјck
+HOUR			= STUNDE			##	Wandelt eine fortlaufende Zahl in eine Stunde um
+MINUTE			= MINUTE			##	Wandelt eine fortlaufende Zahl in eine Minute um
+MONTH			= MONAT				##	Wandelt eine fortlaufende Zahl in einen Monat um
+NETWORKDAYS		= NETTOARBEITSTAGE		##	Gibt die Anzahl von ganzen Arbeitstagen zwischen zwei Datumswerten zurГјck
+NOW			= JETZT				##	Gibt die fortlaufende Zahl des aktuellen Datums und der aktuellen Uhrzeit zurГјck
+SECOND			= SEKUNDE			##	Wandelt eine fortlaufende Zahl in eine Sekunde um
+TIME			= ZEIT				##	Gibt die fortlaufende Zahl einer bestimmten Uhrzeit zurГјck
+TIMEVALUE		= ZEITWERT			##	Wandelt eine Uhrzeit in Form von Text in eine fortlaufende Zahl um
+TODAY			= HEUTE				##	Gibt die fortlaufende Zahl des heutigen Datums zurГјck
+WEEKDAY			= WOCHENTAG			##	Wandelt eine fortlaufende Zahl in den Wochentag um
+WEEKNUM			= KALENDERWOCHE			##	Wandelt eine fortlaufende Zahl in eine Zahl um, die angibt, in welche Woche eines Jahres das angegebene Datum fГ¤llt
+WORKDAY			= ARBEITSTAG			##	Gibt die fortlaufende Zahl des Datums vor oder nach einer bestimmten Anzahl von Arbeitstagen zurГјck
+YEAR			= JAHR				##	Wandelt eine fortlaufende Zahl in ein Jahr um
+YEARFRAC		= BRTEILJAHRE			##	Gibt die Anzahl der ganzen Tage zwischen Ausgangsdatum und Enddatum in Bruchteilen von Jahren zurГјck
+
+
+##
+##	Engineering functions				Konstruktionsfunktionen
+##
+BESSELI			= BESSELI			##	Gibt die geГ¤nderte Besselfunktion In(x) zurГјck
+BESSELJ			= BESSELJ			##	Gibt die Besselfunktion Jn(x) zurГјck
+BESSELK			= BESSELK			##	Gibt die geГ¤nderte Besselfunktion Kn(x) zurГјck
+BESSELY			= BESSELY			##	Gibt die Besselfunktion Yn(x) zurГјck
+BIN2DEC			= BININDEZ			##	Wandelt eine binГ¤re Zahl (Dualzahl) in eine dezimale Zahl um
+BIN2HEX			= BININHEX			##	Wandelt eine binГ¤re Zahl (Dualzahl) in eine hexadezimale Zahl um
+BIN2OCT			= BININOKT			##	Wandelt eine binГ¤re Zahl (Dualzahl) in eine oktale Zahl um
+COMPLEX			= KOMPLEXE			##	Wandelt den Real- und ImaginГ¤rteil in eine komplexe Zahl um
+CONVERT			= UMWANDELN			##	Wandelt eine Zahl von einem MaГџsystem in ein anderes um
+DEC2BIN			= DEZINBIN			##	Wandelt eine dezimale Zahl in eine binГ¤re Zahl (Dualzahl) um
+DEC2HEX			= DEZINHEX			##	Wandelt eine dezimale Zahl in eine hexadezimale Zahl um
+DEC2OCT			= DEZINOKT			##	Wandelt eine dezimale Zahl in eine oktale Zahl um
+DELTA			= DELTA				##	ГњberprГјft, ob zwei Werte gleich sind
+ERF			= GAUSSFEHLER			##	Gibt die Gauss'sche Fehlerfunktion zurГјck
+ERFC			= GAUSSFKOMPL			##	Gibt das Komplement zur Gauss'schen Fehlerfunktion zurГјck
+GESTEP			= GGANZZAHL			##	ГњberprГјft, ob eine Zahl grГ¶Гџer als ein gegebener Schwellenwert ist
+HEX2BIN			= HEXINBIN			##	Wandelt eine hexadezimale Zahl in eine BinГ¤rzahl um
+HEX2DEC			= HEXINDEZ			##	Wandelt eine hexadezimale Zahl in eine dezimale Zahl um
+HEX2OCT			= HEXINOKT			##	Wandelt eine hexadezimale Zahl in eine Oktalzahl um
+IMABS			= IMABS				##	Gibt den Absolutbetrag (Modulo) einer komplexen Zahl zurГјck
+IMAGINARY		= IMAGINГ„RTEIL			##	Gibt den ImaginГ¤rteil einer komplexen Zahl zurГјck
+IMARGUMENT		= IMARGUMENT			##	Gibt das Argument Theta zurГјck, einen Winkel, der als BogenmaГџ ausgedrГјckt wird
+IMCONJUGATE		= IMKONJUGIERTE			##	Gibt die konjugierte komplexe Zahl zu einer komplexen Zahl zurГјck
+IMCOS			= IMCOS				##	Gibt den Kosinus einer komplexen Zahl zurГјck
+IMDIV			= IMDIV				##	Gibt den Quotienten zweier komplexer Zahlen zurГјck
+IMEXP			= IMEXP				##	Gibt die algebraische Form einer in exponentieller Schreibweise vorliegenden komplexen Zahl zurГјck
+IMLN			= IMLN				##	Gibt den natГјrlichen Logarithmus einer komplexen Zahl zurГјck
+IMLOG10			= IMLOG10			##	Gibt den Logarithmus einer komplexen Zahl zur Basis 10 zurГјck
+IMLOG2			= IMLOG2			##	Gibt den Logarithmus einer komplexen Zahl zur Basis 2 zurГјck
+IMPOWER			= IMAPOTENZ			##	Potenziert eine komplexe Zahl mit einer ganzen Zahl
+IMPRODUCT		= IMPRODUKT			##	Gibt das Produkt von komplexen Zahlen zurГјck
+IMREAL			= IMREALTEIL			##	Gibt den Realteil einer komplexen Zahl zurГјck
+IMSIN			= IMSIN				##	Gibt den Sinus einer komplexen Zahl zurГјck
+IMSQRT			= IMWURZEL			##	Gibt die Quadratwurzel einer komplexen Zahl zurГјck
+IMSUB			= IMSUB				##	Gibt die Differenz zwischen zwei komplexen Zahlen zurГјck
+IMSUM			= IMSUMME			##	Gibt die Summe von komplexen Zahlen zurГјck
+OCT2BIN			= OKTINBIN			##	Wandelt eine oktale Zahl in eine binГ¤re Zahl (Dualzahl) um
+OCT2DEC			= OKTINDEZ			##	Wandelt eine oktale Zahl in eine dezimale Zahl um
+OCT2HEX			= OKTINHEX			##	Wandelt eine oktale Zahl in eine hexadezimale Zahl um
+
+
+##
+##	Financial functions				Finanzmathematische Funktionen
+##
+ACCRINT			= AUFGELZINS			##	Gibt die aufgelaufenen Zinsen (StГјckzinsen) eines Wertpapiers mit periodischen Zinszahlungen zurГјck
+ACCRINTM		= AUFGELZINSF			##	Gibt die aufgelaufenen Zinsen (StГјckzinsen) eines Wertpapiers zurГјck, die bei FГ¤lligkeit ausgezahlt werden
+AMORDEGRC		= AMORDEGRK			##	Gibt die Abschreibung fГјr die einzelnen AbschreibungszeitrГ¤ume mithilfe eines Abschreibungskoeffizienten zurГјck
+AMORLINC		= AMORLINEARK			##	Gibt die Abschreibung fГјr die einzelnen AbschreibungszeitrГ¤ume zurГјck
+COUPDAYBS		= ZINSTERMTAGVA			##	Gibt die Anzahl der Tage vom Anfang des Zinstermins bis zum Abrechnungstermin zurГјck
+COUPDAYS		= ZINSTERMTAGE			##	Gibt die Anzahl der Tage der Zinsperiode zurГјck, die den Abrechnungstermin einschlieГџt
+COUPDAYSNC		= ZINSTERMTAGNZ			##	Gibt die Anzahl der Tage vom Abrechnungstermin bis zum nГ¤chsten Zinstermin zurГјck
+COUPNCD			= ZINSTERMNZ			##	Gibt das Datum des ersten Zinstermins nach dem Abrechnungstermin zurГјck
+COUPNUM			= ZINSTERMZAHL			##	Gibt die Anzahl der Zinstermine zwischen Abrechnungs- und FГ¤lligkeitsdatum zurГјck
+COUPPCD			= ZINSTERMVZ			##	Gibt das Datum des letzten Zinstermins vor dem Abrechnungstermin zurГјck
+CUMIPMT			= KUMZINSZ			##	Berechnet die kumulierten Zinsen, die zwischen zwei Perioden zu zahlen sind
+CUMPRINC		= KUMKAPITAL			##	Berechnet die aufgelaufene Tilgung eines Darlehens, die zwischen zwei Perioden zu zahlen ist
+DB			= GDA2				##	Gibt die geometrisch-degressive Abschreibung eines Wirtschaftsguts fГјr eine bestimmte Periode zurГјck
+DDB			= GDA				##	Gibt die Abschreibung eines Anlageguts fГјr einen angegebenen Zeitraum unter Verwendung der degressiven Doppelraten-Abschreibung oder eines anderen von Ihnen angegebenen Abschreibungsverfahrens zurГјck
+DISC			= DISAGIO			##	Gibt den in Prozent ausgedrГјckten Abzinsungssatz eines Wertpapiers zurГјck
+DOLLARDE		= NOTIERUNGDEZ			##	Wandelt eine Notierung, die als Dezimalbruch ausgedrГјckt wurde, in eine Dezimalzahl um
+DOLLARFR		= NOTIERUNGBRU			##	Wandelt eine Notierung, die als Dezimalzahl ausgedrГјckt wurde, in einen Dezimalbruch um
+DURATION		= DURATION			##	Gibt die jГ¤hrliche Duration eines Wertpapiers mit periodischen Zinszahlungen zurГјck
+EFFECT			= EFFEKTIV			##	Gibt die jГ¤hrliche Effektivverzinsung zurГјck
+FV			= ZW				##	Gibt den zukГјnftigen Wert (Endwert) einer Investition zurГјck
+FVSCHEDULE		= ZW2				##	Gibt den aufgezinsten Wert des Anfangskapitals fГјr eine Reihe periodisch unterschiedlicher ZinssГ¤tze zurГјck
+INTRATE			= ZINSSATZ			##	Gibt den Zinssatz eines voll investierten Wertpapiers zurГјck
+IPMT			= ZINSZ				##	Gibt die Zinszahlung einer Investition fГјr die angegebene Periode zurГјck
+IRR			= IKV				##	Gibt den internen ZinsfuГџ einer Investition ohne Finanzierungskosten oder Reinvestitionsgewinne zurГјck
+ISPMT			= ISPMT				##	Berechnet die wГ¤hrend eines bestimmten Zeitraums fГјr eine Investition gezahlten Zinsen
+MDURATION		= MDURATION			##	Gibt die geГ¤nderte Dauer fГјr ein Wertpapier mit einem angenommenen Nennwert von 100 в‚¬ zurГјck
+MIRR			= QIKV				##	Gibt den internen ZinsfuГџ zurГјck, wobei positive und negative Zahlungen zu unterschiedlichen SГ¤tzen finanziert werden
+NOMINAL			= NOMINAL			##	Gibt die jГ¤hrliche Nominalverzinsung zurГјck
+NPER			= ZZR				##	Gibt die Anzahl der Zahlungsperioden einer Investition zurГјck
+NPV			= NBW				##	Gibt den Nettobarwert einer Investition auf Basis periodisch anfallender Zahlungen und eines Abzinsungsfaktors zurГјck
+ODDFPRICE		= UNREGER.KURS			##	Gibt den Kurs pro 100 в‚¬ Nennwert eines Wertpapiers mit einem unregelmГ¤Гџigen ersten Zinstermin zurГјck
+ODDFYIELD		= UNREGER.REND			##	Gibt die Rendite eines Wertpapiers mit einem unregelmГ¤Гџigen ersten Zinstermin zurГјck
+ODDLPRICE		= UNREGLE.KURS			##	Gibt den Kurs pro 100 в‚¬ Nennwert eines Wertpapiers mit einem unregelmГ¤Гџigen letzten Zinstermin zurГјck
+ODDLYIELD		= UNREGLE.REND			##	Gibt die Rendite eines Wertpapiers mit einem unregelmГ¤Гџigen letzten Zinstermin zurГјck
+PMT			= RMZ				##	Gibt die periodische Zahlung fГјr eine AnnuitГ¤t zurГјck
+PPMT			= KAPZ				##	Gibt die KapitalrГјckzahlung einer Investition fГјr eine angegebene Periode zurГјck
+PRICE			= KURS				##	Gibt den Kurs pro 100 в‚¬ Nennwert eines Wertpapiers zurГјck, das periodisch Zinsen auszahlt
+PRICEDISC		= KURSDISAGIO			##	Gibt den Kurs pro 100 в‚¬ Nennwert eines unverzinslichen Wertpapiers zurГјck
+PRICEMAT		= KURSFГ„LLIG			##	Gibt den Kurs pro 100 в‚¬ Nennwert eines Wertpapiers zurГјck, das Zinsen am FГ¤lligkeitsdatum auszahlt
+PV			= BW				##	Gibt den Barwert einer Investition zurГјck
+RATE			= ZINS				##	Gibt den Zinssatz pro Zeitraum einer AnnuitГ¤t zurГјck
+RECEIVED		= AUSZAHLUNG			##	Gibt den Auszahlungsbetrag eines voll investierten Wertpapiers am FГ¤lligkeitstermin zurГјck
+SLN			= LIA				##	Gibt die lineare Abschreibung eines Wirtschaftsguts pro Periode zurГјck
+SYD			= DIA				##	Gibt die arithmetisch-degressive Abschreibung eines Wirtschaftsguts fГјr eine bestimmte Periode zurГјck
+TBILLEQ			= TBILLГ„QUIV			##	Gibt die Rendite fГјr ein Wertpapier zurГјck
+TBILLPRICE		= TBILLKURS			##	Gibt den Kurs pro 100 в‚¬ Nennwert eines Wertpapiers zurГјck
+TBILLYIELD		= TBILLRENDITE			##	Gibt die Rendite fГјr ein Wertpapier zurГјck
+VDB			= VDB				##	Gibt die degressive Abschreibung eines Wirtschaftsguts fГјr eine bestimmte Periode oder Teilperiode zurГјck
+XIRR			= XINTZINSFUSS			##	Gibt den internen ZinsfuГџ einer Reihe nicht periodisch anfallender Zahlungen zurГјck
+XNPV			= XKAPITALWERT			##	Gibt den Nettobarwert (Kapitalwert) einer Reihe nicht periodisch anfallender Zahlungen zurГјck
+YIELD			= RENDITE			##	Gibt die Rendite eines Wertpapiers zurГјck, das periodisch Zinsen auszahlt
+YIELDDISC		= RENDITEDIS			##	Gibt die jГ¤hrliche Rendite eines unverzinslichen Wertpapiers zurГјck
+YIELDMAT		= RENDITEFГ„LL			##	Gibt die jГ¤hrliche Rendite eines Wertpapiers zurГјck, das Zinsen am FГ¤lligkeitsdatum auszahlt
+
+
+##
+##	Information functions				Informationsfunktionen
+##
+CELL			= ZELLE				##	Gibt Informationen zu Formatierung, Position oder Inhalt einer Zelle zurГјck
+ERROR.TYPE		= FEHLER.TYP			##	Gibt eine Zahl zurГјck, die einem Fehlertyp entspricht
+INFO			= INFO				##	Gibt Informationen zur aktuellen Betriebssystemumgebung zurГјck
+ISBLANK			= ISTLEER			##	Gibt WAHR zurГјck, wenn der Wert leer ist
+ISERR			= ISTFEHL			##	Gibt WAHR zurГјck, wenn der Wert ein beliebiger Fehlerwert auГџer #N/V ist
+ISERROR			= ISTFEHLER			##	Gibt WAHR zurГјck, wenn der Wert ein beliebiger Fehlerwert ist
+ISEVEN			= ISTGERADE			##	Gibt WAHR zurГјck, wenn es sich um eine gerade Zahl handelt
+ISLOGICAL		= ISTLOG			##	Gibt WAHR zurГјck, wenn der Wert ein Wahrheitswert ist
+ISNA			= ISTNV				##	Gibt WAHR zurГјck, wenn der Wert der Fehlerwert #N/V ist
+ISNONTEXT		= ISTKTEXT			##	Gibt WAHR zurГјck, wenn der Wert ein Element ist, das keinen Text enthГ¤lt
+ISNUMBER		= ISTZAHL			##	Gibt WAHR zurГјck, wenn der Wert eine Zahl ist
+ISODD			= ISTUNGERADE			##	Gibt WAHR zurГјck, wenn es sich um eine ungerade Zahl handelt
+ISREF			= ISTBEZUG			##	Gibt WAHR zurГјck, wenn der Wert ein Bezug ist
+ISTEXT			= ISTTEXT			##	Gibt WAHR zurГјck, wenn der Wert ein Element ist, das Text enthГ¤lt
+N			= N				##	Gibt den in eine Zahl umgewandelten Wert zurГјck
+NA			= NV				##	Gibt den Fehlerwert #NV zurГјck
+TYPE			= TYP				##	Gibt eine Zahl zurГјck, die den Datentyp des angegebenen Werts anzeigt
+
+
+##
+##	Logical functions				Logische Funktionen
+##
+AND			= UND				##	Gibt WAHR zurГјck, wenn alle zugehГ¶rigen Argumente WAHR sind
+FALSE			= FALSCH			##	Gibt den Wahrheitswert FALSCH zurГјck
+IF			= WENN				##	Gibt einen logischen Test zum AusfГјhren an
+IFERROR			= WENNFEHLER			##	Gibt einen von Ihnen festgelegten Wert zurГјck, wenn die Auswertung der Formel zu einem Fehler fГјhrt; andernfalls wird das Ergebnis der Formel zurГјckgegeben
+NOT			= NICHT				##	Kehrt den Wahrheitswert der zugehГ¶rigen Argumente um
+OR			= ODER				##	Gibt WAHR zurГјck, wenn ein Argument WAHR ist
+TRUE			= WAHR				##	Gibt den Wahrheitswert WAHR zurГјck
+
+
+##
+##	Lookup and reference functions			Nachschlage- und Verweisfunktionen
+##
+ADDRESS			= ADRESSE			##	Gibt einen Bezug auf eine einzelne Zelle in einem Tabellenblatt als Text zurГјck
+AREAS			= BEREICHE			##	Gibt die Anzahl der innerhalb eines Bezugs aufgefГјhrten Bereiche zurГјck
+CHOOSE			= WAHL				##	WГ¤hlt einen Wert aus eine Liste mit Werten aus
+COLUMN			= SPALTE			##	Gibt die Spaltennummer eines Bezugs zurГјck
+COLUMNS			= SPALTEN			##	Gibt die Anzahl der Spalten in einem Bezug zurГјck
+HLOOKUP			= HVERWEIS			##	Sucht in der obersten Zeile einer Matrix und gibt den Wert der angegebenen Zelle zurГјck
+HYPERLINK		= HYPERLINK			##	Erstellt eine VerknГјpfung, Гјber die ein auf einem Netzwerkserver, in einem Intranet oder im Internet gespeichertes Dokument geГ¶ffnet wird
+INDEX			= INDEX				##	Verwendet einen Index, um einen Wert aus einem Bezug oder einer Matrix auszuwГ¤hlen
+INDIRECT		= INDIREKT			##	Gibt einen Bezug zurГјck, der von einem Textwert angegeben wird
+LOOKUP			= LOOKUP			##	Sucht Werte in einem Vektor oder einer Matrix
+MATCH			= VERGLEICH			##	Sucht Werte in einem Bezug oder einer Matrix
+OFFSET			= BEREICH.VERSCHIEBEN		##	Gibt einen Bezugoffset aus einem gegebenen Bezug zurГјck
+ROW			= ZEILE				##	Gibt die Zeilennummer eines Bezugs zurГјck
+ROWS			= ZEILEN			##	Gibt die Anzahl der Zeilen in einem Bezug zurГјck
+RTD			= RTD				##	Ruft Echtzeitdaten von einem Programm ab, das die COM-Automatisierung (Automatisierung: Ein Verfahren, bei dem aus einer Anwendung oder einem Entwicklungstool heraus mit den Objekten einer anderen Anwendung gearbeitet wird. Die frГјher als OLE-Automatisierung bezeichnete Automatisierung ist ein Industriestandard und eine Funktion von COM (Component Object Model).) unterstГјtzt
+TRANSPOSE		= MTRANS			##	Gibt die transponierte Matrix einer Matrix zurГјck
+VLOOKUP			= SVERWEIS			##	Sucht in der ersten Spalte einer Matrix und arbeitet sich durch die Zeile, um den Wert einer Zelle zurГјckzugeben
+
+
+##
+##	Math and trigonometry functions			Mathematische und trigonometrische Funktionen
+##
+ABS			= ABS				##	Gibt den Absolutwert einer Zahl zurГјck
+ACOS			= ARCCOS			##	Gibt den Arkuskosinus einer Zahl zurГјck
+ACOSH			= ARCCOSHYP			##	Gibt den umgekehrten hyperbolischen Kosinus einer Zahl zurГјck
+ASIN			= ARCSIN			##	Gibt den Arkussinus einer Zahl zurГјck
+ASINH			= ARCSINHYP			##	Gibt den umgekehrten hyperbolischen Sinus einer Zahl zurГјck
+ATAN			= ARCTAN			##	Gibt den Arkustangens einer Zahl zurГјck
+ATAN2			= ARCTAN2			##	Gibt den Arkustangens einer x- und einer y-Koordinate zurГјck
+ATANH			= ARCTANHYP			##	Gibt den umgekehrten hyperbolischen Tangens einer Zahl zurГјck
+CEILING			= OBERGRENZE			##	Rundet eine Zahl auf die nГ¤chste ganze Zahl oder das nГ¤chste Vielfache von Schritt
+COMBIN			= KOMBINATIONEN			##	Gibt die Anzahl der Kombinationen fГјr eine bestimmte Anzahl von Objekten zurГјck
+COS			= COS				##	Gibt den Kosinus einer Zahl zurГјck
+COSH			= COSHYP			##	Gibt den hyperbolischen Kosinus einer Zahl zurГјck
+DEGREES			= GRAD				##	Wandelt BogenmaГџ (Radiant) in Grad um
+EVEN			= GERADE			##	Rundet eine Zahl auf die nГ¤chste gerade ganze Zahl auf
+EXP			= EXP				##	Potenziert die Basis e mit der als Argument angegebenen Zahl
+FACT			= FAKULTГ„T			##	Gibt die FakultГ¤t einer Zahl zurГјck
+FACTDOUBLE		= ZWEIFAKULTГ„T			##	Gibt die FakultГ¤t zu Zahl mit SchrittlГ¤nge 2 zurГјck
+FLOOR			= UNTERGRENZE			##	Rundet die Zahl auf Anzahl_Stellen ab
+GCD			= GGT				##	Gibt den grГ¶Гџten gemeinsamen Teiler zurГјck
+INT			= GANZZAHL			##	Rundet eine Zahl auf die nГ¤chstkleinere ganze Zahl ab
+LCM			= KGV				##	Gibt das kleinste gemeinsame Vielfache zurГјck
+LN			= LN				##	Gibt den natГјrlichen Logarithmus einer Zahl zurГјck
+LOG			= LOG				##	Gibt den Logarithmus einer Zahl zu der angegebenen Basis zurГјck
+LOG10			= LOG10				##	Gibt den Logarithmus einer Zahl zur Basis 10 zurГјck
+MDETERM			= MDET				##	Gibt die Determinante einer Matrix zurГјck
+MINVERSE		= MINV				##	Gibt die inverse Matrix einer Matrix zurГјck
+MMULT			= MMULT				##	Gibt das Produkt zweier Matrizen zurГјck
+MOD			= REST				##	Gibt den Rest einer Division zurГјck
+MROUND			= VRUNDEN			##	Gibt eine auf das gewГјnschte Vielfache gerundete Zahl zurГјck
+MULTINOMIAL		= POLYNOMIAL			##	Gibt den Polynomialkoeffizienten einer Gruppe von Zahlen zurГјck
+ODD			= UNGERADE			##	Rundet eine Zahl auf die nГ¤chste ungerade ganze Zahl auf
+PI			= PI				##	Gibt den Wert Pi zurГјck
+POWER			= POTENZ			##	Gibt als Ergebnis eine potenzierte Zahl zurГјck
+PRODUCT			= PRODUKT			##	Multipliziert die zugehГ¶rigen Argumente
+QUOTIENT		= QUOTIENT			##	Gibt den ganzzahligen Anteil einer Division zurГјck
+RADIANS			= BOGENMASS			##	Wandelt Grad in BogenmaГџ (Radiant) um
+RAND			= ZUFALLSZAHL			##	Gibt eine Zufallszahl zwischen 0 und 1 zurГјck
+RANDBETWEEN		= ZUFALLSBEREICH		##	Gibt eine Zufallszahl aus dem festgelegten Bereich zurГјck
+ROMAN			= RГ–MISCH			##	Wandelt eine arabische Zahl in eine rГ¶mische Zahl als Text um
+ROUND			= RUNDEN			##	Rundet eine Zahl auf eine bestimmte Anzahl von Dezimalstellen
+ROUNDDOWN		= ABRUNDEN			##	Rundet die Zahl auf Anzahl_Stellen ab
+ROUNDUP			= AUFRUNDEN			##	Rundet die Zahl auf Anzahl_Stellen auf
+SERIESSUM		= POTENZREIHE			##	Gibt die Summe von Potenzen (zur Berechnung von Potenzreihen und dichotomen Wahrscheinlichkeiten) zurГјck
+SIGN			= VORZEICHEN			##	Gibt das Vorzeichen einer Zahl zurГјck
+SIN			= SIN				##	Gibt den Sinus einer Zahl zurГјck
+SINH			= SINHYP			##	Gibt den hyperbolischen Sinus einer Zahl zurГјck
+SQRT			= WURZEL			##	Gibt die Quadratwurzel einer Zahl zurГјck
+SQRTPI			= WURZELPI			##	Gibt die Wurzel aus der mit Pi (pi) multiplizierten Zahl zurГјck
+SUBTOTAL		= TEILERGEBNIS			##	Gibt ein Teilergebnis in einer Liste oder Datenbank zurГјck
+SUM			= SUMME				##	Addiert die zugehГ¶rigen Argumente
+SUMIF			= SUMMEWENN			##	Addiert Zahlen, die mit den Suchkriterien Гјbereinstimmen
+SUMIFS			= SUMMEWENNS			##	Die Zellen, die mehrere Kriterien erfГјllen, werden in einem Bereich hinzugefГјgt
+SUMPRODUCT		= SUMMENPRODUKT			##	Gibt die Summe der Produkte zusammengehГ¶riger Matrixkomponenten zurГјck
+SUMSQ			= QUADRATESUMME			##	Gibt die Summe der quadrierten Argumente zurГјck
+SUMX2MY2		= SUMMEX2MY2			##	Gibt die Summe der Differenzen der Quadrate fГјr zusammengehГ¶rige Komponenten zweier Matrizen zurГјck
+SUMX2PY2		= SUMMEX2PY2			##	Gibt die Summe der Quadrate fГјr zusammengehГ¶rige Komponenten zweier Matrizen zurГјck
+SUMXMY2			= SUMMEXMY2			##	Gibt die Summe der quadrierten Differenzen fГјr zusammengehГ¶rige Komponenten zweier Matrizen zurГјck
+TAN			= TAN				##	Gibt den Tangens einer Zahl zurГјck
+TANH			= TANHYP			##	Gibt den hyperbolischen Tangens einer Zahl zurГјck
+TRUNC			= KГњRZEN			##	Schneidet die Kommastellen einer Zahl ab und gibt als Ergebnis eine ganze Zahl zurГјck
+
+
+##
+##	Statistical functions				Statistische Funktionen
+##
+AVEDEV			= MITTELABW			##	Gibt die durchschnittliche absolute Abweichung einer Reihe von MerkmalsausprГ¤gungen und ihrem Mittelwert zurГјck
+AVERAGE			= MITTELWERT			##	Gibt den Mittelwert der zugehГ¶rigen Argumente zurГјck
+AVERAGEA		= MITTELWERTA			##	Gibt den Mittelwert der zugehГ¶rigen Argumente, die Zahlen, Text und Wahrheitswerte enthalten, zurГјck
+AVERAGEIF		= MITTELWERTWENN		##	Der Durchschnittswert (arithmetisches Mittel) fГјr alle Zellen in einem Bereich, die einem angegebenen Kriterium entsprechen, wird zurГјckgegeben
+AVERAGEIFS		= MITTELWERTWENNS		##	Gibt den Durchschnittswert (arithmetisches Mittel) aller Zellen zurГјck, die mehreren Kriterien entsprechen
+BETADIST		= BETAVERT			##	Gibt die Werte der kumulierten Betaverteilungsfunktion zurГјck
+BETAINV			= BETAINV			##	Gibt das Quantil der angegebenen Betaverteilung zurГјck
+BINOMDIST		= BINOMVERT			##	Gibt Wahrscheinlichkeiten einer binomialverteilten Zufallsvariablen zurГјck
+CHIDIST			= CHIVERT			##	Gibt Werte der Verteilungsfunktion (1-Alpha) einer Chi-Quadrat-verteilten ZufallsgrГ¶Гџe zurГјck
+CHIINV			= CHIINV			##	Gibt Quantile der Verteilungsfunktion (1-Alpha) der Chi-Quadrat-Verteilung zurГјck
+CHITEST			= CHITEST			##	Gibt die Teststatistik eines UnabhГ¤ngigkeitstests zurГјck
+CONFIDENCE		= KONFIDENZ			##	ErmГ¶glicht die Berechnung des 1-Alpha Konfidenzintervalls fГјr den Erwartungswert einer Zufallsvariablen
+CORREL			= KORREL			##	Gibt den Korrelationskoeffizienten zweier Reihen von MerkmalsausprГ¤gungen zurГјck
+COUNT			= ANZAHL			##	Gibt die Anzahl der Zahlen in der Liste mit Argumenten an
+COUNTA			= ANZAHL2			##	Gibt die Anzahl der Werte in der Liste mit Argumenten an
+COUNTBLANK		= ANZAHLLEEREZELLEN		##	Gibt die Anzahl der leeren Zellen in einem Bereich an
+COUNTIF			= ZГ„HLENWENN			##	Gibt die Anzahl der Zellen in einem Bereich an, deren Inhalte mit den Suchkriterien Гјbereinstimmen
+COUNTIFS		= ZГ„HLENWENNS			##	Gibt die Anzahl der Zellen in einem Bereich an, deren Inhalte mit mehreren Suchkriterien Гјbereinstimmen
+COVAR			= KOVAR				##	Gibt die Kovarianz zurГјck, den Mittelwert der fГјr alle Datenpunktpaare gebildeten Produkte der Abweichungen
+CRITBINOM		= KRITBINOM			##	Gibt den kleinsten Wert zurГјck, fГјr den die kumulierten Wahrscheinlichkeiten der Binomialverteilung kleiner oder gleich einer Grenzwahrscheinlichkeit sind
+DEVSQ			= SUMQUADABW			##	Gibt die Summe der quadrierten Abweichungen der Datenpunkte von ihrem Stichprobenmittelwert zurГјck
+EXPONDIST		= EXPONVERT			##	Gibt Wahrscheinlichkeiten einer exponential verteilten Zufallsvariablen zurГјck
+FDIST			= FVERT				##	Gibt Werte der Verteilungsfunktion (1-Alpha) einer F-verteilten Zufallsvariablen zurГјck
+FINV			= FINV				##	Gibt Quantile der F-Verteilung zurГјck
+FISHER			= FISHER			##	Gibt die Fisher-Transformation zurГјck
+FISHERINV		= FISHERINV			##	Gibt die Umkehrung der Fisher-Transformation zurГјck
+FORECAST		= PROGNOSE			##	Gibt einen Wert zurГјck, der sich aus einem linearen Trend ergibt
+FREQUENCY		= HГ„UFIGKEIT			##	Gibt eine HГ¤ufigkeitsverteilung als vertikale Matrix zurГјck
+FTEST			= FTEST				##	Gibt die Teststatistik eines F-Tests zurГјck
+GAMMADIST		= GAMMAVERT			##	Gibt Wahrscheinlichkeiten einer gammaverteilten Zufallsvariablen zurГјck
+GAMMAINV		= GAMMAINV			##	Gibt Quantile der Gammaverteilung zurГјck
+GAMMALN			= GAMMALN			##	Gibt den natГјrlichen Logarithmus der Gammafunktion zurГјck, О“(x)
+GEOMEAN			= GEOMITTEL			##	Gibt das geometrische Mittel zurГјck
+GROWTH			= VARIATION			##	Gibt Werte zurГјck, die sich aus einem exponentiellen Trend ergeben
+HARMEAN			= HARMITTEL			##	Gibt das harmonische Mittel zurГјck
+HYPGEOMDIST		= HYPGEOMVERT			##	Gibt Wahrscheinlichkeiten einer hypergeometrisch-verteilten Zufallsvariablen zurГјck
+INTERCEPT		= ACHSENABSCHNITT		##	Gibt den Schnittpunkt der Regressionsgeraden zurГјck
+KURT			= KURT				##	Gibt die Kurtosis (Exzess) einer Datengruppe zurГјck
+LARGE			= KGRГ–SSTE			##	Gibt den k-grГ¶Гџten Wert einer Datengruppe zurГјck
+LINEST			= RGP				##	Gibt die Parameter eines linearen Trends zurГјck
+LOGEST			= RKP				##	Gibt die Parameter eines exponentiellen Trends zurГјck
+LOGINV			= LOGINV			##	Gibt Quantile der Lognormalverteilung zurГјck
+LOGNORMDIST		= LOGNORMVERT			##	Gibt Werte der Verteilungsfunktion einer lognormalverteilten Zufallsvariablen zurГјck
+MAX			= MAX				##	Gibt den Maximalwert einer Liste mit Argumenten zurГјck
+MAXA			= MAXA				##	Gibt den Maximalwert einer Liste mit Argumenten zurГјck, die Zahlen, Text und Wahrheitswerte enthalten
+MEDIAN			= MEDIAN			##	Gibt den Median der angegebenen Zahlen zurГјck
+MIN			= MIN				##	Gibt den Minimalwert einer Liste mit Argumenten zurГјck
+MINA			= MINA				##	Gibt den kleinsten Wert einer Liste mit Argumenten zurГјck, die Zahlen, Text und Wahrheitswerte enthalten
+MODE			= MODALWERT			##	Gibt den am hГ¤ufigsten vorkommenden Wert in einer Datengruppe zurГјck
+NEGBINOMDIST		= NEGBINOMVERT			##	Gibt Wahrscheinlichkeiten einer negativen, binominal verteilten Zufallsvariablen zurГјck
+NORMDIST		= NORMVERT			##	Gibt Wahrscheinlichkeiten einer normal verteilten Zufallsvariablen zurГјck
+NORMINV			= NORMINV			##	Gibt Quantile der Normalverteilung zurГјck
+NORMSDIST		= STANDNORMVERT			##	Gibt Werte der Verteilungsfunktion einer standardnormalverteilten Zufallsvariablen zurГјck
+NORMSINV		= STANDNORMINV			##	Gibt Quantile der Standardnormalverteilung zurГјck
+PEARSON			= PEARSON			##	Gibt den Pearsonschen Korrelationskoeffizienten zurГјck
+PERCENTILE		= QUANTIL			##	Gibt das Alpha-Quantil einer Gruppe von Daten zurГјck
+PERCENTRANK		= QUANTILSRANG			##	Gibt den prozentualen Rang (Alpha) eines Werts in einer Datengruppe zurГјck
+PERMUT			= VARIATIONEN			##	Gibt die Anzahl der MГ¶glichkeiten zurГјck, um k Elemente aus einer Menge von n Elementen ohne ZurГјcklegen zu ziehen
+POISSON			= POISSON			##	Gibt Wahrscheinlichkeiten einer poissonverteilten Zufallsvariablen zurГјck
+PROB			= WAHRSCHBEREICH		##	Gibt die Wahrscheinlichkeit fГјr ein von zwei Werten eingeschlossenes Intervall zurГјck
+QUARTILE		= QUARTILE			##	Gibt die Quartile der Datengruppe zurГјck
+RANK			= RANG				##	Gibt den Rang zurГјck, den eine Zahl innerhalb einer Liste von Zahlen einnimmt
+RSQ			= BESTIMMTHEITSMASS		##	Gibt das Quadrat des Pearsonschen Korrelationskoeffizienten zurГјck
+SKEW			= SCHIEFE			##	Gibt die Schiefe einer Verteilung zurГјck
+SLOPE			= STEIGUNG			##	Gibt die Steigung der Regressionsgeraden zurГјck
+SMALL			= KKLEINSTE			##	Gibt den k-kleinsten Wert einer Datengruppe zurГјck
+STANDARDIZE		= STANDARDISIERUNG		##	Gibt den standardisierten Wert zurГјck
+STDEV			= STABW				##	SchГ¤tzt die Standardabweichung ausgehend von einer Stichprobe
+STDEVA			= STABWA			##	SchГ¤tzt die Standardabweichung ausgehend von einer Stichprobe, die Zahlen, Text und Wahrheitswerte enthГ¤lt
+STDEVP			= STABWN			##	Berechnet die Standardabweichung ausgehend von der Grundgesamtheit
+STDEVPA			= STABWNA			##	Berechnet die Standardabweichung ausgehend von der Grundgesamtheit, die Zahlen, Text und Wahrheitswerte enthГ¤lt
+STEYX			= STFEHLERYX			##	Gibt den Standardfehler der geschГ¤tzten y-Werte fГјr alle x-Werte der Regression zurГјck
+TDIST			= TVERT				##	Gibt Werte der Verteilungsfunktion (1-Alpha) einer (Student) t-verteilten Zufallsvariablen zurГјck
+TINV			= TINV				##	Gibt Quantile der t-Verteilung zurГјck
+TREND			= TREND				##	Gibt Werte zurГјck, die sich aus einem linearen Trend ergeben
+TRIMMEAN		= GESTUTZTMITTEL		##	Gibt den Mittelwert einer Datengruppe zurГјck, ohne die Randwerte zu berГјcksichtigen
+TTEST			= TTEST				##	Gibt die Teststatistik eines Student'schen t-Tests zurГјck
+VAR			= VARIANZ			##	SchГ¤tzt die Varianz ausgehend von einer Stichprobe
+VARA			= VARIANZA			##	SchГ¤tzt die Varianz ausgehend von einer Stichprobe, die Zahlen, Text und Wahrheitswerte enthГ¤lt
+VARP			= VARIANZEN			##	Berechnet die Varianz ausgehend von der Grundgesamtheit
+VARPA			= VARIANZENA			##	Berechnet die Varianz ausgehend von der Grundgesamtheit, die Zahlen, Text und Wahrheitswerte enthГ¤lt
+WEIBULL			= WEIBULL			##	Gibt Wahrscheinlichkeiten einer weibullverteilten Zufallsvariablen zurГјck
+ZTEST			= GTEST				##	Gibt den einseitigen Wahrscheinlichkeitswert fГјr einen Gausstest (Normalverteilung) zurГјck
+
+
+##
+##	Text functions					Textfunktionen
+##
+ASC			= ASC				##	Konvertiert DB-Text in einer Zeichenfolge (lateinische Buchstaben oder Katakana) in SB-Text
+BAHTTEXT		= BAHTTEXT			##	Wandelt eine Zahl in Text im WГ¤hrungsformat Гџ (Baht) um
+CHAR			= ZEICHEN			##	Gibt das der Codezahl entsprechende Zeichen zurГјck
+CLEAN			= SГ„UBERN			##	LГ¶scht alle nicht druckbaren Zeichen aus einem Text
+CODE			= CODE				##	Gibt die Codezahl des ersten Zeichens in einem Text zurГјck
+CONCATENATE		= VERKETTEN			##	VerknГјpft mehrere Textelemente zu einem Textelement
+DOLLAR			= DM				##	Wandelt eine Zahl in Text im WГ¤hrungsformat в‚¬ (Euro) um
+EXACT			= IDENTISCH			##	PrГјft, ob zwei Textwerte identisch sind
+FIND			= FINDEN			##	Sucht nach einem Textwert, der in einem anderen Textwert enthalten ist (GroГџ-/Kleinschreibung wird unterschieden)
+FINDB			= FINDENB			##	Sucht nach einem Textwert, der in einem anderen Textwert enthalten ist (GroГџ-/Kleinschreibung wird unterschieden)
+FIXED			= FEST				##	Formatiert eine Zahl als Text mit einer festen Anzahl von Dezimalstellen
+JIS			= JIS				##	Konvertiert SB-Text in einer Zeichenfolge (lateinische Buchstaben oder Katakana) in DB-Text
+LEFT			= LINKS				##	Gibt die Zeichen ganz links in einem Textwert zurГјck
+LEFTB			= LINKSB			##	Gibt die Zeichen ganz links in einem Textwert zurГјck
+LEN			= LГ„NGE				##	Gibt die Anzahl der Zeichen in einer Zeichenfolge zurГјck
+LENB			= LГ„NGEB			##	Gibt die Anzahl der Zeichen in einer Zeichenfolge zurГјck
+LOWER			= KLEIN				##	Wandelt Text in Kleinbuchstaben um
+MID			= TEIL				##	Gibt eine bestimmte Anzahl Zeichen aus einer Zeichenfolge ab der von Ihnen angegebenen Stelle zurГјck
+MIDB			= TEILB				##	Gibt eine bestimmte Anzahl Zeichen aus einer Zeichenfolge ab der von Ihnen angegebenen Stelle zurГјck
+PHONETIC		= PHONETIC			##	Extrahiert die phonetischen (Furigana-)Zeichen aus einer Textzeichenfolge
+PROPER			= GROSS2			##	Wandelt den ersten Buchstaben aller WГ¶rter eines Textwerts in GroГџbuchstaben um
+REPLACE			= ERSETZEN			##	Ersetzt Zeichen in Text
+REPLACEB		= ERSETZENB			##	Ersetzt Zeichen in Text
+REPT			= WIEDERHOLEN			##	Wiederholt einen Text so oft wie angegeben
+RIGHT			= RECHTS			##	Gibt die Zeichen ganz rechts in einem Textwert zurГјck
+RIGHTB			= RECHTSB			##	Gibt die Zeichen ganz rechts in einem Textwert zurГјck
+SEARCH			= SUCHEN			##	Sucht nach einem Textwert, der in einem anderen Textwert enthalten ist (GroГџ-/Kleinschreibung wird nicht unterschieden)
+SEARCHB			= SUCHENB			##	Sucht nach einem Textwert, der in einem anderen Textwert enthalten ist (GroГџ-/Kleinschreibung wird nicht unterschieden)
+SUBSTITUTE		= WECHSELN			##	Ersetzt in einer Zeichenfolge neuen Text gegen alten
+T			= T				##	Wandelt die zugehГ¶rigen Argumente in Text um
+TEXT			= TEXT				##	Formatiert eine Zahl und wandelt sie in Text um
+TRIM			= GLГ„TTEN			##	Entfernt Leerzeichen aus Text
+UPPER			= GROSS				##	Wandelt Text in GroГџbuchstaben um
+VALUE			= WERT				##	Wandelt ein Textargument in eine Zahl um

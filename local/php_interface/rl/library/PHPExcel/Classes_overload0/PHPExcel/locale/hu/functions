@@ -1,0 +1,438 @@
+##
+## PHPExcel
+##
+## Copyright (c) 2006 - 2013 PHPExcel
+##
+## This library is free software; you can redistribute it and/or
+## modify it under the terms of the GNU Lesser General Public
+## License as published by the Free Software Foundation; either
+## version 2.1 of the License, or (at your option) any later version.
+##
+## This library is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+## Lesser General Public License for more details.
+##
+## You should have received a copy of the GNU Lesser General Public
+## License along with this library; if not, write to the Free Software
+## Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+##
+## @category   PHPExcel
+## @package    PHPExcel_Calculation
+## @copyright  Copyright (c) 2006 - 2013 PHPExcel (http://www.codeplex.com/PHPExcel)
+## @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
+## @version    ##VERSION##, ##DATE##
+##
+## Data in this file derived from http://www.piuha.fi/excel-function-name-translation/
+##
+##
+
+
+##
+##	Add-in and Automation functions			BЕ‘vГ­tmГ©nyek Г©s automatizГЎlГЎsi fГјggvГ©nyek
+##
+GETPIVOTDATA		= KIMUTATГЃSADATOT.VESZ		##	A kimutatГЎsokban tГЎrolt adatok visszaadГЎsГЎra hasznГЎlhatГі.
+
+
+##
+##	Cube functions KockafГјggvГ©nyek   
+##
+CUBEKPIMEMBER		= KOCKA.FЕђTELJMUT		##	Egy fЕ‘ teljesГ­tmГ©nymutatГі (KPI) nevГ©t, tulajdonsГЎgГЎt Г©s mГ©rtГ©kegysГ©gГ©t adja eredmГ©nyГјl, a nevet Г©s a tulajdonsГЎgot megjelenГ­ti a cellГЎban. A KPI-k szГЎmszerЕ±sГ­thetЕ‘ mГ©rГ©si lehetЕ‘sГ©get jelentenek вЂ“ ilyen mutatГі pГ©ldГЎul a havi bruttГі nyeresГ©g vagy az egy alkalmazottra jutГі negyedГ©ves forgalom вЂ“, egy szervezet teljesГ­tmГ©nyГ©nek nyomonkГ¶vetГ©sГ©re hasznГЎlhatГіk.
+CUBEMEMBER		= KOCKA.TAG			##	Kockahierachia tagjГЎt vagy rekordjГЎt adja eredmГ©nyГјl. EllenЕ‘rizhetЕ‘ vele, hogy szerepel-e a kockГЎban az adott tag vagy rekord.
+CUBEMEMBERPROPERTY	= KOCKA.TAG.TUL			##	A kocka egyik tagtulajdonsГЎgГЎnak Г©rtГ©kГ©t adja eredmГ©nyГјl. HasznГЎlatГЎval ellenЕ‘rizhetЕ‘, hogy szerepel-e egy tagnГ©v a kockГЎban, eredmГ©nye pedig az erre a tagra vonatkozГі, megadott tulajdonsГЎg.
+CUBERANKEDMEMBER	= KOCKA.HALM.ELEM		##	Egy halmaz rangsor szerinti n-edik tagjГЎt adja eredmГ©nyГјl. HasznГЎlatГЎval egy halmaz egy vagy tГ¶bb elemГ©t kaphatja meg, pГ©ldГЎul a legnagyobb teljesГ­tmГ©nyЕ± ГјzletkГ¶tЕ‘t vagy a 10 legjobb tanulГіt.
+CUBESET			= KOCKA.HALM			##	SzГЎmГ­tott tagok vagy rekordok halmazГЎt adja eredmГ©nyГјl, ehhez egy beГЎllГ­tott kifejezГ©st elkГјld a kiszolgГЎlГіn talГЎlhatГі kockГЎnak, majd ezt a halmazt adja vissza a Microsoft Office Excel alkalmazГЎsnak.
+CUBESETCOUNT		= KOCKA.HALM.DB			##	Egy halmaz elemszГЎmГЎt adja eredmГ©nyГјl.
+CUBEVALUE		= KOCKA.Г‰RTГ‰K			##	KockГЎbГіl Г¶sszesГ­tett Г©rtГ©ket ad eredmГ©nyГјl.
+
+
+##
+##	Database functions				AdatbГЎzis-kezelЕ‘ fГјggvГ©nyek
+##
+DAVERAGE		= AB.ГЃTLAG			##	A kijelГ¶lt adatbГЎziselemek ГЎtlagГЎt szГЎmГ­tja ki.
+DCOUNT			= AB.DARAB			##	MegszГЎmolja, hogy az adatbГЎzisban hГЎny cella tartalmaz szГЎmokat.
+DCOUNTA			= AB.DARAB2			##	MegszГЎmolja az adatbГЎzisban lГ©vЕ‘ nem Гјres cellГЎkat.
+DGET			= AB.MEZЕђ			##	Egy adatbГЎzisbГіl egyetlen olyan rekordot ad vissza, amely megfelel a megadott feltГ©teleknek.
+DMAX			= AB.MAX			##	A kivГЎlasztott adatbГЎziselemek kГ¶zГјl a legnagyobb Г©rtГ©ket adja eredmГ©nyГјl.
+DMIN			= AB.MIN			##	A kijelГ¶lt adatbГЎziselemek kГ¶zГјl a legkisebb Г©rtГ©ket adja eredmГ©nyГјl.
+DPRODUCT		= AB.SZORZAT			##	Az adatbГЎzis megadott feltГ©teleknek eleget tevЕ‘ rekordjaira Г¶sszeszorozza a megadott mezЕ‘ben talГЎlhatГі szГЎmГ©rtГ©keket, Г©s eredmГ©nyГјl ezt a szorzatot adja.
+DSTDEV			= AB.SZГ“RГЃS			##	A kijelГ¶lt adatbГЎziselemek egy mintГЎja alapjГЎn megbecsГјli a szГіrГЎst.
+DSTDEVP			= AB.SZГ“RГЃS2			##	A kijelГ¶lt adatbГЎziselemek teljes sokasГЎga alapjГЎn kiszГЎmГ­tja a szГіrГЎst.
+DSUM			= AB.SZUM			##	Г–sszeadja a feltГ©telnek megfelelЕ‘ adatbГЎzisrekordok mezЕ‘oszlopГЎban a szГЎmokat.
+DVAR			= AB.VAR			##	A kijelГ¶lt adatbГЎziselemek mintГЎja alapjГЎn becslГ©st ad a szГіrГЎsnГ©gyzetre.
+DVARP			= AB.VAR2			##	A kijelГ¶lt adatbГЎziselemek teljes sokasГЎga alapjГЎn kiszГЎmГ­tja a szГіrГЎsnГ©gyzetet.
+
+
+##
+##	Date and time functions				DГЎtumfГјggvГ©nyek
+##
+DATE			= DГЃTUM				##	Adott dГЎtum dГЎtumГ©rtГ©kГ©t adja eredmГ©nyГјl.
+DATEVALUE		= DГЃTUMГ‰RTГ‰K			##	SzГ¶vegkГ©nt megadott dГЎtumot dГЎtumГ©rtГ©kkГ© alakГ­t ГЎt.
+DAY			= NAP				##	DГЎtumГ©rtГ©ket a hГіnap egy napjГЎvГЎ (0-31) alakГ­t.
+DAYS360			= NAP360			##	KГ©t dГЎtum kГ¶zГ© esЕ‘ napok szГЎmГЎt szГЎmГ­tja ki a 360 napos Г©v alapjГЎn.
+EDATE			= EDATE				##	Adott dГЎtumnГЎl adott szГЎmГє hГіnappal korГЎbbi vagy kГ©sЕ‘bbi dГЎtum dГЎtumГ©rtГ©kГ©t adja eredmГ©nyГјl.
+EOMONTH			= EOMONTH			##	Adott dГЎtumnГЎl adott szГЎmГє hГіnappal korГЎbbi vagy kГ©sЕ‘bbi hГіnap utolsГі napjГЎnak dГЎtumГ©rtГ©kГ©t adja eredmГ©nyГјl.
+HOUR			= Г“RA				##	IdЕ‘Г©rtГ©ket ГіrГЎkkГЎ alakГ­t.
+MINUTE			= PERC				##	IdЕ‘Г©rtГ©ket percekkГ© alakГ­t.
+MONTH			= HГ“NAP				##	IdЕ‘Г©rtГ©ket hГіnapokkГЎ alakГ­t.
+NETWORKDAYS		= NETWORKDAYS			##	KГ©t dГЎtum kГ¶zГ¶tt a teljes munkanapok szГЎmГЎt adja meg.
+NOW			= MOST				##	A napi dГЎtum dГЎtumГ©rtГ©kГ©t Г©s a pontos idЕ‘ idЕ‘Г©rtГ©kГ©t adja eredmГ©nyГјl.
+SECOND			= MPERC				##	IdЕ‘Г©rtГ©ket mГЎsodpercekkГ© alakГ­t ГЎt.
+TIME			= IDЕђ				##	Adott idЕ‘pont idЕ‘Г©rtГ©kГ©t adja meg.
+TIMEVALUE		= IDЕђГ‰RTГ‰K			##	SzГ¶vegkГ©nt megadott idЕ‘pontot idЕ‘Г©rtГ©kkГ© alakГ­t ГЎt.
+TODAY			= MA				##	A napi dГЎtum dГЎtumГ©rtГ©kГ©t adja eredmГ©nyГјl.
+WEEKDAY			= HГ‰T.NAPJA			##	DГЎtumГ©rtГ©ket a hГ©t napjГЎvГЎ alakГ­tja ГЎt.
+WEEKNUM			= WEEKNUM			##	VisszatГ©rГ©si Г©rtГ©ke egy szГЎm, amely azt mutatja meg, hogy a megadott dГЎtum az Г©v hГЎnyadik hetГ©re esik.
+WORKDAY			= WORKDAY			##	Adott dГЎtumnГЎl adott munkanappal korГЎbbi vagy kГ©sЕ‘bbi dГЎtum dГЎtumГ©rtГ©kГ©t adja eredmГ©nyГјl.
+YEAR			= Г‰V				##	SorszГЎmot Г©vvГ© alakГ­t ГЎt.
+YEARFRAC		= YEARFRAC			##	Az adott dГЎtumok kГ¶zГ¶tti teljes napok szГЎmГЎt tГ¶rtГ©vkГ©nt adja meg.
+
+
+##
+##	Engineering functions				MГ©rnГ¶ki fГјggvГ©nyek
+##
+BESSELI			= BESSELI			##	Az In(x) mГіdosГ­tott Bessel-fГјggvГ©ny Г©rtГ©kГ©t adja eredmГ©nyГјl.
+BESSELJ			= BESSELJ			##	A Jn(x) Bessel-fГјggvГ©ny Г©rtГ©kГ©t adja eredmГ©nyГјl.
+BESSELK			= BESSELK			##	A Kn(x) mГіdosГ­tott Bessel-fГјggvГ©ny Г©rtГ©kГ©t adja eredmГ©nyГјl.
+BESSELY			= BESSELY			##	Az Yn(x) mГіdosГ­tott Bessel-fГјggvГ©ny Г©rtГ©kГ©t adja eredmГ©nyГјl.
+BIN2DEC			= BIN2DEC			##	BinГЎris szГЎmot decimГЎlissГЎ alakГ­t ГЎt.
+BIN2HEX			= BIN2HEX			##	BinГЎris szГЎmot hexadecimГЎlissГЎ alakГ­t ГЎt.
+BIN2OCT			= BIN2OCT			##	BinГЎris szГЎmot oktГЎlissГЎ alakГ­t ГЎt.
+COMPLEX			= COMPLEX			##	ValГіs Г©s kГ©pzetes rГ©szbЕ‘l komplex szГЎmot kГ©pez.
+CONVERT			= CONVERT			##	MГ©rtГ©kegysГ©geket vГЎlt ГЎt.
+DEC2BIN			= DEC2BIN			##	DecimГЎlis szГЎmot binГЎrissГЎ alakГ­t ГЎt.
+DEC2HEX			= DEC2HEX			##	DecimГЎlis szГЎmot hexadecimГЎlissГЎ alakГ­t ГЎt.
+DEC2OCT			= DEC2OCT			##	DecimГЎlis szГЎmot oktГЎlissГЎ alakГ­t ГЎt.
+DELTA			= DELTA				##	Azt vizsgГЎlja, hogy kГ©t Г©rtГ©k egyenlЕ‘-e.
+ERF			= ERF				##	A hibafГјggvГ©ny Г©rtГ©kГ©t adja eredmГ©nyГјl.
+ERFC			= ERFC				##	A kiegГ©szГ­tett hibafГјggvГ©ny Г©rtГ©kГ©t adja eredmГ©nyГјl.
+GESTEP			= GESTEP			##	Azt vizsgГЎlja, hogy egy szГЎm nagyobb-e adott kГјszГ¶bГ©rtГ©knГ©l.
+HEX2BIN			= HEX2BIN			##	HexadecimГЎlis szГЎmot binГЎrissГЎ alakГ­t ГЎt.
+HEX2DEC			= HEX2DEC			##	HexadecimГЎlis szГЎmot decimГЎlissГЎ alakГ­t ГЎt.
+HEX2OCT			= HEX2OCT			##	HexadecimГЎlis szГЎmot oktГЎlissГЎ alakГ­t ГЎt.
+IMABS			= IMABS				##	Komplex szГЎm abszolГєt Г©rtГ©kГ©t (modulusГЎt) adja eredmГ©nyГјl.
+IMAGINARY		= IMAGINARY			##	Komplex szГЎm kГ©pzetes rГ©szГ©t adja eredmГ©nyГјl.
+IMARGUMENT		= IMARGUMENT			##	A komplex szГЎm radiГЎnban kifejezett thГ©ta argumentumГЎt adja eredmГ©nyГјl.
+IMCONJUGATE		= IMCONJUGATE			##	Komplex szГЎm komplex konjugГЎltjГЎt adja eredmГ©nyГјl.
+IMCOS			= IMCOS				##	Komplex szГЎm koszinuszГЎt adja eredmГ©nyГјl.
+IMDIV			= IMDIV				##	KГ©t komplex szГЎm hГЎnyadosГЎt adja eredmГ©nyГјl.
+IMEXP			= IMEXP				##	Az e szГЎm komplex kitevЕ‘jЕ± hatvГЎnyГЎt adja eredmГ©nyГјl.
+IMLN			= IMLN				##	Komplex szГЎm termГ©szetes logaritmusГЎt adja eredmГ©nyГјl.
+IMLOG10			= IMLOG10			##	Komplex szГЎm tГ­zes alapГє logaritmusГЎt adja eredmГ©nyГјl.
+IMLOG2			= IMLOG2			##	Komplex szГЎm kettes alapГє logaritmusГЎt adja eredmГ©nyГјl.
+IMPOWER			= IMPOWER			##	Komplex szГЎm hatvГЎnyГЎt adja eredmГ©nyГјl.
+IMPRODUCT		= IMPRODUCT			##	Komplex szГЎmok szorzatГЎt adja eredmГ©nyГјl.
+IMREAL			= IMREAL			##	Komplex szГЎm valГіs rГ©szГ©t adja eredmГ©nyГјl.
+IMSIN			= IMSIN				##	Komplex szГЎm szinuszГЎt adja eredmГ©nyГјl.
+IMSQRT			= IMSQRT			##	Komplex szГЎm nГ©gyzetgyГ¶kГ©t adja eredmГ©nyГјl.
+IMSUB			= IMSUB				##	KГ©t komplex szГЎm kГјlГ¶nbsГ©gГ©t adja eredmГ©nyГјl.
+IMSUM			= IMSUM				##	Komplex szГЎmok Г¶sszegГ©t adja eredmГ©nyГјl.
+OCT2BIN			= OCT2BIN			##	OktГЎlis szГЎmot binГЎrissГЎ alakГ­t ГЎt.
+OCT2DEC			= OCT2DEC			##	OktГЎlis szГЎmot decimГЎlissГЎ alakГ­t ГЎt.
+OCT2HEX			= OCT2HEX			##	OktГЎlis szГЎmot hexadecimГЎlissГЎ alakГ­t ГЎt.
+
+
+##
+##	Financial functions				PГ©nzГјgyi fГјggvГ©nyek
+##
+ACCRINT			= ACCRINT			##	Periodikusan kamatozГі Г©rtГ©kpapГ­r felszaporodott kamatГЎt adja eredmГ©nyГјl.
+ACCRINTM		= ACCRINTM			##	LejГЎratkor kamatozГі Г©rtГ©kpapГ­r felszaporodott kamatГЎt adja eredmГ©nyГјl.
+AMORDEGRC		= AMORDEGRC			##	ГЃllГіeszkГ¶z lineГЎris Г©rtГ©kcsГ¶kkenГ©sГ©t adja meg az egyes kГ¶nyvelГ©si idЕ‘szakokra vonatkozГіan.
+AMORLINC		= AMORLINC			##	Az egyes kГ¶nyvelГ©si idЕ‘szakokban az Г©rtГ©kcsГ¶kkenГ©st adja meg.
+COUPDAYBS		= COUPDAYBS			##	A szelvГ©nyidЕ‘szak kezdetГ©tЕ‘l a kifizetГ©s idЕ‘pontjГЎig eltelt napokat adja vissza.
+COUPDAYS		= COUPDAYS			##	A kifizetГ©s idЕ‘pontjГЎt magГЎban foglalГі szelvГ©nyperiГіdus hosszГЎt adja meg napokban.
+COUPDAYSNC		= COUPDAYSNC			##	A kifizetГ©s idЕ‘pontja Г©s a legkГ¶zelebbi szelvГ©nydГЎtum kГ¶zГ¶tti napok szГЎmГЎt adja meg.
+COUPNCD			= COUPNCD			##	A kifizetГ©st kГ¶vetЕ‘ legelsЕ‘ szelvГ©nydГЎtumot adja eredmГ©nyГјl.
+COUPNUM			= COUPNUM			##	A kifizetГ©s Г©s a lejГЎrat idЕ‘pontja kГ¶zГ¶tt kifizetendЕ‘ szelvГ©nyek szГЎmГЎt adja eredmГ©nyГјl.
+COUPPCD			= COUPPCD			##	A kifizetГ©s elЕ‘tti utolsГі szelvГ©nydГЎtumot adja eredmГ©nyГјl.
+CUMIPMT			= CUMIPMT			##	KГ©t fizetГ©si idЕ‘szak kГ¶zГ¶tt kifizetett kamat halmozott Г©rtГ©kГ©t adja eredmГ©nyГјl.
+CUMPRINC		= CUMPRINC			##	KГ©t fizetГ©si idЕ‘szak kГ¶zГ¶tt kifizetett rГ©szletek halmozott (kamatot nem tartalmazГі) Г©rtГ©kГ©t adja eredmГ©nyГјl.
+DB			= KCS2				##	EszkГ¶z adott idЕ‘szak alatti Г©rtГ©kcsГ¶kkenГ©sГ©t szГЎmГ­tja ki a lineГЎris leГ­rГЎsi modell alkalmazГЎsГЎval.
+DDB			= KCSA				##	EszkГ¶z Г©rtГ©kcsГ¶kkenГ©sГ©t szГЎmГ­tja ki adott idЕ‘szakra vonatkozГіan a progresszГ­v vagy egyГ©b megadott leГ­rГЎsi modell alkalmazГЎsГЎval.
+DISC			= DISC				##	Г‰rtГ©kpapГ­r leszГЎmГ­tolГЎsi kamatlГЎbГЎt adja eredmГ©nyГјl.
+DOLLARDE		= DOLLARDE			##	Egy kГ¶zГ¶nsГ©ges tГ¶rtkГ©nt megadott szГЎmot tizedes tГ¶rttГ© alakГ­t ГЎt.
+DOLLARFR		= DOLLARFR			##	Tizedes tГ¶rtkГ©nt megadott szГЎmot kГ¶zГ¶nsГ©ges tГ¶rttГ© alakГ­t ГЎt.
+DURATION		= DURATION			##	Periodikus kamatfizetГ©sЕ± Г©rtГ©kpapГ­r Г©ves kamatГ©rzГ©kenysГ©gГ©t adja eredmГ©nyГјl.
+EFFECT			= EFFECT			##	Az Г©ves tГ©nyleges kamatlГЎb Г©rtГ©kГ©t adja eredmГ©nyГјl.
+FV			= JBГ‰				##	BefektetГ©s jГ¶vЕ‘beli Г©rtГ©kГ©t szГЎmГ­tja ki.
+FVSCHEDULE		= FVSCHEDULE			##	A kezdЕ‘tЕ‘ke adott kamatlГЎbak szerint megnГ¶velt jГ¶vЕ‘beli Г©rtГ©kГ©t adja eredmГ©nyГјl.
+INTRATE			= INTRATE			##	A lejГЎratig teljesen lekГ¶tГ¶tt Г©rtГ©kpapГ­r kamatrГЎtГЎjГЎt adja eredmГ©nyГјl.
+IPMT			= RRГ‰SZLET			##	HiteltГ¶rlesztГ©sen belГјl a tЕ‘ketГ¶rlesztГ©s nagysГЎgГЎt szГЎmГ­tja ki adott idЕ‘szakra.
+IRR			= BMR				##	A befektetГ©s belsЕ‘ megtГ©rГјlГ©si rГЎtГЎjГЎt szГЎmГ­tja ki pГ©nzГЎramlГЎshoz.
+ISPMT			= LRГ‰SZLETKAMAT			##	A befektetГ©s adott idЕ‘szakГЎra fizetett kamatot szГЎmГ­tja ki.
+MDURATION		= MDURATION			##	Egy 100 Ft nГ©vГ©rtГ©kЕ± Г©rtГ©kpapГ­r Macauley-fГ©le mГіdosГ­tott kamatГ©rzГ©kenysГ©gГ©t adja eredmГ©nyГјl.
+MIRR			= MEGTГ‰RГњLГ‰S			##	A befektetГ©s belsЕ‘ megtГ©rГјlГ©si rГЎtГЎjГЎt szГЎmГ­tja ki a kГ¶ltsГ©gek Г©s a bevГ©telek kГјlГ¶nbГ¶zЕ‘ kamatlГЎba mellett.
+NOMINAL			= NOMINAL			##	Az Г©ves nГ©vleges kamatlГЎb Г©rtГ©kГ©t adja eredmГ©nyГјl.
+NPER			= PER.SZГЃM			##	A tГ¶rlesztГ©si idЕ‘szakok szГЎmГЎt adja meg.
+NPV			= NMГ‰				##	BefektetГ©shez kapcsolГіdГі pГ©nzГЎramlГЎs nettГі jelenГ©rtГ©kГ©t szГЎmГ­tja ki ismert pГ©nzГЎramlГЎs Г©s kamatlГЎb mellett.
+ODDFPRICE		= ODDFPRICE			##	Egy 100 Ft nГ©vГ©rtГ©kЕ±, a futamidЕ‘ elejГ©n tГ¶redГ©k-idЕ‘szakos Г©rtГ©kpapГ­r ГЎrГЎt adja eredmГ©nyГјl.
+ODDFYIELD		= ODDFYIELD			##	A futamidЕ‘ elejГ©n tГ¶redГ©k-idЕ‘szakos Г©rtГ©kpapГ­r hozamГЎt adja eredmГ©nyГјl.
+ODDLPRICE		= ODDLPRICE			##	Egy 100 Ft nГ©vГ©rtГ©kЕ±, a futamidЕ‘ vГ©gГ©n tГ¶redГ©k-idЕ‘szakos Г©rtГ©kpapГ­r ГЎrГЎt adja eredmГ©nyГјl.
+ODDLYIELD		= ODDLYIELD			##	A futamidЕ‘ vГ©gГ©n tГ¶redГ©k-idЕ‘szakos Г©rtГ©kpapГ­r hozamГЎt adja eredmГ©nyГјl.
+PMT			= RГ‰SZLET			##	A tГ¶rlesztГ©si idЕ‘szakra vonatkozГі tГ¶rlesztГ©si Г¶sszeget szГЎmГ­tja ki.
+PPMT			= PRГ‰SZLET			##	HiteltГ¶rlesztГ©sen belГјl a tЕ‘ketГ¶rlesztГ©s nagysГЎgГЎt szГЎmГ­tja ki adott idЕ‘szakra.
+PRICE			= PRICE				##	Egy 100 Ft nГ©vГ©rtГ©kЕ±, periodikusan kamatozГі Г©rtГ©kpapГ­r ГЎrГЎt adja eredmГ©nyГјl.
+PRICEDISC		= PRICEDISC			##	Egy 100 Ft nГ©vГ©rtГ©kЕ± leszГЎmГ­tolt Г©rtГ©kpapГ­r ГЎrГЎt adja eredmГ©nyГјl.
+PRICEMAT		= PRICEMAT			##	Egy 100 Ft nГ©vГ©rtГ©kЕ±, a lejГЎratkor kamatozГі Г©rtГ©kpapГ­r ГЎrГЎt adja eredmГ©nyГјl.
+PV			= MГ‰				##	BefektetГ©s jelenlegi Г©rtГ©kГ©t szГЎmГ­tja ki.
+RATE			= RГЃTA				##	Egy tГ¶rlesztГ©si idЕ‘szakban az egy idЕ‘szakra esЕ‘ kamatlГЎb nagysГЎgГЎt szГЎmГ­tja ki.
+RECEIVED		= RECEIVED			##	A lejГЎratig teljesen lekГ¶tГ¶tt Г©rtГ©kpapГ­r lejГЎratakor kapott Г¶sszegГ©t adja eredmГ©nyГјl.
+SLN			= LCSA				##	TГЎrgyi eszkГ¶z egy idЕ‘szakra esЕ‘ amortizГЎciГіjГЎt adja meg bruttГі Г©rtГ©k szerinti lineГЎris leГ­rГЎsi kulcsot alkalmazva.
+SYD			= SYD				##	TГЎrgyi eszkГ¶z Г©rtГ©kcsГ¶kkenГ©sГ©t szГЎmГ­tja ki adott idЕ‘szakra az Г©vek szГЎmjegyГ¶sszegГ©vel dolgozГі mГіdszer alapjГЎn.
+TBILLEQ			= TBILLEQ			##	KincstГЎrjegy kГ¶tvГ©ny-egyenГ©rtГ©kЕ± hozamГЎt adja eredmГ©nyГјl.
+TBILLPRICE		= TBILLPRICE			##	Egy 100 Ft nГ©vГ©rtГ©kЕ± kincstГЎrjegy ГЎrГЎt adja eredmГ©nyГјl.
+TBILLYIELD		= TBILLYIELD			##	KincstГЎrjegy hozamГЎt adja eredmГ©nyГјl.
+VDB			= Г‰CSRI				##	TГЎrgyi eszkГ¶z amortizГЎciГіjГЎt szГЎmГ­tja ki megadott vagy rГ©szidЕ‘szakra a csГ¶kkenЕ‘ egyenleg mГіdszerГ©nek alkalmazГЎsГЎval.
+XIRR			= XIRR				##	Гњtemezett kГ©szpГ©nzforgalom (cash flow) belsЕ‘ megtГ©rГјlГ©si kamatrГЎtГЎjГЎt adja eredmГ©nyГјl.
+XNPV			= XNPV				##	Гњtemezett kГ©szpГ©nzforgalom (cash flow) nettГі jelenlegi Г©rtГ©kГ©t adja eredmГ©nyГјl.
+YIELD			= YIELD				##	Periodikusan kamatozГі Г©rtГ©kpapГ­r hozamГЎt adja eredmГ©nyГјl.
+YIELDDISC		= YIELDDISC			##	LeszГЎmГ­tolt Г©rtГ©kpapГ­r (pГ©ldГЎul kincstГЎrjegy) Г©ves hozamГЎt adja eredmГ©nyГјl.
+YIELDMAT		= YIELDMAT			##	LejГЎratkor kamatozГі Г©rtГ©kpapГ­r Г©ves hozamГЎt adja eredmГ©nyГјl.
+
+
+##
+##	Information functions				InformГЎciГіs fГјggvГ©nyek
+##
+CELL			= CELLA				##	Egy cella formГЎtumГЎra, elhelyezkedГ©sГ©re vagy tartalmГЎra vonatkozГі adatokat ad eredmГ©nyГјl.
+ERROR.TYPE		= HIBA.TГЌPUS			##	Egy hibatГ­pushoz tartozГі szГЎmot ad eredmГ©nyГјl.
+INFO			= INFГ“				##	A rendszer- Г©s munkakГ¶rnyezet pillanatnyi ГЎllapotГЎrГіl ad felvilГЎgosГ­tГЎst.
+ISBLANK			= ГњRES				##	EredmГ©nye IGAZ, ha az Г©rtГ©k Гјres.
+ISERR			= HIBA				##	EredmГ©nye IGAZ, ha az Г©rtГ©k valamelyik hibaГ©rtГ©k a #HIГЃNYZIK kivГ©telГ©vel.
+ISERROR			= HIBГЃS				##	EredmГ©nye IGAZ, ha az Г©rtГ©k valamelyik hibaГ©rtГ©k.
+ISEVEN			= ISEVEN			##	EredmГ©nye IGAZ, ha argumentuma pГЎros szГЎm.
+ISLOGICAL		= LOGIKAI			##	EredmГ©nye IGAZ, ha az Г©rtГ©k logikai Г©rtГ©k.
+ISNA			= NINCS				##	EredmГ©nye IGAZ, ha az Г©rtГ©k a #HIГЃNYZIK hibaГ©rtГ©k.
+ISNONTEXT		= NEM.SZГ–VEG			##	EredmГ©nye IGAZ, ha az Г©rtГ©k nem szГ¶veg.
+ISNUMBER		= SZГЃM				##	EredmГ©nye IGAZ, ha az Г©rtГ©k szГЎm.
+ISODD			= ISODD				##	EredmГ©nye IGAZ, ha argumentuma pГЎratlan szГЎm.
+ISREF			= HIVATKOZГЃS			##	EredmГ©nye IGAZ, ha az Г©rtГ©k hivatkozГЎs.
+ISTEXT			= SZГ–VEG.E			##	EredmГ©nye IGAZ, ha az Г©rtГ©k szГ¶veg.
+N			= N				##	ArgumentumГЎnak Г©rtГ©kГ©t szГЎmmГЎ alakГ­tja.
+NA			= HIГЃNYZIK			##	EredmГ©nye a #HIГЃNYZIK hibaГ©rtГ©k.
+TYPE			= TГЌPUS				##	Г‰rtГ©k adattГ­pusГЎnak azonosГ­tГіszГЎmГЎt adja eredmГ©nyГјl.
+
+
+##
+##	Logical functions				Logikai fГјggvГ©nyek
+##
+AND			= Г‰S				##	EredmГ©nye IGAZ, ha minden argumentuma IGAZ.
+FALSE			= HAMIS				##	A HAMIS logikai Г©rtГ©ket adja eredmГ©nyГјl.
+IF			= HA				##	Logikai vizsgГЎlatot hajt vГ©gre.
+IFERROR			= HAHIBA			##	A megadott Г©rtГ©ket adja vissza, ha egy kГ©plet hibГЎhoz vezet; mГЎs esetben a kГ©plet Г©rtГ©kГ©t adja eredmГ©nyГјl.
+NOT			= NEM				##	Argumentuma Г©rtГ©kГ©nek ellentettjГ©t adja eredmГ©nyГјl.
+OR			= VAGY				##	EredmГ©nye IGAZ, ha bГЎrmely argumentuma IGAZ.
+TRUE			= IGAZ				##	Az IGAZ logikai Г©rtГ©ket adja eredmГ©nyГјl.
+
+
+##
+##	Lookup and reference functions			KeresГ©si Г©s hivatkozГЎsi fГјggvГ©nyek
+##
+ADDRESS			= CГЌM				##	A munkalap egy cellГЎjГЎra valГі hivatkozГЎst adja szГ¶vegkГ©nt eredmГ©nyГјl.
+AREAS			= TERГњLET			##	HivatkozГЎsban a terГјletek szГЎmГЎt adja eredmГ©nyГјl.
+CHOOSE			= VГЃLASZT			##	Г‰rtГ©kek listГЎjГЎbГіl vГЎlaszt ki egy elemet.
+COLUMN			= OSZLOP			##	Egy hivatkozГЎs oszlopszГЎmГЎt adja eredmГ©nyГјl.
+COLUMNS			= OSZLOPOK			##	A hivatkozГЎsban talГЎlhatГі oszlopok szГЎmГЎt adja eredmГ©nyГјl.
+HLOOKUP			= VKERES			##	A megadott tГ¶mb felsЕ‘ sorГЎban adott Г©rtГ©kЕ± elemet keres, Г©s a megtalГЎlt elem oszlopГЎbГіl adott sorban elhelyezkedЕ‘ Г©rtГ©kkel tГ©r vissza.
+HYPERLINK		= HIPERHIVATKOZГЃS		##	HГЎlГіzati kiszolgГЎlГіn, intraneten vagy az interneten tГЎrolt dokumentumot megnyitГі parancsikont vagy hivatkozГЎst hoz lГ©tre.
+INDEX			= INDEX				##	TГ¶mb- vagy hivatkozГЎs indexszel megadott Г©rtГ©kГ©t adja vissza.
+INDIRECT		= INDIREKT			##	SzГ¶veg megadott hivatkozГЎst ad eredmГ©nyГјl.
+LOOKUP			= KERES				##	Vektorban vagy tГ¶mbben keres meg Г©rtГ©keket.
+MATCH			= HOL.VAN			##	HivatkozГЎsban vagy tГ¶mbben Г©rtГ©keket keres.
+OFFSET			= OFSZET			##	HivatkozГЎs egy mГЎsik hivatkozГЎstГіl szГЎmГ­tott tГЎvolsГЎgГЎt adja meg.
+ROW			= SOR				##	Egy hivatkozГЎs sorГЎnak szГЎmГЎt adja meg.
+ROWS			= SOROK				##	Egy hivatkozГЎs sorainak szГЎmГЎt adja meg.
+RTD			= RTD				##	ValГіs idejЕ± adatokat keres vissza a COM automatizmust (automatizГЎlГЎs: Egy alkalmazГЎs objektumaival valГі munka mГЎsik alkalmazГЎsbГіl vagy fejlesztЕ‘eszkГ¶zbЕ‘l. A korГЎbban OLE automatizmusnak nevezett automatizГЎlГЎs iparГЎgi szabvГЎny, a Component Object Model (COM) szolgГЎltatГЎsa.) tГЎmogatГі programbГіl.
+TRANSPOSE		= TRANSZPONГЃLГЃS			##	Egy tГ¶mb transzponГЎltjГЎt adja eredmГ©nyГјl.
+VLOOKUP			= FKERES			##	A megadott tГ¶mb bal szГ©lsЕ‘ oszlopГЎban megkeres egy Г©rtГ©ket, majd annak sora Г©s a megadott oszlop metszГ©spontjГЎban levЕ‘ Г©rtГ©ked adja eredmГ©nyГјl.
+
+
+##
+##	Math and trigonometry functions			Matematikai Г©s trigonometrikus fГјggvГ©nyek
+##
+ABS			= ABS				##	Egy szГЎm abszolГєt Г©rtГ©kГ©t adja eredmГ©nyГјl.
+ACOS			= ARCCOS			##	Egy szГЎm arkusz koszinuszГЎt szГЎmГ­tja ki.
+ACOSH			= ACOSH				##	Egy szГЎm inverz koszinusz hiperbolikuszГЎt szГЎmГ­tja ki.
+ASIN			= ARCSIN			##	Egy szГЎm arkusz szinuszГЎt szГЎmГ­tja ki.
+ASINH			= ASINH				##	Egy szГЎm inverz szinusz hiperbolikuszГЎt szГЎmГ­tja ki.
+ATAN			= ARCTAN			##	Egy szГЎm arkusz tangensГ©t szГЎmГ­tja ki.
+ATAN2			= ARCTAN2			##	X Г©s y koordinГЎtГЎk alapjГЎn szГЎmГ­tja ki az arkusz tangens Г©rtГ©ket.
+ATANH			= ATANH				##	A szГЎm inverz tangens hiperbolikuszГЎt szГЎmГ­tja ki.
+CEILING			= PLAFON			##	Egy szГЎmot a legkГ¶zelebbi egГ©szre vagy a pontossГЎgkГ©nt megadott Г©rtГ©k legkГ¶zelebb esЕ‘ tГ¶bbszГ¶rГ¶sГ©re kerekГ­t.
+COMBIN			= KOMBINГЃCIГ“K			##	Adott szГЎmГє objektum Г¶sszes lehetsГ©ges kombinГЎciГіinak szГЎmГЎt szГЎmГ­tja ki.
+COS			= COS				##	Egy szГЎm koszinuszГЎt szГЎmГ­tja ki.
+COSH			= COSH				##	Egy szГЎm koszinusz hiperbolikuszГЎt szГЎmГ­tja ki.
+DEGREES			= FOK				##	RadiГЎnt fokkГЎ alakГ­t ГЎt.
+EVEN			= PГЃROS				##	Egy szГЎmot a legkГ¶zelebbi pГЎros egГ©sz szГЎmra kerekГ­t.
+EXP			= KITEVЕђ			##	Az e adott kitevЕ‘jЕ± hatvГЎnyГЎt adja eredmГ©nyГјl.
+FACT			= FAKT				##	Egy szГЎm faktoriГЎlisГЎt szГЎmГ­tja ki.
+FACTDOUBLE		= FACTDOUBLE			##	Egy szГЎm dupla faktoriГЎlisГЎt adja eredmГ©nyГјl.
+FLOOR			= PADLГ“				##	Egy szГЎmot lefelГ©, a nulla felГ© kerekГ­t.
+GCD			= GCD				##	A legnagyobb kГ¶zГ¶s osztГіt adja eredmГ©nyГјl.
+INT			= INT				##	Egy szГЎmot lefelГ© kerekГ­t a legkГ¶zelebbi egГ©szre.
+LCM			= LCM				##	A legkisebb kГ¶zГ¶s tГ¶bbszГ¶rГ¶st adja eredmГ©nyГјl.
+LN			= LN				##	Egy szГЎm termГ©szetes logaritmusГЎt szГЎmГ­tja ki.
+LOG			= LOG				##	Egy szГЎm adott alapГє logaritmusГЎt szГЎmГ­tja ki.
+LOG10			= LOG10				##	Egy szГЎm 10-es alapГє logaritmusГЎt szГЎmГ­tja ki.
+MDETERM			= MDETERM			##	Egy tГ¶mb mГЎtrix-determinГЎnsГЎt szГЎmГ­tja ki.
+MINVERSE		= INVERZ.MГЃTRIX			##	Egy tГ¶mb mГЎtrix inverzГ©t adja eredmГ©nyГјl.
+MMULT			= MSZORZAT			##	KГ©t tГ¶mb mГЎtrix-szorzatГЎt adja meg.
+MOD			= MARADГ‰K			##	Egy szГЎm osztГЎsi maradГ©kГЎt adja eredmГ©nyГјl.
+MROUND			= MROUND			##	A kГ­vГЎnt tГ¶bbszГ¶rГ¶sГ©re kerekГ­tett Г©rtГ©ket ad eredmГ©nyГјl.
+MULTINOMIAL		= MULTINOMIAL			##	SzГЎmhalmaz multinomiГЎlisГЎt adja eredmГ©nyГјl.
+ODD			= PГЃRATLAN			##	Egy szГЎmot a legkГ¶zelebbi pГЎratlan szГЎmra kerekГ­t.
+PI			= PI				##	A pi matematikai ГЎllandГіt adja vissza.
+POWER			= HATVГЃNY			##	Egy szГЎm adott kitevЕ‘jЕ± hatvГЎnyГЎt szГЎmГ­tja ki.
+PRODUCT			= SZORZAT			##	Argumentumai szorzatГЎt szГЎmГ­tja ki.
+QUOTIENT		= QUOTIENT			##	Egy hГЎnyados egГ©sz rГ©szГ©t adja eredmГ©nyГјl.
+RADIANS			= RADIГЃN			##	Fokot radiГЎnnГЎ alakГ­t ГЎt.
+RAND			= VГ‰L				##	Egy 0 Г©s 1 kГ¶zГ¶tti vГ©letlen szГЎmot ad eredmГ©nyГјl.
+RANDBETWEEN		= RANDBETWEEN			##	Megadott szГЎmok kГ¶zГ© esЕ‘ vГ©letlen szГЎmot ГЎllГ­t elЕ‘.
+ROMAN			= RГ“MAI				##	Egy szГЎmot rГіmai szГЎmokkal kifejezve szГ¶vegkГ©nt ad eredmГ©nyГјl.
+ROUND			= KEREKГЌTГ‰S			##	Egy szГЎmot adott szГЎmГє szГЎmjegyre kerekГ­t.
+ROUNDDOWN		= KEREKГЌTГ‰S.LE			##	Egy szГЎmot lefelГ©, a nulla felГ© kerekГ­t.
+ROUNDUP			= KEREKГЌTГ‰S.FEL			##	Egy szГЎmot felfelГ©, a nullГЎtГіl tГЎvolabbra kerekГ­t.
+SERIESSUM		= SERIESSUM			##	HatvГЎnysor Г¶sszegГ©t adja eredmГ©nyГјl.
+SIGN			= ELЕђJEL			##	Egy szГЎm elЕ‘jelГ©t adja meg.
+SIN			= SIN				##	Egy szГ¶g szinuszГЎt szГЎmГ­tja ki.
+SINH			= SINH				##	Egy szГЎm szinusz hiperbolikuszГЎt szГЎmГ­tja ki.
+SQRT			= GYГ–K				##	Egy szГЎm pozitГ­v nГ©gyzetgyГ¶kГ©t szГЎmГ­tja ki.
+SQRTPI			= SQRTPI			##	A (szГЎm*pi) nГ©gyzetgyГ¶kГ©t adja eredmГ©nyГјl.
+SUBTOTAL		= RГ‰SZГ–SSZEG			##	Lista vagy adatbГЎzis rГ©szГ¶sszegГ©t adja eredmГ©nyГјl.
+SUM			= SZUM				##	Г–sszeadja az argumentumlistГЎjГЎban lГ©vЕ‘ szГЎmokat.
+SUMIF			= SZUMHA			##	A megadott feltГ©teleknek eleget tevЕ‘ cellГЎkban talГЎlhatГі Г©rtГ©keket adja Г¶ssze.
+SUMIFS			= SZUMHATГ–BB			##	TГ¶bb megadott feltГ©telnek eleget tГ©vЕ‘ tartomГЎnycellГЎk Г¶sszegГ©t adja eredmГ©nyГјl.
+SUMPRODUCT		= SZORZATГ–SSZEG			##	A megfelelЕ‘ tГ¶mbelemek szorzatГЎnak Г¶sszegГ©t szГЎmГ­tja ki.
+SUMSQ			= NГ‰GYZETГ–SSZEG			##	Argumentumai nГ©gyzetГ©nek Г¶sszegГ©t szГЎmГ­tja ki.
+SUMX2MY2		= SZUMX2BЕђLY2			##	KГ©t tГ¶mb megfelelЕ‘ elemei nГ©gyzetГ©nek kГјlГ¶nbsГ©gГ©t Г¶sszegzi.
+SUMX2PY2		= SZUMX2MEGY2			##	KГ©t tГ¶mb megfelelЕ‘ elemei nГ©gyzetГ©nek Г¶sszegГ©t Г¶sszegzi.
+SUMXMY2			= SZUMXBЕђLY2			##	KГ©t tГ¶mb megfelelЕ‘ elemei kГјlГ¶nbsГ©gГ©nek nГ©gyzetГ¶sszegГ©t szГЎmГ­tja ki.
+TAN			= TAN				##	Egy szГЎm tangensГ©t szГЎmГ­tja ki.
+TANH			= TANH				##	Egy szГЎm tangens hiperbolikuszГЎt szГЎmГ­tja ki.
+TRUNC			= CSONK				##	Egy szГЎmot egГ©sszГ© csonkГ­t.
+
+
+##
+##	Statistical functions				Statisztikai fГјggvГ©nyek
+##
+AVEDEV			= ГЃTL.ELTГ‰RГ‰S			##	Az adatpontoknak ГЎtlaguktГіl valГі ГЎtlagos abszolГєt eltГ©rГ©sГ©t szГЎmГ­tja ki.
+AVERAGE			= ГЃTLAG				##	Argumentumai ГЎtlagГЎt szГЎmГ­tja ki.
+AVERAGEA		= ГЃTLAGA			##	Argumentumai ГЎtlagГЎt szГЎmГ­tja ki (beleГ©rtve a szГЎmokat, szГ¶veget Г©s logikai Г©rtГ©keket).
+AVERAGEIF		= ГЃTLAGHA			##	A megadott feltГ©telnek eleget tГ©vЕ‘ tartomГЎny cellГЎinak ГЎtlagГЎt (szГЎmtani kГ¶zepГ©t) adja eredmГ©nyГјl.
+AVERAGEIFS		= ГЃTLAGHATГ–BB			##	A megadott feltГ©teleknek eleget tГ©vЕ‘ cellГЎk ГЎtlagГЎt (szГЎmtani kГ¶zepГ©t) adja eredmГ©nyГјl.
+BETADIST		= BГ‰TA.ELOSZLГЃS			##	A bГ©ta-eloszlГЎs fГјggvГ©nyt szГЎmГ­tja ki.
+BETAINV			= INVERZ.BГ‰TA			##	Adott bГ©ta-eloszlГЎshoz kiszГЎmГ­tja a bГ©ta eloszlГЎsfГјggvГ©ny inverzГ©t.
+BINOMDIST		= BINOM.ELOSZLГЃS		##	A diszkrГ©t binomiГЎlis eloszlГЎs valГіszГ­nЕ±sГ©gГ©rtГ©kГ©t szГЎmГ­tja ki.
+CHIDIST			= KHI.ELOSZLГЃS			##	A khi-nГ©gyzet-eloszlГЎs egyszГ©lЕ± valГіszГ­nЕ±sГ©gГ©rtГ©kГ©t szГЎmГ­tja ki.
+CHIINV			= INVERZ.KHI			##	A khi-nГ©gyzet-eloszlГЎs egyszГ©lЕ± valГіszГ­nЕ±sГ©gГ©rtГ©kГ©nek inverzГ©t szГЎmГ­tja ki.
+CHITEST			= KHI.PRГ“BA			##	FГјggetlensГ©gvizsgГЎlatot hajt vГ©gre.
+CONFIDENCE		= MEGBГЌZHATГ“SГЃG			##	Egy statisztikai sokasГЎg vГЎrhatГі Г©rtГ©kГ©nek megbГ­zhatГіsГЎgi intervallumГЎt adja eredmГ©nyГјl.
+CORREL			= KORREL			##	KГ©t adathalmaz korrelГЎciГіs egyГјtthatГіjГЎt szГЎmГ­tja ki.
+COUNT			= DARAB				##	MegszГЎmolja, hogy argumentumlistГЎjГЎban hГЎny szГЎm talГЎlhatГі.
+COUNTA			= DARAB2			##	MegszГЎmolja, hogy argumentumlistГЎjГЎban hГЎny Г©rtГ©k talГЎlhatГі.
+COUNTBLANK		= DARABГњRES			##	Egy tartomГЎnyban Г¶sszeszГЎmolja az Гјres cellГЎkat.
+COUNTIF			= DARABTELI			##	Egy tartomГЎnyban Г¶sszeszГЎmolja azokat a cellГЎkat, amelyek eleget tesznek a megadott feltГ©telnek.
+COUNTIFS		= DARABHATГ–BB			##	Egy tartomГЎnyban Г¶sszeszГЎmolja azokat a cellГЎkat, amelyek eleget tesznek tГ¶bb feltГ©telnek.
+COVAR			= KOVAR				##	A kovarianciГЎt, azaz a pГЎronkГ©nti eltГ©rГ©sek szorzatГЎnak ГЎtlagГЎt szГЎmГ­tja ki.
+CRITBINOM		= KRITBINOM			##	Azt a legkisebb szГЎmot adja eredmГ©nyГјl, amelyre a binomiГЎlis eloszlГЎsfГјggvГ©ny Г©rtГ©ke nem kisebb egy adott hatГЎrГ©rtГ©knГ©l.
+DEVSQ			= SQ				##	Az ГЎtlagtГіl valГі eltГ©rГ©sek nГ©gyzetГ©nek Г¶sszegГ©t szГЎmГ­tja ki.
+EXPONDIST		= EXP.ELOSZLГЃS			##	Az exponenciГЎlis eloszlГЎs Г©rtГ©kГ©t szГЎmГ­tja ki.
+FDIST			= F.ELOSZLГЃS			##	Az F-eloszlГЎs Г©rtГ©kГ©t szГЎmГ­tja ki.
+FINV			= INVERZ.F			##	Az F-eloszlГЎs inverzГ©nek Г©rtГ©kГ©t szГЎmГ­tja ki.
+FISHER			= FISHER			##	Fisher-transzformГЎciГіt hajt vГ©gre.
+FISHERINV		= INVERZ.FISHER			##	A Fisher-transzformГЎciГі inverzГ©t hajtja vГ©gre.
+FORECAST		= ELЕђREJELZГ‰S			##	Az ismert Г©rtГ©kek alapjГЎn lineГЎris regressziГіval becsГјlt Г©rtГ©ket ad eredmГ©nyГјl.
+FREQUENCY		= GYAKORISГЃG			##	A gyakorisГЎgi vagy empirikus eloszlГЎs Г©rtГ©kГ©t fГјggЕ‘leges tГ¶mbkГ©nt adja eredmГ©nyГјl.
+FTEST			= F.PRГ“BA			##	Az F-prГіba Г©rtГ©kГ©t adja eredmГ©nyГјl.
+GAMMADIST		= GAMMA.ELOSZLГЃS		##	A gamma-eloszlГЎs Г©rtГ©kГ©t szГЎmГ­tja ki.
+GAMMAINV		= INVERZ.GAMMA			##	A gamma-eloszlГЎs eloszlГЎsfГјggvГ©nye inverzГ©nek Г©rtГ©kГ©t szГЎmГ­tja ki.
+GAMMALN			= GAMMALN			##	A gamma-fГјggvГ©ny termГ©szetes logaritmusГЎt szГЎmГ­tja ki.
+GEOMEAN			= MГ‰RTANI.KГ–ZГ‰P			##	Argumentumai mГ©rtani kГ¶zГ©pГ©rtГ©kГ©t szГЎmГ­tja ki.
+GROWTH			= NГ–V				##	ExponenciГЎlis regressziГі alapjГЎn ad becslГ©st.
+HARMEAN			= HARM.KГ–ZГ‰P			##	Argumentumai harmonikus ГЎtlagГЎt szГЎmГ­tja ki.
+HYPGEOMDIST		= HIPERGEOM.ELOSZLГЃS		##	A hipergeometriai eloszlГЎs Г©rtГ©kГ©t szГЎmГ­tja ki.
+INTERCEPT		= METSZ				##	A regressziГіs egyenes y tengellyel valГі metszГ©spontjГЎt hatГЎrozza meg.
+KURT			= CSГљCSOSSГЃG			##	Egy adathalmaz csГєcsossГЎgГЎt szГЎmГ­tja ki.
+LARGE			= NAGY				##	Egy adathalmaz k-adik legnagyobb elemГ©t adja eredmГ©nyГјl.
+LINEST			= LIN.ILL			##	A legkisebb nГ©gyzetek mГіdszerГ©vel az adatokra illesztett egyenes paramГ©tereit hatГЎrozza meg.
+LOGEST			= LOG.ILL			##	Az adatokra illesztett exponenciГЎlis gГ¶rbe paramГ©tereit hatГЎrozza meg.
+LOGINV			= INVERZ.LOG.ELOSZLГЃS		##	A lognormГЎlis eloszlГЎs inverzГ©t szГЎmГ­tja ki.
+LOGNORMDIST		= LOG.ELOSZLГЃS			##	A lognormГЎlis eloszlГЎsfГјggvГ©ny Г©rtГ©kГ©t szГЎmГ­tja ki.
+MAX			= MAX				##	Az argumentumai kГ¶zГ¶tt szereplЕ‘ legnagyobb szГЎmot adja meg.
+MAXA			= MAX2				##	Az argumentumai kГ¶zГ¶tt szereplЕ‘ legnagyobb szГЎmot adja meg (beleГ©rtve a szГЎmokat, szГ¶veget Г©s logikai Г©rtГ©keket).
+MEDIAN			= MEDIГЃN			##	Adott szГЎmhalmaz mediГЎnjГЎt szГЎmГ­tja ki.
+MIN			= MIN				##	Az argumentumai kГ¶zГ¶tt szereplЕ‘ legkisebb szГЎmot adja meg.
+MINA			= MIN2				##	Az argumentumai kГ¶zГ¶tt szereplЕ‘ legkisebb szГЎmot adja meg, beleГ©rtve a szГЎmokat, szГ¶veget Г©s logikai Г©rtГ©keket.
+MODE			= MГ“DUSZ			##	Egy adathalmazbГіl kivГЎlasztja a leggyakrabban elЕ‘fordulГі szГЎmot.
+NEGBINOMDIST		= NEGBINOM.ELOSZL		##	A negatГ­v binomiГЎlis eloszlГЎs Г©rtГ©kГ©t szГЎmГ­tja ki.
+NORMDIST		= NORM.ELOSZL			##	A normГЎlis eloszlГЎs Г©rtГ©kГ©t szГЎmГ­tja ki.
+NORMINV			= INVERZ.NORM			##	A normГЎlis eloszlГЎs eloszlГЎsfГјggvГ©nye inverzГ©nek Г©rtГ©kГ©t szГЎmГ­tja ki.
+NORMSDIST		= STNORMELOSZL			##	A standard normГЎlis eloszlГЎs eloszlГЎsfГјggvГ©nyГ©nek Г©rtГ©kГ©t szГЎmГ­tja ki.
+NORMSINV		= INVERZ.STNORM			##	A standard normГЎlis eloszlГЎs eloszlГЎsfГјggvГ©nye inverzГ©nek Г©rtГ©kГ©t szГЎmГ­tja ki.
+PEARSON			= PEARSON			##	A Pearson-fГ©le korrelГЎciГіs egyГјtthatГіt szГЎmГ­tja ki.
+PERCENTILE		= PERCENTILIS			##	Egy tartomГЎnyban talГЎlhatГі Г©rtГ©kek k-adik percentilisГ©t, azaz szГЎzalГ©kosztГЎlyГЎt adja eredmГ©nyГјl.
+PERCENTRANK		= SZГЃZALГ‰KRANG			##	Egy Г©rtГ©knek egy adathalmazon belГјl vett szГЎzalГ©kos rangjГЎt (elhelyezkedГ©sГ©t) szГЎmГ­tja ki.
+PERMUT			= VARIГЃCIГ“K			##	Adott szГЎmГє objektum k-ad osztГЎlyГє ismГ©tlГ©s nГ©lkГјli variГЎciГіinak szГЎmГЎt szГЎmГ­tja ki.
+POISSON			= POISSON			##	A Poisson-eloszlГЎs Г©rtГ©kГ©t szГЎmГ­tja ki.
+PROB			= VALГ“SZГЌNЕ°SГ‰G			##	Annak valГіszГ­nЕ±sГ©gГ©t szГЎmГ­tja ki, hogy adott Г©rtГ©kek kГ©t hatГЎrГ©rtГ©k kГ¶zГ© esnek.
+QUARTILE		= KVARTILIS			##	Egy adathalmaz kvartilisГ©t (negyedszintjГ©t) szГЎmГ­tja ki.
+RANK			= SORSZГЃM			##	KiszГЎmГ­tja, hogy egy szГЎm hГЎnyadik egy szГЎmsorozatban.
+RSQ			= RNГ‰GYZET			##	KiszГЎmГ­tja a Pearson-fГ©le szorzatmomentum korrelГЎciГіs egyГјtthatГіjГЎnak nГ©gyzetГ©t.
+SKEW			= FERDESГ‰G			##	Egy eloszlГЎs ferdesГ©gГ©t hatГЎrozza meg.
+SLOPE			= MEREDEKSГ‰G			##	Egy lineГЎris regressziГіs egyenes meredeksГ©gГ©t szГЎmГ­tja ki.
+SMALL			= KICSI				##	Egy adathalmaz k-adik legkisebb elemГ©t adja meg.
+STANDARDIZE		= NORMALIZГЃLГЃS			##	NormalizГЎlt Г©rtГ©ket ad eredmГ©nyГјl.
+STDEV			= SZГ“RГЃS			##	Egy statisztikai sokasГЎg mintГЎjГЎbГіl kiszГЎmГ­tja annak szГіrГЎsГЎt.
+STDEVA			= SZГ“RГЃSA			##	Egy statisztikai sokasГЎg mintГЎjГЎbГіl kiszГЎmГ­tja annak szГіrГЎsГЎt (beleГ©rtve a szГЎmokat, szГ¶veget Г©s logikai Г©rtГ©keket).
+STDEVP			= SZГ“RГЃSP			##	Egy statisztikai sokasГЎg egГ©szГ©bЕ‘l kiszГЎmГ­tja annak szГіrГЎsГЎt.
+STDEVPA			= SZГ“RГЃSPA			##	Egy statisztikai sokasГЎg egГ©szГ©bЕ‘l kiszГЎmГ­tja annak szГіrГЎsГЎt (beleГ©rtve szГЎmokat, szГ¶veget Г©s logikai Г©rtГ©keket).
+STEYX			= STHIBAYX			##	Egy regressziГі esetГ©n az egyes x-Г©rtГ©kek alapjГЎn meghatГЎrozott y-Г©rtГ©kek standard hibГЎjГЎt szГЎmГ­tja ki.
+TDIST			= T.ELOSZLГЃS			##	A Student-fГ©le t-eloszlГЎs Г©rtГ©kГ©t szГЎmГ­tja ki.
+TINV			= INVERZ.T			##	A Student-fГ©le t-eloszlГЎs inverzГ©t szГЎmГ­tja ki.
+TREND			= TREND				##	LineГЎris trend Г©rtГ©keit szГЎmГ­tja ki.
+TRIMMEAN		= RГ‰SZГЃTLAG			##	Egy adathalmaz kГ¶zГ©psЕ‘ rГ©szГ©nek ГЎtlagГЎt szГЎmГ­tja ki.
+TTEST			= T.PRГ“BA			##	A Student-fГ©le t-prГіbГЎhoz tartozГі valГіszГ­nЕ±sГ©get szГЎmГ­tja ki.
+VAR			= VAR				##	Minta alapjГЎn becslГ©st ad a varianciГЎra.
+VARA			= VARA				##	Minta alapjГЎn becslГ©st ad a varianciГЎra (beleГ©rtve szГЎmokat, szГ¶veget Г©s logikai Г©rtГ©keket).
+VARP			= VARP				##	Egy statisztikai sokasГЎg varianciГЎjГЎt szГЎmГ­tja ki.
+VARPA			= VARPA				##	Egy statisztikai sokasГЎg varianciГЎjГЎt szГЎmГ­tja ki (beleГ©rtve szГЎmokat, szГ¶veget Г©s logikai Г©rtГ©keket).
+WEIBULL			= WEIBULL			##	A Weibull-fГ©le eloszlГЎs Г©rtГ©kГ©t szГЎmГ­tja ki.
+ZTEST			= Z.PRГ“BA			##	Az egyszГ©lЕ± z-prГіbГЎval kapott valГіszГ­nЕ±sГ©gГ©rtГ©ket szГЎmГ­tja ki.
+
+
+##
+##	Text functions					SzГ¶vegmЕ±veletekhez hasznГЎlhatГі fГјggvГ©nyek
+##
+ASC			= ASC				##	SzГ¶veg teljes szГ©lessГ©gЕ± (kГ©tbГЎjtos) latin Г©s katakana karaktereit fГ©lszГ©lessГ©gЕ± (egybГЎjtos) karakterekkГ© alakГ­tja.
+BAHTTEXT		= BAHTSZГ–VEG			##	SzГЎmot szГ¶veggГ© alakГ­t a Гџ (baht) pГ©nznemformГЎtum hasznГЎlatГЎval.
+CHAR			= KARAKTER			##	A kГіdszГЎmmal meghatГЎrozott karaktert adja eredmГ©nyГјl.
+CLEAN			= TISZTГЌT			##	A szГ¶vegbЕ‘l eltГЎvolГ­tja az Г¶sszes nem nyomtathatГі karaktert.
+CODE			= KГ“D				##	Karaktersorozat elsЕ‘ karakterГ©nek numerikus kГіdjГЎt adja eredmГ©nyГјl.
+CONCATENATE		= Г–SSZEFЕ°Z			##	TГ¶bb szГ¶vegelemet egyetlen szГ¶veges elemmГ© fЕ±z Г¶ssze.
+DOLLAR			= FORINT			##	SzГЎmot pГ©nznem formГЎtumГє szГ¶veggГ© alakГ­t ГЎt.
+EXACT			= AZONOS			##	MegvizsgГЎlja, hogy kГ©t Г©rtГ©k azonos-e.
+FIND			= SZГ–VEG.TALГЃL			##	Karaktersorozatot keres egy mГЎsikban (a kis- Г©s nagybetЕ±k megkГјlГ¶nbГ¶ztetГ©sГ©vel).
+FINDB			= SZГ–VEG.TALГЃL2			##	Karaktersorozatot keres egy mГЎsikban (a kis- Г©s nagybetЕ±k megkГјlГ¶nbГ¶ztetГ©sГ©vel).
+FIXED			= FIX				##	SzГЎmot szГ¶veges formГЎtumГєra alakГ­t adott szГЎmГє tizedesjegyre kerekГ­tve.
+JIS			= JIS				##	A fГ©lszГ©lessГ©gЕ± (egybГЎjtos) latin Г©s a katakana karaktereket teljes szГ©lessГ©gЕ± (kГ©tbГЎjtos) karakterekkГ© alakГ­tja.
+LEFT			= BAL				##	SzГ¶veg bal szГ©lsЕ‘ karaktereit adja eredmГ©nyГјl.
+LEFTB			= BAL2				##	SzГ¶veg bal szГ©lsЕ‘ karaktereit adja eredmГ©nyГјl.
+LEN			= HOSSZ				##	SzГ¶veg karakterekben mГ©rt hosszГЎt adja eredmГ©nyГјl.
+LENB			= HOSSZ2			##	SzГ¶veg karakterekben mГ©rt hosszГЎt adja eredmГ©nyГјl.
+LOWER			= KISBETЕ°			##	SzГ¶veget kisbetЕ±ssГ© alakГ­t ГЎt.
+MID			= KГ–ZГ‰P				##	A szГ¶veg adott pozГ­ciГіjГЎtГіl kezdve megadott szГЎmГє karaktert ad vissza eredmГ©nykГ©nt.
+MIDB			= KГ–ZГ‰P2			##	A szГ¶veg adott pozГ­ciГіjГЎtГіl kezdve megadott szГЎmГє karaktert ad vissza eredmГ©nykГ©nt.
+PHONETIC		= PHONETIC			##	SzГ¶veg furigana (fonetikus) karaktereit adja vissza.
+PROPER			= TNГ‰V				##	SzГ¶veg minden szavГЎnak kezdЕ‘betЕ±jГ©t nagybetЕ±sre cserГ©li.
+REPLACE			= CSERE				##	A szГ¶vegen belГјl karaktereket cserГ©l.
+REPLACEB		= CSERE2			##	A szГ¶vegen belГјl karaktereket cserГ©l.
+REPT			= SOKSZOR			##	Megadott szГЎmГє alkalommal megismГ©tel egy szГ¶vegrГ©szt.
+RIGHT			= JOBB				##	SzГ¶vegrГ©sz jobb szГ©lsЕ‘ karaktereit adja eredmГ©nyГјl.
+RIGHTB			= JOBB2				##	SzГ¶vegrГ©sz jobb szГ©lsЕ‘ karaktereit adja eredmГ©nyГјl.
+SEARCH			= SZГ–VEG.KERES			##	Karaktersorozatot keres egy mГЎsikban (a kis- Г©s nagybetЕ±k kГ¶zГ¶tt nem tesz kГјlГ¶nbsГ©get).
+SEARCHB			= SZГ–VEG.KERES2			##	Karaktersorozatot keres egy mГЎsikban (a kis- Г©s nagybetЕ±k kГ¶zГ¶tt nem tesz kГјlГ¶nbsГ©get).
+SUBSTITUTE		= HELYETTE			##	SzГ¶vegben adott karaktereket mГЎsikra cserГ©l.
+T			= T				##	ArgumentumГЎt szГ¶veggГ© alakГ­tja ГЎt.
+TEXT			= SZГ–VEG			##	SzГЎmГ©rtГ©ket alakГ­t ГЎt adott szГЎmformГЎtumГє szГ¶veggГ©.
+TRIM			= TRIM				##	A szГ¶vegbЕ‘l eltГЎvolГ­tja a szГіkГ¶zГ¶ket.
+UPPER			= NAGYBETЕ°S			##	SzГ¶veget nagybetЕ±ssГ© alakГ­t ГЎt.
+VALUE			= Г‰RTГ‰K				##	SzГ¶veget szГЎmmГЎ alakГ­t ГЎt.

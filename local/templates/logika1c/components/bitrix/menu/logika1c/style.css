@@ -1,0 +1,57 @@
+/* Left menu*/
+ul.left-menu {
+    list-style: none;
+    position: relative;
+    background: #2c2c2c73;
+    width: 95%;
+    border-radius: 18px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+ul.left-menu li
+{
+	color: white;
+}
+
+ul.left-menu li a
+{
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    color: #ffffff;
+    width: auto;
+    padding: 10px 20px;
+    border-radius: 18px;
+    transition: .2s ease-in-out;
+	text-align: center;
+    text-transform: lowercase;
+}
+
+ul.left-menu li a:hover {
+    color: white;
+    text-decoration: none !important;
+    background: #ed535acc;
+    width: auto;
+    padding: 10px 20px;
+    border-radius: 28px;
+}
+
+
+ul.left-menu li a.selected:link,
+ul.left-menu li a.selected:visited,
+ul.left-menu li a.selected:active,
+ul.left-menu li a.selected:hover
+{
+	background: #ed535acc;
+    padding: 10px 20px;
+}
+
+@media (max-width: 998px) {
+ul.left-menu li a {
+    padding: 5px 10px;
+    border-radius: 18px;
+    text-align: center;
+    font-size: smaller;
+}
+}

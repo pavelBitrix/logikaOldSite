@@ -1,0 +1,438 @@
+##
+## PHPExcel
+##
+## Copyright (c) 2006 - 2013 PHPExcel
+##
+## This library is free software; you can redistribute it and/or
+## modify it under the terms of the GNU Lesser General Public
+## License as published by the Free Software Foundation; either
+## version 2.1 of the License, or (at your option) any later version.
+##
+## This library is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+## Lesser General Public License for more details.
+##
+## You should have received a copy of the GNU Lesser General Public
+## License along with this library; if not, write to the Free Software
+## Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+##
+## @category   PHPExcel
+## @package    PHPExcel_Calculation
+## @copyright  Copyright (c) 2006 - 2013 PHPExcel (http://www.codeplex.com/PHPExcel)
+## @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
+## @version    ##VERSION##, ##DATE##
+##
+## Data in this file derived from http://www.piuha.fi/excel-function-name-translation/
+##
+##
+
+
+##
+##	Add-in and Automation functions				Funciones de complementos y automatizaciГіn
+##
+GETPIVOTDATA		= IMPORTARDATOSDINAMICOS		##	Devuelve los datos almacenados en un informe de tabla dinГЎmica.
+
+
+##
+##	Cube functions						Funciones de cubo
+##
+CUBEKPIMEMBER		= MIEMBROKPICUBO			##	Devuelve un nombre, propiedad y medida de indicador de rendimiento clave (KPI) y muestra el nombre y la propiedad en la celda. Un KPI es una medida cuantificable, como los beneficios brutos mensuales o la facturaciГіn trimestral por empleado, que se usa para supervisar el rendimiento de una organizaciГіn.
+CUBEMEMBER		= MIEMBROCUBO				##	Devuelve un miembro o tupla en una jerarquГ­a de cubo. Se usa para validar la existencia del miembro o la tupla en el cubo.
+CUBEMEMBERPROPERTY	= PROPIEDADMIEMBROCUBO			##	Devuelve el valor de una propiedad de miembro del cubo Se usa para validar la existencia de un nombre de miembro en el cubo y para devolver la propiedad especificada para este miembro.
+CUBERANKEDMEMBER	= MIEMBRORANGOCUBO			##	Devuelve el miembro n, o clasificado, de un conjunto. Se usa para devolver uno o mГЎs elementos de un conjunto, por ejemplo, el representante con mejores ventas o los diez mejores alumnos.
+CUBESET			= CONJUNTOCUBO				##	Define un conjunto calculado de miembros o tuplas mediante el envГ­o de una expresiГіn de conjunto al cubo en el servidor, lo que crea el conjunto y, despuГ©s, devuelve dicho conjunto a Microsoft Office Excel.
+CUBESETCOUNT		= RECUENTOCONJUNTOCUBO			##	Devuelve el nГєmero de elementos de un conjunto.
+CUBEVALUE		= VALORCUBO				##	Devuelve un valor agregado de un cubo.
+
+
+##
+##	Database functions					Funciones de base de datos
+##
+DAVERAGE		= BDPROMEDIO				##	Devuelve el promedio de las entradas seleccionadas en la base de datos.
+DCOUNT			= BDCONTAR				##	Cuenta el nГєmero de celdas que contienen nГєmeros en una base de datos.
+DCOUNTA			= BDCONTARA				##	Cuenta el nГєmero de celdas no vacГ­as en una base de datos.
+DGET			= BDEXTRAER				##	Extrae de una base de datos un Гєnico registro que cumple los criterios especificados.
+DMAX			= BDMAX					##	Devuelve el valor mГЎximo de las entradas seleccionadas de la base de datos.
+DMIN			= BDMIN					##	Devuelve el valor mГ­nimo de las entradas seleccionadas de la base de datos.
+DPRODUCT		= BDPRODUCTO				##	Multiplica los valores de un campo concreto de registros de una base de datos que cumplen los criterios especificados.
+DSTDEV			= BDDESVEST				##	Calcula la desviaciГіn estГЎndar a partir de una muestra de entradas seleccionadas en la base de datos.
+DSTDEVP			= BDDESVESTP				##	Calcula la desviaciГіn estГЎndar en funciГіn de la poblaciГіn total de las entradas seleccionadas de la base de datos.
+DSUM			= BDSUMA				##	Suma los nГєmeros de la columna de campo de los registros de la base de datos que cumplen los criterios.
+DVAR			= BDVAR					##	Calcula la varianza a partir de una muestra de entradas seleccionadas de la base de datos.
+DVARP			= BDVARP				##	Calcula la varianza a partir de la poblaciГіn total de entradas seleccionadas de la base de datos.
+
+
+##
+##	Date and time functions					Funciones de fecha y hora
+##
+DATE			= FECHA					##	Devuelve el nГєmero de serie correspondiente a una fecha determinada.
+DATEVALUE		= FECHANUMERO				##	Convierte una fecha con formato de texto en un valor de nГєmero de serie.
+DAY			= DIA					##	Convierte un nГєmero de serie en un valor de dГ­a del mes.
+DAYS360			= DIAS360				##	Calcula el nГєmero de dГ­as entre dos fechas a partir de un aГ±o de 360 dГ­as.
+EDATE			= FECHA.MES				##	Devuelve el nГєmero de serie de la fecha equivalente al nГєmero indicado de meses anteriores o posteriores a la fecha inicial.
+EOMONTH			= FIN.MES				##	Devuelve el nГєmero de serie correspondiente al Гєltimo dГ­a del mes anterior o posterior a un nГєmero de meses especificado.
+HOUR			= HORA					##	Convierte un nГєmero de serie en un valor de hora.
+MINUTE			= MINUTO				##	Convierte un nГєmero de serie en un valor de minuto.
+MONTH			= MES					##	Convierte un nГєmero de serie en un valor de mes.
+NETWORKDAYS		= DIAS.LAB				##	Devuelve el nГєmero de todos los dГ­as laborables existentes entre dos fechas.
+NOW			= AHORA					##	Devuelve el nГєmero de serie correspondiente a la fecha y hora actuales.
+SECOND			= SEGUNDO				##	Convierte un nГєmero de serie en un valor de segundo.
+TIME			= HORA					##	Devuelve el nГєmero de serie correspondiente a una hora determinada.
+TIMEVALUE		= HORANUMERO				##	Convierte una hora con formato de texto en un valor de nГєmero de serie.
+TODAY			= HOY					##	Devuelve el nГєmero de serie correspondiente al dГ­a actual.
+WEEKDAY			= DIASEM				##	Convierte un nГєmero de serie en un valor de dГ­a de la semana.
+WEEKNUM			= NUM.DE.SEMANA				##	Convierte un nГєmero de serie en un nГєmero que representa el lugar numГ©rico correspondiente a una semana de un aГ±o.
+WORKDAY			= DIA.LAB				##	Devuelve el nГєmero de serie de la fecha que tiene lugar antes o despuГ©s de un nГєmero determinado de dГ­as laborables.
+YEAR			= AГ‘O					##	Convierte un nГєmero de serie en un valor de aГ±o.
+YEARFRAC		= FRAC.AГ‘O				##	Devuelve la fracciГіn de aГ±o que representa el nГєmero total de dГ­as existentes entre el valor de fecha_inicial y el de fecha_final.
+
+
+##
+##	Engineering functions					Funciones de ingenierГ­a
+##
+BESSELI			= BESSELI				##	Devuelve la funciГіn Bessel In(x) modificada.
+BESSELJ			= BESSELJ				##	Devuelve la funciГіn Bessel Jn(x).
+BESSELK			= BESSELK				##	Devuelve la funciГіn Bessel Kn(x) modificada.
+BESSELY			= BESSELY				##	Devuelve la funciГіn Bessel Yn(x).
+BIN2DEC			= BIN.A.DEC				##	Convierte un nГєmero binario en decimal.
+BIN2HEX			= BIN.A.HEX				##	Convierte un nГєmero binario en hexadecimal.
+BIN2OCT			= BIN.A.OCT				##	Convierte un nГєmero binario en octal.
+COMPLEX			= COMPLEJO				##	Convierte coeficientes reales e imaginarios en un nГєmero complejo.
+CONVERT			= CONVERTIR				##	Convierte un nГєmero de un sistema de medida a otro.
+DEC2BIN			= DEC.A.BIN				##	Convierte un nГєmero decimal en binario.
+DEC2HEX			= DEC.A.HEX				##	Convierte un nГєmero decimal en hexadecimal.
+DEC2OCT			= DEC.A.OCT				##	Convierte un nГєmero decimal en octal.
+DELTA			= DELTA					##	Comprueba si dos valores son iguales.
+ERF			= FUN.ERROR				##	Devuelve la funciГіn de error.
+ERFC			= FUN.ERROR.COMPL			##	Devuelve la funciГіn de error complementario.
+GESTEP			= MAYOR.O.IGUAL				##	Comprueba si un nГєmero es mayor que un valor de umbral.
+HEX2BIN			= HEX.A.BIN				##	Convierte un nГєmero hexadecimal en binario.
+HEX2DEC			= HEX.A.DEC				##	Convierte un nГєmero hexadecimal en decimal.
+HEX2OCT			= HEX.A.OCT				##	Convierte un nГєmero hexadecimal en octal.
+IMABS			= IM.ABS				##	Devuelve el valor absoluto (mГіdulo) de un nГєmero complejo.
+IMAGINARY		= IMAGINARIO				##	Devuelve el coeficiente imaginario de un nГєmero complejo.
+IMARGUMENT		= IM.ANGULO				##	Devuelve el argumento theta, un ГЎngulo expresado en radianes.
+IMCONJUGATE		= IM.CONJUGADA				##	Devuelve la conjugada compleja de un nГєmero complejo.
+IMCOS			= IM.COS				##	Devuelve el coseno de un nГєmero complejo.
+IMDIV			= IM.DIV				##	Devuelve el cociente de dos nГєmeros complejos.
+IMEXP			= IM.EXP				##	Devuelve el valor exponencial de un nГєmero complejo.
+IMLN			= IM.LN					##	Devuelve el logaritmo natural (neperiano) de un nГєmero complejo.
+IMLOG10			= IM.LOG10				##	Devuelve el logaritmo en base 10 de un nГєmero complejo.
+IMLOG2			= IM.LOG2				##	Devuelve el logaritmo en base 2 de un nГєmero complejo.
+IMPOWER			= IM.POT				##	Devuelve un nГєmero complejo elevado a una potencia entera.
+IMPRODUCT		= IM.PRODUCT				##	Devuelve el producto de nГєmeros complejos.
+IMREAL			= IM.REAL				##	Devuelve el coeficiente real de un nГєmero complejo.
+IMSIN			= IM.SENO				##	Devuelve el seno de un nГєmero complejo.
+IMSQRT			= IM.RAIZ2				##	Devuelve la raГ­z cuadrada de un nГєmero complejo.
+IMSUB			= IM.SUSTR				##	Devuelve la diferencia entre dos nГєmeros complejos.
+IMSUM			= IM.SUM				##	Devuelve la suma de nГєmeros complejos.
+OCT2BIN			= OCT.A.BIN				##	Convierte un nГєmero octal en binario.
+OCT2DEC			= OCT.A.DEC				##	Convierte un nГєmero octal en decimal.
+OCT2HEX			= OCT.A.HEX				##	Convierte un nГєmero octal en hexadecimal.
+
+
+##
+##	Financial functions					Funciones financieras
+##
+ACCRINT			= INT.ACUM				##	Devuelve el interГ©s acumulado de un valor bursГЎtil con pagos de interГ©s periГіdicos.
+ACCRINTM		= INT.ACUM.V				##	Devuelve el interГ©s acumulado de un valor bursГЎtil con pagos de interГ©s al vencimiento.
+AMORDEGRC		= AMORTIZ.PROGRE			##	Devuelve la amortizaciГіn de cada perГ­odo contable mediante el uso de un coeficiente de amortizaciГіn.
+AMORLINC		= AMORTIZ.LIN				##	Devuelve la amortizaciГіn de cada uno de los perГ­odos contables.
+COUPDAYBS		= CUPON.DIAS.L1				##	Devuelve el nГєmero de dГ­as desde el principio del perГ­odo de un cupГіn hasta la fecha de liquidaciГіn.
+COUPDAYS		= CUPON.DIAS				##	Devuelve el nГєmero de dГ­as del perГ­odo (entre dos cupones) donde se encuentra la fecha de liquidaciГіn.
+COUPDAYSNC		= CUPON.DIAS.L2				##	Devuelve el nГєmero de dГ­as desde la fecha de liquidaciГіn hasta la fecha del prГіximo cupГіn.
+COUPNCD			= CUPON.FECHA.L2			##	Devuelve la fecha del prГіximo cupГіn despuГ©s de la fecha de liquidaciГіn.
+COUPNUM			= CUPON.NUM				##	Devuelve el nГєmero de pagos de cupГіn entre la fecha de liquidaciГіn y la fecha de vencimiento.
+COUPPCD			= CUPON.FECHA.L1			##	Devuelve la fecha de cupГіn anterior a la fecha de liquidaciГіn.
+CUMIPMT			= PAGO.INT.ENTRE			##	Devuelve el interГ©s acumulado pagado entre dos perГ­odos.
+CUMPRINC		= PAGO.PRINC.ENTRE			##	Devuelve el capital acumulado pagado de un prГ©stamo entre dos perГ­odos.
+DB			= DB					##	Devuelve la amortizaciГіn de un bien durante un perГ­odo especГ­fico a travГ©s del mГ©todo de amortizaciГіn de saldo fijo.
+DDB			= DDB					##	Devuelve la amortizaciГіn de un bien durante un perГ­odo especГ­fico a travГ©s del mГ©todo de amortizaciГіn por doble disminuciГіn de saldo u otro mГ©todo que se especifique.
+DISC			= TASA.DESC				##	Devuelve la tasa de descuento de un valor bursГЎtil.
+DOLLARDE		= MONEDA.DEC				##	Convierte una cotizaciГіn de un valor bursГЎtil expresada en forma fraccionaria en una cotizaciГіn de un valor bursГЎtil expresada en forma decimal.
+DOLLARFR		= MONEDA.FRAC				##	Convierte una cotizaciГіn de un valor bursГЎtil expresada en forma decimal en una cotizaciГіn de un valor bursГЎtil expresada en forma fraccionaria.
+DURATION		= DURACION				##	Devuelve la duraciГіn anual de un valor bursГЎtil con pagos de interГ©s periГіdico.
+EFFECT			= INT.EFECTIVO				##	Devuelve la tasa de interГ©s anual efectiva.
+FV			= VF					##	Devuelve el valor futuro de una inversiГіn.
+FVSCHEDULE		= VF.PLAN				##	Devuelve el valor futuro de un capital inicial despuГ©s de aplicar una serie de tasas de interГ©s compuesto.
+INTRATE			= TASA.INT				##	Devuelve la tasa de interГ©s para la inversiГіn total de un valor bursГЎtil.
+IPMT			= PAGOINT				##	Devuelve el pago de intereses de una inversiГіn durante un perГ­odo determinado.
+IRR			= TIR					##	Devuelve la tasa interna de retorno para una serie de flujos de efectivo periГіdicos.
+ISPMT			= INT.PAGO.DIR				##	Calcula el interГ©s pagado durante un perГ­odo especГ­fico de una inversiГіn.
+MDURATION		= DURACION.MODIF			##	Devuelve la duraciГіn de Macauley modificada de un valor bursГЎtil con un valor nominal supuesto de 100 $.
+MIRR			= TIRM					##	Devuelve la tasa interna de retorno donde se financian flujos de efectivo positivos y negativos a tasas diferentes.
+NOMINAL			= TASA.NOMINAL				##	Devuelve la tasa nominal de interГ©s anual.
+NPER			= NPER					##	Devuelve el nГєmero de perГ­odos de una inversiГіn.
+NPV			= VNA					##	Devuelve el valor neto actual de una inversiГіn en funciГіn de una serie de flujos periГіdicos de efectivo y una tasa de descuento.
+ODDFPRICE		= PRECIO.PER.IRREGULAR.1		##	Devuelve el precio por un valor nominal de 100 $ de un valor bursГЎtil con un primer perГ­odo impar.
+ODDFYIELD		= RENDTO.PER.IRREGULAR.1		##	Devuelve el rendimiento de un valor bursГЎtil con un primer perГ­odo impar.
+ODDLPRICE		= PRECIO.PER.IRREGULAR.2		##	Devuelve el precio por un valor nominal de 100 $ de un valor bursГЎtil con un Гєltimo perГ­odo impar.
+ODDLYIELD		= RENDTO.PER.IRREGULAR.2		##	Devuelve el rendimiento de un valor bursГЎtil con un Гєltimo perГ­odo impar.
+PMT			= PAGO					##	Devuelve el pago periГіdico de una anualidad.
+PPMT			= PAGOPRIN				##	Devuelve el pago de capital de una inversiГіn durante un perГ­odo determinado.
+PRICE			= PRECIO				##	Devuelve el precio por un valor nominal de 100 $ de un valor bursГЎtil que paga una tasa de interГ©s periГіdico.
+PRICEDISC		= PRECIO.DESCUENTO			##	Devuelve el precio por un valor nominal de 100 $ de un valor bursГЎtil con descuento.
+PRICEMAT		= PRECIO.VENCIMIENTO			##	Devuelve el precio por un valor nominal de 100 $ de un valor bursГЎtil que paga interГ©s a su vencimiento.
+PV			= VALACT				##	Devuelve el valor actual de una inversiГіn.
+RATE			= TASA					##	Devuelve la tasa de interГ©s por perГ­odo de una anualidad.
+RECEIVED		= CANTIDAD.RECIBIDA			##	Devuelve la cantidad recibida al vencimiento de un valor bursГЎtil completamente invertido.
+SLN			= SLN					##	Devuelve la amortizaciГіn por mГ©todo directo de un bien en un perГ­odo dado.
+SYD			= SYD					##	Devuelve la amortizaciГіn por suma de dГ­gitos de los aГ±os de un bien durante un perГ­odo especificado.
+TBILLEQ			= LETRA.DE.TES.EQV.A.BONO		##	Devuelve el rendimiento de un bono equivalente a una letra del Tesoro (de EE.UU.)
+TBILLPRICE		= LETRA.DE.TES.PRECIO			##	Devuelve el precio por un valor nominal de 100 $ de una letra del Tesoro (de EE.UU.)
+TBILLYIELD		= LETRA.DE.TES.RENDTO			##	Devuelve el rendimiento de una letra del Tesoro (de EE.UU.)
+VDB			= DVS					##	Devuelve la amortizaciГіn de un bien durante un perГ­odo especГ­fico o parcial a travГ©s del mГ©todo de cГЎlculo del saldo en disminuciГіn.
+XIRR			= TIR.NO.PER				##	Devuelve la tasa interna de retorno para un flujo de efectivo que no es necesariamente periГіdico.
+XNPV			= VNA.NO.PER				##	Devuelve el valor neto actual para un flujo de efectivo que no es necesariamente periГіdico.
+YIELD			= RENDTO				##	Devuelve el rendimiento de un valor bursГЎtil que paga intereses periГіdicos.
+YIELDDISC		= RENDTO.DESC				##	Devuelve el rendimiento anual de un valor bursГЎtil con descuento; por ejemplo, una letra del Tesoro (de EE.UU.)
+YIELDMAT		= RENDTO.VENCTO				##	Devuelve el rendimiento anual de un valor bursГЎtil que paga intereses al vencimiento.
+
+
+##
+##	Information functions					Funciones de informaciГіn
+##
+CELL			= CELDA					##	Devuelve informaciГіn acerca del formato, la ubicaciГіn o el contenido de una celda.
+ERROR.TYPE		= TIPO.DE.ERROR				##	Devuelve un nГєmero que corresponde a un tipo de error.
+INFO			= INFO					##	Devuelve informaciГіn acerca del entorno operativo en uso.
+ISBLANK			= ESBLANCO				##	Devuelve VERDADERO si el valor estГЎ en blanco.
+ISERR			= ESERR					##	Devuelve VERDADERO si el valor es cualquier valor de error excepto #N/A.
+ISERROR			= ESERROR				##	Devuelve VERDADERO si el valor es cualquier valor de error.
+ISEVEN			= ES.PAR				##	Devuelve VERDADERO si el nГєmero es par.
+ISLOGICAL		= ESLOGICO				##	Devuelve VERDADERO si el valor es un valor lГіgico.
+ISNA			= ESNOD					##	Devuelve VERDADERO si el valor es el valor de error #N/A.
+ISNONTEXT		= ESNOTEXTO				##	Devuelve VERDADERO si el valor no es texto.
+ISNUMBER		= ESNUMERO				##	Devuelve VERDADERO si el valor es un nГєmero.
+ISODD			= ES.IMPAR				##	Devuelve VERDADERO si el nГєmero es impar.
+ISREF			= ESREF					##	Devuelve VERDADERO si el valor es una referencia.
+ISTEXT			= ESTEXTO				##	Devuelve VERDADERO si el valor es texto.
+N			= N					##	Devuelve un valor convertido en un nГєmero.
+NA			= ND					##	Devuelve el valor de error #N/A.
+TYPE			= TIPO					##	Devuelve un nГєmero que indica el tipo de datos de un valor.
+
+
+##
+##	Logical functions					Funciones lГіgicas
+##
+AND			= Y					##	Devuelve VERDADERO si todos sus argumentos son VERDADERO.
+FALSE			= FALSO					##	Devuelve el valor lГіgico FALSO.
+IF			= SI					##	Especifica una prueba lГіgica que realizar.
+IFERROR			= SI.ERROR				##	Devuelve un valor que se especifica si una fГіrmula lo evalГєa como un error; de lo contrario, devuelve el resultado de la fГіrmula.
+NOT			= NO					##	Invierte el valor lГіgico del argumento.
+OR			= O					##	Devuelve VERDADERO si cualquier argumento es VERDADERO.
+TRUE			= VERDADERO				##	Devuelve el valor lГіgico VERDADERO.
+
+
+##
+##	Lookup and reference functions				Funciones de bГєsqueda y referencia
+##
+ADDRESS			= DIRECCION				##	Devuelve una referencia como texto a una sola celda de una hoja de cГЎlculo.
+AREAS			= AREAS					##	Devuelve el nГєmero de ГЎreas de una referencia.
+CHOOSE			= ELEGIR				##	Elige un valor de una lista de valores.
+COLUMN			= COLUMNA				##	Devuelve el nГєmero de columna de una referencia.
+COLUMNS			= COLUMNAS				##	Devuelve el nГєmero de columnas de una referencia.
+HLOOKUP			= BUSCARH				##	Busca en la fila superior de una matriz y devuelve el valor de la celda indicada.
+HYPERLINK		= HIPERVINCULO				##	Crea un acceso directo o un salto que abre un documento almacenado en un servidor de red, en una intranet o en Internet.
+INDEX			= INDICE				##	Usa un Г­ndice para elegir un valor de una referencia o matriz.
+INDIRECT		= INDIRECTO				##	Devuelve una referencia indicada por un valor de texto.
+LOOKUP			= BUSCAR				##	Busca valores de un vector o una matriz.
+MATCH			= COINCIDIR				##	Busca valores de una referencia o matriz.
+OFFSET			= DESREF				##	Devuelve un desplazamiento de referencia respecto a una referencia dada.
+ROW			= FILA					##	Devuelve el nГєmero de fila de una referencia.
+ROWS			= FILAS					##	Devuelve el nГєmero de filas de una referencia.
+RTD			= RDTR					##	Recupera datos en tiempo real desde un programa compatible con la automatizaciГіn COM (automatizaciГіn: modo de trabajar con los objetos de una aplicaciГіn desde otra aplicaciГіn o herramienta de entorno. La automatizaciГіn, antes denominada automatizaciГіn OLE, es un estГЎndar de la industria y una funciГіn del Modelo de objetos componentes (COM).).
+TRANSPOSE		= TRANSPONER				##	Devuelve la transposiciГіn de una matriz.
+VLOOKUP			= BUSCARV				##	Busca en la primera columna de una matriz y se mueve en horizontal por la fila para devolver el valor de una celda.
+
+
+##
+##	Math and trigonometry functions				Funciones matemГЎticas y trigonomГ©tricas
+##
+ABS			= ABS					##	Devuelve el valor absoluto de un nГєmero.
+ACOS			= ACOS					##	Devuelve el arcocoseno de un nГєmero.
+ACOSH			= ACOSH					##	Devuelve el coseno hiperbГіlico inverso de un nГєmero.
+ASIN			= ASENO					##	Devuelve el arcoseno de un nГєmero.
+ASINH			= ASENOH				##	Devuelve el seno hiperbГіlico inverso de un nГєmero.
+ATAN			= ATAN					##	Devuelve la arcotangente de un nГєmero.
+ATAN2			= ATAN2					##	Devuelve la arcotangente de las coordenadas "x" e "y".
+ATANH			= ATANH					##	Devuelve la tangente hiperbГіlica inversa de un nГєmero.
+CEILING			= MULTIPLO.SUPERIOR			##	Redondea un nГєmero al entero mГЎs prГіximo o al mГєltiplo significativo mГЎs cercano.
+COMBIN			= COMBINAT				##	Devuelve el nГєmero de combinaciones para un nГєmero determinado de objetos.
+COS			= COS					##	Devuelve el coseno de un nГєmero.
+COSH			= COSH					##	Devuelve el coseno hiperbГіlico de un nГєmero.
+DEGREES			= GRADOS				##	Convierte radianes en grados.
+EVEN			= REDONDEA.PAR				##	Redondea un nГєmero hasta el entero par mГЎs prГіximo.
+EXP			= EXP					##	Devuelve e elevado a la potencia de un nГєmero dado.
+FACT			= FACT					##	Devuelve el factorial de un nГєmero.
+FACTDOUBLE		= FACT.DOBLE				##	Devuelve el factorial doble de un nГєmero.
+FLOOR			= MULTIPLO.INFERIOR			##	Redondea un nГєmero hacia abajo, en direcciГіn hacia cero.
+GCD			= M.C.D					##	Devuelve el mГЎximo comГєn divisor.
+INT			= ENTERO				##	Redondea un nГєmero hacia abajo hasta el entero mГЎs prГіximo.
+LCM			= M.C.M					##	Devuelve el mГ­nimo comГєn mГєltiplo.
+LN			= LN					##	Devuelve el logaritmo natural (neperiano) de un nГєmero.
+LOG			= LOG					##	Devuelve el logaritmo de un nГєmero en una base especificada.
+LOG10			= LOG10					##	Devuelve el logaritmo en base 10 de un nГєmero.
+MDETERM			= MDETERM				##	Devuelve la determinante matricial de una matriz.
+MINVERSE		= MINVERSA				##	Devuelve la matriz inversa de una matriz.
+MMULT			= MMULT					##	Devuelve el producto de matriz de dos matrices.
+MOD			= RESIDUO				##	Devuelve el resto de la divisiГіn.
+MROUND			= REDOND.MULT				##	Devuelve un nГєmero redondeado al mГєltiplo deseado.
+MULTINOMIAL		= MULTINOMIAL				##	Devuelve el polinomio de un conjunto de nГєmeros.
+ODD			= REDONDEA.IMPAR			##	Redondea un nГєmero hacia arriba hasta el entero impar mГЎs prГіximo.
+PI			= PI					##	Devuelve el valor de pi.
+POWER			= POTENCIA				##	Devuelve el resultado de elevar un nГєmero a una potencia.
+PRODUCT			= PRODUCTO				##	Multiplica sus argumentos.
+QUOTIENT		= COCIENTE				##	Devuelve la parte entera de una divisiГіn.
+RADIANS			= RADIANES				##	Convierte grados en radianes.
+RAND			= ALEATORIO				##	Devuelve un nГєmero aleatorio entre 0 y 1.
+RANDBETWEEN		= ALEATORIO.ENTRE			##	Devuelve un nГєmero aleatorio entre los nГєmeros que especifique.
+ROMAN			= NUMERO.ROMANO				##	Convierte un nГєmero arГЎbigo en nГєmero romano, con formato de texto.
+ROUND			= REDONDEAR				##	Redondea un nГєmero al nГєmero de decimales especificado.
+ROUNDDOWN		= REDONDEAR.MENOS			##	Redondea un nГєmero hacia abajo, en direcciГіn hacia cero.
+ROUNDUP			= REDONDEAR.MAS				##	Redondea un nГєmero hacia arriba, en direcciГіn contraria a cero.
+SERIESSUM		= SUMA.SERIES				##	Devuelve la suma de una serie de potencias en funciГіn de la fГіrmula.
+SIGN			= SIGNO					##	Devuelve el signo de un nГєmero.
+SIN			= SENO					##	Devuelve el seno de un ГЎngulo determinado.
+SINH			= SENOH					##	Devuelve el seno hiperbГіlico de un nГєmero.
+SQRT			= RAIZ					##	Devuelve la raГ­z cuadrada positiva de un nГєmero.
+SQRTPI			= RAIZ2PI				##	Devuelve la raГ­z cuadrada de un nГєmero multiplicado por PI (nГєmero * pi).
+SUBTOTAL		= SUBTOTALES				##	Devuelve un subtotal en una lista o base de datos.
+SUM			= SUMA					##	Suma sus argumentos.
+SUMIF			= SUMAR.SI				##	Suma las celdas especificadas que cumplen unos criterios determinados.
+SUMIFS			= SUMAR.SI.CONJUNTO			##	Suma las celdas de un rango que cumplen varios criterios.
+SUMPRODUCT		= SUMAPRODUCTO				##	Devuelve la suma de los productos de los correspondientes componentes de matriz.
+SUMSQ			= SUMA.CUADRADOS			##	Devuelve la suma de los cuadrados de los argumentos.
+SUMX2MY2		= SUMAX2MENOSY2				##	Devuelve la suma de la diferencia de los cuadrados de los valores correspondientes de dos matrices.
+SUMX2PY2		= SUMAX2MASY2				##	Devuelve la suma de la suma de los cuadrados de los valores correspondientes de dos matrices.
+SUMXMY2			= SUMAXMENOSY2				##	Devuelve la suma de los cuadrados de las diferencias de los valores correspondientes de dos matrices.
+TAN			= TAN					##	Devuelve la tangente de un nГєmero.
+TANH			= TANH					##	Devuelve la tangente hiperbГіlica de un nГєmero.
+TRUNC			= TRUNCAR				##	Trunca un nГєmero a un entero.
+
+
+##
+##	Statistical functions					Funciones estadГ­sticas
+##
+AVEDEV			= DESVPROM				##	Devuelve el promedio de las desviaciones absolutas de la media de los puntos de datos.
+AVERAGE			= PROMEDIO				##	Devuelve el promedio de sus argumentos.
+AVERAGEA		= PROMEDIOA				##	Devuelve el promedio de sus argumentos, incluidos nГєmeros, texto y valores lГіgicos.
+AVERAGEIF		= PROMEDIO.SI				##	Devuelve el promedio (media aritmГ©tica) de todas las celdas de un rango que cumplen unos criterios determinados.
+AVERAGEIFS		= PROMEDIO.SI.CONJUNTO			##	Devuelve el promedio (media aritmГ©tica) de todas las celdas que cumplen mГєltiples criterios.
+BETADIST		= DISTR.BETA				##	Devuelve la funciГіn de distribuciГіn beta acumulativa.
+BETAINV			= DISTR.BETA.INV			##	Devuelve la funciГіn inversa de la funciГіn de distribuciГіn acumulativa de una distribuciГіn beta especificada.
+BINOMDIST		= DISTR.BINOM				##	Devuelve la probabilidad de una variable aleatoria discreta siguiendo una distribuciГіn binomial.
+CHIDIST			= DISTR.CHI				##	Devuelve la probabilidad de una variable aleatoria continua siguiendo una distribuciГіn chi cuadrado de una sola cola.
+CHIINV			= PRUEBA.CHI.INV			##	Devuelve la funciГіn inversa de la probabilidad de una variable aleatoria continua siguiendo una distribuciГіn chi cuadrado de una sola cola.
+CHITEST			= PRUEBA.CHI				##	Devuelve la prueba de independencia.
+CONFIDENCE		= INTERVALO.CONFIANZA			##	Devuelve el intervalo de confianza de la media de una poblaciГіn.
+CORREL			= COEF.DE.CORREL			##	Devuelve el coeficiente de correlaciГіn entre dos conjuntos de datos.
+COUNT			= CONTAR				##	Cuenta cuГЎntos nГєmeros hay en la lista de argumentos.
+COUNTA			= CONTARA				##	Cuenta cuГЎntos valores hay en la lista de argumentos.
+COUNTBLANK		= CONTAR.BLANCO				##	Cuenta el nГєmero de celdas en blanco de un rango.
+COUNTIF			= CONTAR.SI				##	Cuenta el nГєmero de celdas, dentro del rango, que cumplen el criterio especificado.
+COUNTIFS		= CONTAR.SI.CONJUNTO			##	Cuenta el nГєmero de celdas, dentro del rango, que cumplen varios criterios.
+COVAR			= COVAR					##	Devuelve la covarianza, que es el promedio de los productos de las desviaciones para cada pareja de puntos de datos.
+CRITBINOM		= BINOM.CRIT				##	Devuelve el menor valor cuya distribuciГіn binomial acumulativa es menor o igual a un valor de criterio.
+DEVSQ			= DESVIA2				##	Devuelve la suma de los cuadrados de las desviaciones.
+EXPONDIST		= DISTR.EXP				##	Devuelve la distribuciГіn exponencial.
+FDIST			= DISTR.F				##	Devuelve la distribuciГіn de probabilidad F.
+FINV			= DISTR.F.INV				##	Devuelve la funciГіn inversa de la distribuciГіn de probabilidad F.
+FISHER			= FISHER				##	Devuelve la transformaciГіn Fisher.
+FISHERINV		= PRUEBA.FISHER.INV			##	Devuelve la funciГіn inversa de la transformaciГіn Fisher.
+FORECAST		= PRONOSTICO				##	Devuelve un valor en una tendencia lineal.
+FREQUENCY		= FRECUENCIA				##	Devuelve una distribuciГіn de frecuencia como una matriz vertical.
+FTEST			= PRUEBA.F				##	Devuelve el resultado de una prueba F.
+GAMMADIST		= DISTR.GAMMA				##	Devuelve la distribuciГіn gamma.
+GAMMAINV		= DISTR.GAMMA.INV			##	Devuelve la funciГіn inversa de la distribuciГіn gamma acumulativa.
+GAMMALN			= GAMMA.LN				##	Devuelve el logaritmo natural de la funciГіn gamma, G(x).
+GEOMEAN			= MEDIA.GEOM				##	Devuelve la media geomГ©trica.
+GROWTH			= CRECIMIENTO				##	Devuelve valores en una tendencia exponencial.
+HARMEAN			= MEDIA.ARMO				##	Devuelve la media armГіnica.
+HYPGEOMDIST		= DISTR.HIPERGEOM			##	Devuelve la distribuciГіn hipergeomГ©trica.
+INTERCEPT		= INTERSECCION.EJE			##	Devuelve la intersecciГіn de la lГ­nea de regresiГіn lineal.
+KURT			= CURTOSIS				##	Devuelve la curtosis de un conjunto de datos.
+LARGE			= K.ESIMO.MAYOR				##	Devuelve el k-Г©simo mayor valor de un conjunto de datos.
+LINEST			= ESTIMACION.LINEAL			##	Devuelve los parГЎmetros de una tendencia lineal.
+LOGEST			= ESTIMACION.LOGARITMICA		##	Devuelve los parГЎmetros de una tendencia exponencial.
+LOGINV			= DISTR.LOG.INV				##	Devuelve la funciГіn inversa de la distribuciГіn logarГ­tmico-normal.
+LOGNORMDIST		= DISTR.LOG.NORM			##	Devuelve la distribuciГіn logarГ­tmico-normal acumulativa.
+MAX			= MAX					##	Devuelve el valor mГЎximo de una lista de argumentos.
+MAXA			= MAXA					##	Devuelve el valor mГЎximo de una lista de argumentos, incluidos nГєmeros, texto y valores lГіgicos.
+MEDIAN			= MEDIANA				##	Devuelve la mediana de los nГєmeros dados.
+MIN			= MIN					##	Devuelve el valor mГ­nimo de una lista de argumentos.
+MINA			= MINA					##	Devuelve el valor mГ­nimo de una lista de argumentos, incluidos nГєmeros, texto y valores lГіgicos.
+MODE			= MODA					##	Devuelve el valor mГЎs comГєn de un conjunto de datos.
+NEGBINOMDIST		= NEGBINOMDIST				##	Devuelve la distribuciГіn binomial negativa.
+NORMDIST		= DISTR.NORM				##	Devuelve la distribuciГіn normal acumulativa.
+NORMINV			= DISTR.NORM.INV			##	Devuelve la funciГіn inversa de la distribuciГіn normal acumulativa.
+NORMSDIST		= DISTR.NORM.ESTAND			##	Devuelve la distribuciГіn normal estГЎndar acumulativa.
+NORMSINV		= DISTR.NORM.ESTAND.INV			##	Devuelve la funciГіn inversa de la distribuciГіn normal estГЎndar acumulativa.
+PEARSON			= PEARSON				##	Devuelve el coeficiente de momento de correlaciГіn de producto Pearson.
+PERCENTILE		= PERCENTIL				##	Devuelve el k-Г©simo percentil de los valores de un rango.
+PERCENTRANK		= RANGO.PERCENTIL			##	Devuelve el rango porcentual de un valor de un conjunto de datos.
+PERMUT			= PERMUTACIONES				##	Devuelve el nГєmero de permutaciones de un nГєmero determinado de objetos.
+POISSON			= POISSON				##	Devuelve la distribuciГіn de Poisson.
+PROB			= PROBABILIDAD				##	Devuelve la probabilidad de que los valores de un rango se encuentren entre dos lГ­mites.
+QUARTILE		= CUARTIL				##	Devuelve el cuartil de un conjunto de datos.
+RANK			= JERARQUIA				##	Devuelve la jerarquГ­a de un nГєmero en una lista de nГєmeros.
+RSQ			= COEFICIENTE.R2			##	Devuelve el cuadrado del coeficiente de momento de correlaciГіn de producto Pearson.
+SKEW			= COEFICIENTE.ASIMETRIA			##	Devuelve la asimetrГ­a de una distribuciГіn.
+SLOPE			= PENDIENTE				##	Devuelve la pendiente de la lГ­nea de regresiГіn lineal.
+SMALL			= K.ESIMO.MENOR				##	Devuelve el k-Г©simo menor valor de un conjunto de datos.
+STANDARDIZE		= NORMALIZACION				##	Devuelve un valor normalizado.
+STDEV			= DESVEST				##	Calcula la desviaciГіn estГЎndar a partir de una muestra.
+STDEVA			= DESVESTA				##	Calcula la desviaciГіn estГЎndar a partir de una muestra, incluidos nГєmeros, texto y valores lГіgicos.
+STDEVP			= DESVESTP				##	Calcula la desviaciГіn estГЎndar en funciГіn de toda la poblaciГіn.
+STDEVPA			= DESVESTPA				##	Calcula la desviaciГіn estГЎndar en funciГіn de toda la poblaciГіn, incluidos nГєmeros, texto y valores lГіgicos.
+STEYX			= ERROR.TIPICO.XY			##	Devuelve el error estГЎndar del valor de "y" previsto para cada "x" de la regresiГіn.
+TDIST			= DISTR.T				##	Devuelve la distribuciГіn de t de Student.
+TINV			= DISTR.T.INV				##	Devuelve la funciГіn inversa de la distribuciГіn de t de Student.
+TREND			= TENDENCIA				##	Devuelve valores en una tendencia lineal.
+TRIMMEAN		= MEDIA.ACOTADA				##	Devuelve la media del interior de un conjunto de datos.
+TTEST			= PRUEBA.T				##	Devuelve la probabilidad asociada a una prueba t de Student.
+VAR			= VAR					##	Calcula la varianza en funciГіn de una muestra.
+VARA			= VARA					##	Calcula la varianza en funciГіn de una muestra, incluidos nГєmeros, texto y valores lГіgicos.
+VARP			= VARP					##	Calcula la varianza en funciГіn de toda la poblaciГіn.
+VARPA			= VARPA					##	Calcula la varianza en funciГіn de toda la poblaciГіn, incluidos nГєmeros, texto y valores lГіgicos.
+WEIBULL			= DIST.WEIBULL				##	Devuelve la distribuciГіn de Weibull.
+ZTEST			= PRUEBA.Z				##	Devuelve el valor de una probabilidad de una cola de una prueba z.
+
+
+##
+##	Text functions						Funciones de texto
+##
+ASC			= ASC					##	Convierte las letras inglesas o katakana de ancho completo (de dos bytes) dentro de una cadena de caracteres en caracteres de ancho medio (de un byte).
+BAHTTEXT		= TEXTOBAHT				##	Convierte un nГєmero en texto, con el formato de moneda Гџ (Baht).
+CHAR			= CARACTER				##	Devuelve el carГЎcter especificado por el nГєmero de cГіdigo.
+CLEAN			= LIMPIAR				##	Quita del texto todos los caracteres no imprimibles.
+CODE			= CODIGO				##	Devuelve un cГіdigo numГ©rico del primer carГЎcter de una cadena de texto.
+CONCATENATE		= CONCATENAR				##	Concatena varios elementos de texto en uno solo.
+DOLLAR			= MONEDA				##	Convierte un nГєmero en texto, con el formato de moneda $ (dГіlar).
+EXACT			= IGUAL					##	Comprueba si dos valores de texto son idГ©nticos.
+FIND			= ENCONTRAR				##	Busca un valor de texto dentro de otro (distingue mayГєsculas de minГєsculas).
+FINDB			= ENCONTRARB				##	Busca un valor de texto dentro de otro (distingue mayГєsculas de minГєsculas).
+FIXED			= DECIMAL				##	Da formato a un nГєmero como texto con un nГєmero fijo de decimales.
+JIS			= JIS					##	Convierte las letras inglesas o katakana de ancho medio (de un byte) dentro de una cadena de caracteres en caracteres de ancho completo (de dos bytes).
+LEFT			= IZQUIERDA				##	Devuelve los caracteres del lado izquierdo de un valor de texto.
+LEFTB			= IZQUIERDAB				##	Devuelve los caracteres del lado izquierdo de un valor de texto.
+LEN			= LARGO					##	Devuelve el nГєmero de caracteres de una cadena de texto.
+LENB			= LARGOB				##	Devuelve el nГєmero de caracteres de una cadena de texto.
+LOWER			= MINUSC				##	Pone el texto en minГєsculas.
+MID			= EXTRAE				##	Devuelve un nГєmero especГ­fico de caracteres de una cadena de texto que comienza en la posiciГіn que se especifique.
+MIDB			= EXTRAEB				##	Devuelve un nГєmero especГ­fico de caracteres de una cadena de texto que comienza en la posiciГіn que se especifique.
+PHONETIC		= FONETICO				##	Extrae los caracteres fonГ©ticos (furigana) de una cadena de texto.
+PROPER			= NOMPROPIO				##	Pone en mayГєscula la primera letra de cada palabra de un valor de texto.
+REPLACE			= REEMPLAZAR				##	Reemplaza caracteres de texto.
+REPLACEB		= REEMPLAZARB				##	Reemplaza caracteres de texto.
+REPT			= REPETIR				##	Repite el texto un nГєmero determinado de veces.
+RIGHT			= DERECHA				##	Devuelve los caracteres del lado derecho de un valor de texto.
+RIGHTB			= DERECHAB				##	Devuelve los caracteres del lado derecho de un valor de texto.
+SEARCH			= HALLAR				##	Busca un valor de texto dentro de otro (no distingue mayГєsculas de minГєsculas).
+SEARCHB			= HALLARB				##	Busca un valor de texto dentro de otro (no distingue mayГєsculas de minГєsculas).
+SUBSTITUTE		= SUSTITUIR				##	Sustituye texto nuevo por texto antiguo en una cadena de texto.
+T			= T					##	Convierte sus argumentos a texto.
+TEXT			= TEXTO					##	Da formato a un nГєmero y lo convierte en texto.
+TRIM			= ESPACIOS				##	Quita los espacios del texto.
+UPPER			= MAYUSC				##	Pone el texto en mayГєsculas.
+VALUE			= VALOR					##	Convierte un argumento de texto en un nГєmero.

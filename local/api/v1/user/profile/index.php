@@ -1,0 +1,1 @@
+<?php echo 'GET/PUT /api/v1/user/profile'; ?>

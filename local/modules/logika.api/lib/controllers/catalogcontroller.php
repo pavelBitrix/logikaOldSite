@@ -57,7 +57,7 @@ class CatalogController
             $filter,
             false,
             ['nPageSize' => $limit, 'iNumPage' => $page],
-            ['ID', 'NAME', 'CODE', 'PREVIEW_TEXT', 'PREVIEW_PICTURE', 'XML_ID', 'IBLOCK_SECTION_ID', 'PROPERTY_*']
+            ['ID', 'NAME', 'CODE', 'PREVIEW_TEXT', 'DETAIL_PICTURE', 'PREVIEW_PICTURE', 'XML_ID', 'IBLOCK_SECTION_ID', 'PROPERTY_*']
         );
 
         $items = [];
@@ -215,9 +215,10 @@ class CatalogController
         $priceData = \CPrice::GetBasePrice($id);
         $price     = $priceData ? (float) $priceData['PRICE'] : null;
 
-        // Картинка превью
+        // Детальная картинка приоритетнее превью — она всегда лучшего качества
         $picture = null;
-        if ($picId = ($fields['PREVIEW_PICTURE'] ?? null)) {
+        $picId   = $fields['DETAIL_PICTURE'] ?? $fields['PREVIEW_PICTURE'] ?? null;
+        if ($picId) {
             $picture = \CFile::GetPath($picId);
         }
 

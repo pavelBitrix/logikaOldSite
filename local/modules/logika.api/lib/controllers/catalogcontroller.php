@@ -48,7 +48,7 @@ class CatalogController
         };
 
         // ─── Подсчёт ─────────────────────────────────────────────────────────────
-        $total = (int) \CIBlockElement::GetList($order, $filter, [], false, ['ID'])->SelectedRowsCount();
+        $total = (int) \CIBlockElement::GetList($order, $filter, false, false, ['ID'])->SelectedRowsCount();
         $pages = (int) ceil($total / $limit);
 
         // ─── Выборка ─────────────────────────────────────────────────────────────

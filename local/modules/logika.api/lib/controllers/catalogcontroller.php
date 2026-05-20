@@ -255,8 +255,21 @@ class CatalogController
             ['SORT' => 'ASC'],
             ['IBLOCK_ID' => self::IBLOCK_ID, 'ACTIVE' => 'Y'],
             false,
-            ['ID', 'NAME', 'CODE', 'DEPTH_LEVEL', 'IBLOCK_SECTION_ID', 'ELEMENT_CNT', 'UF_GROUP_SUB']
+            ['ID', 'NAME', 'CODE', 'DEPTH_LEVEL', 'IBLOCK_SECTION_ID', 'UF_GROUP_SUB']
         );
+
+        // Actual element counts per section (single SQL — faster and always accurate)
+        global $DB;
+        $cntRes = $DB->Query(
+            "SELECT IBLOCK_SECTION_ID, COUNT(*) cnt
+             FROM b_iblock_element
+             WHERE IBLOCK_ID = " . self::IBLOCK_ID . " AND ACTIVE = 'Y'
+             GROUP BY IBLOCK_SECTION_ID"
+        );
+        $directCounts = [];
+        while ($cr = $cntRes->Fetch()) {
+            $directCounts[(int) $cr['IBLOCK_SECTION_ID']] = (int) $cr['cnt'];
+        }
 
         $sections = [];
         while ($row = $res->GetNext()) {
@@ -267,9 +280,24 @@ class CatalogController
                 'sub'       => $row['UF_GROUP_SUB'] ?? '',
                 'depth'     => (int) $row['DEPTH_LEVEL'],
                 'parent_id' => (int) ($row['IBLOCK_SECTION_ID'] ?: 0),
-                'count'     => (int) $row['ELEMENT_CNT'],
+                'count'     => $directCounts[(int) $row['ID']] ?? 0,
             ];
         }
+
+        // Propagate child counts to parent sections
+        $childSum = [];
+        foreach ($sections as $s) {
+            if ($s['parent_id'] > 0) {
+                $childSum[$s['parent_id']] = ($childSum[$s['parent_id']] ?? 0) + $s['count'];
+            }
+        }
+        foreach ($sections as &$s) {
+            if (isset($childSum[$s['id']])) {
+                $s['count'] += $childSum[$s['id']];
+            }
+        }
+        unset($s);
+
         return $sections;
     }
 

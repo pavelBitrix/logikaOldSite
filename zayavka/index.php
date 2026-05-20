@@ -33,6 +33,11 @@ $APPLICATION->SetTitle("Оставить заявку");
 				</select>
 			</div>
 
+			<div style="position: absolute; left: -9999px;" aria-hidden="true">
+				<label for="company_website">Оставьте это поле пустым</label>
+				<input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off">
+			</div>
+
 			<div id="title-block" class="form-group">
 				<label for="titlelist">Укажите заголовок заявки:</label>
 				<select id="titlelist" class="form-control" name="TITLE">
@@ -164,11 +169,30 @@ $APPLICATION->SetTitle("Оставить заявку");
 				}
 			}
 
-
+			var formLoadTime = new Date().getTime();
 			// Обработка отправки формы
 			document.getElementById('ticketForm').addEventListener('submit', function(event) {
 				event.preventDefault(); // Предотвращаем стандартное поведение формы
 
+				// --- Проверка времени ---
+				var submitTime = new Date().getTime();
+				var timeDiff = submitTime - formLoadTime;
+				
+				// Если форма заполнена быстрее чем за 4 секунды (4000 мс) - это точно бот
+				if (timeDiff < 4000) {
+					console.warn('Обнаружен бот (форма заполнена слишком быстро).');
+					return false; 
+				}
+				// ------------------------
+
+				// --- Honeypot проверка ---
+				if ($('#company_website').val() !== '') {
+					console.warn('Обнаружен бот (заполнено скрытое поле).');
+					// Имитируем успешную отправку для бота, чтобы он отстал, но ничего не отправляем
+					$('#successModal').modal('show'); 
+					return false; 
+				}
+				// -------------------------
 
 
 				var formData = new FormData();

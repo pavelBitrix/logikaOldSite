@@ -1666,3 +1666,7 @@ a,
   background-image: url(images/phone_white.svg);
   background-size: auto 21px;
 }
+
+.bx-authform .form-check-label {
+  color: #ebebeb !important;
+}

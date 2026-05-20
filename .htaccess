@@ -18,6 +18,13 @@ ErrorDocument 404 /404.php
 <IfModule mod_rewrite.c>
   Options +FollowSymLinks
   RewriteEngine On
+  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+ # --- Logika API ---
+  RewriteRule ^local/ - [F,L]
+  RewriteRule ^1c-exchange/? /local/php_interface/1c_exchange.php [L,QSA]
+  RewriteCond %{REQUEST_URI} ^/api(/|$)
+  RewriteRule ^api/(.*)$ /api.php [L,QSA]
+  # --- /Logika API ---
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-l
   RewriteCond %{REQUEST_FILENAME} !-d
@@ -48,5 +55,3 @@ ErrorDocument 404 /404.php
   
   
 </IfModule>
-
-

@@ -32,6 +32,7 @@ CJSCore::Init(array("fx"));
 
 	<? $APPLICATION->ShowHead(); ?>
 	<?$APPLICATION->AddHeadScript("/bitrix/js/main/ajax.js");?>
+	<script src="<?= SITE_TEMPLATE_PATH ?>/swiper/jquery.min.js"></script>
 </head>
 
 <body class="bx-background-image bx-theme-<?= $theme ?>" <? $APPLICATION->ShowProperty("backgroundImage"); ?>>

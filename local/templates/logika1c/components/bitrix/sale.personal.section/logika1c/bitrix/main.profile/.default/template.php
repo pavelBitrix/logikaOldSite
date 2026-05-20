@@ -15,7 +15,7 @@ use Bitrix\Main\Localization\Loc;
 		ShowNote(Loc::getMessage('PROFILE_DATA_SAVED'));
 	}
 
-	?>
+	?>12312321
 	<form method="post" name="form1" action="<?=POST_FORM_ACTION_URI?>" enctype="multipart/form-data" role="form">
 		<?=$arResult["BX_SESSION_CHECK"]?>
 		<input type="hidden" name="lang" value="<?=LANG?>" />

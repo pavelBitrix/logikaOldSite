@@ -68,3 +68,26 @@ function onManagerCouponAddHandler(Bitrix\Main\Event $event)
     // if ($result) {
     //     \Bitrix\Sale\DiscountCouponsManager::delete($couponData["COUPON"]);
     // }
+    
+    
+// ── Новый модуль logika.api ─────────────────────────────────────────────────
+use Bitrix\Main\Loader;
+use Bitrix\Main\EventManager;
+
+if (Loader::includeModule('logika.api')) {
+    Loader::registerAutoLoadClasses('logika.api', [
+        'Logika\Api\Router'                        => 'lib/router.php',
+        'Logika\Api\Response'                      => 'lib/response.php',
+        'Logika\Api\Auth\TokenAuth'                => 'lib/auth/tokenauth.php',
+        'Logika\Api\Controllers\LeadController'    => 'lib/controllers/leadcontroller.php',
+        'Logika\Api\Controllers\CatalogController' => 'lib/controllers/catalogcontroller.php',
+        'Logika\Api\Controllers\OrderController'   => 'lib/controllers/ordercontroller.php',
+        'Logika\Api\Handlers\OneCHandler'          => 'lib/handlers/onechandler.php',
+    ]);
+
+    EventManager::getInstance()->addEventHandler(
+        'crm',
+        'OnAfterCrmLeadAdd',
+        ['Logika\Api\Handlers\OneCHandler', 'onLeadCreated']
+    );
+}

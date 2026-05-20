@@ -41,6 +41,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Согласие на обработку персональных данных Яндекс.Метрика", 
+		SITE_DIR."/yandex-policy", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>

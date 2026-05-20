@@ -57,7 +57,7 @@ class CatalogController
             $filter,
             false,
             ['nPageSize' => $limit, 'iNumPage' => $page],
-            ['ID', 'NAME', 'CODE', 'PREVIEW_TEXT', 'PREVIEW_PICTURE', 'XML_ID', 'PROPERTY_*']
+            ['ID', 'NAME', 'CODE', 'PREVIEW_TEXT', 'PREVIEW_PICTURE', 'XML_ID', 'IBLOCK_SECTION_ID', 'PROPERTY_*']
         );
 
         $items = [];
@@ -231,6 +231,7 @@ class CatalogController
             'name'         => $fields['NAME'],
             'code'         => $fields['CODE'],
             'xml_id'       => $fields['XML_ID'] ?? null,
+            'section_id'   => (int) ($fields['IBLOCK_SECTION_ID'] ?? 0),
             'preview'      => $fields['PREVIEW_TEXT'] ?? null,
             'picture'      => $picture,
             'price'        => $price,

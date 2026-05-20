@@ -222,10 +222,20 @@ class CatalogController
             $picture = \CFile::GetPath($picId);
         }
 
-        // Наличие (остатки со склада)
+        // Наличие: каталожный модуль → свойство IN_STOCK → по умолчанию true
         $productData = \CCatalogProduct::GetByIDEx($id);
-        $quantity    = (int) ($productData['QUANTITY'] ?? 0);
-        $inStock     = $quantity > 0;
+        if ($productData && isset($productData['QUANTITY'])) {
+            $inStock  = (int) $productData['QUANTITY'] > 0;
+            $quantity = (int) $productData['QUANTITY'];
+        } elseif (!empty($props['IN_STOCK']['VALUE'])) {
+            $val      = strtolower(trim($props['IN_STOCK']['VALUE']));
+            $inStock  = in_array($val, ['y', 'yes', 'да', '1', 'true', 'в наличии'], true);
+            $quantity = $inStock ? 1 : 0;
+        } else {
+            // Нет данных о складе — считаем в наличии
+            $inStock  = true;
+            $quantity = 1;
+        }
 
         return [
             'id'           => $id,

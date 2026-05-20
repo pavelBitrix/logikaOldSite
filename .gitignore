@@ -1,0 +1,20 @@
+# Bitrix core (не храним в git — ставится отдельно)
+/bitrix/
+
+# Загрузки и кэш
+/upload/
+/cache/
+/managed_cache/
+/stack_cache/
+
+# Конфиги с паролями
+/bitrix/.settings.php
+/bitrix/.settings_extra.php
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

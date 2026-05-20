@@ -1,0 +1,30 @@
+## =============================================================================
+## Вставить в ~/public_html/.htaccess ПЕРЕД блоком # Bitrix
+## (не заменять весь файл — Bitrix генерирует его сам)
+##
+## Домен backend: https://api.logika1c.ru
+## Frontend:      https://logika1c.ru
+## =============================================================================
+
+# --- Redirect HTTP → HTTPS (после получения SSL) ----------------------------
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# --- Logika API routes -------------------------------------------------------
+
+# REST API → api.php
+RewriteCond %{REQUEST_URI} ^/api(/|$)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^api/(.*)$ /api.php [L,QSA]
+
+# 1C CommerceML exchange endpoint
+RewriteRule ^1c-exchange/? /local/php_interface/1c_exchange.php [L,QSA]
+
+# Запрет прямого доступа к /local/
+RewriteRule ^local/ - [F,L]
+
+# --- CORS-заголовки (раскомментировать если не выставляются из PHP) ----------
+# Header always set Access-Control-Allow-Origin "https://logika1c.ru"
+# Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+# Header always set Access-Control-Allow-Headers "Authorization, Content-Type, X-Requested-With"
+# Header always set Access-Control-Allow-Credentials "true"

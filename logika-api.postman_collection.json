@@ -1,0 +1,498 @@
+{
+  "info": {
+    "name": "Logika — Bitrix API v2",
+    "description": "Base URL: {{base}}/api/v1\n\nПубличные роуты — без авторизации.\nПользовательские роуты (user) — требуют активной Bitrix-сессии (cookie PHPSESSID).\nАдминские роуты (token) — Bearer {{admin_token}} в заголовке Authorization.\n\nПоследовательность для тестирования:\n1. POST auth/login → сессия сохраняется автоматически\n2. Работаем с cart, checkout, profile, wishlist\n3. POST checkout/order → заказ создан, корзина очищена",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base",
+      "value": "https://logika.ru",
+      "type": "string"
+    },
+    {
+      "key": "admin_token",
+      "value": "",
+      "type": "string",
+      "description": "Bearer токен. Сгенерировать: открыть /generate-token.php на сервере"
+    }
+  ],
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 200) {",
+                  "    pm.test('Login success', () => pm.response.json().success === true);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/api/v1/auth/login",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"login\": \"user@example.com\",\n  \"password\": \"secret\"\n}"
+            },
+            "description": "Публичный. Возвращает данные пользователя. Сессия сохраняется в cookie PHPSESSID."
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/api/v1/auth/logout",
+            "description": "Публичный. Завершает текущую сессию."
+          }
+        },
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/api/v1/auth/register",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"newuser@example.com\",\n  \"password\": \"secret123\",\n  \"name\": \"Иван Иванов\",\n  \"phone\": \"+79001234567\"\n}"
+            },
+            "description": "Публичный. После регистрации автоматически выполняет логин."
+          }
+        },
+        {
+          "name": "Reset Password",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/api/v1/auth/password/reset",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\"\n}"
+            },
+            "description": "Публичный. Отправляет письмо со ссылкой для сброса пароля. Всегда возвращает success."
+          }
+        },
+        {
+          "name": "Me (current user)",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/api/v1/auth/me",
+            "description": "User-auth. Возвращает данные текущего авторизованного пользователя."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Catalog",
+      "item": [
+        {
+          "name": "Get Products",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/api/v1/catalog?page=1&limit=12&sort=popular",
+              "host": ["{{base}}"],
+              "path": ["api", "v1", "catalog"],
+              "query": [
+                { "key": "section", "value": "", "description": "CODE раздела (строка)", "disabled": true },
+                { "key": "q", "value": "", "description": "Поисковый запрос", "disabled": true },
+                { "key": "sort", "value": "popular", "description": "popular | price-asc | price-desc | name | new" },
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "12", "description": "1–50" }
+              ]
+            },
+            "description": "Публичный. Список товаров с пагинацией, поиском и сортировкой."
+          }
+        },
+        {
+          "name": "Get Sections",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/api/v1/catalog/sections",
+            "description": "Публичный. Дерево разделов каталога."
+          }
+        },
+        {
+          "name": "Get Filters",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/api/v1/catalog/filters",
+            "description": "Публичный. Разделы + свойства с типами и диапазонами значений для построения фильтра."
+          }
+        },
+        {
+          "name": "Get Product by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/api/v1/catalog/1",
+              "host": ["{{base}}"],
+              "path": ["api", "v1", "catalog", "1"]
+            },
+            "description": "Публичный. Детальная карточка товара. Замени 1 на реальный ID."
+          }
+        },
+        {
+          "name": "Get Product Reviews",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/api/v1/catalog/1/reviews",
+              "host": ["{{base}}"],
+              "path": ["api", "v1", "catalog", "1", "reviews"]
+            },
+            "description": "Публичный. Последние 20 одобренных отзывов на товар."
+          }
+        },
+        {
+          "name": "Add Review",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "{{base}}/api/v1/catalog/1/reviews",
+              "host": ["{{base}}"],
+              "path": ["api", "v1", "catalog", "1", "reviews"]
+            },
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"text\": \"Отличный товар, всем рекомендую!\",\n  \"rating\": 5,\n  \"author_name\": \"Иван\"\n}"
+            },
+            "description": "Публичный. Отзыв создаётся с ACTIVE=N и требует ручной модерации в Битриксе."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cart",
+      "description": "User-auth: требуют cookie-сессии (выполни Login первым)",
+      "item": [
+        {
+          "name": "Get Cart",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/api/v1/cart",
+            "description": "Возвращает items[], total, currency, count."
+          }
+        },
+        {
+          "name": "Add to Cart",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/api/v1/cart/add",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"product_id\": 123,\n  \"quantity\": 1\n}"
+            },
+            "description": "Если товар уже в корзине — количество увеличивается."
+          }
+        },
+        {
+          "name": "Update Cart Item",
+          "request": {
+            "method": "PUT",
+            "url": {
+              "raw": "{{base}}/api/v1/cart/456",
+              "host": ["{{base}}"],
+              "path": ["api", "v1", "cart", "456"]
+            },
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"quantity\": 3\n}"
+            },
+            "description": "456 — item.id позиции корзины. quantity=0 удаляет позицию."
+          }
+        },
+        {
+          "name": "Remove Cart Item",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{base}}/api/v1/cart/456",
+              "host": ["{{base}}"],
+              "path": ["api", "v1", "cart", "456"]
+            },
+            "description": "456 — item.id позиции корзины."
+          }
+        },
+        {
+          "name": "Clear Cart",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base}}/api/v1/cart",
+            "description": "Полностью очищает корзину."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Checkout",
+      "description": "User-auth: требуют cookie-сессии. Сначала добавь товары в корзину.",
+      "item": [
+        {
+          "name": "Get Checkout Info",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/api/v1/checkout/info",
+            "description": "Возвращает delivery_methods, payment_methods, order_properties за один запрос."
+          }
+        },
+        {
+          "name": "Calculate Delivery",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/api/v1/checkout/calculate",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"delivery_id\": 1\n}"
+            },
+            "description": "Считает стоимость доставки для текущей корзины."
+          }
+        },
+        {
+          "name": "Create Order",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/api/v1/checkout/order",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"delivery_id\": 1,\n  \"payment_id\": 1,\n  \"properties\": {\n    \"NAME\": \"Иван Иванов\",\n    \"PHONE\": \"+79001234567\",\n    \"EMAIL\": \"ivan@example.com\",\n    \"ADDRESS\": \"г. Москва, ул. Примерная, д. 1\",\n    \"COMMENT\": \"Позвоните перед доставкой\"\n  }\n}"
+            },
+            "description": "Создаёт заказ из текущей корзины, затем очищает корзину. Возвращает order_id и order_total."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Profile",
+      "description": "User-auth: требуют cookie-сессии.",
+      "item": [
+        {
+          "name": "Get Profile",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/api/v1/profile",
+            "description": "Возвращает id, email, name, phone текущего пользователя."
+          }
+        },
+        {
+          "name": "Update Profile",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/api/v1/profile",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Иван Петров\",\n  \"phone\": \"+79009876543\"\n}"
+            },
+            "description": "Обновляет имя и/или телефон."
+          }
+        },
+        {
+          "name": "Change Password",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/api/v1/profile",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"old_password\": \"oldSecret\",\n  \"password\": \"newSecret123\"\n}"
+            },
+            "description": "Смена пароля. old_password обязателен."
+          }
+        },
+        {
+          "name": "Get Orders",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/api/v1/profile/orders?page=1&limit=10",
+              "host": ["{{base}}"],
+              "path": ["api", "v1", "profile", "orders"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "10" }
+              ]
+            },
+            "description": "Заказы текущего пользователя с пагинацией."
+          }
+        },
+        {
+          "name": "Get Order Detail",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/api/v1/profile/orders/789",
+              "host": ["{{base}}"],
+              "path": ["api", "v1", "profile", "orders", "789"]
+            },
+            "description": "Детали заказа: позиции, свойства, статус. Замени 789 на реальный ID."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Wishlist",
+      "description": "User-auth: требуют cookie-сессии.",
+      "item": [
+        {
+          "name": "Get Wishlist",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/api/v1/wishlist",
+            "description": "Список товаров в избранном с данными из инфоблока."
+          }
+        },
+        {
+          "name": "Add to Wishlist",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/api/v1/wishlist",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"product_id\": 123\n}"
+            },
+            "description": "Добавляет товар в избранное. Дубликаты игнорируются."
+          }
+        },
+        {
+          "name": "Remove from Wishlist",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{base}}/api/v1/wishlist/123",
+              "host": ["{{base}}"],
+              "path": ["api", "v1", "wishlist", "123"]
+            },
+            "description": "Убирает товар из избранного. 123 — ID товара."
+          }
+        },
+        {
+          "name": "Check Wishlist",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/api/v1/wishlist/check/123",
+              "host": ["{{base}}"],
+              "path": ["api", "v1", "wishlist", "check", "123"]
+            },
+            "description": "Быстрая проверка без загрузки всего списка. Возвращает { product_id, in_wishlist }."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Leads",
+      "item": [
+        {
+          "name": "Create Lead",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/api/v1/leads",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Иван\",\n  \"phone\": \"+79001234567\",\n  \"email\": \"ivan@example.com\",\n  \"comment\": \"Хочу узнать подробнее\",\n  \"source\": \"site\"\n}"
+            },
+            "description": "Публичный. Сохраняет заявку в инфоблок LOGIKA_LEADS и отправляет email."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin (Bearer token)",
+      "description": "Требуют заголовок Authorization: Bearer {{admin_token}}",
+      "item": [
+        {
+          "name": "Get All Orders",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/api/v1/orders",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" }
+            ],
+            "description": "Все заказы магазина."
+          }
+        },
+        {
+          "name": "Get Order by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/api/v1/orders/789",
+              "host": ["{{base}}"],
+              "path": ["api", "v1", "orders", "789"]
+            },
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" }
+            ],
+            "description": "Один заказ по ID. Замени 789 на реальный."
+          }
+        }
+      ]
+    },
+    {
+      "name": "1С Обмен (CommerceML)",
+      "description": "Стандартный Bitrix-обмен с 1С. Использует Basic Auth.",
+      "item": [
+        {
+          "name": "checkauth",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/1c-exchange/?type=catalog&mode=checkauth",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                { "key": "username", "value": "admin" },
+                { "key": "password", "value": "your_password" }
+              ]
+            },
+            "description": "Первый шаг обмена. Возвращает success + PHPSESSID."
+          }
+        },
+        {
+          "name": "init",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/1c-exchange/?type=catalog&mode=init",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                { "key": "username", "value": "admin" },
+                { "key": "password", "value": "your_password" }
+              ]
+            },
+            "description": "Второй шаг. Возвращает zip=yes и лимит файла."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Health check",
+      "item": [
+        {
+          "name": "404 — Route not found",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/api/v1/ping",
+            "description": "Должен вернуть {success:false, error:'Route not found', code:404}. Проверяет что api.php отвечает."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -38,6 +38,27 @@ class CatalogController
             $filter['%NAME'] = $query;
         }
 
+        // ─── Фильтры ─────────────────────────────────────────────────────────────
+        $priceMin = isset($_GET['price_min']) && $_GET['price_min'] !== '' ? (float) $_GET['price_min'] : null;
+        $priceMax = isset($_GET['price_max']) && $_GET['price_max'] !== '' ? (float) $_GET['price_max'] : null;
+        if ($priceMin !== null) $filter['>=CATALOG_PRICE_1'] = $priceMin;
+        if ($priceMax !== null) $filter['<=CATALOG_PRICE_1'] = $priceMax;
+
+        // in_stock: фильтруем товары с ценой > 0; если price_min уже задан — он достаточен
+        if (!empty($_GET['in_stock']) && $priceMin === null) {
+            $filter['>CATALOG_PRICE_1'] = 0;
+        }
+
+        // Плоские ключи: prop_KIND=software,equipment (избегаем проблем с кодированием скобок)
+        foreach ($_GET as $key => $rawVal) {
+            if (strncmp($key, 'prop_', 5) !== 0) continue;
+            $code   = preg_replace('/[^A-Z0-9_]/', '', strtoupper(substr($key, 5)));
+            $values = array_values(array_filter(array_map('trim', explode(',', (string) $rawVal))));
+            if ($code && $values) {
+                $filter['PROPERTY_' . $code] = count($values) === 1 ? reset($values) : $values;
+            }
+        }
+
         // ─── Сортировка ──────────────────────────────────────────────────────────
         $order = match($sort) {
             'price-asc'  => ['CATALOG_PRICE_1' => 'ASC'],
@@ -116,14 +137,60 @@ class CatalogController
     }
 
     /**
-     * GET catalog/filters — разделы + фильтруемые свойства с диапазонами
+     * GET catalog/filters?section=CODE — свойства + диапазон цен для раздела
      */
     public function filters(array $params, array $body): void
     {
         Loader::includeModule('iblock');
+        Loader::includeModule('catalog');
+
+        $sectionCode = trim($_GET['section'] ?? '');
+        $sectionId   = null;
+
+        if ($sectionCode) {
+            $secRes = \CIBlockSection::GetList(
+                [],
+                ['IBLOCK_ID' => self::IBLOCK_ID, 'CODE' => $sectionCode],
+                false,
+                ['ID']
+            );
+            if ($sec = $secRes->Fetch()) {
+                $sectionId = (int) $sec['ID'];
+            }
+        }
+
+        global $DB;
+
+        // Диапазон цен — скоупится на раздел если выбран
+        $sectionJoin  = '';
+        $sectionWhere = '';
+        if ($sectionId) {
+            $sectionJoin  = "INNER JOIN b_iblock_section_element se ON se.IBLOCK_ELEMENT_ID = e.ID";
+            $sectionWhere = "AND se.IBLOCK_SECTION_ID IN (
+                SELECT ID FROM b_iblock_section
+                WHERE IBLOCK_ID = " . self::IBLOCK_ID . "
+                  AND (ID = $sectionId OR IBLOCK_SECTION_ID = $sectionId)
+            )";
+        }
+
+        $priceRow = $DB->Query(
+            "SELECT MIN(p.PRICE) min_price, MAX(p.PRICE) max_price
+             FROM b_catalog_price p
+             INNER JOIN b_iblock_element e ON e.ID = p.PRODUCT_ID
+             $sectionJoin
+             WHERE e.IBLOCK_ID = " . self::IBLOCK_ID . "
+               AND e.ACTIVE = 'Y'
+               AND p.CATALOG_GROUP_ID = 1
+               $sectionWhere"
+        )->Fetch();
+
         Response::success([
-            'sections'   => $this->getSections(),
-            'properties' => $this->getFilterProperties(),
+            'sections'    => $this->getSections(),
+            'properties'  => $this->getFilterProperties($sectionId),
+            'price_range' => [
+                'min' => (float) ($priceRow['min_price'] ?? 0),
+                'max' => (float) ($priceRow['max_price'] ?? 0),
+            ],
         ]);
     }
 
@@ -332,30 +399,80 @@ class CatalogController
         return $sections;
     }
 
-    private function getFilterProperties(): array
+    private function getFilterProperties(?int $sectionId = null): array
     {
-        $res   = \CIBlockProperty::GetList(['SORT' => 'ASC'], ['IBLOCK_ID' => self::IBLOCK_ID, 'ACTIVE' => 'Y']);
+        $res   = \CIBlockProperty::GetList(
+            ['SORT' => 'ASC'],
+            ['IBLOCK_ID' => self::IBLOCK_ID, 'ACTIVE' => 'Y', 'FILTRABLE' => 'Y']
+        );
         $props = [];
 
+        // Если выбран раздел — заранее собираем ID элементов в нём для фильтрации значений
+        $elementIds = null;
+        if ($sectionId !== null) {
+            $elRes = \CIBlockElement::GetList(
+                [],
+                ['IBLOCK_ID' => self::IBLOCK_ID, 'ACTIVE' => 'Y',
+                 'SECTION_ID' => $sectionId, 'INCLUDE_SUBSECTIONS' => 'Y'],
+                false,
+                false,
+                ['ID']
+            );
+            $elementIds = [];
+            while ($el = $elRes->Fetch()) {
+                $elementIds[] = (int) $el['ID'];
+            }
+            if (empty($elementIds)) return [];
+        }
+
+        global $DB;
+
         while ($prop = $res->Fetch()) {
-            $entry = [
-                'id'   => (int) $prop['ID'],
+            $propId = (int) $prop['ID'];
+            $entry  = [
+                'id'   => $propId,
                 'code' => $prop['CODE'],
                 'name' => $prop['NAME'],
                 'type' => $prop['PROPERTY_TYPE'],
             ];
 
             if ($prop['PROPERTY_TYPE'] === 'L') {
-                $vals = [];
-                $vRes = \CIBlockPropertyEnum::GetList(['SORT' => 'ASC'], ['PROPERTY_ID' => $prop['ID']]);
-                while ($v = $vRes->Fetch()) {
-                    $vals[] = ['id' => (int) $v['ID'], 'value' => $v['VALUE']];
+                if ($elementIds !== null) {
+                    // Только значения, реально встречающиеся у элементов раздела
+                    $inList = implode(',', $elementIds);
+                    $usedRes = $DB->Query(
+                        "SELECT DISTINCT ep.VALUE_ENUM
+                         FROM b_iblock_element_property ep
+                         WHERE ep.IBLOCK_PROPERTY_ID = $propId
+                           AND ep.IBLOCK_ELEMENT_ID IN ($inList)
+                           AND ep.VALUE_ENUM IS NOT NULL"
+                    );
+                    $usedIds = [];
+                    while ($u = $usedRes->Fetch()) $usedIds[] = (int) $u['VALUE_ENUM'];
+                    if (empty($usedIds)) continue;
+
+                    $vals = [];
+                    $vRes = \CIBlockPropertyEnum::GetList(['SORT' => 'ASC'], ['PROPERTY_ID' => $propId]);
+                    while ($v = $vRes->Fetch()) {
+                        if (in_array((int) $v['ID'], $usedIds, true)) {
+                            $vals[] = ['id' => (int) $v['ID'], 'value' => $v['VALUE']];
+                        }
+                    }
+                } else {
+                    $vals = [];
+                    $vRes = \CIBlockPropertyEnum::GetList(['SORT' => 'ASC'], ['PROPERTY_ID' => $propId]);
+                    while ($v = $vRes->Fetch()) {
+                        $vals[] = ['id' => (int) $v['ID'], 'value' => $v['VALUE']];
+                    }
                 }
+                if (empty($vals)) continue;
                 $entry['values'] = $vals;
             }
 
             if ($prop['PROPERTY_TYPE'] === 'N') {
-                $entry['range'] = $this->getPropertyRange((int) $prop['ID']);
+                $range = $this->getPropertyRange($propId, $elementIds);
+                if ($range['min'] === $range['max'] && $range['min'] === 0.0) continue;
+                $entry['range'] = $range;
             }
 
             $props[] = $entry;
@@ -363,12 +480,16 @@ class CatalogController
         return $props;
     }
 
-    private function getPropertyRange(int $propId): array
+    private function getPropertyRange(int $propId, ?array $elementIds = null): array
     {
         global $DB;
+        $where = "IBLOCK_PROPERTY_ID = $propId AND VALUE <> ''";
+        if ($elementIds !== null && !empty($elementIds)) {
+            $where .= " AND IBLOCK_ELEMENT_ID IN (" . implode(',', $elementIds) . ")";
+        }
         $res = $DB->Query(
             "SELECT MIN(CAST(VALUE AS DECIMAL(15,2))) min_val, MAX(CAST(VALUE AS DECIMAL(15,2))) max_val
-             FROM b_iblock_element_property WHERE IBLOCK_PROPERTY_ID = $propId AND VALUE <> ''"
+             FROM b_iblock_element_property WHERE $where"
         );
         $row = $res->Fetch();
         return ['min' => (float) ($row['min_val'] ?? 0), 'max' => (float) ($row['max_val'] ?? 0)];

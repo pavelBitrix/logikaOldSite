@@ -222,26 +222,42 @@ class CatalogController
             $picture = \CFile::GetPath($picId);
         }
 
-        // Наличие: каталожный модуль → свойство IN_STOCK → по умолчанию false
+        // Наличие:
+        // На этом сайте склад не ведётся: b_catalog_product.QUANTITY=0 у всех товаров.
+        // QUANTITY=0 не значит «нет на складе» — просто учёт не настроен.
+        // Единственный надёжный индикатор: есть ли цена на товар.
+        //   price > 0  → физический товар, принимаем заявки → inStock=true
+        //   price null → ПО/услуга без прайса, только по заявке → inStock=false
+        // Исключение: явный свойство IN_STOCK или реальный остаток > 0 в Bitrix.
         $productData = \CCatalogProduct::GetByIDEx($id);
+        $quantity    = 0;
+
         if ($productData !== false && is_array($productData)) {
-            $quantityTrace = $productData['QUANTITY_TRACE'] ?? 'Y';
             $quantity      = (int) ($productData['QUANTITY'] ?? 0);
-            if (isset($productData['AVAILABLE'])) {
-                // Bitrix вычисляет AVAILABLE с учётом QUANTITY_TRACE и других флагов
-                $inStock = $productData['AVAILABLE'] === 'Y';
+            $quantityTrace = $productData['QUANTITY_TRACE'] ?? 'Y';
+
+            if ($quantity > 0) {
+                // Реальный остаток — доверяем напрямую
+                $inStock = true;
+            } elseif ($quantityTrace === 'N') {
+                // Учёт отключён — используем цену
+                $inStock  = ($price !== null);
+                $quantity = $inStock ? 1 : 0;
             } else {
-                // Если учёт остатков отключён — товар всегда доступен
-                $inStock = ($quantityTrace === 'N') || ($quantity > 0);
+                // QUANTITY=0 с включённым учётом.
+                // На этом сайте это «склад не ведётся», а не реальный OOS.
+                // Используем цену как индикатор доступности.
+                $inStock  = ($price !== null);
+                $quantity = $inStock ? 1 : 0;
             }
         } elseif (!empty($props['IN_STOCK']['VALUE'])) {
             $val      = strtolower(trim($props['IN_STOCK']['VALUE']));
             $inStock  = in_array($val, ['y', 'yes', 'да', '1', 'true', 'в наличии'], true);
             $quantity = $inStock ? 1 : 0;
         } else {
-            // Нет записи в каталоге (товар не настроен для продажи) — недоступен
-            $inStock  = false;
-            $quantity = 0;
+            // Нет записи в каталоге: только цена определяет доступность
+            $inStock  = ($price !== null);
+            $quantity = $inStock ? 1 : 0;
         }
 
         return [

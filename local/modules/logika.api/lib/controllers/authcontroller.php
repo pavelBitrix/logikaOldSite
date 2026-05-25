@@ -69,10 +69,10 @@ class AuthController
     {
         global $USER;
 
-        $name     = trim($body['name']     ?? '');
+        $name     = trim($body['name']     ?? $body['FIO'] ?? '');
         $email    = trim($body['email']    ?? '');
         $password = trim($body['password'] ?? '');
-        $phone    = trim($body['phone']    ?? '');
+        $phone    = trim($body['phone']    ?? $body['PERSONAL_PHONE'] ?? '');
 
         if (!$name || !$email || !$password) {
             Response::error('name, email и password обязательны', 422);
@@ -85,9 +85,9 @@ class AuthController
             $password,
             $password,       // подтверждение
             $email,
-            '',
-            '',
             SITE_ID,
+            '',
+            0,
             false,
             ['PERSONAL_PHONE' => $phone]
         );

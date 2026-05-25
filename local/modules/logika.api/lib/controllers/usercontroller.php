@@ -2,6 +2,7 @@
 namespace Logika\Api\Controllers;
 
 use Bitrix\Main\Loader;
+use Bitrix\Sale\Internals\OrderTable;
 use Bitrix\Sale\Order;
 use Logika\Api\Auth\UserAuth;
 use Logika\Api\Response;
@@ -81,24 +82,31 @@ class UserController
         $page   = max(1, (int) ($_GET['page'] ?? 1));
         $limit  = min(50, max(1, (int) ($_GET['limit'] ?? 10)));
 
-        $total = Order::getCount(['USER_ID' => $userId]);
-        $rows  = Order::getList([
+        $total = (int) OrderTable::getCount(['=USER_ID' => $userId]);
+        $rows  = OrderTable::getList([
             'select' => ['ID', 'DATE_INSERT', 'PRICE', 'STATUS_ID', 'CURRENCY', 'XML_ID'],
-            'filter' => ['USER_ID' => $userId],
+            'filter' => ['=USER_ID' => $userId],
             'order'  => ['DATE_INSERT' => 'DESC'],
             'limit'  => $limit,
             'offset' => ($page - 1) * $limit,
         ])->fetchAll();
 
-        $orders = array_map(fn($r) => [
-            'id'         => (int) $r['ID'],
-            'date'       => $r['DATE_INSERT'],
-            'price'      => (float) $r['PRICE'],
-            'currency'   => $r['CURRENCY'],
-            'status'     => $r['STATUS_ID'],
-            'status_name'=> $this->statusName($r['STATUS_ID']),
-            'xml_id'     => $r['XML_ID'],
-        ], $rows);
+        $orders = array_map(function ($r) {
+            $date = $r['DATE_INSERT'];
+            if ($date instanceof \Bitrix\Main\Type\DateTime) {
+                $date = $date->toString();
+            }
+
+            return [
+                'id'         => (int) $r['ID'],
+                'date'       => (string) $date,
+                'price'      => (float) $r['PRICE'],
+                'currency'   => $r['CURRENCY'],
+                'status'     => $r['STATUS_ID'],
+                'status_name'=> $this->statusName($r['STATUS_ID']),
+                'xml_id'     => $r['XML_ID'],
+            ];
+        }, $rows);
 
         Response::success([
             'orders'     => $orders,

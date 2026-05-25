@@ -222,31 +222,29 @@ class CatalogController
             $picture = \CFile::GetPath($picId);
         }
 
-        // Наличие:
-        // На этом сайте склад не ведётся: b_catalog_product.QUANTITY=0 у всех товаров.
-        // QUANTITY=0 не значит «нет на складе» — просто учёт не настроен.
-        // Единственный надёжный индикатор: есть ли цена на товар.
-        //   price > 0  → физический товар, принимаем заявки → inStock=true
-        //   price null → ПО/услуга без прайса, только по заявке → inStock=false
-        // Исключение: явный свойство IN_STOCK или реальный остаток > 0 в Bitrix.
-        $productData = \CCatalogProduct::GetByIDEx($id);
-        $quantity    = 0;
+        // Наличие и количество читаем напрямую из b_catalog_product —
+        // CCatalogProduct::GetByIDEx() иногда возвращает false при наличии записи в БД.
+        // Логика:
+        //   QUANTITY > 0  → реальный остаток, доверяем напрямую
+        //   QUANTITY = 0, QUANTITY_TRACE = N  → учёт отключён, доступность = есть цена
+        //   QUANTITY = 0, QUANTITY_TRACE = Y  → на этом сайте учёт не ведётся, доступность = есть цена
+        //   нет записи в b_catalog_product   → доступность = есть цена (+ свойство IN_STOCK)
+        global $DB;
+        $prodRow = $DB->Query(
+            "SELECT QUANTITY, QUANTITY_TRACE FROM b_catalog_product WHERE ID = " . $id
+        )->Fetch();
 
-        if ($productData !== false && is_array($productData)) {
-            $quantity      = (int) ($productData['QUANTITY'] ?? 0);
-            $quantityTrace = $productData['QUANTITY_TRACE'] ?? 'Y';
+        $quantity = 0;
+
+        if ($prodRow !== false) {
+            $quantity      = (int) ($prodRow['QUANTITY'] ?? 0);
+            $quantityTrace = $prodRow['QUANTITY_TRACE'] ?? 'Y';
 
             if ($quantity > 0) {
-                // Реальный остаток — доверяем напрямую
                 $inStock = true;
-            } elseif ($quantityTrace === 'N') {
-                // Учёт отключён — используем цену
-                $inStock  = ($price !== null);
-                $quantity = $inStock ? 1 : 0;
             } else {
-                // QUANTITY=0 с включённым учётом.
-                // На этом сайте это «склад не ведётся», а не реальный OOS.
-                // Используем цену как индикатор доступности.
+                // QUANTITY_TRACE = N → учёт выключен; Y → учёт «включён» но не ведётся на сайте.
+                // В обоих случаях доступность определяем по цене.
                 $inStock  = ($price !== null);
                 $quantity = $inStock ? 1 : 0;
             }
@@ -255,7 +253,6 @@ class CatalogController
             $inStock  = in_array($val, ['y', 'yes', 'да', '1', 'true', 'в наличии'], true);
             $quantity = $inStock ? 1 : 0;
         } else {
-            // Нет записи в каталоге: только цена определяет доступность
             $inStock  = ($price !== null);
             $quantity = $inStock ? 1 : 0;
         }

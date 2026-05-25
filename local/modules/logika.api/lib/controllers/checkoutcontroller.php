@@ -175,14 +175,11 @@ class CheckoutController
         }
 
         $orderId = $order->getId();
-
-        // Очищаем корзину после успешного оформления
-        $basket->clearCollection();
-        $basket->save();
+        $orderTotal = (float) $order->getPrice();
 
         Response::success([
             'order_id'    => $orderId,
-            'order_total' => (float) $order->getPrice(),
+            'order_total' => $orderTotal,
             'status'      => $order->getField('STATUS_ID'),
         ], 201);
     }

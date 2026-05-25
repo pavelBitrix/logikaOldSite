@@ -146,7 +146,7 @@ class CatalogController
             ['IBLOCK_ID' => self::IBLOCK_ID, 'ID' => $id, 'ACTIVE' => 'Y'],
             false,
             false,
-            ['ID', 'NAME', 'CODE', 'PREVIEW_TEXT', 'DETAIL_TEXT', 'PREVIEW_PICTURE', 'DETAIL_PICTURE', 'XML_ID', 'PROPERTY_*']
+            ['ID', 'NAME', 'CODE', 'PREVIEW_TEXT', 'DETAIL_TEXT', 'PREVIEW_PICTURE', 'DETAIL_PICTURE', 'XML_ID', 'IBLOCK_SECTION_ID', 'PROPERTY_*']
         );
 
         $el = $res->GetNextElement();
@@ -158,11 +158,14 @@ class CatalogController
         $props  = $el->GetProperties();
         $item   = $this->formatItem($fields, $props);
 
-        // Дополнительные поля для детальной страницы
-        $item['detail']  = $fields['DETAIL_TEXT'] ?? null;
-        $item['picture'] = $fields['DETAIL_PICTURE']
-            ? \CFile::GetPath($fields['DETAIL_PICTURE'])
-            : $item['picture'];
+        // Детальная картинка приоритетнее превью
+        if ($fields['DETAIL_PICTURE']) {
+            $item['picture'] = \CFile::GetPath($fields['DETAIL_PICTURE']);
+        }
+
+        // Полное описание и структурированные характеристики
+        $item['detail'] = $fields['DETAIL_TEXT'] ?? null;
+        $item['specs']  = $this->formatSpecs($props);
 
         Response::success($item);
     }
@@ -385,6 +388,52 @@ class CatalogController
             'tags'         => array_values(array_filter((array) ($props['TAGS']['VALUE']     ?? []))),
             'features'     => array_values(array_filter((array) ($props['FEATURES']['VALUE'] ?? []))),
         ];
+    }
+
+    private function formatSpecs(array $props): array
+    {
+        // Свойства, уже показанные в карточке — в характеристиках не дублируем
+        static $skip = ['KIND', 'BADGE', 'EDITION', 'DEPLOY', 'ILLUSTRATION',
+                        'TAGS', 'FEATURES', 'IN_STOCK', 'PRICE_LABEL'];
+        $specs = [];
+        foreach ($props as $code => $prop) {
+            if (in_array($code, $skip, true)) continue;
+            if (empty($prop['NAME']))         continue;
+
+            $type = $prop['PROPERTY_TYPE'] ?? '';
+            $val  = null;
+
+            if ($type === 'L') {
+                // Список — берём текстовое значение (или несколько через запятую)
+                $raw = $prop['VALUE'] ?? null;
+                if (is_array($raw)) {
+                    $labels = array_filter(array_map(function($v) use ($prop) {
+                        return $prop['VALUE_ENUM_ID'] ?? $v;
+                    }, $raw));
+                    // Проще: используем VALUE_XML_ID или TEXT
+                    $texts = array_values(array_filter(
+                        is_array($prop['~VALUE']) ? $prop['~VALUE'] : [$prop['~VALUE'] ?? '']
+                    ));
+                    $val = implode(', ', array_filter($texts));
+                } else {
+                    $val = $prop['~VALUE'] ?? $raw;
+                }
+            } elseif ($type === 'S' || $type === 'N') {
+                $raw = $prop['VALUE'] ?? null;
+                if (is_array($raw)) {
+                    $val = implode(', ', array_filter(array_map('strval', $raw)));
+                } else {
+                    $val = (string) ($raw ?? '');
+                }
+            } elseif ($type === 'E') {
+                // Привязка к элементу — пропускаем
+                continue;
+            }
+
+            if ($val === null || $val === '') continue;
+            $specs[] = ['name' => $prop['NAME'], 'value' => (string) $val];
+        }
+        return $specs;
     }
 
     private function getSections(): array

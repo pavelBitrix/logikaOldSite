@@ -42,8 +42,8 @@ class Router
         $this->register('DELETE', 'cart/{itemId}',   [CartController::class, 'remove'], 'user');
         $this->register('DELETE', 'cart',            [CartController::class, 'clear'],  'user');
 
-        // ─── Checkout (user session required) ────────────────────────────────────
-        $this->register('GET',  'checkout/info',      [CheckoutController::class, 'info'],        'user');
+        // ─── Checkout ────────────────────────────────────────────────────────────
+        $this->register('GET',  'checkout/info',      [CheckoutController::class, 'info']);
         $this->register('POST', 'checkout/calculate', [CheckoutController::class, 'calculate'],   'user');
         $this->register('POST', 'checkout/order',     [CheckoutController::class, 'createOrder'], 'user');
 

@@ -79,17 +79,48 @@ class CheckoutController
     {
         Loader::includeModule('sale');
         Loader::includeModule('catalog');
+        Loader::includeModule('currency');
 
         $deliveryId = (int) ($body['delivery_id'] ?? 0);
         $paymentId  = (int) ($body['payment_id']  ?? 0);
         $properties = $body['properties'] ?? [];
+        $bodyItems  = $body['items']      ?? [];
 
         if (!$deliveryId || !$paymentId) {
             Response::error('delivery_id и payment_id обязательны', 422);
         }
 
-        $userId = UserAuth::id(); // 0 = гость
+        $userId   = UserAuth::id();
+        $currency = \Bitrix\Currency\CurrencyManager::getBaseCurrency();
+
+        // Пробуем взять корзину из сессии Bitrix
         $basket = Basket::loadItemsForFUser(Fuser::getId(true), SITE_ID);
+
+        // Если корзина пуста, но фронт передал товары — строим корзину из тела запроса
+        if ($basket->isEmpty() && !empty($bodyItems)) {
+            $basket = Basket::create(SITE_ID);
+            foreach ($bodyItems as $item) {
+                $productId = (int)($item['product_id'] ?? 0);
+                if (!$productId) continue;
+
+                $basketItem = $basket->createItem('Bitrix\Catalog\Product\Basket', $productId);
+                $res = $basketItem->setFields([
+                    'NAME'                   => (string)($item['name'] ?? 'Товар'),
+                    'QUANTITY'               => max(1, (float)($item['quantity'] ?? 1)),
+                    'PRICE'                  => (float)($item['price'] ?? 0),
+                    'BASE_PRICE'             => (float)($item['price'] ?? 0),
+                    'CURRENCY'               => $currency,
+                    'LID'                    => SITE_ID,
+                    'PRODUCT_PROVIDER_CLASS' => 'CCatalogProductProvider',
+                    'CAN_BUY'                => 'Y',
+                    'DELAY'                  => 'N',
+                    'WEIGHT'                 => 0,
+                ]);
+                if (!$res->isSuccess()) {
+                    Response::error('Ошибка товара #' . $productId . ': ' . implode(', ', $res->getErrorMessages()), 422);
+                }
+            }
+        }
 
         if ($basket->isEmpty()) {
             Response::error('Корзина пуста', 422);
@@ -103,15 +134,29 @@ class CheckoutController
         // ─── Доставка ───────────────────────────────────────────────────────────
         $shipmentCollection = $order->getShipmentCollection();
         $deliveryService    = Delivery\Services\Manager::getObjectById($deliveryId);
+        if (!$deliveryService) {
+            Response::error('Способ доставки не найден', 422);
+        }
         $shipment = $shipmentCollection->createItem($deliveryService);
-        $shipment->setField('CURRENCY', 'RUB');
+        $shipment->setField('CURRENCY', $currency);
+
+        foreach ($basket as $basketItem) {
+            $shipmentItem = $shipment->getShipmentItemCollection()->createItem($basketItem);
+            $shipmentItem->setQuantity($basketItem->getQuantity());
+        }
 
         // ─── Оплата ─────────────────────────────────────────────────────────────
         $paymentCollection = $order->getPaymentCollection();
         $paySystem = PaySystem\Manager::getObjectById($paymentId);
+        if (!$paySystem) {
+            Response::error('Способ оплаты не найден', 422);
+        }
         $payment = $paymentCollection->createItem($paySystem);
+
+        // Пересчёт ПОСЛЕ привязки корзины и доставки, ДО установки суммы оплаты
+        $order->refreshData();
         $payment->setField('SUM', $order->getPrice());
-        $payment->setField('CURRENCY', 'RUB');
+        $payment->setField('CURRENCY', $currency);
 
         // ─── Свойства заказа (контактная информация) ────────────────────────────
         $propertyCollection = $order->getPropertyCollection();

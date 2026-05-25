@@ -222,19 +222,26 @@ class CatalogController
             $picture = \CFile::GetPath($picId);
         }
 
-        // Наличие: каталожный модуль → свойство IN_STOCK → по умолчанию true
+        // Наличие: каталожный модуль → свойство IN_STOCK → по умолчанию false
         $productData = \CCatalogProduct::GetByIDEx($id);
-        if ($productData && isset($productData['QUANTITY'])) {
-            $inStock  = (int) $productData['QUANTITY'] > 0;
-            $quantity = (int) $productData['QUANTITY'];
+        if ($productData !== false && is_array($productData)) {
+            $quantityTrace = $productData['QUANTITY_TRACE'] ?? 'Y';
+            $quantity      = (int) ($productData['QUANTITY'] ?? 0);
+            if (isset($productData['AVAILABLE'])) {
+                // Bitrix вычисляет AVAILABLE с учётом QUANTITY_TRACE и других флагов
+                $inStock = $productData['AVAILABLE'] === 'Y';
+            } else {
+                // Если учёт остатков отключён — товар всегда доступен
+                $inStock = ($quantityTrace === 'N') || ($quantity > 0);
+            }
         } elseif (!empty($props['IN_STOCK']['VALUE'])) {
             $val      = strtolower(trim($props['IN_STOCK']['VALUE']));
             $inStock  = in_array($val, ['y', 'yes', 'да', '1', 'true', 'в наличии'], true);
             $quantity = $inStock ? 1 : 0;
         } else {
-            // Нет данных о складе — считаем в наличии
-            $inStock  = true;
-            $quantity = 1;
+            // Нет записи в каталоге (товар не настроен для продажи) — недоступен
+            $inStock  = false;
+            $quantity = 0;
         }
 
         return [

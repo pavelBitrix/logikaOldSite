@@ -14,14 +14,26 @@ class AuthController
     {
         global $USER;
 
-        $email    = trim($body['email']    ?? '');
+        $email    = trim($body['email'] ?? $body['login'] ?? '');
         $password = trim($body['password'] ?? '');
 
         if (!$email || !$password) {
             Response::error('Email и пароль обязательны', 422);
         }
 
-        $result = $USER->Login($email, $password, 'N');
+        $login = $email;
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $rsUser = \CUser::GetList(
+                ($by = 'id'),
+                ($order = 'asc'),
+                ['=EMAIL' => $email]
+            );
+            if ($userData = $rsUser->Fetch()) {
+                $login = $userData['LOGIN'];
+            }
+        }
+
+        $result = $USER->Login($login, $password, 'N');
 
         if ($result !== true) {
             Response::error('Неверный email или пароль', 401);

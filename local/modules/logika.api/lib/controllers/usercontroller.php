@@ -129,7 +129,7 @@ class UserController
         $id    = (int) ($params['id'] ?? 0);
         $order = Order::load($id);
 
-        if (!$order || $order->getUserId() !== UserAuth::id()) {
+        if (!$order || (int) $order->getUserId() !== UserAuth::id()) {
             Response::error('Заказ не найден', 404);
         }
 

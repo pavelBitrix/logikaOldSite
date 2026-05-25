@@ -118,12 +118,19 @@ class CatalogController
             $filter,
             false,
             ['nPageSize' => $limit, 'iNumPage' => $page],
-            ['ID', 'NAME', 'CODE', 'PREVIEW_TEXT', 'DETAIL_PICTURE', 'PREVIEW_PICTURE', 'XML_ID', 'IBLOCK_SECTION_ID', 'PROPERTY_*']
+            ['ID', 'NAME', 'CODE', 'PREVIEW_TEXT', 'DETAIL_PICTURE', 'PREVIEW_PICTURE', 'XML_ID', 'IBLOCK_SECTION_ID']
         );
 
-        $items = [];
+        $elements = [];
         while ($el = $res->GetNextElement()) {
-            $items[] = $this->formatItem($el->GetFields(), $el->GetProperties());
+            $elements[] = $el->GetFields();
+        }
+
+        $propsMap = $this->getPropertiesBatch(array_map('intval', array_column($elements, 'ID')));
+
+        $items = [];
+        foreach ($elements as $fields) {
+            $items[] = $this->formatItem($fields, $propsMap[(int) $fields['ID']] ?? []);
         }
 
         Response::success([
@@ -153,14 +160,21 @@ class CatalogController
             false,
             false,
             ['ID', 'NAME', 'CODE', 'PREVIEW_TEXT', 'DETAIL_TEXT',
-             'PREVIEW_PICTURE', 'DETAIL_PICTURE', 'XML_ID', 'IBLOCK_SECTION_ID', 'PROPERTY_*']
+             'PREVIEW_PICTURE', 'DETAIL_PICTURE', 'XML_ID', 'IBLOCK_SECTION_ID']
         );
 
-        $items = [];
+        $elements = [];
         while ($el = $res->GetNextElement()) {
-            $fields = $el->GetFields();
-            $props  = $el->GetProperties();
-            $item   = $this->formatItem($fields, $props);
+            $elements[] = $el->GetFields();
+        }
+
+        $propsMap = $this->getPropertiesBatch(array_map('intval', array_column($elements, 'ID')));
+
+        $items = [];
+        foreach ($elements as $fields) {
+            $id    = (int) $fields['ID'];
+            $props = $propsMap[$id] ?? [];
+            $item  = $this->formatItem($fields, $props);
             if ($fields['DETAIL_PICTURE']) {
                 $item['picture'] = \CFile::GetPath($fields['DETAIL_PICTURE']);
             }
@@ -191,7 +205,7 @@ class CatalogController
             ['IBLOCK_ID' => self::IBLOCK_ID, 'ID' => $id, 'ACTIVE' => 'Y'],
             false,
             false,
-            ['ID', 'NAME', 'CODE', 'PREVIEW_TEXT', 'DETAIL_TEXT', 'PREVIEW_PICTURE', 'DETAIL_PICTURE', 'XML_ID', 'IBLOCK_SECTION_ID', 'PROPERTY_*']
+            ['ID', 'NAME', 'CODE', 'PREVIEW_TEXT', 'DETAIL_TEXT', 'PREVIEW_PICTURE', 'DETAIL_PICTURE', 'XML_ID', 'IBLOCK_SECTION_ID']
         );
 
         $el = $res->GetNextElement();
@@ -199,16 +213,15 @@ class CatalogController
             Response::error('Элемент не найден', 404);
         }
 
-        $fields = $el->GetFields();
-        $props  = $el->GetProperties();
-        $item   = $this->formatItem($fields, $props);
+        $fields   = $el->GetFields();
+        $propsMap = $this->getPropertiesBatch([$id]);
+        $props    = $propsMap[$id] ?? [];
+        $item     = $this->formatItem($fields, $props);
 
-        // Детальная картинка приоритетнее превью
         if ($fields['DETAIL_PICTURE']) {
             $item['picture'] = \CFile::GetPath($fields['DETAIL_PICTURE']);
         }
 
-        // Полное описание и структурированные характеристики
         $item['detail'] = $fields['DETAIL_TEXT'] ?? null;
         $item['specs']  = $this->formatSpecs($props);
 
@@ -412,6 +425,10 @@ class CatalogController
             $quantity = $inStock ? 1 : 0;
         }
 
+        // Prop value helper: false (unset in Bitrix) and '' both become null
+        $pval = fn(string $code) => $props[$code]['VALUE'] ?: null;
+        $parr = fn(string $code) => array_values(array_filter((array) ($props[$code]['VALUE'] ?? [])));
+
         return [
             'id'           => $id,
             'name'         => $fields['NAME'],
@@ -421,17 +438,17 @@ class CatalogController
             'preview'      => $fields['PREVIEW_TEXT'] ?? null,
             'picture'      => $picture,
             'price'        => $price,
-            'price_label'  => $props['PRICE_LABEL']['VALUE'] ?? 'от',
+            'price_label'  => $pval('PRICE_LABEL') ?? 'от',
             'currency'     => 'RUB',
             'in_stock'     => $inStock,
             'quantity'     => $quantity,
-            'badge'        => $props['BADGE']['VALUE']     ?? null,
-            'kind'         => $props['KIND']['VALUE']      ?? null,
-            'edition'      => $props['EDITION']['VALUE']   ?? null,
-            'deploy'       => $props['DEPLOY']['VALUE']    ?? null,
-            'illustration' => $props['ILLUSTRATION']['VALUE'] ?? null,
-            'tags'         => array_values(array_filter((array) ($props['TAGS']['VALUE']     ?? []))),
-            'features'     => array_values(array_filter((array) ($props['FEATURES']['VALUE'] ?? []))),
+            'badge'        => $pval('BADGE'),
+            'kind'         => $pval('KIND'),
+            'edition'      => $pval('EDITION'),
+            'deploy'       => $pval('DEPLOY'),
+            'illustration' => $pval('ILLUSTRATION'),
+            'tags'         => $parr('TAGS'),
+            'features'     => $parr('FEATURES'),
         ];
     }
 
@@ -475,10 +492,114 @@ class CatalogController
                 continue;
             }
 
-            if ($val === null || $val === '') continue;
+            if ($val === null || $val === '' || $val === false) continue;
             $specs[] = ['name' => $prop['NAME'], 'value' => (string) $val];
         }
         return $specs;
+    }
+
+    /**
+     * Load all property values for a batch of element IDs directly from DB.
+     * Bypasses CIBlockElement::GetProperties() which is unreliable on some Bitrix versions.
+     * Returns [ elementId => [ propCode => ['NAME'=>..,'PROPERTY_TYPE'=>..,'VALUE'=>..,'~VALUE'=>..] ] ]
+     */
+    private function getPropertiesBatch(array $elementIds): array
+    {
+        if (empty($elementIds)) return [];
+
+        global $DB;
+        $inIds = implode(',', array_map('intval', $elementIds));
+
+        // Property metadata (code, name, type)
+        $metaRes = $DB->Query(
+            "SELECT ID, CODE, NAME, PROPERTY_TYPE
+             FROM b_iblock_property
+             WHERE IBLOCK_ID = " . self::IBLOCK_ID . " AND ACTIVE = 'Y' AND CODE <> ''"
+        );
+        $meta = [];
+        while ($m = $metaRes->Fetch()) {
+            $meta[(int) $m['ID']] = $m;
+        }
+
+        // Raw property values
+        $valRes = $DB->Query(
+            "SELECT IBLOCK_ELEMENT_ID, IBLOCK_PROPERTY_ID, VALUE, VALUE_ENUM
+             FROM b_iblock_element_property
+             WHERE IBLOCK_ELEMENT_ID IN ($inIds)"
+        );
+        $rawByEl = [];
+        while ($v = $valRes->Fetch()) {
+            $rawByEl[(int) $v['IBLOCK_ELEMENT_ID']][(int) $v['IBLOCK_PROPERTY_ID']][] = $v;
+        }
+
+        // Resolve enum IDs → display text in one query
+        $allEnumIds = [];
+        foreach ($rawByEl as $byProp) {
+            foreach ($byProp as $rows) {
+                foreach ($rows as $r) {
+                    if (!empty($r['VALUE_ENUM'])) $allEnumIds[] = (int) $r['VALUE_ENUM'];
+                }
+            }
+        }
+        $enumMap = [];
+        if ($allEnumIds) {
+            $eRes = $DB->Query(
+                "SELECT ID, VALUE FROM b_iblock_property_enum
+                 WHERE ID IN (" . implode(',', array_unique($allEnumIds)) . ")"
+            );
+            while ($e = $eRes->Fetch()) $enumMap[(int) $e['ID']] = $e['VALUE'];
+        }
+
+        // Build props array per element
+        $result = [];
+        foreach ($elementIds as $eid) {
+            $eid   = (int) $eid;
+            $props = [];
+            foreach ($meta as $pid => $m) {
+                $code = $m['CODE'];
+                $type = $m['PROPERTY_TYPE'];
+                $rows = $rawByEl[$eid][$pid] ?? [];
+
+                if ($type === 'L') {
+                    $texts = [];
+                    foreach ($rows as $r) {
+                        $enumId = (int) ($r['VALUE_ENUM'] ?? 0);
+                        if ($enumId && isset($enumMap[$enumId])) {
+                            $texts[] = $enumMap[$enumId];
+                        }
+                    }
+                    $val = match(count($texts)) {
+                        0 => false,
+                        1 => $texts[0],
+                        default => $texts,
+                    };
+                } elseif ($type === 'S' || $type === 'N') {
+                    $vals = array_values(array_filter(
+                        array_column($rows, 'VALUE'),
+                        fn($v) => $v !== '' && $v !== null
+                    ));
+                    $val = match(count($vals)) {
+                        0 => false,
+                        1 => $vals[0],
+                        default => $vals,
+                    };
+                } else {
+                    // E (element link), F (file), G (section) — pass raw VALUE
+                    $val = !empty($rows) ? ($rows[0]['VALUE'] ?? false) : false;
+                }
+
+                $props[$code] = [
+                    'NAME'          => $m['NAME'],
+                    'PROPERTY_TYPE' => $type,
+                    'VALUE'         => $val,
+                    '~VALUE'        => $val,
+                    'VALUE_ENUM_ID' => null,
+                ];
+            }
+            $result[$eid] = $props;
+        }
+
+        return $result;
     }
 
     private function getSections(): array

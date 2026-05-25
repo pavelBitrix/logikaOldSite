@@ -477,31 +477,24 @@ class CatalogController
             ];
 
             if ($prop['PROPERTY_TYPE'] === 'L') {
+                // Всегда проверяем реально используемые значения (и для секции, и глобально)
+                $usedWhere = "ep.IBLOCK_PROPERTY_ID = $propId AND ep.VALUE_ENUM IS NOT NULL";
                 if ($elementIds !== null) {
-                    // Только значения, реально встречающиеся у элементов раздела
-                    $inList = implode(',', $elementIds);
-                    $usedRes = $DB->Query(
-                        "SELECT DISTINCT ep.VALUE_ENUM
-                         FROM b_iblock_element_property ep
-                         WHERE ep.IBLOCK_PROPERTY_ID = $propId
-                           AND ep.IBLOCK_ELEMENT_ID IN ($inList)
-                           AND ep.VALUE_ENUM IS NOT NULL"
-                    );
-                    $usedIds = [];
-                    while ($u = $usedRes->Fetch()) $usedIds[] = (int) $u['VALUE_ENUM'];
-                    if (empty($usedIds)) continue;
+                    $usedWhere .= " AND ep.IBLOCK_ELEMENT_ID IN (" . implode(',', $elementIds) . ")";
+                }
+                $usedRes = $DB->Query(
+                    "SELECT DISTINCT ep.VALUE_ENUM FROM b_iblock_element_property ep WHERE $usedWhere"
+                );
+                $usedIds = [];
+                while ($u = $usedRes->Fetch()) $usedIds[] = (int) $u['VALUE_ENUM'];
+                if (empty($usedIds)) continue;
 
-                    $vals = [];
-                    $vRes = \CIBlockPropertyEnum::GetList(['SORT' => 'ASC'], ['PROPERTY_ID' => $propId]);
-                    while ($v = $vRes->Fetch()) {
-                        if (in_array((int) $v['ID'], $usedIds, true)) {
-                            $vals[] = ['id' => (int) $v['ID'], 'value' => $v['VALUE']];
-                        }
-                    }
-                } else {
-                    $vals = [];
-                    $vRes = \CIBlockPropertyEnum::GetList(['SORT' => 'ASC'], ['PROPERTY_ID' => $propId]);
-                    while ($v = $vRes->Fetch()) {
+                $vals = [];
+                $vRes = \CIBlockPropertyEnum::GetList(['SORT' => 'ASC'], ['PROPERTY_ID' => $propId]);
+                while ($v = $vRes->Fetch()) {
+                    // Пропускаем сырые Bitrix XML_ID вида IP_PROP\d+ (не настроенные значения)
+                    if (preg_match('/^IP_PROP\d+$/i', $v['VALUE'])) continue;
+                    if (in_array((int) $v['ID'], $usedIds, true)) {
                         $vals[] = ['id' => (int) $v['ID'], 'value' => $v['VALUE']];
                     }
                 }

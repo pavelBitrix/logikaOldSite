@@ -133,6 +133,51 @@ class CatalogController
     }
 
     /**
+     * GET catalog/compare?ids=1,2,3,4
+     */
+    public function compare(array $params, array $body): void
+    {
+        Loader::includeModule('iblock');
+        Loader::includeModule('catalog');
+
+        $rawIds = array_map('intval', explode(',', $_GET['ids'] ?? ''));
+        $ids    = array_values(array_filter($rawIds));
+
+        if (empty($ids) || count($ids) > 4) {
+            Response::error('Параметр ids: от 1 до 4 значений', 400);
+        }
+
+        $res = \CIBlockElement::GetList(
+            [],
+            ['IBLOCK_ID' => self::IBLOCK_ID, 'ID' => $ids, 'ACTIVE' => 'Y'],
+            false,
+            false,
+            ['ID', 'NAME', 'CODE', 'PREVIEW_TEXT', 'DETAIL_TEXT',
+             'PREVIEW_PICTURE', 'DETAIL_PICTURE', 'XML_ID', 'IBLOCK_SECTION_ID', 'PROPERTY_*']
+        );
+
+        $items = [];
+        while ($el = $res->GetNextElement()) {
+            $fields = $el->GetFields();
+            $props  = $el->GetProperties();
+            $item   = $this->formatItem($fields, $props);
+            if ($fields['DETAIL_PICTURE']) {
+                $item['picture'] = \CFile::GetPath($fields['DETAIL_PICTURE']);
+            }
+            $item['detail'] = $fields['DETAIL_TEXT'] ?? null;
+            $item['specs']  = $this->formatSpecs($props);
+            $items[]        = $item;
+        }
+
+        // Сохранить порядок из запроса (GetList сортирует по ID)
+        usort($items, fn($a, $b) =>
+            array_search($a['id'], $ids) <=> array_search($b['id'], $ids)
+        );
+
+        Response::success($items);
+    }
+
+    /**
      * GET catalog/{id}
      */
     public function show(array $params, array $body): void

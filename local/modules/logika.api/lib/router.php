@@ -31,6 +31,7 @@ class Router
         $this->register('GET',  'catalog',                   [CatalogController::class, 'index']);
         $this->register('GET',  'catalog/sections',          [CatalogController::class, 'sections']);
         $this->register('GET',  'catalog/filters',           [CatalogController::class, 'filters']);
+        $this->register('GET',  'catalog/compare',           [CatalogController::class, 'compare']);
         $this->register('GET',  'catalog/{id}',              [CatalogController::class, 'show']);
         $this->register('GET',  'catalog/{id}/reviews',      [CatalogController::class, 'reviews']);
         $this->register('POST', 'catalog/{id}/reviews',      [CatalogController::class, 'addReview']);

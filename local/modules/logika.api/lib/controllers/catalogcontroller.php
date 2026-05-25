@@ -38,15 +38,42 @@ class CatalogController
             $filter['%NAME'] = $query;
         }
 
-        // ─── Фильтры ─────────────────────────────────────────────────────────────
-        $priceMin = isset($_GET['price_min']) && $_GET['price_min'] !== '' ? (float) $_GET['price_min'] : null;
-        $priceMax = isset($_GET['price_max']) && $_GET['price_max'] !== '' ? (float) $_GET['price_max'] : null;
-        if ($priceMin !== null) $filter['>=CATALOG_PRICE_1'] = $priceMin;
-        if ($priceMax !== null) $filter['<=CATALOG_PRICE_1'] = $priceMax;
+        // ─── Фильтры цены / наличия через прямой SQL ─────────────────────────────
+        // CIBlockElement::GetList с >=CATALOG_PRICE_1 ненадёжен (JOIN ломает
+        // SelectedRowsCount → pages=0 → пустой результат). Решение: pre-query ID.
+        $priceMin   = isset($_GET['price_min']) && $_GET['price_min'] !== '' ? (float) $_GET['price_min'] : null;
+        $priceMax   = isset($_GET['price_max']) && $_GET['price_max'] !== '' ? (float) $_GET['price_max'] : null;
+        $filterStock = !empty($_GET['in_stock']);
 
-        // in_stock: фильтруем товары с ценой > 0; если price_min уже задан — он достаточен
-        if (!empty($_GET['in_stock']) && $priceMin === null) {
-            $filter['>CATALOG_PRICE_1'] = 0;
+        if ($priceMin !== null || $priceMax !== null || $filterStock) {
+            global $DB;
+            $priceWhere = 'p.CATALOG_GROUP_ID = 1';
+            if ($priceMin !== null) $priceWhere .= ' AND p.PRICE >= ' . (float) $priceMin;
+            if ($priceMax !== null) $priceWhere .= ' AND p.PRICE <= ' . (float) $priceMax;
+            if ($filterStock)       $priceWhere .= ' AND p.PRICE > 0';
+
+            $priceOrderSql = match($sort) {
+                'price-asc'  => ' ORDER BY p.PRICE ASC',
+                'price-desc' => ' ORDER BY p.PRICE DESC',
+                default      => '',
+            };
+
+            $idRes    = $DB->Query(
+                'SELECT e.ID FROM b_iblock_element e'
+                . ' INNER JOIN b_catalog_price p ON p.PRODUCT_ID = e.ID'
+                . ' WHERE e.IBLOCK_ID = ' . self::IBLOCK_ID
+                . ' AND e.ACTIVE = \'Y\''
+                . ' AND ' . $priceWhere
+                . $priceOrderSql
+            );
+            $priceIds = [];
+            while ($r = $idRes->Fetch()) $priceIds[] = (int) $r['ID'];
+
+            if (empty($priceIds)) {
+                Response::success(['items' => [], 'pagination' => ['total' => 0, 'page' => 1, 'limit' => $limit, 'pages' => 0]]);
+                return;
+            }
+            $filter['ID'] = $priceIds;
         }
 
         // Плоские ключи: prop_KIND=software,equipment (избегаем проблем с кодированием скобок)
@@ -60,16 +87,29 @@ class CatalogController
         }
 
         // ─── Сортировка ──────────────────────────────────────────────────────────
-        $order = match($sort) {
-            'price-asc'  => ['CATALOG_PRICE_1' => 'ASC'],
-            'price-desc' => ['CATALOG_PRICE_1' => 'DESC'],
-            'name'       => ['NAME' => 'ASC'],
-            'new'        => ['DATE_CREATE' => 'DESC'],
-            default      => ['SORT' => 'ASC'],
+        // Для сортировки по цене используем CATALOG_PRICE_1 только когда нет ID-фильтра
+        // (он уже содержит нужные элементы); иначе Bitrix снова добавляет JOIN и ломает COUNT.
+        $priceSort = in_array($sort, ['price-asc', 'price-desc'], true);
+        $hasIdFilter = isset($filter['ID']);
+        $order = match(true) {
+            $sort === 'price-asc'  && !$hasIdFilter => ['CATALOG_PRICE_1' => 'ASC'],
+            $sort === 'price-desc' && !$hasIdFilter => ['CATALOG_PRICE_1' => 'DESC'],
+            $sort === 'price-asc'  && $hasIdFilter  => ['SORT' => 'ASC'],  // ID уже отсортированы SQL-ом
+            $sort === 'price-desc' && $hasIdFilter  => ['SORT' => 'ASC'],
+            $sort === 'name'  => ['NAME' => 'ASC'],
+            $sort === 'new'   => ['DATE_CREATE' => 'DESC'],
+            default           => ['SORT' => 'ASC'],
         };
 
         // ─── Подсчёт ─────────────────────────────────────────────────────────────
-        $total = (int) \CIBlockElement::GetList($order, $filter, false, false, ['ID'])->SelectedRowsCount();
+        // SelectedRowsCount() ненадёжен с CATALOG_PRICE JOIN — используем отдельный запрос COUNT
+        if ($hasIdFilter || $priceSort) {
+            $countFilter = $filter;
+            $countOrder  = ['ID' => 'ASC'];  // без price JOIN
+            $total = (int) \CIBlockElement::GetList($countOrder, $countFilter, false, false, ['ID'])->SelectedRowsCount();
+        } else {
+            $total = (int) \CIBlockElement::GetList($order, $filter, false, false, ['ID'])->SelectedRowsCount();
+        }
         $pages = (int) ceil($total / $limit);
 
         // ─── Выборка ─────────────────────────────────────────────────────────────

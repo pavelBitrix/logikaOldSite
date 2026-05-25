@@ -103,7 +103,7 @@ class CheckoutController
                 $productId = (int)($item['product_id'] ?? 0);
                 if (!$productId) continue;
 
-                $basketItem = $basket->createItem('Bitrix\Catalog\Product\Basket', $productId);
+                $basketItem = $basket->createItem('catalog', $productId);
                 $res = $basketItem->setFields([
                     'NAME'                   => (string)($item['name'] ?? 'Товар'),
                     'QUANTITY'               => max(1, (float)($item['quantity'] ?? 1)),

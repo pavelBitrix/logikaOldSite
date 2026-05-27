@@ -20,6 +20,7 @@ ErrorDocument 404 /404.php
   Options +FollowSymLinks
   RewriteEngine On
   RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+  RewriteRule .* - [E=HTTP_ORIGIN:%{HTTP:Origin}]
 
   # --- Logika API ---
   RewriteRule ^local/ - [F,L]

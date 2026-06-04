@@ -46,6 +46,7 @@ if ($request_origin && in_array($request_origin, $allowed_origins)) {
         header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
         header("Access-Control-Allow-Credentials: true");
         header("Access-Control-Max-Age: 86400");
+        header("Vary: Origin");
         exit(0);
     }
 
@@ -54,7 +55,8 @@ if ($request_origin && in_array($request_origin, $allowed_origins)) {
     header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
     header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
     header("Access-Control-Allow-Credentials: true");
-    header("Content-Type: application/json"); // Устанавливайте Content-Type здесь или позже, перед выводом JSON
+    header("Vary: Origin");
+    header("Content-Type: application/json");
 
 } else {
     // Источник не разрешен - не отправляем заголовок Allow-Origin

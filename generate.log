@@ -1,0 +1,977 @@
+
+> generate
+> nuxt generate
+
+┌  [36mBuilding Nuxt for production...[39m
+│
+●  [32mNuxt [1m4.4.2[22m[39m[90m (with [39m[90mNitro [1m2.13.3[22m[39m[90m, Vite [1m7.3.1[22m[39m[90m and Vue [1m3.5.32[22m[39m[90m)[39m
+[90m[[90mnuxt:tailwindcss[90m][39m [36mℹ[39m Using default Tailwind CSS file
+│
+●  Nitro preset: [36mstatic[39m
+[36mℹ[39m Building client...
+[36mℹ[39m [36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+
+[43m[30m WARN [39m[49m [33m[plugin nuxt:module-preload-polyfill] Sourcemap is likely to be incorrect: a plugin (nuxt:module-preload-polyfill) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+
+[36mℹ[39m transforming...
+[36mℹ[39m [32m✓[39m 938 modules transformed.
+[36mℹ[39m rendering chunks...
+
+[43m[30m WARN [39m[49m [33m[plugin vite:reporter] 
+(!) C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/three/build/three.module.js is dynamically imported by C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/app/components/SectionEquipment.vue but also statically imported by C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/app/components/HeroMainAnimation.client.vue, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/three/examples/jsm/controls/OrbitControls.js, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/three/examples/jsm/environments/RoomEnvironment.js, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/three/examples/jsm/loaders/GLTFLoader.js, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/three/examples/jsm/math/MeshSurfaceSampler.js, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/three/examples/jsm/postprocessing/EffectComposer.js, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/three/examples/jsm/postprocessing/Pass.js, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/three/examples/jsm/postprocessing/RenderPass.js, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/three/examples/jsm/postprocessing/ShaderPass.js, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/three/examples/jsm/postprocessing/UnrealBloomPass.js, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/three/examples/jsm/shaders/LuminosityHighPassShader.js, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/three/examples/jsm/utils/BufferGeometryUtils.js, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/three/examples/jsm/utils/SkeletonUtils.js, dynamic import will not move module into another chunk.
+[39m
+
+
+[43m[30m WARN [39m[49m [33m[plugin vite:reporter] 
+(!) C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/three/examples/jsm/loaders/GLTFLoader.js is dynamically imported by C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/app/components/SectionEquipment.vue but also statically imported by C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/app/components/HeroMainAnimation.client.vue, dynamic import will not move module into another chunk.
+[39m
+
+[36mℹ[39m computing gzip size...
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[32m_nuxt/Manrope-normal-200-vietnamese.usUDDRr7.woff2  [39m[1m[2m  8.52 kB[22m[1m[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[32m_nuxt/Manrope-normal-200-greek.DL7QRZyv.woff2       [39m[1m[2m  9.44 kB[22m[1m[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[32m_nuxt/Inter-normal-300-vietnamese.CBcvBZtf.woff2    [39m[1m[2m 10.25 kB[22m[1m[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[32m_nuxt/Inter-normal-300-greek-ext.DlzME5K_.woff2     [39m[1m[2m 11.23 kB[22m[1m[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[32m_nuxt/Manrope-normal-200-cyrillic.Dvxsihut.woff2    [39m[1m[2m 14.50 kB[22m[1m[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[32m_nuxt/Manrope-normal-200-latin-ext.Ch3YOpNY.woff2   [39m[1m[2m 15.12 kB[22m[1m[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[32m_nuxt/Inter-normal-300-cyrillic.DqGufNeO.woff2      [39m[1m[2m 18.75 kB[22m[1m[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[32m_nuxt/Inter-normal-300-greek.CkhJZR-_.woff2         [39m[1m[2m 19.00 kB[22m[1m[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[32mmanifest.json                                       [39m[1m[2m 20.25 kB[22m[1m[22m[2m │ gzip:   1.79 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[32m_nuxt/Manrope-normal-200-latin.DHIcAJRg.woff2       [39m[1m[2m 24.84 kB[22m[1m[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[32m_nuxt/Inter-normal-300-cyrillic-ext.BOeWTOD4.woff2  [39m[1m[2m 25.96 kB[22m[1m[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[32m_nuxt/Inter-normal-300-latin.Dx4kXJAl.woff2         [39m[1m[2m 48.26 kB[22m[1m[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[32m_nuxt/Inter-normal-300-latin-ext.DO1Apj_S.woff2     [39m[1m[2m 85.07 kB[22m[1m[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[35m_nuxt/services.BVUeYCBF.css                         [39m[1m[2m  0.28 kB[22m[1m[22m[2m │ gzip:   0.15 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[35m_nuxt/web.BpV_1_Fd.css                              [39m[1m[2m  0.28 kB[22m[1m[22m[2m │ gzip:   0.15 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[35m_nuxt/checkout.ka_cwEHv.css                         [39m[1m[2m  0.34 kB[22m[1m[22m[2m │ gzip:   0.18 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[35m_nuxt/orders.CStylnAh.css                           [39m[1m[2m  0.41 kB[22m[1m[22m[2m │ gzip:   0.16 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[35m_nuxt/login.tySYsO98.css                            [39m[1m[2m  0.48 kB[22m[1m[22m[2m │ gzip:   0.18 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[35m_nuxt/profile.BxZ884Bh.css                          [39m[1m[2m  0.48 kB[22m[1m[22m[2m │ gzip:   0.23 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[35m_nuxt/compare.NEbd1XVC.css                          [39m[1m[2m  0.89 kB[22m[1m[22m[2m │ gzip:   0.25 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[35m_nuxt/index.BMKn-L2Z.css                            [39m[1m[2m  1.34 kB[22m[1m[22m[2m │ gzip:   0.59 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[35m_nuxt/default.C6U5HYrF.css                          [39m[1m[2m  1.93 kB[22m[1m[22m[2m │ gzip:   0.55 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[35m_nuxt/catalog.C8qCbbfB.css                          [39m[1m[2m  3.33 kB[22m[1m[22m[2m │ gzip:   0.69 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[35m_nuxt/employee-dashboard.BOCqEzxh.css               [39m[1m[2m  5.13 kB[22m[1m[22m[2m │ gzip:   0.95 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[35m_nuxt/entry.CY1E7SYV.css                            [39m[1m[2m100.36 kB[22m[1m[22m[2m │ gzip:  17.53 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/-V7qKpL6.js                                   [39m[1m[2m  0.22 kB[22m[1m[22m[2m │ gzip:   0.17 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/CRwMvUCW.js                                   [39m[1m[2m  0.25 kB[22m[1m[22m[2m │ gzip:   0.21 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/IMVKaJEN.js                                   [39m[1m[2m  0.32 kB[22m[1m[22m[2m │ gzip:   0.22 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/CpNLMuAr.js                                   [39m[1m[2m  0.40 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/BvJ16tib.js                                   [39m[1m[2m  0.49 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/DA7hmBbu.js                                   [39m[1m[2m  0.83 kB[22m[1m[22m[2m │ gzip:   0.47 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/cxuT7zcR.js                                   [39m[1m[2m  0.98 kB[22m[1m[22m[2m │ gzip:   0.57 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/6B9_ZMyw.js                                   [39m[1m[2m  1.35 kB[22m[1m[22m[2m │ gzip:   0.78 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/FdLuqJZe.js                                   [39m[1m[2m  1.37 kB[22m[1m[22m[2m │ gzip:   0.76 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/BkpvLx71.js                                   [39m[1m[2m  1.59 kB[22m[1m[22m[2m │ gzip:   0.91 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/CLGxIMpS.js                                   [39m[1m[2m  5.18 kB[22m[1m[22m[2m │ gzip:   2.03 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/kOFvJJXb.js                                   [39m[1m[2m  5.52 kB[22m[1m[22m[2m │ gzip:   2.89 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/CyMwmtoo.js                                   [39m[1m[2m  5.60 kB[22m[1m[22m[2m │ gzip:   2.06 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/Cgr4KU98.js                                   [39m[1m[2m  6.07 kB[22m[1m[22m[2m │ gzip:   2.14 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/CJEZl9GT.js                                   [39m[1m[2m  6.73 kB[22m[1m[22m[2m │ gzip:   2.61 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/Cw0xf7eQ.js                                   [39m[1m[2m  7.66 kB[22m[1m[22m[2m │ gzip:   2.47 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/eX8SulHz.js                                   [39m[1m[2m  7.70 kB[22m[1m[22m[2m │ gzip:   3.33 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/6tQAXZ82.js                                   [39m[1m[2m  8.56 kB[22m[1m[22m[2m │ gzip:   3.09 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/Ssp47Y1b.js                                   [39m[1m[2m  9.37 kB[22m[1m[22m[2m │ gzip:   3.45 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/CjK8l3Mf.js                                   [39m[1m[2m 10.35 kB[22m[1m[22m[2m │ gzip:   3.68 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/CEeroA_7.js                                   [39m[1m[2m 13.65 kB[22m[1m[22m[2m │ gzip:   4.39 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/C83kWI5i.js                                   [39m[1m[2m 15.25 kB[22m[1m[22m[2m │ gzip:   5.24 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/6eADVMr2.js                                   [39m[1m[2m 17.74 kB[22m[1m[22m[2m │ gzip:   4.62 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/DAwF58Ce.js                                   [39m[1m[2m 19.08 kB[22m[1m[22m[2m │ gzip:   6.91 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/BbpIyiy1.js                                   [39m[1m[2m 22.91 kB[22m[1m[22m[2m │ gzip:   6.53 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/D-AUo_qE.js                                   [39m[1m[2m 32.61 kB[22m[1m[22m[2m │ gzip:  10.15 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/Cphq8aEL.js                                   [39m[1m[2m 42.24 kB[22m[1m[22m[2m │ gzip:  10.51 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/DM7qUlG2.js                                   [39m[1m[2m 47.13 kB[22m[1m[22m[2m │ gzip:  11.95 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/CR8RZWAc.js                                   [39m[1m[2m 61.75 kB[22m[1m[22m[2m │ gzip:  16.48 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/D7kzANT1.js                                   [39m[1m[2m376.11 kB[22m[1m[22m[2m │ gzip: 141.48 kB[22m
+[36mℹ[39m [2m../node_modules/.cache/nuxt/.nuxt/dist/client/[22m[36m_nuxt/BpjD-d6F.js                                   [39m[1m[33m867.50 kB[39m[22m[2m │ gzip: 226.30 kB[22m
+
+[43m[30m WARN [39m[49m [33m
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+
+[36mℹ[39m [32m✓ built in 13.00s[39m
+[32m✔[39m Client built in 13021ms
+[36mℹ[39m Building server...
+[36mℹ[39m [36mvite v7.3.1 [32mbuilding ssr environment for production...[36m[39m
+[36mℹ[39m transforming...
+[36mℹ[39m [32m✓[39m 219 modules transformed.
+[36mℹ[39m rendering chunks...
+
+[43m[30m WARN [39m[49m [33m[plugin vite:reporter] 
+(!) C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/gsap/index.js is dynamically imported by C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/app/components/SectionEquipment.vue but also statically imported by C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/app/components/SectionAbout.vue, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/app/components/SectionEquipment.vue, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/app/components/SectionFeatures.vue, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/app/components/SectionIntro.vue, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/app/components/UiMarquee.vue, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/app/pages/company.vue, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/app/pages/contacts.vue, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/app/pages/personal-data.vue, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/app/pages/privacy.vue, C:/Users/Bitrix/Documents/WORK PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/app/pages/yandex-metrics.vue, dynamic import will not move module into another chunk.
+[39m
+
+[36mℹ[39m [32m✓ built in 5.65s[39m
+[32m✔[39m Server built in 5675ms
+[90m[[90mnitro[90m][39m [36mℹ[39m Initializing prerenderer
+
+[43m[30m WARN [39m[49m "file:///C:/Users/Bitrix/Documents/WORK%20PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/@nuxt/nitro-server/dist/runtime/utils/cache-driver.js" is imported by " virtual:#nitro-internal-virtual/storage", but could not be resolved – treating it as an external dependency.
+
+[90m[[90mnitro[90m][39m [36mℹ[39m Prerendering 3 initial routes with crawler
+[90m[[90mnitro[90m][39m [90m  ├─ /200.html (133ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /404.html (134ms)[39m
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-downward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:blur-on[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:waves-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:settings-motion-mode-outline[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:blur-on[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:waves-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:settings-motion-mode-outline[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:blur-on[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:waves-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:settings-motion-mode-outline[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:blur-on[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:waves-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:settings-motion-mode-outline[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:point-of-sale-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:barcode-scanner-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:print-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:devices-other-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:scale-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:shopping-cart-checkout-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:sd-card-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:monitor-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:receipt-long-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-downward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:drag-pan-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:point-of-sale-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:manage-search-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:integration-instructions-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:model-training-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:support-agent-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:storage-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:account-tree-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:security-update-good-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:architecture-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:support-agent-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:build-circle-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:school-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:published-with-changes-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:devices-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:travel-explore-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:storefront-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:app-promo-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:code-blocks-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:handshake-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:troubleshoot-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:settings-suggest-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:co-present-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:trending-up-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+[90m[[90mnitro[90m][39m [90m  ├─ / (1671ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (931ms)[90m (skipped)[90m[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /employee-dashboard (931ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /_payload.json (931ms)[39m
+
+[41m[30m ERROR [39m[49m [unhandledRejection] [GET] "https://api.logika1c.ru/api/v1/catalog/compare?ids": 400 Bad Request
+
+    [90mat [39mprocess.processTicksAndRejections ([36mnode:internal/process/task_queues:105:5[39m)
+    [90mat [39masync $fetch2 ([36m/C:/Users/Bitrix/Documents/WORK%20PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/ofetch/dist/shared/ofetch.CWycOUEr.mjs:332:15[39m)
+    [90mat [39masync Object.callAsync ([36m/C:/Users/Bitrix/Documents/WORK%20PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/unctx/dist/index.mjs:72:16[39m)
+
+
+[41m[30m ERROR [39m[49m [unhandledRejection] [GET] "https://api.logika1c.ru/api/v1/catalog/compare?ids": 400 Bad Request
+
+    [90mat [39mprocess.processTicksAndRejections ([36mnode:internal/process/task_queues:105:5[39m)
+    [90mat [39masync $fetch2 ([36m/C:/Users/Bitrix/Documents/WORK%20PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/ofetch/dist/shared/ofetch.CWycOUEr.mjs:332:15[39m)
+    [90mat [39masync Object.callAsync ([36m/C:/Users/Bitrix/Documents/WORK%20PROJECTS/LOGIKA_SITE_2026_LENDING_VERSION_VUETIFY/logika_new_site_2026_nuxt/node_modules/unctx/dist/index.mjs:72:16[39m)
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+[90m[[90mnitro[90m][39m [90m  ├─ /yandex-metrics (2338ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /yandex-metrics/_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (2ms)[90m (skipped)[90m[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /personal-data (2333ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /privacy (2330ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /personal-data/_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (53ms)[90m (skipped)[90m[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /privacy/_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (50ms)[90m (skipped)[90m[39m
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:account-balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:devices-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:point-of-sale-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:assignment-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:account-balance-wallet-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:developer-mode-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:cloud-sync-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:support-agent-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:call-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:open-in-browser-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:sync-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:group-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:encrypted-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:point-of-sale-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:chat-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:open-in-browser-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:sync-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:build-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:open-in-browser-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:business-center-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:storefront-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:code-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:phone-android-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:router-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:autorenew-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:encrypted-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:upload-file-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:build-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:search-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:call-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:call-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:mail-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:schedule-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:location-on-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-outward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-back-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:person-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:package-2-outline[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:shopping-bag-outline[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+[90m[[90mnitro[90m][39m [90m  ├─ /profile (53ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /yandex-metrics/_payload.json (2ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /personal-data/_payload.json (54ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /privacy/_payload.json (53ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /company (2597ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /services (2598ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /web (2599ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /contacts (2599ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /company/_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (20ms)[90m (skipped)[90m[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /services/_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (11ms)[90m (skipped)[90m[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /web/_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (7ms)[90m (skipped)[90m[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /contacts/_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (4ms)[90m (skipped)[90m[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /gallery (2600ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /login (2600ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /gallery/_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (12ms)[90m (skipped)[90m[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /login/_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (11ms)[90m (skipped)[90m[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /account (2716ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /account/_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (6ms)[90m (skipped)[90m[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /checkout (2745ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /checkout/_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (6ms)[90m (skipped)[90m[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /account/orders (2715ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /company/_payload.json (21ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /web/_payload.json (8ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /services/_payload.json (12ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /account/orders/_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (3ms)[90m (skipped)[90m[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /contacts/_payload.json (5ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /gallery/_payload.json (12ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /login/_payload.json (12ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /account/_payload.json (6ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /checkout/_payload.json (8ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /account/orders/_payload.json (4ms)[39m
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-back-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:storefront-outline-rounded[39m timed out after 1500ms
+
+[90m[[90mnitro[90m][39m [90m  ├─ /compare (3140ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /compare/_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (1ms)[90m (skipped)[90m[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /compare/_payload.json (2ms)[39m
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:inventory-2-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:chevron-right-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:inventory-2-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:chevron-right-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:inventory-2-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:chevron-right-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:inventory-2-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:chevron-right-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:inventory-2-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:chevron-right-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:search-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:tune-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:grid-view-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:list-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:auto-awesome-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:shopping-cart-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:shopping-cart-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:shopping-cart-outline-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:balance-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:chevron-left-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:chevron-right-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-forward-rounded[39m timed out after 1500ms
+
+[90m[[90mnitro[90m][39m [90m  ├─ /catalog (3200ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /catalog/_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (1ms)[90m (skipped)[90m[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /catalog/_payload.json (2ms)[39m
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:menu-rounded[39m timed out after 1500ms
+
+
+[43m[30m WARN [39m[49m [Icon] loading icon [36mmaterial-symbols:arrow-upward-rounded[39m timed out after 1500ms
+
+[90m[[90mnitro[90m][39m [90m  ├─ /register (1553ms)[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /register/_payload.json?f45b291b-1ac4-496a-aa4e-b2f8f8cfbe37 (1ms)[90m (skipped)[90m[39m
+[90m[[90mnitro[90m][39m [90m  ├─ /register/_payload.json (2ms)[39m
+[90m[[90mnitro[90m][39m [36mℹ[39m Prerendered 36 routes in 10.556 seconds
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:arrow-downward-rounded`
+[Icon] failed to load icon `material-symbols:blur-on`
+[Icon] failed to load icon `material-symbols:waves-rounded`
+[Icon] failed to load icon `material-symbols:settings-motion-mode-outline`
+[Icon] failed to load icon `material-symbols:blur-on`
+[Icon] failed to load icon `material-symbols:waves-rounded`
+[Icon] failed to load icon `material-symbols:settings-motion-mode-outline`
+[Icon] failed to load icon `material-symbols:blur-on`
+[Icon] failed to load icon `material-symbols:waves-rounded`
+[Icon] failed to load icon `material-symbols:settings-motion-mode-outline`
+[Icon] failed to load icon `material-symbols:blur-on`
+[Icon] failed to load icon `material-symbols:waves-rounded`
+[Icon] failed to load icon `material-symbols:settings-motion-mode-outline`
+[Icon] failed to load icon `material-symbols:point-of-sale-rounded`
+[Icon] failed to load icon `material-symbols:barcode-scanner-rounded`
+[Icon] failed to load icon `material-symbols:print-rounded`
+[Icon] failed to load icon `material-symbols:devices-other-rounded`
+[Icon] failed to load icon `material-symbols:scale-rounded`
+[Icon] failed to load icon `material-symbols:shopping-cart-checkout-rounded`
+[Icon] failed to load icon `material-symbols:sd-card-rounded`
+[Icon] failed to load icon `material-symbols:monitor-rounded`
+[Icon] failed to load icon `material-symbols:receipt-long-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:arrow-downward-rounded`
+[Icon] failed to load icon `material-symbols:drag-pan-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:point-of-sale-rounded`
+[Icon] failed to load icon `material-symbols:manage-search-rounded`
+[Icon] failed to load icon `material-symbols:integration-instructions-outline-rounded`
+[Icon] failed to load icon `material-symbols:model-training-rounded`
+[Icon] failed to load icon `material-symbols:support-agent-rounded`
+[Icon] failed to load icon `material-symbols:storage-rounded`
+[Icon] failed to load icon `material-symbols:account-tree-rounded`
+[Icon] failed to load icon `material-symbols:security-update-good-outline-rounded`
+[Icon] failed to load icon `material-symbols:architecture-rounded`
+[Icon] failed to load icon `material-symbols:support-agent-rounded`
+[Icon] failed to load icon `material-symbols:build-circle-outline-rounded`
+[Icon] failed to load icon `material-symbols:school-outline-rounded`
+[Icon] failed to load icon `material-symbols:published-with-changes-rounded`
+[Icon] failed to load icon `material-symbols:devices-rounded`
+[Icon] failed to load icon `material-symbols:travel-explore-rounded`
+[Icon] failed to load icon `material-symbols:storefront-outline-rounded`
+[Icon] failed to load icon `material-symbols:app-promo-outline-rounded`
+[Icon] failed to load icon `material-symbols:code-blocks-outline-rounded`
+[Icon] failed to load icon `material-symbols:handshake-rounded`
+[Icon] failed to load icon `material-symbols:troubleshoot-rounded`
+[Icon] failed to load icon `material-symbols:settings-suggest-rounded`
+[Icon] failed to load icon `material-symbols:co-present-rounded`
+[Icon] failed to load icon `material-symbols:trending-up-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:devices-rounded`
+[Icon] failed to load icon `material-symbols:point-of-sale-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:support-agent-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:point-of-sale-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:storefront-outline-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[Icon] failed to load icon `material-symbols:storefront-outline-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:arrow-forward-rounded`
+[Icon] failed to load icon `material-symbols:menu-rounded`
+[Icon] failed to load icon `material-symbols:arrow-upward-rounded`
+[90m[[90mnitro[90m][39m [32m✔[39m Generated public [36m.output/public[39m
+[90m[[90mnitro[90m][39m [32m✔[39m You can preview this build using [36mnpx serve .output/public[39m
+│
+└  ✨ You can now deploy [36m.output/public[39m to any static hosting!
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:account-balance-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:assignment-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:account-balance-wallet-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:developer-mode-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:cloud-sync-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:call-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:open-in-browser-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:sync-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:group-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:encrypted-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:chat-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:open-in-browser-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:sync-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:build-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:open-in-browser-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:business-center-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:code-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:phone-android-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:router-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:autorenew-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:encrypted-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:upload-file-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:build-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:search-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:call-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:call-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:mail-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:schedule-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:location-on-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:arrow-outward-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:arrow-back-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:person-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:package-2-outline[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:shopping-bag-outline[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:arrow-back-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:search-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:balance-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:balance-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:balance-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:balance-rounded[39m (repeated 12 times)
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:inventory-2-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:chevron-right-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:inventory-2-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:chevron-right-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:inventory-2-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:chevron-right-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:inventory-2-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:chevron-right-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:inventory-2-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:chevron-right-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:tune-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:grid-view-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:list-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:auto-awesome-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:shopping-cart-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:shopping-cart-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:shopping-cart-outline-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:chevron-left-rounded[39m
+
+
+[43m[30m WARN [39m[49m [Icon] failed to load icon [36mmaterial-symbols:chevron-right-rounded[39m
+

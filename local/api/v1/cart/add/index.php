@@ -10,9 +10,11 @@ use Bitrix\Main\Context;
 use Bitrix\Currency\CurrencyManager;
 
 if (CModule::IncludeModule('sale') && CModule::IncludeModule('catalog')) {
-    
-    $productId = intval($_POST['product_id']);
-    $quantity = intval($_POST['quantity']);
+
+    $rawInput = file_get_contents('php://input');
+    $jsonInput = ($rawInput && strlen($rawInput) > 0) ? (json_decode($rawInput, true) ?? []) : [];
+    $productId = intval($jsonInput['product_id'] ?? $_POST['product_id'] ?? 0);
+    $quantity  = intval($jsonInput['quantity']   ?? $_POST['quantity']   ?? 1);
 
     if ($productId <= 0 || $quantity <= 0) {
         echo json_encode(["status" => "error", "message" => "Некорректные данные"]);

@@ -122,10 +122,8 @@ class CartController
     {
         $items = [];
         foreach ($basket->getBasketItems() as $item) {
-            $picture = null;
-            if ($picId = $item->getField('DETAIL_PAGE_URL')) {
-                $picture = $picId; // или CFile::GetPath если хранится ID
-            }
+            $previewPicId = $item->getField('PREVIEW_PICTURE');
+            $picture = $previewPicId ? \CFile::GetPath($previewPicId) : null;
 
             $items[] = [
                 'id'         => $item->getId(),
@@ -134,7 +132,7 @@ class CartController
                 'price'      => (float) $item->getPrice(),
                 'quantity'   => (int) $item->getQuantity(),
                 'sum'        => (float) $item->getFinalPrice(),
-                'picture'    => $item->getField('PREVIEW_PICTURE'),
+                'picture'    => $picture,
                 'xml_id'     => $item->getField('PRODUCT_XML_ID'),
             ];
         }

@@ -174,13 +174,51 @@ class CheckoutController
             Response::error(implode('; ', $result->getErrorMessages()), 500);
         }
 
-        $orderId = $order->getId();
+        $orderId    = $order->getId();
         $orderTotal = (float) $order->getPrice();
 
+        // ─── Инициация оплаты ───────────────────────────────────────────────────
+        $paymentUrl  = null;
+        $paymentHtml = null;
+
+        $psService = PaySystem\Manager::getObjectById($payment->getPaymentSystemId());
+        if ($psService) {
+            $buffered   = '';
+            $initResult = null;
+            ob_start();
+            try {
+                $initResult = $psService->initiatePay(
+                    $payment,
+                    \Bitrix\Main\Application::getInstance()->getContext()->getRequest()
+                );
+            } catch (\Throwable $e) {
+                // некоторые обработчики бросают вместо возврата ServiceResult
+            } finally {
+                $buffered = (string) ob_get_clean();
+            }
+
+            // Приоритет 1: HTML-форма, напечатанная в буфер вывода
+            if ($buffered !== '' && stripos($buffered, '<form') !== false) {
+                $paymentHtml = $buffered;
+            } elseif ($initResult instanceof PaySystem\ServiceResult && $initResult->isSuccess()) {
+                // Приоритет 2: стандартные методы ServiceResult
+                $url  = method_exists($initResult, 'getPaymentUrl') ? $initResult->getPaymentUrl() : null;
+                $html = method_exists($initResult, 'getTemplate')   ? $initResult->getTemplate()   : null;
+                $data = method_exists($initResult, 'getData')       ? (array) $initResult->getData() : [];
+
+                if ($url)                            $paymentUrl  = $url;
+                elseif ($html)                       $paymentHtml = $html;
+                elseif (!empty($data['PAYMENT_URL'])) $paymentUrl  = $data['PAYMENT_URL'];
+                elseif (!empty($data['TEMPLATE']))    $paymentHtml = $data['TEMPLATE'];
+            }
+        }
+
         Response::success([
-            'order_id'    => $orderId,
-            'order_total' => $orderTotal,
-            'status'      => $order->getField('STATUS_ID'),
+            'order_id'     => $orderId,
+            'order_total'  => $orderTotal,
+            'status'       => $order->getField('STATUS_ID'),
+            'payment_url'  => $paymentUrl,
+            'payment_html' => $paymentHtml,
         ], 201);
     }
 

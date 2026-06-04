@@ -157,6 +157,7 @@ class UserController
             'status'      => $order->getField('STATUS_ID'),
             'status_name' => $this->statusName($order->getField('STATUS_ID')),
             'xml_id'      => $order->getField('XML_ID'),
+            'comment'     => $order->getField('USER_DESCRIPTION') ?: null,
             'items'       => $items,
             'properties'  => $props,
         ]);

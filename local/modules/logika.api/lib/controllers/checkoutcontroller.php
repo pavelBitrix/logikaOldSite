@@ -158,9 +158,17 @@ class CheckoutController
         $payment->setField('SUM', $order->getPrice());
         $payment->setField('CURRENCY', $currency);
 
+        // ─── Комментарий покупателя — поле заказа, а не свойство ───────────────
+        // В Bitrix Sale комментарий хранится в ORDER.USER_DESCRIPTION, а не в коллекции свойств.
+        // Если передавать через $propertyCollection без настроенного свойства COMMENT — молча игнорируется.
+        if (!empty($properties['COMMENT'])) {
+            $order->setField('USER_DESCRIPTION', (string) $properties['COMMENT']);
+        }
+
         // ─── Свойства заказа (контактная информация) ────────────────────────────
         $propertyCollection = $order->getPropertyCollection();
         foreach ($properties as $code => $value) {
+            if (strtoupper($code) === 'COMMENT') continue; // уже записан выше
             $prop = $propertyCollection->getItemByOrderPropertyCode(strtoupper($code));
             if ($prop) {
                 $prop->setValue($value);

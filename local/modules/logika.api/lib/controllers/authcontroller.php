@@ -64,6 +64,10 @@ class AuthController
     /**
      * POST auth/register
      * Body: { name, email, password, phone? }
+     *
+     * Использует CUser::Add() вместо CUser::Register(), чтобы обойти проверку
+     * капчи Bitrix — она настраивается на уровне сайта и всегда срабатывает
+     * при Register() в API-контексте, где нет сессии с капчей.
      */
     public function register(array $params, array $body): void
     {
@@ -78,22 +82,26 @@ class AuthController
             Response::error('name, email и password обязательны', 422);
         }
 
-        $result = $USER->Register(
-            $email,          // login = email
-            $name,           // имя
-            '',              // фамилия
-            $password,
-            $password,       // подтверждение
-            $email,
-            SITE_ID,
-            '',
-            0,
-            false,
-            ['PERSONAL_PHONE' => $phone]
-        );
+        // Проверяем уникальность email заранее — чтобы вернуть понятную ошибку
+        $existing = \CUser::GetList($by = 'id', $order = 'asc', ['=EMAIL' => $email]);
+        if ($existing->Fetch()) {
+            Response::error('Email уже зарегистрирован', 422);
+        }
 
-        if ($result['TYPE'] === 'ERROR') {
-            Response::error($result['MESSAGE'], 422);
+        $cUser  = new \CUser();
+        $userId = $cUser->Add([
+            'LOGIN'            => $email,
+            'NAME'             => $name,
+            'EMAIL'            => $email,
+            'PASSWORD'         => $password,
+            'CONFIRM_PASSWORD' => $password,
+            'ACTIVE'           => 'Y',
+            'PERSONAL_PHONE'   => $phone,
+        ]);
+
+        if (!$userId) {
+            $msg = strip_tags($cUser->LAST_ERROR ?: 'Ошибка при создании пользователя');
+            Response::error($msg, 422);
         }
 
         // Сразу логиним после регистрации

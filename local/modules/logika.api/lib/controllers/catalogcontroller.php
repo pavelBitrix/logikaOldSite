@@ -50,7 +50,18 @@ class CatalogController
             $priceWhere = 'p.CATALOG_GROUP_ID = 1';
             if ($priceMin !== null) $priceWhere .= ' AND p.PRICE >= ' . (float) $priceMin;
             if ($priceMax !== null) $priceWhere .= ' AND p.PRICE <= ' . (float) $priceMax;
-            if ($filterStock)       $priceWhere .= ' AND p.PRICE > 0';
+            // Фильтр «В наличии»: цена > 0 И (реальный остаток > 0 ИЛИ учёт выключен ИЛИ нет
+            // записи в каталоге). Проверяем CAN_BUY_ZERO только для полноты — если 'Y' и цена
+            // есть, товар тоже считается доступным (спецзаказ). Это зеркалит логику formatItem().
+            if ($filterStock) {
+                $priceWhere .= ' AND p.PRICE > 0'
+                    . ' AND ('
+                    .     'cp.ID IS NULL'
+                    .     ' OR cp.QUANTITY > 0'
+                    .     ' OR cp.QUANTITY_TRACE = \'N\''
+                    .     ' OR cp.CAN_BUY_ZERO = \'Y\''
+                    . ')';
+            }
 
             $priceOrderSql = match($sort) {
                 'price-asc'  => ' ORDER BY p.PRICE ASC',
@@ -61,6 +72,7 @@ class CatalogController
             $idRes    = $DB->Query(
                 'SELECT e.ID FROM b_iblock_element e'
                 . ' INNER JOIN b_catalog_price p ON p.PRODUCT_ID = e.ID'
+                . ($filterStock ? ' LEFT JOIN b_catalog_product cp ON cp.ID = e.ID' : '')
                 . ' WHERE e.IBLOCK_ID = ' . self::IBLOCK_ID
                 . ' AND e.ACTIVE = \'Y\''
                 . ' AND ' . $priceWhere
@@ -390,30 +402,43 @@ class CatalogController
             $picture = \CFile::GetPath($picId);
         }
 
-        // Наличие и количество читаем напрямую из b_catalog_product —
-        // CCatalogProduct::GetByIDEx() иногда возвращает false при наличии записи в БД.
-        // Логика:
-        //   QUANTITY > 0  → реальный остаток, доверяем напрямую
-        //   QUANTITY = 0, QUANTITY_TRACE = N  → учёт отключён, доступность = есть цена
-        //   QUANTITY = 0, QUANTITY_TRACE = Y  → на этом сайте учёт не ведётся, доступность = есть цена
-        //   нет записи в b_catalog_product   → доступность = есть цена (+ свойство IN_STOCK)
+        // Наличие и количество читаем напрямую из b_catalog_product.
+        // Три поля определяют доступность в Bitrix:
+        //   QUANTITY       — фактический остаток
+        //   QUANTITY_TRACE — Y/D: учёт включён; N: учёт выключен (D = системный дефолт Y)
+        //   CAN_BUY_ZERO   — Y: покупка разрешена при 0; N/D: запрещена (D = системный дефолт N)
+        // Итоговая логика:
+        //   QUANTITY > 0                          → В наличии (реальный остаток)
+        //   QUANTITY_TRACE = N                    → учёт выключен → доступен если есть цена
+        //   QUANTITY_TRACE = Y/D, QUANTITY ≤ 0    → смотрим CAN_BUY_ZERO
+        //     CAN_BUY_ZERO = Y                    → спецзаказ/подписка → доступен если есть цена
+        //     CAN_BUY_ZERO = N/D                  → НЕТ В НАЛИЧИИ
+        //   нет записи в b_catalog_product        → доступность = есть цена (+ свойство IN_STOCK)
         global $DB;
         $prodRow = $DB->Query(
-            "SELECT QUANTITY, QUANTITY_TRACE FROM b_catalog_product WHERE ID = " . $id
+            "SELECT QUANTITY, QUANTITY_TRACE, CAN_BUY_ZERO FROM b_catalog_product WHERE ID = " . $id
         )->Fetch();
 
         $quantity = 0;
 
         if ($prodRow !== false) {
             $quantity      = (int) ($prodRow['QUANTITY'] ?? 0);
-            $quantityTrace = $prodRow['QUANTITY_TRACE'] ?? 'Y';
+            $quantityTrace = $prodRow['QUANTITY_TRACE'] ?? 'D';
+            $canBuyZero    = $prodRow['CAN_BUY_ZERO']   ?? 'D';
+
+            // 'D' = системный дефолт: QUANTITY_TRACE → включён (Y), CAN_BUY_ZERO → запрещён (N)
+            $trackingEnabled = ($quantityTrace !== 'N');
+            $canBuyAtZero    = ($canBuyZero === 'Y');
 
             if ($quantity > 0) {
                 $inStock = true;
-            } else {
-                // QUANTITY_TRACE = N → учёт выключен; Y → учёт «включён» но не ведётся на сайте.
-                // В обоих случаях доступность определяем по цене.
+            } elseif (!$trackingEnabled) {
+                // Учёт количества выключен — доступность определяем по наличию цены
                 $inStock  = ($price !== null);
+                $quantity = $inStock ? 1 : 0;
+            } else {
+                // Учёт включён, QUANTITY = 0 — покупка только если явно разрешена при нуле
+                $inStock  = $canBuyAtZero && ($price !== null);
                 $quantity = $inStock ? 1 : 0;
             }
         } elseif (!empty($props['IN_STOCK']['VALUE'])) {
